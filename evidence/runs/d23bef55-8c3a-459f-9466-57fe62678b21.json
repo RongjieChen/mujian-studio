@@ -1,0 +1,74 @@
+{
+  "id": "d23bef55-8c3a-459f-9466-57fe62678b21",
+  "projectId": "6efb23e6-4ca6-4e45-a13a-7ce58d9c4760",
+  "kind": "image",
+  "state": "succeeded",
+  "request": {
+    "sceneId": "lobby",
+    "kind": "image",
+    "seed": 42,
+    "quality": "draft",
+    "force": false
+  },
+  "baseRevision": 3,
+  "events": [
+    {
+      "at": "2026-09-20T21:13:18.507Z",
+      "type": "cache",
+      "message": "复用完全相同输入的已有素材",
+      "detail": {
+        "assetId": "90ace3dc-ad88-4d86-9c4d-76f368de4909"
+      }
+    }
+  ],
+  "createdAt": "2026-09-20T21:10:49.979Z",
+  "startedAt": "2026-09-20T21:13:18.506Z",
+  "result": {
+    "asset": {
+      "id": "90ace3dc-ad88-4d86-9c4d-76f368de4909",
+      "sceneId": "lobby",
+      "kind": "image",
+      "file": "90ace3dc-ad88-4d86-9c4d-76f368de4909.png",
+      "mime": "image/png",
+      "inputHash": "40e378cc700623c8710ddd1630070a2826a7929baa351316b8c9352e49bd56e3",
+      "seed": 42,
+      "model": "/root/mujian-runtime/models/sdxl-base",
+      "durationMs": 42694,
+      "createdAt": "2026-09-20T20:40:07.295Z",
+      "provenance": "local-generation",
+      "metadata": {
+        "id": "7800a6cb-1438-4627-8b14-d9fb2e012ffc",
+        "state": "succeeded",
+        "createdAt": 1789936764.011075,
+        "request": {
+          "kind": "image",
+          "prompt": "Wide cinematic interior of a remote Chinese mountain inn lobby in 1998 at rainy midnight, empty reception desk with green bankers lamp, an open logbook, wet window, dark wood, amber tungsten light and deep moss green shadows, no people, no readable text.\nVisual style: 写实悬疑电影，1998 年中国南方山间旅馆，墨绿色与钨丝灯琥珀色，35mm 胶片颗粒，克制的固定镜头，无可读文字，无水印。所有角色均为成年人。",
+          "seed": 42,
+          "reference": null,
+          "quality": "draft"
+        },
+        "phase": "done",
+        "device": "NVIDIA GB10",
+        "loadMs": 37619,
+        "steps": 20,
+        "step": 20,
+        "file": "7800a6cb-1438-4627-8b14-d9fb2e012ffc.png",
+        "model": "/root/mujian-runtime/models/sdxl-base",
+        "durationMs": 42694,
+        "peakAllocatedBytes": 9477176320,
+        "settings": {
+          "width": 1024,
+          "height": 576,
+          "num_inference_steps": 20,
+          "guidance_scale": 6
+        },
+        "torchVersion": "2.9.1+cu130",
+        "cudaVersion": "13.0",
+        "finishedAt": 1789936806.7057502,
+        "quality": "draft"
+      }
+    },
+    "cacheHit": true
+  },
+  "finishedAt": "2026-09-20T21:13:18.507Z"
+}

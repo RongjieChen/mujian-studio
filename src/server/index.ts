@@ -28,7 +28,7 @@ app.use((req,res,next)=>{
 });
 app.use(express.json({limit:'2mb'}));
 const projectView=(id:string)=>{
-  const p=getProject(id);return {...p,assetStates:p.assets.map(a=>({id:a.id,current:assetCurrent(p,a)}))};
+  const p=getProject(id);return {...p,report:validateCase(p.case),assetStates:p.assets.map(a=>({id:a.id,current:assetCurrent(p,a)}))};
 };
 app.get('/api/health',(_req,res)=>res.json({ok:true,version:'0.1.0'}));
 app.get('/api/status',async(_req,res)=>{
@@ -39,7 +39,11 @@ app.get('/api/status',async(_req,res)=>{
   ]);
   res.json({llm:{provider:config.provider,model:config.model,configured:!!config.key,reachable:probes[0].status==='fulfilled'&&probes[0].value.ok},media:probes[1].status==='fulfilled'?probes[1].value:{ok:false},activeJobs:listJobs().filter(j=>['running','queued'].includes(j.state)).length});
 });
-app.get('/api/projects',(_req,res)=>res.json(listProjects().map(({id,title,brief,createdAt,updatedAt,revision,source,report,case:doc,assets})=>({id,title,brief,createdAt,updatedAt,revision,source,passed:report?.passed,logline:doc.logline,scenes:doc.scenes.length,characters:doc.characters.length,assets:assets.length}))));
+app.get('/api/projects',(_req,res)=>res.json(listProjects().map(p=>{
+  const {id,title,brief,createdAt,updatedAt,revision,source,case:doc,assets}=p;
+  const cover=[...assets].reverse().find(a=>a.kind==='image'&&a.sceneId===doc.scenes[0].id&&assetCurrent(p,a));
+  return {id,title,brief,createdAt,updatedAt,revision,source,passed:validateCase(doc).passed,logline:doc.logline,scenes:doc.scenes.length,characters:doc.characters.length,assets:assets.length,cover:cover?`/media/${cover.file}`:null};
+})));
 app.post('/api/projects/sample',(_req,res)=>res.status(201).json(createProject(structuredClone(sampleCase),'手工示例案件；用于体验玩法，不代表 AI 现场生成。','sample')));
 app.post('/api/projects/import',(req,res)=>{const doc=caseSchema.parse(req.body.case??req.body);res.status(201).json(createProject(doc,'从 JSON 导入','imported'));});
 app.post('/api/generate',(req,res)=>{const {prompt}=z.object({prompt:z.string().trim().min(5).max(5000)}).parse(req.body);res.status(202).json(enqueue('generate',{prompt},null));});

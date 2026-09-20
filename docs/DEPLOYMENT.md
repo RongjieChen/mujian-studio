@@ -15,17 +15,39 @@ cmake -S llama.cpp -B llama.cpp/build \
 cmake --build llama.cpp/build --target llama-server --config Release -j 12
 ```
 
-下载 `unsloth/Qwen3.6-35B-A3B-GGUF` 的 `Qwen3.6-35B-A3B-UD-Q4_K_M.gguf`。核查 revision `a483e9e6cbd595906af30beda3187c2663a1118c`；文件 SHA256 为 `ac0e2c1189e055faa36eff361580e79c5bd6f8e76bffb4ce547f167d53e31a61`，大小 22,134,528,992 字节。镜像下载后应核对同一哈希。
+本次已运行的案件模型是 `Qwen/Qwen3-Next-80B-A3B-Thinking`。原始权重来自机器已有目录，使用同一份 llama.cpp 转为 F16 GGUF，再量化为 Q4_K_M。原目录保持不变；生成的 GGUF 约 47,258.42 MiB，平均 4.87 BPW。自转换文件 SHA256：`1624acebd3e14f320d5e9c9dd8a2c78698ee5fa15e7e6f06e81077c6444a4c49`。
 
 ```bash
+python llama.cpp/convert_hf_to_gguf.py /absolute/models/Qwen3-Next-80B-A3B-Thinking \
+  --outtype f16 --outfile /absolute/models/qwen3next-f16.gguf
+cmake --build llama.cpp/build --target llama-quantize -j 12
+llama.cpp/build/bin/llama-quantize \
+  /absolute/models/qwen3next-f16.gguf /absolute/models/qwen3next-Q4_K_M.gguf Q4_K_M 16
 ./llama.cpp/build/bin/llama-server \
-  --model /absolute/models/Qwen3.6-35B-A3B-UD-Q4_K_M.gguf \
-  --alias mujian-director --host 127.0.0.1 --port 8088 \
+  --model /absolute/models/qwen3next-Q4_K_M.gguf \
+  --alias qwen3-next-80b-q4 --host 127.0.0.1 --port 8088 \
   --ctx-size 32768 --parallel 1 --n-gpu-layers 99 --jinja \
-  --chat-template-kwargs '{"enable_thinking":false}'
+  --reasoning on --reasoning-format deepseek --reasoning-budget 2048 \
+  --temp 0.6 --top-k 20 --top-p 0.95 --min-p 0 --sleep-idle-seconds 30
 ```
 
-先确认 `/health` 返回 ready，且工具调用响应符合预期。版本、上下文和启动参数均影响速度。最终实测参数以 evidence 为准。
+对应 `.env` 设置 `LLM_MODEL=qwen3-next-80b-q4`、`LLM_REASONING=true`。这是只支持 thinking 模式的模型，不能套用关闭 thinking 的部署示例。Pi 请求也携带 `thinking_budget_tokens=2048`；是否严格限制思考长度取决于当前 llama.cpp 模板与解析器，任务总时限另行约束。
+
+Nemotron-3-Nano-30B-A3B 的自转换 Q4_K_M 版本已验证 GPU 推理和工具调用，但在本次中文案件任务中多次失败，故未作为默认编剧。Qwen3.6-35B-A3B 的 22 GB GGUF 是另一个候选，目前下载已暂停，尚未加载验证；不得把它的候选配置称作已通过验收。
+
+## 内存调度
+
+在同一台 Spark 使用较大语言模型与视频模型时，启用：
+
+```dotenv
+GPU_EXCLUSIVE=true
+LLM_WAIT_FOR_SLEEP=true
+LLAMA_ADMIN_URL=http://127.0.0.1:8088
+```
+
+开始本地 Agent 作业前，工作台调用素材服务 `/unload` 释放驻留的扩散模型与 CUDA 缓存。开始视频作业前，工作台查询 llama.cpp `/props`，确认 `is_sleeping=true` 再提交；必须同时配置上面的 `--sleep-idle-seconds 30`。图片与视频、Agent 任务共用一个队列。该策略交换了模型驻留速度与可用内存，冷加载耗时不能从端到端成绩里删除。
+
+健康检查不会把缓存结果冒充新生成。若未配置兼容的 llama.cpp，不启用此保护选项；较小模型可采用常驻方式。不要同时运行多个使用同一数据目录的工作台进程。
 
 ## 2. 本地图片与视频
 
@@ -47,6 +69,8 @@ export WAN_MODEL=/absolute/models/Wan2.2-TI2V-5B-Diffusers
 export MEDIA_DATA_DIR=/absolute/mujian-data/media-worker
 .venv-media/bin/uvicorn scripts.media_worker:app --host 127.0.0.1 --port 4318
 ```
+
+当前锁定的 Diffusers 0.35.2 在 Wan 2.2 VAE 分块模式存在 patchify 不匹配，首轮实测出现 12/3 通道错误；当前明确关闭 VAE tiling，使用普通路径，并在作业中记录。首次还缺少 ftfy，现已固定为 6.3.1。不得在同一环境中随意启用旧版 tiling；升级需重新验证。
 
 `GET /health` 返回 GPU、当前加载的任务类型与 busy。`POST /jobs` 创建异步作业，`GET /jobs/:id` 读取进度与产物，`POST /jobs/:id/cancel` 在采样步边界取消。模型加载本身不保证可立即取消。图片与视频模型在切换时释放旧模型，应用层一次只调度一个重任务。
 

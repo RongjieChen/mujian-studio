@@ -7,6 +7,20 @@ import { hashObject, sceneInput } from '../core/validate.ts';
 import { dataDir, getProject, saveProject } from './store.ts';
 
 export const workerUrl = () => process.env.MEDIA_WORKER_URL || 'http://127.0.0.1:4318';
+async function waitForLlmSleep(emit:(type:string,message:string,detail?:unknown)=>void,signal:AbortSignal){
+  if(process.env.LLM_WAIT_FOR_SLEEP!=='true'||process.env.LLM_PROVIDER==='stepfun')return;
+  const root=process.env.LLAMA_ADMIN_URL||'http://127.0.0.1:8088';
+  emit('memory','等待语言模型释放内存，为视频生成腾出统一内存。');
+  const deadline=Date.now()+120_000;
+  while(Date.now()<deadline){
+    const r=await fetch(`${root}/props`,{signal:AbortSignal.any([signal,AbortSignal.timeout(5000)])});
+    if(!r.ok)throw new Error('无法确认语言模型内存状态，请检查 llama.cpp 休眠配置。');
+    const status=await r.json();
+    if(status.is_sleeping===true){emit('memory','已确认语言模型休眠，开始视频作业。');return;}
+    await delay(2000,undefined,{signal});
+  }
+  throw new Error('语言模型尚未释放内存，请启用 --sleep-idle-seconds 后重试视频。');
+}
 export function assetCurrent(project: Project, asset: Asset) {
   if (!project.case.scenes.some(s=>s.id===asset.sceneId)) return false;
   let ref: string|undefined;
@@ -27,13 +41,22 @@ export async function runMedia(job: Job, emit: (type:string,message:string,detai
   const cached=project.assets.find(a=>a.inputHash===inputHash&&a.metadata?.quality===(job.request.quality||'draft')&&fs.existsSync(path.join(dataDir,'media',a.file)));
   if(cached&&!job.request.force){emit('cache','复用完全相同输入的已有素材',{assetId:cached.id});return {asset:cached,cacheHit:true};}
   emit('workflow','执行分镜制作流程：顺序调度、种子固定、保留旧素材');
+  if(kind==='video')await waitForLlmSleep(emit,signal);
   let remoteRef: string|undefined;
   if(reference){
     const r=await fetch(`${workerUrl()}/references/${reference.id}`,{method:'PUT',body:fs.readFileSync(path.join(dataDir,'media',reference.file)),signal});
     if(!r.ok)throw new Error('无法提交视频首帧参考');remoteRef=(await r.json()).file;
   }
   const prompt=`${input.prompt}\nVisual style: ${input.style}`;
-  const started=await fetch(`${workerUrl()}/jobs`,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({kind,prompt,seed,reference:remoteRef,quality:job.request.quality||'draft'}),signal});
+  let started:Response;
+  let waiting=false;
+  while(true){
+    started=await fetch(`${workerUrl()}/jobs`,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({kind,prompt,seed,reference:remoteRef,quality:job.request.quality||'draft'}),signal});
+    if(started.status!==409)break;
+    await started.text();
+    if(!waiting){emit('waiting','等待上一份 GPU 作业释放资源；可以取消当前任务。');waiting=true;}
+    await delay(2000,undefined,{signal});
+  }
   if(!started.ok)throw new Error(`本地素材服务拒绝任务：${await started.text()}`);
   const remote=await started.json();emit('media','本地 GPU 作业已创建',{workerJobId:remote.id,kind,seed,inputHash});
   let previous='';

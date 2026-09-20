@@ -1,0 +1,137 @@
+{
+  "id": "3261daa0-ea62-41c7-b80e-dede950cceac",
+  "projectId": "6efb23e6-4ca6-4e45-a13a-7ce58d9c4760",
+  "kind": "image",
+  "state": "succeeded",
+  "request": {
+    "sceneId": "lobby",
+    "kind": "image",
+    "seed": 42,
+    "quality": "draft",
+    "force": false
+  },
+  "baseRevision": 1,
+  "events": [
+    {
+      "at": "2026-09-20T20:39:23.997Z",
+      "type": "workflow",
+      "message": "执行分镜制作流程：顺序调度、种子固定、保留旧素材"
+    },
+    {
+      "at": "2026-09-20T20:39:24.012Z",
+      "type": "media",
+      "message": "本地 GPU 作业已创建",
+      "detail": {
+        "workerJobId": "7800a6cb-1438-4627-8b14-d9fb2e012ffc",
+        "kind": "image",
+        "seed": 42,
+        "inputHash": "40e378cc700623c8710ddd1630070a2826a7929baa351316b8c9352e49bd56e3"
+      }
+    },
+    {
+      "at": "2026-09-20T20:39:24.015Z",
+      "type": "progress",
+      "message": "素材状态：queued",
+      "detail": {}
+    },
+    {
+      "at": "2026-09-20T20:39:27.623Z",
+      "type": "progress",
+      "message": "加载本地生成模型",
+      "detail": {
+        "phase": "loading"
+      }
+    },
+    {
+      "at": "2026-09-20T20:40:03.682Z",
+      "type": "progress",
+      "message": "生成采样 7/20",
+      "detail": {
+        "phase": "sampling",
+        "step": 7,
+        "steps": 20
+      }
+    },
+    {
+      "at": "2026-09-20T20:40:05.486Z",
+      "type": "progress",
+      "message": "生成采样 17/20",
+      "detail": {
+        "phase": "sampling",
+        "step": 17,
+        "steps": 20
+      }
+    },
+    {
+      "at": "2026-09-20T20:40:07.288Z",
+      "type": "progress",
+      "message": "素材状态：succeeded",
+      "detail": {
+        "phase": "done",
+        "step": 20,
+        "steps": 20
+      }
+    },
+    {
+      "at": "2026-09-20T20:40:07.295Z",
+      "type": "asset",
+      "message": "生成完成，已保存可追溯素材",
+      "detail": {
+        "assetId": "90ace3dc-ad88-4d86-9c4d-76f368de4909",
+        "durationMs": 42694,
+        "stale": false
+      }
+    }
+  ],
+  "createdAt": "2026-09-20T20:39:23.997Z",
+  "startedAt": "2026-09-20T20:39:23.997Z",
+  "result": {
+    "asset": {
+      "id": "90ace3dc-ad88-4d86-9c4d-76f368de4909",
+      "sceneId": "lobby",
+      "kind": "image",
+      "file": "90ace3dc-ad88-4d86-9c4d-76f368de4909.png",
+      "mime": "image/png",
+      "inputHash": "40e378cc700623c8710ddd1630070a2826a7929baa351316b8c9352e49bd56e3",
+      "seed": 42,
+      "model": "/root/mujian-runtime/models/sdxl-base",
+      "durationMs": 42694,
+      "createdAt": "2026-09-20T20:40:07.295Z",
+      "provenance": "local-generation",
+      "metadata": {
+        "id": "7800a6cb-1438-4627-8b14-d9fb2e012ffc",
+        "state": "succeeded",
+        "createdAt": 1789936764.011075,
+        "request": {
+          "kind": "image",
+          "prompt": "Wide cinematic interior of a remote Chinese mountain inn lobby in 1998 at rainy midnight, empty reception desk with green bankers lamp, an open logbook, wet window, dark wood, amber tungsten light and deep moss green shadows, no people, no readable text.\nVisual style: 写实悬疑电影，1998 年中国南方山间旅馆，墨绿色与钨丝灯琥珀色，35mm 胶片颗粒，克制的固定镜头，无可读文字，无水印。所有角色均为成年人。",
+          "seed": 42,
+          "reference": null,
+          "quality": "draft"
+        },
+        "phase": "done",
+        "device": "NVIDIA GB10",
+        "loadMs": 37619,
+        "steps": 20,
+        "step": 20,
+        "file": "7800a6cb-1438-4627-8b14-d9fb2e012ffc.png",
+        "model": "/root/mujian-runtime/models/sdxl-base",
+        "durationMs": 42694,
+        "peakAllocatedBytes": 9477176320,
+        "settings": {
+          "width": 1024,
+          "height": 576,
+          "num_inference_steps": 20,
+          "guidance_scale": 6
+        },
+        "torchVersion": "2.9.1+cu130",
+        "cudaVersion": "13.0",
+        "finishedAt": 1789936806.7057502,
+        "quality": "draft"
+      }
+    },
+    "cacheHit": false,
+    "stale": false
+  },
+  "finishedAt": "2026-09-20T20:40:07.298Z"
+}

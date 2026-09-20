@@ -1,0 +1,935 @@
+{
+  "id": "45394866-1f1b-4314-8d52-7250d636aea2",
+  "title": "陨石疑云",
+  "brief": "在一座即将闭馆的海边天文台，一块陨石样本被调包。三个成年研究者都有动机，关键在于观测日志与潮汐时间不一致。设计三个可探索场景、六条证据、两种结局。至少一条关键证词必须出示已有物证才能取得。原创中文故事，最后揭示一个合理且不悲惨的动机。",
+  "createdAt": "2026-09-20T20:34:20.826Z",
+  "updatedAt": "2026-09-20T20:50:55.904Z",
+  "revision": 3,
+  "case": {
+    "schemaVersion": 1,
+    "title": "陨石疑云",
+    "logline": "在即将闭馆的海边天文台，一块珍贵陨石样本被调包，三位研究者各怀秘密，真相藏于观测日志与潮汐时间的矛盾之中",
+    "opening": "23:45，天文台即将闭馆。值班研究员发现陨石样本被调包，真品不翼而飞。监控显示只有三人进入过样本库，但他们的证词与潮汐记录存在矛盾。你作为调查员，必须在闭馆前找出真相。",
+    "style": "写实悬疑风格，现代海边天文台，冷色调为主，注重科学细节。镜头以固定机位为主，强调环境细节，避免文字提示。所有角色均为成年人。",
+    "truth": {
+      "culpritId": "zhao_tianyu",
+      "motive": "赵天宇发现样本转运审批流程尚未完成，担心被非法转移，因此调包样本阻止转运，但未计划造成严重后果。",
+      "method": "篡改潮汐日志，将真样本藏于潮汐观测站设备箱，阻止审批流程完成。",
+      "requiredEvidenceIds": [
+        "tide_log",
+        "fake_stone",
+        "research_note"
+      ],
+      "timeline": [
+        {
+          "time": "23:10",
+          "event": "赵天宇篡改潮汐记录日志，将高潮时段标记为低潮。"
+        },
+        {
+          "time": "23:25",
+          "event": "进入样本库调包陨石，将真样本藏入潮汐观测站设备箱。"
+        },
+        {
+          "time": "23:40",
+          "event": "返回实验室，整理分析数据。"
+        }
+      ]
+    },
+    "characters": [
+      {
+        "id": "lin_hai",
+        "name": "林海",
+        "role": "天文台首席研究员",
+        "description": "40岁，戴眼镜，白大褂，严谨但略显疲惫。负责陨石样本的保管与研究。",
+        "publicKnowledge": "林海对陨石样本异常高度关注，但未发现调包迹象。他主张严格遵循科研规范，反对私下行动。",
+        "secret": "他长期怀疑样本可能涉及外星生命迹象，但机构高层不支持深入研究，暗中希望保留样本进行更多分析。",
+        "portraitPrompt": "Portrait of a 40-year-old Chinese male scientist, glasses, white lab coat, serious expression, modern coastal observatory background, cinematic lighting, no text.",
+        "topics": [
+          {
+            "id": "sample_status",
+            "question": "样本异常是什么时候发现的？",
+            "answer": "刚发现样本柜空了。监控显示只有三人进入过，但调包痕迹不明显，需要分析报告确认。",
+            "requires": [],
+            "reveals": []
+          },
+          {
+            "id": "research_intent",
+            "question": "你是否想单独研究样本？",
+            "answer": "当然，但必须按程序申请。我从不私自行动，这是科研底线。",
+            "requires": [
+              "analysis_report"
+            ],
+            "reveals": []
+          }
+        ]
+      },
+      {
+        "id": "su_qing",
+        "name": "苏晴",
+        "role": "地质学家",
+        "description": "32岁，短发，穿地质勘探服。负责陨石成分分析。",
+        "publicKnowledge": "苏晴对陨石成分有专业判断，但未公开怀疑。她认为样本异常可能与潮汐环境有关。",
+        "secret": "她发现陨石中含特殊矿物，对地质研究有重大突破价值，但机构不允许带走样本，计划闭馆前偷取。",
+        "portraitPrompt": "Portrait of a 32-year-old Chinese female geologist, short hair, field jacket, focused expression, coastal observatory lab, cinematic lighting, no text.",
+        "topics": [
+          {
+            "id": "mineral_analysis",
+            "question": "样本成分分析结果如何？",
+            "answer": "初步检测显示矿物结构异常，但需要更多数据。潮汐变化可能影响了样本状态。",
+            "requires": [],
+            "reveals": []
+          },
+          {
+            "id": "sample_steal",
+            "question": "你是否想带走样本？",
+            "answer": "当然想，但必须合法。我不会做违法的事，样本是国家财产。",
+            "requires": [
+              "analysis_report"
+            ],
+            "reveals": []
+          }
+        ]
+      },
+      {
+        "id": "zhao_tianyu",
+        "name": "赵天宇",
+        "role": "气象学家",
+        "description": "45岁，穿气象局制服，手持潮汐记录本。负责潮汐观测与数据记录。",
+        "publicKnowledge": "赵天宇对潮汐数据记录严谨，近期行为异常，但声称一切正常。",
+        "secret": "他发现样本转运审批流程存在漏洞，担心被非法转移，因此调包样本阻止转运。",
+        "portraitPrompt": "Portrait of a 45-year-old Chinese male meteorologist, uniform, holding tide logbook, coastal observatory setting, cinematic lighting, no text.",
+        "topics": [
+          {
+            "id": "tide_record",
+            "question": "潮汐记录是否准确？",
+            "answer": "记录完全准确。昨晚低潮时段确实很平静，样本柜从未被触碰过。",
+            "requires": [],
+            "reveals": []
+          },
+          {
+            "id": "tide_log_review",
+            "question": "你为什么修改潮汐记录？",
+            "answer": "我发现了转运审批的漏洞，必须阻止样本被转移。但没想到会引发这么大的问题。",
+            "requires": [
+              "tide_log"
+            ],
+            "reveals": [
+              "research_note"
+            ]
+          }
+        ]
+      }
+    ],
+    "scenes": [
+      {
+        "id": "main_observatory",
+        "name": "主观测室",
+        "description": "存放陨石样本的恒温库，监控显示最后进入的是赵天宇。样本柜空了，只留下一个调包的普通石头。",
+        "requires": [],
+        "characterIds": [
+          "lin_hai",
+          "zhao_tianyu",
+          "su_qing"
+        ],
+        "imagePrompt": "Interior of a modern coastal observatory main observation room, stainless steel sample cabinet open, empty space where meteorite should be, a fake rock inside, dim blue lighting, scientific equipment, no people, cinematic shot, no text.",
+        "videoPrompt": "Wide static shot of the main observatory room, open sample cabinet with a fake rock inside, blue ambient lighting, subtle movement of equipment. No people, no text."
+      },
+      {
+        "id": "tide_station",
+        "name": "潮汐观测站",
+        "description": "潮汐记录仪显示低潮时间，但实际潮位是高潮。记录本上有篡改痕迹。",
+        "requires": [],
+        "characterIds": [
+          "zhao_tianyu"
+        ],
+        "imagePrompt": "Coastal tide monitoring station at night, rain on the window, tide logbook on desk with scribbled corrections, electronic equipment displaying wave data, cold blue lighting, cinematic composition, no text.",
+        "videoPrompt": "Static shot of a tide monitoring station, raindrops on the window, a logbook with erased entries, electronic screens showing incorrect tidal data. No people, no text."
+      },
+      {
+        "id": "lab",
+        "name": "实验室",
+        "description": "陨石分析仪器显示样本异常，但无法确定是否被调包。需要更多证据确认。",
+        "requires": [],
+        "characterIds": [
+          "su_qing",
+          "lin_hai"
+        ],
+        "imagePrompt": "Modern laboratory with microscopes and analytical equipment, a stone sample on the table, scientific instruments, cool fluorescent lighting, cinematic detail, no people, no text.",
+        "videoPrompt": "Close-up of laboratory equipment analyzing a stone sample, fluorescent lights reflecting on metal surfaces, subtle movement of instruments. No people, no text."
+      }
+    ],
+    "clues": [
+      {
+        "id": "fake_stone",
+        "name": "调包陨石",
+        "description": "样本柜中的普通石头，表面处理成陨石外观，但成分分析与真陨石不符。",
+        "sceneId": "main_observatory",
+        "requires": [
+          "fake_stone"
+        ]
+      },
+      {
+        "id": "tide_log",
+        "name": "潮汐记录日志",
+        "description": "记录显示23:20为低潮，但实际潮位是高潮。笔迹显示曾被篡改。",
+        "sceneId": "tide_station",
+        "requires": []
+      },
+      {
+        "id": "analysis_report",
+        "name": "陨石成分分析报告",
+        "description": "实验室分析显示，样本中的矿物成分与真陨石不符，但具体数据需要更多证据验证。",
+        "sceneId": "lab",
+        "requires": []
+      },
+      {
+        "id": "research_note",
+        "name": "赵天宇的笔记本",
+        "description": "记录了样本转运审批流程的漏洞，以及阻止转运的计划。页角有'必须阻止转运'的潦草字迹。",
+        "sceneId": null,
+        "requires": []
+      },
+      {
+        "id": "equipment_box",
+        "name": "备用设备箱",
+        "description": "箱内藏有真陨石样本，但需要先发现箱内有异常才能打开。",
+        "sceneId": "tide_station",
+        "requires": [
+          "tide_log"
+        ]
+      },
+      {
+        "id": "security_footage",
+        "name": "监控记录",
+        "description": "监控显示赵天宇在23:25进入样本库，但画面被模糊处理，无法确认细节。",
+        "sceneId": "main_observatory",
+        "requires": []
+      }
+    ],
+    "endings": [
+      {
+        "id": "solved_ending",
+        "kind": "solved",
+        "title": "潮汐真相",
+        "text": "你发现赵天宇篡改潮汐日志，将真样本藏在设备箱中。他承认因担心样本转运审批流程漏洞被利用，阻止转运，但未料到事态失控。样本被安全归还，审批流程重新审查。"
+      },
+      {
+        "id": "wrong_ending",
+        "kind": "wrong",
+        "title": "错误的指认",
+        "text": "你的证据链不完整，错误地指责了林海。真样本被赵天宇转移，无法找回。天文台关闭，陨石研究中断。重新调查，注意潮汐记录与实际观测的矛盾。"
+      }
+    ]
+  },
+  "revisions": [
+    {
+      "id": "2d1c8cb1-1149-40ca-9652-a734445acf15",
+      "number": 1,
+      "createdAt": "2026-09-20T20:34:20.826Z",
+      "note": "创建案件",
+      "case": {
+        "schemaVersion": 1,
+        "title": "陨石疑云",
+        "logline": "在即将闭馆的海边天文台，一块珍贵陨石样本被调包，三位研究者各怀秘密，真相藏于观测日志与潮汐时间的矛盾之中",
+        "opening": "23:45，天文台即将闭馆。值班研究员发现陨石样本被调包，真品不翼而飞。监控显示只有三人进入过样本库，但他们的证词与潮汐记录存在矛盾。你作为调查员，必须在闭馆前找出真相。",
+        "style": "写实悬疑风格，现代海边天文台，冷色调为主，注重科学细节。镜头以固定机位为主，强调环境细节，避免文字提示。所有角色均为成年人。",
+        "truth": {
+          "culpritId": "zhao_tianyu",
+          "motive": "赵天宇发现陨石中的特殊元素能显著提升潮汐预测模型精度，但机构拒绝批准研究。为推进科学，他决定调包样本私下实验。",
+          "method": "利用潮汐高潮时段调包样本，篡改日志显示低潮，将真样本藏于潮汐观测站设备箱。",
+          "requiredEvidenceIds": [
+            "tide_log",
+            "fake_stone",
+            "research_note"
+          ],
+          "timeline": [
+            {
+              "time": "23:10",
+              "event": "赵天宇篡改潮汐记录日志，将高潮时段标记为低潮。"
+            },
+            {
+              "time": "23:25",
+              "event": "进入样本库调包陨石，将真样本藏入潮汐观测站设备箱。"
+            },
+            {
+              "time": "23:40",
+              "event": "返回实验室，整理分析数据。"
+            }
+          ]
+        },
+        "characters": [
+          {
+            "id": "lin_hai",
+            "name": "林海",
+            "role": "天文台首席研究员",
+            "description": "40岁，戴眼镜，白大褂，严谨但略显疲惫。负责陨石样本的保管与研究。",
+            "publicKnowledge": "林海对陨石样本异常高度关注，但未发现调包迹象。他主张严格遵循科研规范，反对私下行动。",
+            "secret": "他长期怀疑样本可能涉及外星生命迹象，但机构高层不支持深入研究，暗中希望保留样本进行更多分析。",
+            "portraitPrompt": "Portrait of a 40-year-old Chinese male scientist, glasses, white lab coat, serious expression, modern coastal observatory background, cinematic lighting, no text.",
+            "topics": [
+              {
+                "id": "sample_status",
+                "question": "样本异常是什么时候发现的？",
+                "answer": "刚发现样本柜空了。监控显示只有三人进入过，但调包痕迹不明显，需要分析报告确认。",
+                "requires": [],
+                "reveals": []
+              },
+              {
+                "id": "research_intent",
+                "question": "你是否想单独研究样本？",
+                "answer": "当然，但必须按程序申请。我从不私自行动，这是科研底线。",
+                "requires": [
+                  "analysis_report"
+                ],
+                "reveals": []
+              }
+            ]
+          },
+          {
+            "id": "su_qing",
+            "name": "苏晴",
+            "role": "地质学家",
+            "description": "32岁，短发，穿地质勘探服。负责陨石成分分析。",
+            "publicKnowledge": "苏晴对陨石成分有专业判断，但未公开怀疑。她认为样本异常可能与潮汐环境有关。",
+            "secret": "她发现陨石中含特殊矿物，对地质研究有重大突破价值，但机构不允许带走样本，计划闭馆前偷取。",
+            "portraitPrompt": "Portrait of a 32-year-old Chinese female geologist, short hair, field jacket, focused expression, coastal observatory lab, cinematic lighting, no text.",
+            "topics": [
+              {
+                "id": "mineral_analysis",
+                "question": "样本成分分析结果如何？",
+                "answer": "初步检测显示矿物结构异常，但需要更多数据。潮汐变化可能影响了样本状态。",
+                "requires": [],
+                "reveals": []
+              },
+              {
+                "id": "sample_steal",
+                "question": "你是否想带走样本？",
+                "answer": "当然想，但必须合法。我不会做违法的事，样本是国家财产。",
+                "requires": [
+                  "analysis_report"
+                ],
+                "reveals": []
+              }
+            ]
+          },
+          {
+            "id": "zhao_tianyu",
+            "name": "赵天宇",
+            "role": "气象学家",
+            "description": "45岁，穿气象局制服，手持潮汐记录本。负责潮汐观测与数据记录。",
+            "publicKnowledge": "赵天宇对潮汐数据记录严谨，近期行为异常，但声称一切正常。",
+            "secret": "他发现陨石中的特殊元素能改善潮汐预测模型，但机构拒绝批准。他调包样本想私下实验，但未计划造成严重后果。",
+            "portraitPrompt": "Portrait of a 45-year-old Chinese male meteorologist, uniform, holding tide logbook, coastal observatory setting, cinematic lighting, no text.",
+            "topics": [
+              {
+                "id": "tide_record",
+                "question": "潮汐记录是否准确？",
+                "answer": "记录完全准确。昨晚低潮时段确实很平静，样本柜从未被触碰过。",
+                "requires": [],
+                "reveals": []
+              },
+              {
+                "id": "meteorite_impact",
+                "question": "你对陨石有什么研究计划？",
+                "answer": "只是常规分析。不过如果能确认特殊元素的特性，或许能改进潮汐预测精度。",
+                "requires": [
+                  "research_note"
+                ],
+                "reveals": []
+              }
+            ]
+          }
+        ],
+        "scenes": [
+          {
+            "id": "main_observatory",
+            "name": "主观测室",
+            "description": "存放陨石样本的恒温库，监控显示最后进入的是赵天宇。样本柜空了，只留下一个调包的普通石头。",
+            "requires": [],
+            "characterIds": [
+              "lin_hai",
+              "zhao_tianyu",
+              "su_qing"
+            ],
+            "imagePrompt": "Interior of a modern coastal observatory main observation room, stainless steel sample cabinet open, empty space where meteorite should be, a fake rock inside, dim blue lighting, scientific equipment, no people, cinematic shot, no text.",
+            "videoPrompt": "Wide static shot of the main observatory room, open sample cabinet with a fake rock inside, blue ambient lighting, subtle movement of equipment. No people, no text."
+          },
+          {
+            "id": "tide_station",
+            "name": "潮汐观测站",
+            "description": "潮汐记录仪显示低潮时间，但实际潮位是高潮。记录本上有篡改痕迹。",
+            "requires": [],
+            "characterIds": [
+              "zhao_tianyu"
+            ],
+            "imagePrompt": "Coastal tide monitoring station at night, rain on the window, tide logbook on desk with scribbled corrections, electronic equipment displaying wave data, cold blue lighting, cinematic composition, no text.",
+            "videoPrompt": "Static shot of a tide monitoring station, raindrops on the window, a logbook with erased entries, electronic screens showing incorrect tidal data. No people, no text."
+          },
+          {
+            "id": "lab",
+            "name": "实验室",
+            "description": "陨石分析仪器显示样本异常，但无法确定是否被调包。需要更多证据确认。",
+            "requires": [],
+            "characterIds": [
+              "su_qing",
+              "lin_hai"
+            ],
+            "imagePrompt": "Modern laboratory with microscopes and analytical equipment, a stone sample on the table, scientific instruments, cool fluorescent lighting, cinematic detail, no people, no text.",
+            "videoPrompt": "Close-up of laboratory equipment analyzing a stone sample, fluorescent lights reflecting on metal surfaces, subtle movement of instruments. No people, no text."
+          }
+        ],
+        "clues": [
+          {
+            "id": "fake_stone",
+            "name": "调包陨石",
+            "description": "样本柜中的普通石头，表面处理成陨石外观，但成分分析与真陨石不符。",
+            "sceneId": "main_observatory",
+            "requires": []
+          },
+          {
+            "id": "tide_log",
+            "name": "潮汐记录日志",
+            "description": "记录显示23:20为低潮，但实际潮位为高潮。笔迹显示曾被篡改。",
+            "sceneId": "tide_station",
+            "requires": []
+          },
+          {
+            "id": "analysis_report",
+            "name": "陨石成分分析报告",
+            "description": "实验室分析显示，样本中的矿物成分与真陨石不符，但具体数据需要更多证据验证。",
+            "sceneId": "lab",
+            "requires": []
+          },
+          {
+            "id": "research_note",
+            "name": "赵天宇的笔记本",
+            "description": "记录了陨石中特殊元素的特性，以及改进潮汐预测模型的计划。页角有'必须带走样本'的潦草字迹。",
+            "sceneId": "lab",
+            "requires": [
+              "analysis_report"
+            ]
+          },
+          {
+            "id": "equipment_box",
+            "name": "备用设备箱",
+            "description": "箱内藏有真陨石样本，但需要先发现箱内有异常才能打开。",
+            "sceneId": "tide_station",
+            "requires": [
+              "tide_log"
+            ]
+          },
+          {
+            "id": "security_footage",
+            "name": "监控记录",
+            "description": "监控显示赵天宇在23:25进入样本库，但画面被模糊处理，无法确认细节。",
+            "sceneId": "main_observatory",
+            "requires": []
+          }
+        ],
+        "endings": [
+          {
+            "id": "solved_ending",
+            "kind": "solved",
+            "title": "潮汐真相",
+            "text": "你发现赵天宇篡改潮汐日志，将真样本藏在设备箱中。他承认想用陨石中的特殊元素改进潮汐模型，但机构拒绝批准。你将真相报告给上级，样本被安全归还，赵天宇接受纪律处分，但研究得以继续。"
+          },
+          {
+            "id": "wrong_ending",
+            "kind": "wrong",
+            "title": "错误的指认",
+            "text": "你的证据链不完整，错误地指责了林海。真样本被赵天宇转移，无法找回。天文台关闭，陨石研究中断。重新调查，注意潮汐记录与实际观测的矛盾。"
+          }
+        ]
+      },
+      "hash": "c830a275101ac83f2ae8d48dfdacfb89819419850b939d092e0d64787cc070d0"
+    },
+    {
+      "id": "2caf6132-0b45-48fd-ade8-c705bda1bb11",
+      "number": 2,
+      "createdAt": "2026-09-20T20:46:29.084Z",
+      "note": "案件已通过验收，所有问题修复完毕，提交最终版本。",
+      "case": {
+        "schemaVersion": 1,
+        "title": "陨石疑云",
+        "logline": "在即将闭馆的海边天文台，一块珍贵陨石样本被调包，三位研究者各怀秘密，真相藏于观测日志与潮汐时间的矛盾之中",
+        "opening": "23:45，天文台即将闭馆。值班研究员发现陨石样本被调包，真品不翼而飞。监控显示只有三人进入过样本库，但他们的证词与潮汐记录存在矛盾。你作为调查员，必须在闭馆前找出真相。",
+        "style": "写实悬疑风格，现代海边天文台，冷色调为主，注重科学细节。镜头以固定机位为主，强调环境细节，避免文字提示。所有角色均为成年人。",
+        "truth": {
+          "culpritId": "zhao_tianyu",
+          "motive": "赵天宇发现样本转运审批流程尚未完成，担心被非法转移，因此调包样本阻止转运，但未计划造成严重后果。",
+          "method": "篡改潮汐日志，将真样本藏于潮汐观测站设备箱，阻止审批流程完成。",
+          "requiredEvidenceIds": [
+            "tide_log",
+            "fake_stone",
+            "research_note"
+          ],
+          "timeline": [
+            {
+              "time": "23:10",
+              "event": "赵天宇篡改潮汐记录日志，将高潮时段标记为低潮。"
+            },
+            {
+              "time": "23:25",
+              "event": "进入样本库调包陨石，将真样本藏入潮汐观测站设备箱。"
+            },
+            {
+              "time": "23:40",
+              "event": "返回实验室，整理分析数据。"
+            }
+          ]
+        },
+        "characters": [
+          {
+            "id": "lin_hai",
+            "name": "林海",
+            "role": "天文台首席研究员",
+            "description": "40岁，戴眼镜，白大褂，严谨但略显疲惫。负责陨石样本的保管与研究。",
+            "publicKnowledge": "林海对陨石样本异常高度关注，但未发现调包迹象。他主张严格遵循科研规范，反对私下行动。",
+            "secret": "他长期怀疑样本可能涉及外星生命迹象，但机构高层不支持深入研究，暗中希望保留样本进行更多分析。",
+            "portraitPrompt": "Portrait of a 40-year-old Chinese male scientist, glasses, white lab coat, serious expression, modern coastal observatory background, cinematic lighting, no text.",
+            "topics": [
+              {
+                "id": "sample_status",
+                "question": "样本异常是什么时候发现的？",
+                "answer": "刚发现样本柜空了。监控显示只有三人进入过，但调包痕迹不明显，需要分析报告确认。",
+                "requires": [],
+                "reveals": []
+              },
+              {
+                "id": "research_intent",
+                "question": "你是否想单独研究样本？",
+                "answer": "当然，但必须按程序申请。我从不私自行动，这是科研底线。",
+                "requires": [
+                  "analysis_report"
+                ],
+                "reveals": []
+              }
+            ]
+          },
+          {
+            "id": "su_qing",
+            "name": "苏晴",
+            "role": "地质学家",
+            "description": "32岁，短发，穿地质勘探服。负责陨石成分分析。",
+            "publicKnowledge": "苏晴对陨石成分有专业判断，但未公开怀疑。她认为样本异常可能与潮汐环境有关。",
+            "secret": "她发现陨石中含特殊矿物，对地质研究有重大突破价值，但机构不允许带走样本，计划闭馆前偷取。",
+            "portraitPrompt": "Portrait of a 32-year-old Chinese female geologist, short hair, field jacket, focused expression, coastal observatory lab, cinematic lighting, no text.",
+            "topics": [
+              {
+                "id": "mineral_analysis",
+                "question": "样本成分分析结果如何？",
+                "answer": "初步检测显示矿物结构异常，但需要更多数据。潮汐变化可能影响了样本状态。",
+                "requires": [],
+                "reveals": []
+              },
+              {
+                "id": "sample_steal",
+                "question": "你是否想带走样本？",
+                "answer": "当然想，但必须合法。我不会做违法的事，样本是国家财产。",
+                "requires": [
+                  "analysis_report"
+                ],
+                "reveals": []
+              }
+            ]
+          },
+          {
+            "id": "zhao_tianyu",
+            "name": "赵天宇",
+            "role": "气象学家",
+            "description": "45岁，穿气象局制服，手持潮汐记录本。负责潮汐观测与数据记录。",
+            "publicKnowledge": "赵天宇对潮汐数据记录严谨，近期行为异常，但声称一切正常。",
+            "secret": "他发现样本转运审批流程存在漏洞，担心被非法转移，因此调包样本阻止转运。",
+            "portraitPrompt": "Portrait of a 45-year-old Chinese male meteorologist, uniform, holding tide logbook, coastal observatory setting, cinematic lighting, no text.",
+            "topics": [
+              {
+                "id": "tide_record",
+                "question": "潮汐记录是否准确？",
+                "answer": "记录完全准确。昨晚低潮时段确实很平静，样本柜从未被触碰过。",
+                "requires": [],
+                "reveals": []
+              },
+              {
+                "id": "tide_log_review",
+                "question": "你为什么修改潮汐记录？",
+                "answer": "我发现了转运审批的漏洞，必须阻止样本被转移。但没想到会引发这么大的问题。",
+                "requires": [
+                  "tide_log"
+                ],
+                "reveals": [
+                  "research_note"
+                ]
+              }
+            ]
+          }
+        ],
+        "scenes": [
+          {
+            "id": "main_observatory",
+            "name": "主观测室",
+            "description": "存放陨石样本的恒温库，监控显示最后进入的是赵天宇。样本柜空了，只留下一个调包的普通石头。",
+            "requires": [],
+            "characterIds": [
+              "lin_hai",
+              "zhao_tianyu",
+              "su_qing"
+            ],
+            "imagePrompt": "Interior of a modern coastal observatory main observation room, stainless steel sample cabinet open, empty space where meteorite should be, a fake rock inside, dim blue lighting, scientific equipment, no people, cinematic shot, no text.",
+            "videoPrompt": "Wide static shot of the main observatory room, open sample cabinet with a fake rock inside, blue ambient lighting, subtle movement of equipment. No people, no text."
+          },
+          {
+            "id": "tide_station",
+            "name": "潮汐观测站",
+            "description": "潮汐记录仪显示低潮时间，但实际潮位是高潮。记录本上有篡改痕迹。",
+            "requires": [],
+            "characterIds": [
+              "zhao_tianyu"
+            ],
+            "imagePrompt": "Coastal tide monitoring station at night, rain on the window, tide logbook on desk with scribbled corrections, electronic equipment displaying wave data, cold blue lighting, cinematic composition, no text.",
+            "videoPrompt": "Static shot of a tide monitoring station, raindrops on the window, a logbook with erased entries, electronic screens showing incorrect tidal data. No people, no text."
+          },
+          {
+            "id": "lab",
+            "name": "实验室",
+            "description": "陨石分析仪器显示样本异常，但无法确定是否被调包。需要更多证据确认。",
+            "requires": [],
+            "characterIds": [
+              "su_qing",
+              "lin_hai"
+            ],
+            "imagePrompt": "Modern laboratory with microscopes and analytical equipment, a stone sample on the table, scientific instruments, cool fluorescent lighting, cinematic detail, no people, no text.",
+            "videoPrompt": "Close-up of laboratory equipment analyzing a stone sample, fluorescent lights reflecting on metal surfaces, subtle movement of instruments. No people, no text."
+          }
+        ],
+        "clues": [
+          {
+            "id": "fake_stone",
+            "name": "调包陨石",
+            "description": "样本柜中的普通石头，表面处理成陨石外观，但成分分析与真陨石不符。",
+            "sceneId": "main_observatory",
+            "requires": []
+          },
+          {
+            "id": "tide_log",
+            "name": "潮汐记录日志",
+            "description": "记录显示23:20为低潮，但实际潮位是高潮。笔迹显示曾被篡改。",
+            "sceneId": "tide_station",
+            "requires": []
+          },
+          {
+            "id": "analysis_report",
+            "name": "陨石成分分析报告",
+            "description": "实验室分析显示，样本中的矿物成分与真陨石不符，但具体数据需要更多证据验证。",
+            "sceneId": "lab",
+            "requires": []
+          },
+          {
+            "id": "research_note",
+            "name": "赵天宇的笔记本",
+            "description": "记录了样本转运审批流程的漏洞，以及阻止转运的计划。页角有'必须阻止转运'的潦草字迹。",
+            "sceneId": null,
+            "requires": []
+          },
+          {
+            "id": "equipment_box",
+            "name": "备用设备箱",
+            "description": "箱内藏有真陨石样本，但需要先发现箱内有异常才能打开。",
+            "sceneId": "tide_station",
+            "requires": [
+              "tide_log"
+            ]
+          },
+          {
+            "id": "security_footage",
+            "name": "监控记录",
+            "description": "监控显示赵天宇在23:25进入样本库，但画面被模糊处理，无法确认细节。",
+            "sceneId": "main_observatory",
+            "requires": []
+          }
+        ],
+        "endings": [
+          {
+            "id": "solved_ending",
+            "kind": "solved",
+            "title": "潮汐真相",
+            "text": "你发现赵天宇篡改潮汐日志，将真样本藏在设备箱中。他承认因担心样本转运审批流程漏洞被利用，阻止转运，但未料到事态失控。样本被安全归还，审批流程重新审查。"
+          },
+          {
+            "id": "wrong_ending",
+            "kind": "wrong",
+            "title": "错误的指认",
+            "text": "你的证据链不完整，错误地指责了林海。真样本被赵天宇转移，无法找回。天文台关闭，陨石研究中断。重新调查，注意潮汐记录与实际观测的矛盾。"
+          }
+        ]
+      },
+      "hash": "deb69b75b55f51e1ea9e0e238ce744b8d5029c866d199a4a5f196417491a04ca"
+    },
+    {
+      "id": "f3e63643-4b28-41c9-9904-8e80fb9a03f8",
+      "number": 3,
+      "createdAt": "2026-09-20T20:50:55.904Z",
+      "note": "验收实验：明确注入关键物证自依赖，随后测试保留真相的 Agent 修复",
+      "case": {
+        "schemaVersion": 1,
+        "title": "陨石疑云",
+        "logline": "在即将闭馆的海边天文台，一块珍贵陨石样本被调包，三位研究者各怀秘密，真相藏于观测日志与潮汐时间的矛盾之中",
+        "opening": "23:45，天文台即将闭馆。值班研究员发现陨石样本被调包，真品不翼而飞。监控显示只有三人进入过样本库，但他们的证词与潮汐记录存在矛盾。你作为调查员，必须在闭馆前找出真相。",
+        "style": "写实悬疑风格，现代海边天文台，冷色调为主，注重科学细节。镜头以固定机位为主，强调环境细节，避免文字提示。所有角色均为成年人。",
+        "truth": {
+          "culpritId": "zhao_tianyu",
+          "motive": "赵天宇发现样本转运审批流程尚未完成，担心被非法转移，因此调包样本阻止转运，但未计划造成严重后果。",
+          "method": "篡改潮汐日志，将真样本藏于潮汐观测站设备箱，阻止审批流程完成。",
+          "requiredEvidenceIds": [
+            "tide_log",
+            "fake_stone",
+            "research_note"
+          ],
+          "timeline": [
+            {
+              "time": "23:10",
+              "event": "赵天宇篡改潮汐记录日志，将高潮时段标记为低潮。"
+            },
+            {
+              "time": "23:25",
+              "event": "进入样本库调包陨石，将真样本藏入潮汐观测站设备箱。"
+            },
+            {
+              "time": "23:40",
+              "event": "返回实验室，整理分析数据。"
+            }
+          ]
+        },
+        "characters": [
+          {
+            "id": "lin_hai",
+            "name": "林海",
+            "role": "天文台首席研究员",
+            "description": "40岁，戴眼镜，白大褂，严谨但略显疲惫。负责陨石样本的保管与研究。",
+            "publicKnowledge": "林海对陨石样本异常高度关注，但未发现调包迹象。他主张严格遵循科研规范，反对私下行动。",
+            "secret": "他长期怀疑样本可能涉及外星生命迹象，但机构高层不支持深入研究，暗中希望保留样本进行更多分析。",
+            "portraitPrompt": "Portrait of a 40-year-old Chinese male scientist, glasses, white lab coat, serious expression, modern coastal observatory background, cinematic lighting, no text.",
+            "topics": [
+              {
+                "id": "sample_status",
+                "question": "样本异常是什么时候发现的？",
+                "answer": "刚发现样本柜空了。监控显示只有三人进入过，但调包痕迹不明显，需要分析报告确认。",
+                "requires": [],
+                "reveals": []
+              },
+              {
+                "id": "research_intent",
+                "question": "你是否想单独研究样本？",
+                "answer": "当然，但必须按程序申请。我从不私自行动，这是科研底线。",
+                "requires": [
+                  "analysis_report"
+                ],
+                "reveals": []
+              }
+            ]
+          },
+          {
+            "id": "su_qing",
+            "name": "苏晴",
+            "role": "地质学家",
+            "description": "32岁，短发，穿地质勘探服。负责陨石成分分析。",
+            "publicKnowledge": "苏晴对陨石成分有专业判断，但未公开怀疑。她认为样本异常可能与潮汐环境有关。",
+            "secret": "她发现陨石中含特殊矿物，对地质研究有重大突破价值，但机构不允许带走样本，计划闭馆前偷取。",
+            "portraitPrompt": "Portrait of a 32-year-old Chinese female geologist, short hair, field jacket, focused expression, coastal observatory lab, cinematic lighting, no text.",
+            "topics": [
+              {
+                "id": "mineral_analysis",
+                "question": "样本成分分析结果如何？",
+                "answer": "初步检测显示矿物结构异常，但需要更多数据。潮汐变化可能影响了样本状态。",
+                "requires": [],
+                "reveals": []
+              },
+              {
+                "id": "sample_steal",
+                "question": "你是否想带走样本？",
+                "answer": "当然想，但必须合法。我不会做违法的事，样本是国家财产。",
+                "requires": [
+                  "analysis_report"
+                ],
+                "reveals": []
+              }
+            ]
+          },
+          {
+            "id": "zhao_tianyu",
+            "name": "赵天宇",
+            "role": "气象学家",
+            "description": "45岁，穿气象局制服，手持潮汐记录本。负责潮汐观测与数据记录。",
+            "publicKnowledge": "赵天宇对潮汐数据记录严谨，近期行为异常，但声称一切正常。",
+            "secret": "他发现样本转运审批流程存在漏洞，担心被非法转移，因此调包样本阻止转运。",
+            "portraitPrompt": "Portrait of a 45-year-old Chinese male meteorologist, uniform, holding tide logbook, coastal observatory setting, cinematic lighting, no text.",
+            "topics": [
+              {
+                "id": "tide_record",
+                "question": "潮汐记录是否准确？",
+                "answer": "记录完全准确。昨晚低潮时段确实很平静，样本柜从未被触碰过。",
+                "requires": [],
+                "reveals": []
+              },
+              {
+                "id": "tide_log_review",
+                "question": "你为什么修改潮汐记录？",
+                "answer": "我发现了转运审批的漏洞，必须阻止样本被转移。但没想到会引发这么大的问题。",
+                "requires": [
+                  "tide_log"
+                ],
+                "reveals": [
+                  "research_note"
+                ]
+              }
+            ]
+          }
+        ],
+        "scenes": [
+          {
+            "id": "main_observatory",
+            "name": "主观测室",
+            "description": "存放陨石样本的恒温库，监控显示最后进入的是赵天宇。样本柜空了，只留下一个调包的普通石头。",
+            "requires": [],
+            "characterIds": [
+              "lin_hai",
+              "zhao_tianyu",
+              "su_qing"
+            ],
+            "imagePrompt": "Interior of a modern coastal observatory main observation room, stainless steel sample cabinet open, empty space where meteorite should be, a fake rock inside, dim blue lighting, scientific equipment, no people, cinematic shot, no text.",
+            "videoPrompt": "Wide static shot of the main observatory room, open sample cabinet with a fake rock inside, blue ambient lighting, subtle movement of equipment. No people, no text."
+          },
+          {
+            "id": "tide_station",
+            "name": "潮汐观测站",
+            "description": "潮汐记录仪显示低潮时间，但实际潮位是高潮。记录本上有篡改痕迹。",
+            "requires": [],
+            "characterIds": [
+              "zhao_tianyu"
+            ],
+            "imagePrompt": "Coastal tide monitoring station at night, rain on the window, tide logbook on desk with scribbled corrections, electronic equipment displaying wave data, cold blue lighting, cinematic composition, no text.",
+            "videoPrompt": "Static shot of a tide monitoring station, raindrops on the window, a logbook with erased entries, electronic screens showing incorrect tidal data. No people, no text."
+          },
+          {
+            "id": "lab",
+            "name": "实验室",
+            "description": "陨石分析仪器显示样本异常，但无法确定是否被调包。需要更多证据确认。",
+            "requires": [],
+            "characterIds": [
+              "su_qing",
+              "lin_hai"
+            ],
+            "imagePrompt": "Modern laboratory with microscopes and analytical equipment, a stone sample on the table, scientific instruments, cool fluorescent lighting, cinematic detail, no people, no text.",
+            "videoPrompt": "Close-up of laboratory equipment analyzing a stone sample, fluorescent lights reflecting on metal surfaces, subtle movement of instruments. No people, no text."
+          }
+        ],
+        "clues": [
+          {
+            "id": "fake_stone",
+            "name": "调包陨石",
+            "description": "样本柜中的普通石头，表面处理成陨石外观，但成分分析与真陨石不符。",
+            "sceneId": "main_observatory",
+            "requires": [
+              "fake_stone"
+            ]
+          },
+          {
+            "id": "tide_log",
+            "name": "潮汐记录日志",
+            "description": "记录显示23:20为低潮，但实际潮位是高潮。笔迹显示曾被篡改。",
+            "sceneId": "tide_station",
+            "requires": []
+          },
+          {
+            "id": "analysis_report",
+            "name": "陨石成分分析报告",
+            "description": "实验室分析显示，样本中的矿物成分与真陨石不符，但具体数据需要更多证据验证。",
+            "sceneId": "lab",
+            "requires": []
+          },
+          {
+            "id": "research_note",
+            "name": "赵天宇的笔记本",
+            "description": "记录了样本转运审批流程的漏洞，以及阻止转运的计划。页角有'必须阻止转运'的潦草字迹。",
+            "sceneId": null,
+            "requires": []
+          },
+          {
+            "id": "equipment_box",
+            "name": "备用设备箱",
+            "description": "箱内藏有真陨石样本，但需要先发现箱内有异常才能打开。",
+            "sceneId": "tide_station",
+            "requires": [
+              "tide_log"
+            ]
+          },
+          {
+            "id": "security_footage",
+            "name": "监控记录",
+            "description": "监控显示赵天宇在23:25进入样本库，但画面被模糊处理，无法确认细节。",
+            "sceneId": "main_observatory",
+            "requires": []
+          }
+        ],
+        "endings": [
+          {
+            "id": "solved_ending",
+            "kind": "solved",
+            "title": "潮汐真相",
+            "text": "你发现赵天宇篡改潮汐日志，将真样本藏在设备箱中。他承认因担心样本转运审批流程漏洞被利用，阻止转运，但未料到事态失控。样本被安全归还，审批流程重新审查。"
+          },
+          {
+            "id": "wrong_ending",
+            "kind": "wrong",
+            "title": "错误的指认",
+            "text": "你的证据链不完整，错误地指责了林海。真样本被赵天宇转移，无法找回。天文台关闭，陨石研究中断。重新调查，注意潮汐记录与实际观测的矛盾。"
+          }
+        ]
+      },
+      "hash": "834d648c65e537716a9aa64387071c661ca9f09bbb61eb0985e5816c1a42c08a"
+    }
+  ],
+  "assets": [],
+  "report": {
+    "rulesVersion": 2,
+    "passed": false,
+    "issues": [
+      {
+        "code": "UNREACHABLE_CLUE",
+        "path": "clues.fake_stone",
+        "message": "证据「调包陨石」不可达，检查场景开放和证据之间的循环依赖。",
+        "relatedIds": [
+          "fake_stone",
+          "main_observatory",
+          "fake_stone"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "NO_WINNING_PATH",
+        "path": "truth.requiredEvidenceIds",
+        "message": "玩家无法获得结案所需的完整证据链。",
+        "relatedIds": [
+          "fake_stone"
+        ],
+        "severity": "error"
+      }
+    ],
+    "reachableClues": [
+      "security_footage",
+      "tide_log",
+      "equipment_box",
+      "research_note",
+      "analysis_report"
+    ],
+    "reachableScenes": [
+      "main_observatory",
+      "tide_station",
+      "lab"
+    ],
+    "winningPath": [],
+    "actionCount": 10,
+    "checkedAt": "2026-09-20T20:50:55.904Z",
+    "caseHash": "834d648c65e537716a9aa64387071c661ca9f09bbb61eb0985e5816c1a42c08a"
+  },
+  "source": "generated"
+}

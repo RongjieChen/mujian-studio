@@ -78,3 +78,22 @@ test('all 64 subsets of sample evidence obey ending conditions',()=>{
     }
   }
 });
+
+test('a collectible note cannot substitute for required gated testimony',()=>{
+  const doc=structuredClone(sampleCase);
+  const witness=doc.clues.find(c=>c.id==='witness')!;
+  witness.sceneId='screening';
+  for(const c of doc.characters)for(const t of c.topics)t.reveals=t.reveals.filter(id=>id!=='witness');
+  const report=validateCase(doc);
+  assert.equal(report.passed,false);
+  assert.ok(report.issues.some(i=>i.code==='MISSING_GATED_TESTIMONY'));
+});
+
+test('an alternative ungated topic cannot bypass the required evidence conversation',()=>{
+  const doc=structuredClone(sampleCase);
+  doc.clues.find(c=>c.id==='witness')!.requires=[];
+  doc.characters[0].topics.push({id:'unguarded_confession',question:'发生了什么？',answer:'我看见了。',requires:[],reveals:['witness']});
+  const report=validateCase(doc);
+  assert.equal(report.passed,false);
+  assert.ok(report.issues.some(i=>i.code==='MISSING_GATED_TESTIMONY'));
+});

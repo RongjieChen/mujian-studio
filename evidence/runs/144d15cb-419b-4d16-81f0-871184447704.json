@@ -1,0 +1,345 @@
+{
+  "id": "144d15cb-419b-4d16-81f0-871184447704",
+  "projectId": "6efb23e6-4ca6-4e45-a13a-7ce58d9c4760",
+  "kind": "video",
+  "state": "succeeded",
+  "request": {
+    "sceneId": "tea",
+    "kind": "video",
+    "seed": 73,
+    "quality": "draft",
+    "force": false,
+    "retryOf": "0403845b-3d41-4c5c-9ddd-51456f17cb57"
+  },
+  "baseRevision": 3,
+  "events": [
+    {
+      "at": "2026-09-20T21:10:14.213Z",
+      "type": "workflow",
+      "message": "执行分镜制作流程：顺序调度、种子固定、保留旧素材"
+    },
+    {
+      "at": "2026-09-20T21:10:14.216Z",
+      "type": "memory",
+      "message": "等待语言模型释放内存，为视频生成腾出统一内存。"
+    },
+    {
+      "at": "2026-09-20T21:10:14.218Z",
+      "type": "memory",
+      "message": "已确认语言模型休眠，开始视频作业。"
+    },
+    {
+      "at": "2026-09-20T21:10:14.424Z",
+      "type": "media",
+      "message": "本地 GPU 作业已创建",
+      "detail": {
+        "workerJobId": "82fd0748-d6b8-47d1-9dcc-6ea766a74a1f",
+        "kind": "video",
+        "seed": 73,
+        "inputHash": "b059638caf438ecfdf54194d95d81f4accb513b2df24de34aa551f1db85052dd"
+      }
+    },
+    {
+      "at": "2026-09-20T21:10:14.425Z",
+      "type": "progress",
+      "message": "素材状态：queued",
+      "detail": {}
+    },
+    {
+      "at": "2026-09-20T21:10:16.232Z",
+      "type": "progress",
+      "message": "加载本地生成模型",
+      "detail": {
+        "phase": "loading"
+      }
+    },
+    {
+      "at": "2026-09-20T21:11:55.413Z",
+      "type": "progress",
+      "message": "生成采样 1/20",
+      "detail": {
+        "phase": "sampling",
+        "step": 1,
+        "steps": 20
+      }
+    },
+    {
+      "at": "2026-09-20T21:11:59.024Z",
+      "type": "progress",
+      "message": "生成采样 2/20",
+      "detail": {
+        "phase": "sampling",
+        "step": 2,
+        "steps": 20
+      }
+    },
+    {
+      "at": "2026-09-20T21:12:02.636Z",
+      "type": "progress",
+      "message": "生成采样 3/20",
+      "detail": {
+        "phase": "sampling",
+        "step": 3,
+        "steps": 20
+      }
+    },
+    {
+      "at": "2026-09-20T21:12:06.255Z",
+      "type": "progress",
+      "message": "生成采样 4/20",
+      "detail": {
+        "phase": "sampling",
+        "step": 4,
+        "steps": 20
+      }
+    },
+    {
+      "at": "2026-09-20T21:12:09.869Z",
+      "type": "progress",
+      "message": "生成采样 5/20",
+      "detail": {
+        "phase": "sampling",
+        "step": 5,
+        "steps": 20
+      }
+    },
+    {
+      "at": "2026-09-20T21:12:13.477Z",
+      "type": "progress",
+      "message": "生成采样 6/20",
+      "detail": {
+        "phase": "sampling",
+        "step": 6,
+        "steps": 20
+      }
+    },
+    {
+      "at": "2026-09-20T21:12:17.098Z",
+      "type": "progress",
+      "message": "生成采样 7/20",
+      "detail": {
+        "phase": "sampling",
+        "step": 7,
+        "steps": 20
+      }
+    },
+    {
+      "at": "2026-09-20T21:12:18.903Z",
+      "type": "progress",
+      "message": "生成采样 8/20",
+      "detail": {
+        "phase": "sampling",
+        "step": 8,
+        "steps": 20
+      }
+    },
+    {
+      "at": "2026-09-20T21:12:22.517Z",
+      "type": "progress",
+      "message": "生成采样 9/20",
+      "detail": {
+        "phase": "sampling",
+        "step": 9,
+        "steps": 20
+      }
+    },
+    {
+      "at": "2026-09-20T21:12:26.124Z",
+      "type": "progress",
+      "message": "生成采样 10/20",
+      "detail": {
+        "phase": "sampling",
+        "step": 10,
+        "steps": 20
+      }
+    },
+    {
+      "at": "2026-09-20T21:12:29.736Z",
+      "type": "progress",
+      "message": "生成采样 11/20",
+      "detail": {
+        "phase": "sampling",
+        "step": 11,
+        "steps": 20
+      }
+    },
+    {
+      "at": "2026-09-20T21:12:33.344Z",
+      "type": "progress",
+      "message": "生成采样 12/20",
+      "detail": {
+        "phase": "sampling",
+        "step": 12,
+        "steps": 20
+      }
+    },
+    {
+      "at": "2026-09-20T21:12:36.954Z",
+      "type": "progress",
+      "message": "生成采样 13/20",
+      "detail": {
+        "phase": "sampling",
+        "step": 13,
+        "steps": 20
+      }
+    },
+    {
+      "at": "2026-09-20T21:12:40.562Z",
+      "type": "progress",
+      "message": "生成采样 14/20",
+      "detail": {
+        "phase": "sampling",
+        "step": 14,
+        "steps": 20
+      }
+    },
+    {
+      "at": "2026-09-20T21:12:44.184Z",
+      "type": "progress",
+      "message": "生成采样 15/20",
+      "detail": {
+        "phase": "sampling",
+        "step": 15,
+        "steps": 20
+      }
+    },
+    {
+      "at": "2026-09-20T21:12:47.793Z",
+      "type": "progress",
+      "message": "生成采样 16/20",
+      "detail": {
+        "phase": "sampling",
+        "step": 16,
+        "steps": 20
+      }
+    },
+    {
+      "at": "2026-09-20T21:12:51.403Z",
+      "type": "progress",
+      "message": "生成采样 17/20",
+      "detail": {
+        "phase": "sampling",
+        "step": 17,
+        "steps": 20
+      }
+    },
+    {
+      "at": "2026-09-20T21:12:55.011Z",
+      "type": "progress",
+      "message": "生成采样 18/20",
+      "detail": {
+        "phase": "sampling",
+        "step": 18,
+        "steps": 20
+      }
+    },
+    {
+      "at": "2026-09-20T21:12:58.619Z",
+      "type": "progress",
+      "message": "生成采样 19/20",
+      "detail": {
+        "phase": "sampling",
+        "step": 19,
+        "steps": 20
+      }
+    },
+    {
+      "at": "2026-09-20T21:13:02.239Z",
+      "type": "progress",
+      "message": "生成采样 20/20",
+      "detail": {
+        "phase": "sampling",
+        "step": 20,
+        "steps": 20
+      }
+    },
+    {
+      "at": "2026-09-20T21:13:18.477Z",
+      "type": "progress",
+      "message": "素材状态：succeeded",
+      "detail": {
+        "phase": "done",
+        "step": 20,
+        "steps": 20
+      }
+    },
+    {
+      "at": "2026-09-20T21:13:18.505Z",
+      "type": "asset",
+      "message": "生成完成，已保存可追溯素材",
+      "detail": {
+        "assetId": "7eee28d7-8fd2-446c-b05c-579897451ad5",
+        "durationMs": 183559,
+        "stale": false
+      }
+    }
+  ],
+  "createdAt": "2026-09-20T21:10:14.206Z",
+  "startedAt": "2026-09-20T21:10:14.206Z",
+  "result": {
+    "asset": {
+      "id": "7eee28d7-8fd2-446c-b05c-579897451ad5",
+      "sceneId": "tea",
+      "kind": "video",
+      "file": "7eee28d7-8fd2-446c-b05c-579897451ad5.mp4",
+      "mime": "video/mp4",
+      "inputHash": "b059638caf438ecfdf54194d95d81f4accb513b2df24de34aa551f1db85052dd",
+      "seed": 73,
+      "model": "/root/mujian-runtime/models/Wan2.2-TI2V-5B-Diffusers",
+      "durationMs": 183559,
+      "createdAt": "2026-09-20T21:13:18.496Z",
+      "provenance": "local-generation",
+      "metadata": {
+        "id": "82fd0748-d6b8-47d1-9dcc-6ea766a74a1f",
+        "state": "succeeded",
+        "createdAt": 1789938614.4211125,
+        "request": {
+          "kind": "video",
+          "prompt": "The woman from the reference image sits beside the piano. She breathes gently, blinks naturally and slowly turns her gaze towards the camera. Preserve her short black bob, green knitted clothing and warm dim lighting from the reference. Locked medium shot, very subtle movement. No dialogue, no text.\nVisual style: 写实悬疑电影，1998 年中国南方山间旅馆，墨绿色与钨丝灯琥珀色，35mm 胶片颗粒，克制的固定镜头，无可读文字，无水印。所有角色均为成年人。",
+          "seed": 73,
+          "reference": "43998cd0-5a60-4f3a-b0a4-2d635d613228.png",
+          "quality": "draft"
+        },
+        "phase": "done",
+        "device": "NVIDIA GB10",
+        "diffusersVersion": "0.35.2",
+        "vaeTiling": false,
+        "loadMs": 94761,
+        "steps": 20,
+        "step": 20,
+        "probe": {
+          "programs": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "width": 768,
+              "height": 448
+            }
+          ],
+          "format": {
+            "duration": "2.041667"
+          }
+        },
+        "file": "82fd0748-d6b8-47d1-9dcc-6ea766a74a1f.mp4",
+        "model": "/root/mujian-runtime/models/Wan2.2-TI2V-5B-Diffusers",
+        "durationMs": 183559,
+        "peakAllocatedBytes": 32255070208,
+        "settings": {
+          "width": 768,
+          "height": 448,
+          "num_frames": 49,
+          "num_inference_steps": 20,
+          "guidance_scale": 5
+        },
+        "torchVersion": "2.9.1+cu130",
+        "cudaVersion": "13.0",
+        "finishedAt": 1789938797.9816158,
+        "quality": "draft",
+        "referenceHash": "33cbf555f1654103b8288593c87e2547a635060e0a048d34bfb4da5d73d93220"
+      }
+    },
+    "cacheHit": false,
+    "stale": false
+  },
+  "finishedAt": "2026-09-20T21:13:18.506Z"
+}

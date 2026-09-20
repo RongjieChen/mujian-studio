@@ -1,0 +1,519 @@
+{
+  "id": "8c0fd0e1-a621-41cc-85e5-ce5cea62ed3e",
+  "title": "童谣谜案",
+  "brief": "创作一个全新的原创中文推理影游：旧剧院闭幕纪念演出前，终场录音被替换成了四十秒钟的童谣。三位成年工作人员都接触过控制室，请设计三个场景、六条证据和两种结局，动机温暖但不能开场剧透。至少一条结案必需证据必须是人物证词，只能在出示现场物证后通过盘问取得。证词不能放在场景里直接拾取。录音时间、门禁记录、人物说法要能相互核对，避免超自然或不合理科学解释。",
+  "createdAt": "2026-09-20T20:55:04.016Z",
+  "updatedAt": "2026-09-20T20:55:04.016Z",
+  "revision": 1,
+  "case": {
+    "schemaVersion": 1,
+    "title": "童谣谜案",
+    "logline": "旧剧院闭幕前，终场录音被童谣替换。三位工作人员各怀心事，真相藏在温暖的动机里。",
+    "opening": "闭幕演出前，当熟悉的交响乐即将响起，控制室却传出四十秒的童谣。三名工作人员——音响师苏明、舞台监督赵雪、保安王强——都曾接触控制室。他们声称无辜，但细节中藏着矛盾。时间紧迫，真相将在演出前揭晓。",
+    "style": "写实悬疑，旧剧院怀旧氛围，1990年代中国风格。光线柔和，固定镜头，注重细节。人物对话简洁，避免直白剧透。所有角色均为成年人，无超自然元素。",
+    "truth": {
+      "culpritId": "character_002",
+      "motive": "赵雪发现剧院装修偷工减料导致舞台结构不安全，想用童谣提醒大家注意，但被误解为破坏。她替换录音是为阻止演出，避免事故。",
+      "method": "赵雪在演出前2小时进入控制室，用备份磁带替换终场录音。她利用保安王强值班时间避开监控，但门禁记录留下痕迹。",
+      "requiredEvidenceIds": [
+        "clue_002",
+        "clue_004",
+        "clue_006"
+      ],
+      "timeline": [
+        {
+          "time": "演出前3小时",
+          "event": "赵雪发现舞台结构问题，决定替换录音"
+        },
+        {
+          "time": "演出前2小时",
+          "event": "赵雪进入控制室替换录音"
+        },
+        {
+          "time": "演出前1.5小时",
+          "event": "王强发现门禁异常但未上报"
+        },
+        {
+          "time": "演出前1小时",
+          "event": "苏明发现录音异常但以为设备故障"
+        }
+      ]
+    },
+    "characters": [
+      {
+        "id": "character_001",
+        "name": "苏明",
+        "role": "音响师 · 40岁",
+        "description": "黑框眼镜，深蓝工作服，双手有长期操作设备的茧。",
+        "publicKnowledge": "负责剧院所有音响设备维护，今晚负责终场录音播放。声称自己整晚都在控制室检查设备，没有离开过。",
+        "secret": "曾因设备故障被老板责骂，但其实想用童谣提醒老板注意安全隐患。",
+        "portraitPrompt": "Portrait of a 40-year-old Chinese man with black-rimmed glasses, dark blue work uniform, calloused hands, focused expression, dimly lit control room background, cinematic 35mm photograph, no text.",
+        "topics": [
+          {
+            "id": "alibi",
+            "question": "今晚你离开过控制室吗？",
+            "answer": "没有。我一直在调试设备，直到演出开始。",
+            "requires": [],
+            "reveals": []
+          },
+          {
+            "id": "sound_check",
+            "question": "发现录音被替换时，你做了什么？",
+            "answer": "我以为是设备故障，检查了线路和播放器，但没发现异常。直到听到童谣才意识到有问题。",
+            "requires": [
+              "clue_001"
+            ],
+            "reveals": []
+          }
+        ]
+      },
+      {
+        "id": "character_002",
+        "name": "赵雪",
+        "role": "舞台监督 · 35岁",
+        "description": "黑色高马尾，白色衬衫，手持对讲机，眼神锐利。",
+        "publicKnowledge": "负责演出流程和舞台调度，声称自己在后台监督，没有进入过控制室。",
+        "secret": "发现舞台结构问题，想用童谣提醒大家，但被误解。",
+        "portraitPrompt": "Portrait of a 35-year-old Chinese woman with high black ponytail, white shirt, walkie-talkie in hand, sharp gaze, backstage environment, cinematic 35mm photograph, no text.",
+        "topics": [
+          {
+            "id": "stage_safety",
+            "question": "你对舞台安全有什么看法？",
+            "answer": "最近装修后，舞台承重有问题，但老板没重视。我本来想用其他方式提醒，但没想到会这样。",
+            "requires": [],
+            "reveals": []
+          },
+          {
+            "id": "control_room",
+            "question": "你声称没进过控制室，但门禁记录显示你进过。",
+            "answer": "……是的，我确实进去过。但我是为了检查舞台指示灯的线路，不是为了录音。",
+            "requires": [
+              "clue_002"
+            ],
+            "reveals": []
+          }
+        ]
+      },
+      {
+        "id": "character_003",
+        "name": "王强",
+        "role": "保安 · 45岁",
+        "description": "制服笔挺，腰间钥匙串，脸上有旧伤疤。",
+        "publicKnowledge": "负责剧院安全，值班时没有发现异常。声称没有看到任何人进入控制室。",
+        "secret": "女儿曾在剧院走失，想用童谣提醒注意儿童安全。",
+        "portraitPrompt": "Portrait of a 45-year-old Chinese security guard in uniform, prominent scar on cheek, keys at waist, stern expression, dim corridor lighting, cinematic 35mm photograph, no text.",
+        "topics": [
+          {
+            "id": "alibi",
+            "question": "你值班时有没有看到有人进出控制室？",
+            "answer": "……其实我看到赵雪进去过，但当时以为是例行检查，没上报。",
+            "requires": [
+              "clue_002",
+              "clue_004"
+            ],
+            "reveals": [
+              "clue_006"
+            ]
+          }
+        ]
+      }
+    ],
+    "scenes": [
+      {
+        "id": "control_room",
+        "name": "控制室",
+        "description": "布满电子设备的房间，录音机显示正在播放童谣，但原始磁带已被替换。门禁记录仪显示有人进出。",
+        "requires": [],
+        "characterIds": [
+          "character_001",
+          "character_002"
+        ],
+        "imagePrompt": "A dimly lit control room in an old theater, vintage audio equipment, recording machine playing a nursery rhyme, access card reader on the wall, cinematic 35mm film still, no text, no people.",
+        "videoPrompt": "Static camera shot of a control room in an old theater, recording machine playing a nursery rhyme, dim warm lighting, subtle movement of equipment, no text, no people."
+      },
+      {
+        "id": "backstage_lounge",
+        "name": "后台休息室",
+        "description": "杂乱的休息室，有茶杯、笔记本、撕碎的童谣歌词纸条。",
+        "requires": [],
+        "characterIds": [
+          "character_002"
+        ],
+        "imagePrompt": "A cluttered backstage lounge in an old theater, empty teacup on table, notebook with handwritten notes, torn pieces of nursery rhyme lyrics on floor, warm tungsten light, cinematic 35mm photograph, no text.",
+        "videoPrompt": "Slow pan across a backstage lounge in an old theater, empty teacup, scattered papers with nursery rhyme lyrics, warm dim lighting, subtle dust particles in air, no text, no people."
+      },
+      {
+        "id": "audience_corridor",
+        "name": "观众席通道",
+        "description": "狭窄通道，监控摄像头对准控制室入口，但画面模糊。门禁系统记录显示异常。",
+        "requires": [],
+        "characterIds": [
+          "character_003"
+        ],
+        "imagePrompt": "A narrow audience corridor in an old theater, dim security camera view of control room entrance, faint access card reader light, cinematic film still, no text, no people.",
+        "videoPrompt": "Static camera shot of a theater corridor, dim security camera feed showing control room entrance, soft ambient light, subtle movement of shadows, no text, no people."
+      }
+    ],
+    "clues": [
+      {
+        "id": "clue_001",
+        "name": "录音机原始带",
+        "description": "录音机内磁带被替换，但残留的旧磁带碎片显示原版是交响乐。",
+        "sceneId": "control_room",
+        "requires": []
+      },
+      {
+        "id": "clue_002",
+        "name": "门禁记录",
+        "description": "门禁系统记录显示赵雪在演出前2小时进入控制室，但保安声称无人进出。",
+        "sceneId": "control_room",
+        "requires": []
+      },
+      {
+        "id": "clue_003",
+        "name": "舞台笔记本",
+        "description": "赵雪的笔记本记录了舞台结构问题，但被撕掉关键页。",
+        "sceneId": "backstage_lounge",
+        "requires": []
+      },
+      {
+        "id": "clue_004",
+        "name": "监控日志",
+        "description": "监控记录显示控制室入口有模糊人影，但画面无法识别。",
+        "sceneId": "audience_corridor",
+        "requires": []
+      },
+      {
+        "id": "clue_005",
+        "name": "童谣歌词碎片",
+        "description": "后台休息室发现的撕碎歌词纸条，内容与替换录音一致。",
+        "sceneId": "backstage_lounge",
+        "requires": []
+      },
+      {
+        "id": "clue_006",
+        "name": "王强的证词",
+        "description": "通过盘问获得的证词，显示王强看到赵雪进入控制室但未上报。",
+        "sceneId": null,
+        "requires": [
+          "clue_002",
+          "clue_004"
+        ]
+      }
+    ],
+    "endings": [
+      {
+        "id": "solved",
+        "kind": "solved",
+        "title": "温暖的提醒",
+        "text": "你发现赵雪替换录音是为提醒舞台安全隐患。她承认自己用童谣掩盖真实意图，但动机纯粹。演出取消，剧院启动安全检查。"
+      },
+      {
+        "id": "wrong",
+        "kind": "wrong",
+        "title": "未解的谜题",
+        "text": "你误判了真相。苏明虽有设备故障，但与录音无关；王强因女儿走失而过度敏感。真相仍在暗处等待被发现。"
+      }
+    ]
+  },
+  "revisions": [
+    {
+      "id": "f6830610-5cfd-4343-8db7-abbf2b1c31b9",
+      "number": 1,
+      "createdAt": "2026-09-20T20:55:04.016Z",
+      "note": "创建案件",
+      "case": {
+        "schemaVersion": 1,
+        "title": "童谣谜案",
+        "logline": "旧剧院闭幕前，终场录音被童谣替换。三位工作人员各怀心事，真相藏在温暖的动机里。",
+        "opening": "闭幕演出前，当熟悉的交响乐即将响起，控制室却传出四十秒的童谣。三名工作人员——音响师苏明、舞台监督赵雪、保安王强——都曾接触控制室。他们声称无辜，但细节中藏着矛盾。时间紧迫，真相将在演出前揭晓。",
+        "style": "写实悬疑，旧剧院怀旧氛围，1990年代中国风格。光线柔和，固定镜头，注重细节。人物对话简洁，避免直白剧透。所有角色均为成年人，无超自然元素。",
+        "truth": {
+          "culpritId": "character_002",
+          "motive": "赵雪发现剧院装修偷工减料导致舞台结构不安全，想用童谣提醒大家注意，但被误解为破坏。她替换录音是为阻止演出，避免事故。",
+          "method": "赵雪在演出前2小时进入控制室，用备份磁带替换终场录音。她利用保安王强值班时间避开监控，但门禁记录留下痕迹。",
+          "requiredEvidenceIds": [
+            "clue_002",
+            "clue_004",
+            "clue_006"
+          ],
+          "timeline": [
+            {
+              "time": "演出前3小时",
+              "event": "赵雪发现舞台结构问题，决定替换录音"
+            },
+            {
+              "time": "演出前2小时",
+              "event": "赵雪进入控制室替换录音"
+            },
+            {
+              "time": "演出前1.5小时",
+              "event": "王强发现门禁异常但未上报"
+            },
+            {
+              "time": "演出前1小时",
+              "event": "苏明发现录音异常但以为设备故障"
+            }
+          ]
+        },
+        "characters": [
+          {
+            "id": "character_001",
+            "name": "苏明",
+            "role": "音响师 · 40岁",
+            "description": "黑框眼镜，深蓝工作服，双手有长期操作设备的茧。",
+            "publicKnowledge": "负责剧院所有音响设备维护，今晚负责终场录音播放。声称自己整晚都在控制室检查设备，没有离开过。",
+            "secret": "曾因设备故障被老板责骂，但其实想用童谣提醒老板注意安全隐患。",
+            "portraitPrompt": "Portrait of a 40-year-old Chinese man with black-rimmed glasses, dark blue work uniform, calloused hands, focused expression, dimly lit control room background, cinematic 35mm photograph, no text.",
+            "topics": [
+              {
+                "id": "alibi",
+                "question": "今晚你离开过控制室吗？",
+                "answer": "没有。我一直在调试设备，直到演出开始。",
+                "requires": [],
+                "reveals": []
+              },
+              {
+                "id": "sound_check",
+                "question": "发现录音被替换时，你做了什么？",
+                "answer": "我以为是设备故障，检查了线路和播放器，但没发现异常。直到听到童谣才意识到有问题。",
+                "requires": [
+                  "clue_001"
+                ],
+                "reveals": []
+              }
+            ]
+          },
+          {
+            "id": "character_002",
+            "name": "赵雪",
+            "role": "舞台监督 · 35岁",
+            "description": "黑色高马尾，白色衬衫，手持对讲机，眼神锐利。",
+            "publicKnowledge": "负责演出流程和舞台调度，声称自己在后台监督，没有进入过控制室。",
+            "secret": "发现舞台结构问题，想用童谣提醒大家，但被误解。",
+            "portraitPrompt": "Portrait of a 35-year-old Chinese woman with high black ponytail, white shirt, walkie-talkie in hand, sharp gaze, backstage environment, cinematic 35mm photograph, no text.",
+            "topics": [
+              {
+                "id": "stage_safety",
+                "question": "你对舞台安全有什么看法？",
+                "answer": "最近装修后，舞台承重有问题，但老板没重视。我本来想用其他方式提醒，但没想到会这样。",
+                "requires": [],
+                "reveals": []
+              },
+              {
+                "id": "control_room",
+                "question": "你声称没进过控制室，但门禁记录显示你进过。",
+                "answer": "……是的，我确实进去过。但我是为了检查舞台指示灯的线路，不是为了录音。",
+                "requires": [
+                  "clue_002"
+                ],
+                "reveals": []
+              }
+            ]
+          },
+          {
+            "id": "character_003",
+            "name": "王强",
+            "role": "保安 · 45岁",
+            "description": "制服笔挺，腰间钥匙串，脸上有旧伤疤。",
+            "publicKnowledge": "负责剧院安全，值班时没有发现异常。声称没有看到任何人进入控制室。",
+            "secret": "女儿曾在剧院走失，想用童谣提醒注意儿童安全。",
+            "portraitPrompt": "Portrait of a 45-year-old Chinese security guard in uniform, prominent scar on cheek, keys at waist, stern expression, dim corridor lighting, cinematic 35mm photograph, no text.",
+            "topics": [
+              {
+                "id": "alibi",
+                "question": "你值班时有没有看到有人进出控制室？",
+                "answer": "……其实我看到赵雪进去过，但当时以为是例行检查，没上报。",
+                "requires": [
+                  "clue_002",
+                  "clue_004"
+                ],
+                "reveals": [
+                  "clue_006"
+                ]
+              }
+            ]
+          }
+        ],
+        "scenes": [
+          {
+            "id": "control_room",
+            "name": "控制室",
+            "description": "布满电子设备的房间，录音机显示正在播放童谣，但原始磁带已被替换。门禁记录仪显示有人进出。",
+            "requires": [],
+            "characterIds": [
+              "character_001",
+              "character_002"
+            ],
+            "imagePrompt": "A dimly lit control room in an old theater, vintage audio equipment, recording machine playing a nursery rhyme, access card reader on the wall, cinematic 35mm film still, no text, no people.",
+            "videoPrompt": "Static camera shot of a control room in an old theater, recording machine playing a nursery rhyme, dim warm lighting, subtle movement of equipment, no text, no people."
+          },
+          {
+            "id": "backstage_lounge",
+            "name": "后台休息室",
+            "description": "杂乱的休息室，有茶杯、笔记本、撕碎的童谣歌词纸条。",
+            "requires": [],
+            "characterIds": [
+              "character_002"
+            ],
+            "imagePrompt": "A cluttered backstage lounge in an old theater, empty teacup on table, notebook with handwritten notes, torn pieces of nursery rhyme lyrics on floor, warm tungsten light, cinematic 35mm photograph, no text.",
+            "videoPrompt": "Slow pan across a backstage lounge in an old theater, empty teacup, scattered papers with nursery rhyme lyrics, warm dim lighting, subtle dust particles in air, no text, no people."
+          },
+          {
+            "id": "audience_corridor",
+            "name": "观众席通道",
+            "description": "狭窄通道，监控摄像头对准控制室入口，但画面模糊。门禁系统记录显示异常。",
+            "requires": [],
+            "characterIds": [
+              "character_003"
+            ],
+            "imagePrompt": "A narrow audience corridor in an old theater, dim security camera view of control room entrance, faint access card reader light, cinematic film still, no text, no people.",
+            "videoPrompt": "Static camera shot of a theater corridor, dim security camera feed showing control room entrance, soft ambient light, subtle movement of shadows, no text, no people."
+          }
+        ],
+        "clues": [
+          {
+            "id": "clue_001",
+            "name": "录音机原始带",
+            "description": "录音机内磁带被替换，但残留的旧磁带碎片显示原版是交响乐。",
+            "sceneId": "control_room",
+            "requires": []
+          },
+          {
+            "id": "clue_002",
+            "name": "门禁记录",
+            "description": "门禁系统记录显示赵雪在演出前2小时进入控制室，但保安声称无人进出。",
+            "sceneId": "control_room",
+            "requires": []
+          },
+          {
+            "id": "clue_003",
+            "name": "舞台笔记本",
+            "description": "赵雪的笔记本记录了舞台结构问题，但被撕掉关键页。",
+            "sceneId": "backstage_lounge",
+            "requires": []
+          },
+          {
+            "id": "clue_004",
+            "name": "监控日志",
+            "description": "监控记录显示控制室入口有模糊人影，但画面无法识别。",
+            "sceneId": "audience_corridor",
+            "requires": []
+          },
+          {
+            "id": "clue_005",
+            "name": "童谣歌词碎片",
+            "description": "后台休息室发现的撕碎歌词纸条，内容与替换录音一致。",
+            "sceneId": "backstage_lounge",
+            "requires": []
+          },
+          {
+            "id": "clue_006",
+            "name": "王强的证词",
+            "description": "通过盘问获得的证词，显示王强看到赵雪进入控制室但未上报。",
+            "sceneId": null,
+            "requires": [
+              "clue_002",
+              "clue_004"
+            ]
+          }
+        ],
+        "endings": [
+          {
+            "id": "solved",
+            "kind": "solved",
+            "title": "温暖的提醒",
+            "text": "你发现赵雪替换录音是为提醒舞台安全隐患。她承认自己用童谣掩盖真实意图，但动机纯粹。演出取消，剧院启动安全检查。"
+          },
+          {
+            "id": "wrong",
+            "kind": "wrong",
+            "title": "未解的谜题",
+            "text": "你误判了真相。苏明虽有设备故障，但与录音无关；王强因女儿走失而过度敏感。真相仍在暗处等待被发现。"
+          }
+        ]
+      },
+      "hash": "500cc1cdf1be82398d32370f4d17c2718f3f5424496e0bd4541712a55656b02d"
+    }
+  ],
+  "assets": [],
+  "report": {
+    "rulesVersion": 2,
+    "passed": true,
+    "issues": [],
+    "reachableClues": [
+      "clue_001",
+      "clue_002",
+      "clue_003",
+      "clue_005",
+      "clue_004",
+      "clue_006"
+    ],
+    "reachableScenes": [
+      "control_room",
+      "backstage_lounge",
+      "audience_corridor"
+    ],
+    "winningPath": [
+      {
+        "type": "collect",
+        "clueId": "clue_001"
+      },
+      {
+        "type": "collect",
+        "clueId": "clue_002"
+      },
+      {
+        "type": "travel",
+        "sceneId": "backstage_lounge"
+      },
+      {
+        "type": "collect",
+        "clueId": "clue_003"
+      },
+      {
+        "type": "collect",
+        "clueId": "clue_005"
+      },
+      {
+        "type": "travel",
+        "sceneId": "audience_corridor"
+      },
+      {
+        "type": "collect",
+        "clueId": "clue_004"
+      },
+      {
+        "type": "ask",
+        "characterId": "character_003",
+        "topicId": "alibi"
+      },
+      {
+        "type": "travel",
+        "sceneId": "control_room"
+      },
+      {
+        "type": "travel",
+        "sceneId": "backstage_lounge"
+      },
+      {
+        "type": "travel",
+        "sceneId": "audience_corridor"
+      },
+      {
+        "type": "accuse",
+        "characterId": "character_002",
+        "evidenceIds": [
+          "clue_002",
+          "clue_004",
+          "clue_006"
+        ]
+      }
+    ],
+    "actionCount": 12,
+    "checkedAt": "2026-09-20T20:56:13.680Z",
+    "caseHash": "500cc1cdf1be82398d32370f4d17c2718f3f5424496e0bd4541712a55656b02d"
+  },
+  "source": "generated",
+  "assetStates": []
+}

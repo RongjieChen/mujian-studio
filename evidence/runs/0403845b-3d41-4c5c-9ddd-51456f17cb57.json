@@ -1,0 +1,66 @@
+{
+  "id": "0403845b-3d41-4c5c-9ddd-51456f17cb57",
+  "projectId": "6efb23e6-4ca6-4e45-a13a-7ce58d9c4760",
+  "kind": "video",
+  "state": "failed",
+  "request": {
+    "sceneId": "tea",
+    "kind": "video",
+    "seed": 73,
+    "quality": "draft",
+    "force": false,
+    "retryOf": "139fe269-9bd6-42b4-8e95-cedddebf2d24"
+  },
+  "baseRevision": 3,
+  "events": [
+    {
+      "at": "2026-09-20T21:06:35.973Z",
+      "type": "workflow",
+      "message": "执行分镜制作流程：顺序调度、种子固定、保留旧素材"
+    },
+    {
+      "at": "2026-09-20T21:06:35.979Z",
+      "type": "memory",
+      "message": "等待语言模型释放内存，为视频生成腾出统一内存。"
+    },
+    {
+      "at": "2026-09-20T21:06:35.980Z",
+      "type": "memory",
+      "message": "已确认语言模型休眠，开始视频作业。"
+    },
+    {
+      "at": "2026-09-20T21:06:36.233Z",
+      "type": "media",
+      "message": "本地 GPU 作业已创建",
+      "detail": {
+        "workerJobId": "0c111ede-f5b7-4a77-8c34-aeae8427da2d",
+        "kind": "video",
+        "seed": 73,
+        "inputHash": "b059638caf438ecfdf54194d95d81f4accb513b2df24de34aa551f1db85052dd"
+      }
+    },
+    {
+      "at": "2026-09-20T21:06:36.236Z",
+      "type": "progress",
+      "message": "素材状态：queued",
+      "detail": {}
+    },
+    {
+      "at": "2026-09-20T21:06:38.039Z",
+      "type": "progress",
+      "message": "加载本地生成模型",
+      "detail": {
+        "phase": "loading"
+      }
+    },
+    {
+      "at": "2026-09-20T21:08:13.621Z",
+      "type": "error",
+      "message": "RuntimeError: Given groups=1, weight of size [160, 12, 3, 3, 3], expected input[1, 3, 3, 258, 258] to have 12 channels, but got 3 channels instead"
+    }
+  ],
+  "createdAt": "2026-09-20T21:06:35.968Z",
+  "startedAt": "2026-09-20T21:06:35.969Z",
+  "error": "RuntimeError: Given groups=1, weight of size [160, 12, 3, 3, 3], expected input[1, 3, 3, 258, 258] to have 12 channels, but got 3 channels instead",
+  "finishedAt": "2026-09-20T21:08:13.631Z"
+}

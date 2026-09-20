@@ -1,0 +1,892 @@
+{
+  "id": "8dc4d052-0565-4b1e-9891-8dc3746e039a",
+  "projectId": null,
+  "kind": "generate",
+  "state": "failed",
+  "request": {
+    "prompt": "在一座即将闭馆的海边天文台，一块陨石样本被调包。三个成年研究者都有动机，关键在于观测日志与潮汐时间不一致。设计三个可探索场景、六条证据、两种结局。至少一条关键证词必须出示已有物证才能取得。原创中文故事，最后揭示一个合理且不悲惨的动机。"
+  },
+  "events": [
+    {
+      "at": "2026-09-20T20:16:26.599Z",
+      "type": "model",
+      "message": "使用 本地 模型 nemotron-3-nano-q4"
+    },
+    {
+      "at": "2026-09-20T20:16:29.073Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 3061,
+        "output": 26,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 3087,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "nemotron-3-nano-q4"
+      }
+    },
+    {
+      "at": "2026-09-20T20:16:29.075Z",
+      "type": "skill",
+      "message": "读取技能：case-design"
+    },
+    {
+      "at": "2026-09-20T20:16:29.661Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 552,
+        "output": 16,
+        "cacheRead": 3057,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 3625,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "nemotron-3-nano-q4"
+      }
+    },
+    {
+      "at": "2026-09-20T20:16:29.662Z",
+      "type": "tool",
+      "message": "读取案件数据契约"
+    },
+    {
+      "at": "2026-09-20T20:17:08.987Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 3910,
+        "output": 2795,
+        "cacheRead": 3624,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 10329,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "nemotron-3-nano-q4"
+      }
+    },
+    {
+      "at": "2026-09-20T20:17:08.992Z",
+      "type": "check",
+      "message": "草稿存在需要修复的规则问题",
+      "detail": {
+        "note": "创建全新案件，请使用 read_case 确认草稿已生成，再进行 validate_case。确保所有 requiredEvidenceIds 对应的线索存在，且 timeline 符合逻辑。避免重复使用已存在的 ID，使用唯一标识符。关键证词必须依赖已有物证 requires，不能直接 reveals。",
+        "issues": [
+          {
+            "code": "MISSING_REFERENCE",
+            "path": "scenes.observatory.characterIds",
+            "message": "引用 liu 不存在。",
+            "relatedIds": [
+              "liu"
+            ],
+            "severity": "error"
+          },
+          {
+            "code": "MISSING_REFERENCE",
+            "path": "scenes.cafeteria.characterIds",
+            "message": "引用 liu 不存在。",
+            "relatedIds": [
+              "liu"
+            ],
+            "severity": "error"
+          },
+          {
+            "code": "NO_CLUE_SOURCE",
+            "path": "clues.witness",
+            "message": "证词「证人陈述」没有对应问话来源。",
+            "relatedIds": [
+              "witness"
+            ],
+            "severity": "error"
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-09-20T20:17:10.825Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 3166,
+        "output": 15,
+        "cacheRead": 7530,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 10711,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "nemotron-3-nano-q4"
+      }
+    },
+    {
+      "at": "2026-09-20T20:17:10.826Z",
+      "type": "tool",
+      "message": "读取工作版本"
+    },
+    {
+      "at": "2026-09-20T20:17:12.300Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 2494,
+        "output": 15,
+        "cacheRead": 10710,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 13219,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "nemotron-3-nano-q4"
+      }
+    },
+    {
+      "at": "2026-09-20T20:17:12.301Z",
+      "type": "check",
+      "message": "实际检查 0/6 条证据，0 步通关路径",
+      "detail": {
+        "passed": false,
+        "issues": [
+          {
+            "code": "MISSING_REFERENCE",
+            "path": "scenes.observatory.characterIds",
+            "message": "引用 liu 不存在。",
+            "relatedIds": [
+              "liu"
+            ],
+            "severity": "error"
+          },
+          {
+            "code": "MISSING_REFERENCE",
+            "path": "scenes.cafeteria.characterIds",
+            "message": "引用 liu 不存在。",
+            "relatedIds": [
+              "liu"
+            ],
+            "severity": "error"
+          },
+          {
+            "code": "NO_CLUE_SOURCE",
+            "path": "clues.witness",
+            "message": "证词「证人陈述」没有对应问话来源。",
+            "relatedIds": [
+              "witness"
+            ],
+            "severity": "error"
+          }
+        ],
+        "reachableClues": [],
+        "reachableScenes": [],
+        "winningPath": [],
+        "actionCount": 0,
+        "checkedAt": "2026-09-20T20:17:12.301Z",
+        "caseHash": "2f9015e8d3e76b782cf07a2acc71edd2fa86522d55ca11c70521c49d557262dc"
+      }
+    },
+    {
+      "at": "2026-09-20T20:17:18.104Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 273,
+        "output": 408,
+        "cacheRead": 13218,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 13899,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "nemotron-3-nano-q4"
+      }
+    },
+    {
+      "at": "2026-09-20T20:17:18.621Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 444,
+        "output": 15,
+        "cacheRead": 13487,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 13946,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "nemotron-3-nano-q4"
+      }
+    },
+    {
+      "at": "2026-09-20T20:17:18.622Z",
+      "type": "tool",
+      "message": "读取工作版本"
+    },
+    {
+      "at": "2026-09-20T20:17:20.276Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 2494,
+        "output": 27,
+        "cacheRead": 13945,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 16466,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "nemotron-3-nano-q4"
+      }
+    },
+    {
+      "at": "2026-09-20T20:17:20.277Z",
+      "type": "skill",
+      "message": "读取技能：shot-direction"
+    },
+    {
+      "at": "2026-09-20T20:18:00.892Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 342,
+        "output": 2916,
+        "cacheRead": 16465,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 19723,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "nemotron-3-nano-q4"
+      }
+    },
+    {
+      "at": "2026-09-20T20:18:00.894Z",
+      "type": "check",
+      "message": "草稿存在需要修复的规则问题",
+      "detail": {
+        "note": "Create fresh case using unique IDs, ensure every character ID appears in required scene characterIds, clues.witness requires key_record, and all requiredEvidenceIds have corresponding clues. Verify timeline logical.",
+        "issues": [
+          {
+            "code": "MISSING_REFERENCE",
+            "path": "scenes.observatory.characterIds",
+            "message": "引用 liu 不存在。",
+            "relatedIds": [
+              "liu"
+            ],
+            "severity": "error"
+          },
+          {
+            "code": "MISSING_REFERENCE",
+            "path": "scenes.cafeteria.characterIds",
+            "message": "引用 liu 不存在。",
+            "relatedIds": [
+              "liu"
+            ],
+            "severity": "error"
+          },
+          {
+            "code": "TOPIC_GUARD_MISMATCH",
+            "path": "topics.zhao",
+            "message": "问话条件没有包含证词 witness 的获取条件。",
+            "relatedIds": [
+              "witness"
+            ],
+            "severity": "error"
+          },
+          {
+            "code": "TOPIC_GUARD_MISMATCH",
+            "path": "topics.alibi",
+            "message": "问话条件没有包含证词 witness 的获取条件。",
+            "relatedIds": [
+              "witness"
+            ],
+            "severity": "error"
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-09-20T20:18:08.761Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 3350,
+        "output": 441,
+        "cacheRead": 16803,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 20594,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "nemotron-3-nano-q4"
+      }
+    },
+    {
+      "at": "2026-09-20T20:18:08.763Z",
+      "type": "patch",
+      "message": "Add witness to alibi topic requires to satisfy TOPIC_GUARD_MISMATCH.",
+      "detail": {
+        "collection": "characters",
+        "id": "zhao",
+        "fields": [
+          "topics",
+          "portraitPrompt",
+          "secret",
+          "publicKnowledge"
+        ],
+        "issues": [
+          {
+            "code": "MISSING_REFERENCE",
+            "path": "scenes.observatory.characterIds",
+            "message": "引用 liu 不存在。",
+            "relatedIds": [
+              "liu"
+            ],
+            "severity": "error"
+          },
+          {
+            "code": "MISSING_REFERENCE",
+            "path": "scenes.cafeteria.characterIds",
+            "message": "引用 liu 不存在。",
+            "relatedIds": [
+              "liu"
+            ],
+            "severity": "error"
+          },
+          {
+            "code": "TOPIC_GUARD_MISMATCH",
+            "path": "topics.zhao",
+            "message": "问话条件没有包含证词 witness 的获取条件。",
+            "relatedIds": [
+              "witness"
+            ],
+            "severity": "error"
+          },
+          {
+            "code": "TOPIC_GUARD_MISMATCH",
+            "path": "topics.alibi",
+            "message": "问话条件没有包含证词 witness 的获取条件。",
+            "relatedIds": [
+              "witness"
+            ],
+            "severity": "error"
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-09-20T20:18:09.546Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 874,
+        "output": 15,
+        "cacheRead": 20149,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 21038,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "nemotron-3-nano-q4"
+      }
+    },
+    {
+      "at": "2026-09-20T20:18:09.547Z",
+      "type": "tool",
+      "message": "读取工作版本"
+    },
+    {
+      "at": "2026-09-20T20:18:11.210Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 2659,
+        "output": 15,
+        "cacheRead": 21037,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 23711,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "nemotron-3-nano-q4"
+      }
+    },
+    {
+      "at": "2026-09-20T20:18:11.211Z",
+      "type": "check",
+      "message": "实际检查 0/6 条证据，0 步通关路径",
+      "detail": {
+        "passed": false,
+        "issues": [
+          {
+            "code": "MISSING_REFERENCE",
+            "path": "scenes.observatory.characterIds",
+            "message": "引用 liu 不存在。",
+            "relatedIds": [
+              "liu"
+            ],
+            "severity": "error"
+          },
+          {
+            "code": "MISSING_REFERENCE",
+            "path": "scenes.cafeteria.characterIds",
+            "message": "引用 liu 不存在。",
+            "relatedIds": [
+              "liu"
+            ],
+            "severity": "error"
+          },
+          {
+            "code": "TOPIC_GUARD_MISMATCH",
+            "path": "topics.zhao",
+            "message": "问话条件没有包含证词 witness 的获取条件。",
+            "relatedIds": [
+              "witness"
+            ],
+            "severity": "error"
+          },
+          {
+            "code": "TOPIC_GUARD_MISMATCH",
+            "path": "topics.alibi",
+            "message": "问话条件没有包含证词 witness 的获取条件。",
+            "relatedIds": [
+              "witness"
+            ],
+            "severity": "error"
+          }
+        ],
+        "reachableClues": [],
+        "reachableScenes": [],
+        "winningPath": [],
+        "actionCount": 0,
+        "checkedAt": "2026-09-20T20:18:11.211Z",
+        "caseHash": "18d371352a5b9053e6ed7867bc063bc12da3be211bafe0a6f16a11d15d174210"
+      }
+    },
+    {
+      "at": "2026-09-20T20:18:12.605Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 331,
+        "output": 78,
+        "cacheRead": 23710,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 24119,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "nemotron-3-nano-q4"
+      }
+    },
+    {
+      "at": "2026-09-20T20:18:12.606Z",
+      "type": "patch",
+      "message": "Remove liu from observatory characterIds to fix missing reference.",
+      "detail": {
+        "collection": "scenes",
+        "id": "observatory",
+        "fields": [
+          "characterIds"
+        ],
+        "issues": [
+          {
+            "code": "MISSING_REFERENCE",
+            "path": "scenes.cafeteria.characterIds",
+            "message": "引用 liu 不存在。",
+            "relatedIds": [
+              "liu"
+            ],
+            "severity": "error"
+          },
+          {
+            "code": "TOPIC_GUARD_MISMATCH",
+            "path": "topics.zhao",
+            "message": "问话条件没有包含证词 witness 的获取条件。",
+            "relatedIds": [
+              "witness"
+            ],
+            "severity": "error"
+          },
+          {
+            "code": "TOPIC_GUARD_MISMATCH",
+            "path": "topics.alibi",
+            "message": "问话条件没有包含证词 witness 的获取条件。",
+            "relatedIds": [
+              "witness"
+            ],
+            "severity": "error"
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-09-20T20:18:14.018Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 384,
+        "output": 77,
+        "cacheRead": 24118,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 24579,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "nemotron-3-nano-q4"
+      }
+    },
+    {
+      "at": "2026-09-20T20:18:14.020Z",
+      "type": "patch",
+      "message": "Remove liu from cafeteria characterIds to fix missing reference.",
+      "detail": {
+        "collection": "scenes",
+        "id": "cafeteria",
+        "fields": [
+          "characterIds"
+        ],
+        "issues": [
+          {
+            "code": "TOPIC_GUARD_MISMATCH",
+            "path": "topics.zhao",
+            "message": "问话条件没有包含证词 witness 的获取条件。",
+            "relatedIds": [
+              "witness"
+            ],
+            "severity": "error"
+          },
+          {
+            "code": "TOPIC_GUARD_MISMATCH",
+            "path": "topics.alibi",
+            "message": "问话条件没有包含证词 witness 的获取条件。",
+            "relatedIds": [
+              "witness"
+            ],
+            "severity": "error"
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-09-20T20:18:14.540Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 340,
+        "output": 15,
+        "cacheRead": 24578,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 24933,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "nemotron-3-nano-q4"
+      }
+    },
+    {
+      "at": "2026-09-20T20:18:14.540Z",
+      "type": "tool",
+      "message": "读取工作版本"
+    },
+    {
+      "at": "2026-09-20T20:18:16.222Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 2653,
+        "output": 15,
+        "cacheRead": 24932,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 27600,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "nemotron-3-nano-q4"
+      }
+    },
+    {
+      "at": "2026-09-20T20:18:16.223Z",
+      "type": "check",
+      "message": "实际检查 0/6 条证据，0 步通关路径",
+      "detail": {
+        "passed": false,
+        "issues": [
+          {
+            "code": "TOPIC_GUARD_MISMATCH",
+            "path": "topics.zhao",
+            "message": "问话条件没有包含证词 witness 的获取条件。",
+            "relatedIds": [
+              "witness"
+            ],
+            "severity": "error"
+          },
+          {
+            "code": "TOPIC_GUARD_MISMATCH",
+            "path": "topics.alibi",
+            "message": "问话条件没有包含证词 witness 的获取条件。",
+            "relatedIds": [
+              "witness"
+            ],
+            "severity": "error"
+          }
+        ],
+        "reachableClues": [],
+        "reachableScenes": [],
+        "winningPath": [],
+        "actionCount": 0,
+        "checkedAt": "2026-09-20T20:18:16.223Z",
+        "caseHash": "653136a33fffe0c9bf36ceb1287c02203ccc04fdff4eec159c049ea4e1ed534d"
+      }
+    },
+    {
+      "at": "2026-09-20T20:18:22.630Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 240,
+        "output": 439,
+        "cacheRead": 27599,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 28278,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "nemotron-3-nano-q4"
+      }
+    },
+    {
+      "at": "2026-09-20T20:18:22.632Z",
+      "type": "patch",
+      "message": "Add witness to alibi requires to fix TOPIC_GUARD_MISMATCH.",
+      "detail": {
+        "collection": "characters",
+        "id": "zhao",
+        "fields": [
+          "topics",
+          "portraitPrompt",
+          "secret",
+          "publicKnowledge"
+        ],
+        "issues": [
+          {
+            "code": "TOPIC_GUARD_MISMATCH",
+            "path": "topics.zhao",
+            "message": "问话条件没有包含证词 witness 的获取条件。",
+            "relatedIds": [
+              "witness"
+            ],
+            "severity": "error"
+          },
+          {
+            "code": "TOPIC_GUARD_MISMATCH",
+            "path": "topics.alibi",
+            "message": "问话条件没有包含证词 witness 的获取条件。",
+            "relatedIds": [
+              "witness"
+            ],
+            "severity": "error"
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-09-20T20:18:25.346Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 340,
+        "output": 172,
+        "cacheRead": 28277,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 28789,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "nemotron-3-nano-q4"
+      }
+    },
+    {
+      "at": "2026-09-20T20:18:25.551Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 64,
+        "output": 1,
+        "cacheRead": 28788,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 28853,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "nemotron-3-nano-q4"
+      }
+    },
+    {
+      "at": "2026-09-20T20:18:25.552Z",
+      "type": "retry",
+      "message": "Agent 尚未提交作品，依据真实检查结果继续修复",
+      "detail": {
+        "attempt": 1,
+        "callsUsed": 17
+      }
+    },
+    {
+      "at": "2026-09-20T20:18:26.013Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 458,
+        "output": 1,
+        "cacheRead": 28788,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 29247,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "nemotron-3-nano-q4"
+      }
+    },
+    {
+      "at": "2026-09-20T20:18:26.013Z",
+      "type": "retry",
+      "message": "Agent 尚未提交作品，依据真实检查结果继续修复",
+      "detail": {
+        "attempt": 2,
+        "callsUsed": 17
+      }
+    },
+    {
+      "at": "2026-09-20T20:18:26.724Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 794,
+        "output": 1,
+        "cacheRead": 28846,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 29641,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "nemotron-3-nano-q4"
+      }
+    },
+    {
+      "at": "2026-09-20T20:18:26.725Z",
+      "type": "error",
+      "message": "Agent 尚未提交通过检查的版本。请查看记录后调整要求重试，原项目已保留。"
+    }
+  ],
+  "createdAt": "2026-09-20T20:16:26.581Z",
+  "startedAt": "2026-09-20T20:16:26.582Z",
+  "error": "Agent 尚未提交通过检查的版本。请查看记录后调整要求重试，原项目已保留。",
+  "finishedAt": "2026-09-20T20:18:26.734Z"
+}

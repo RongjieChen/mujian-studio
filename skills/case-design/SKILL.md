@@ -7,7 +7,7 @@ description: Design a complete, editable short mystery game from a story brief. 
 
 先 read_case_schema 读取真实契约。按顺序确定真相、作案时间线、三个成年嫌疑人的动机与在场说法，再倒推证据。不要先写漫长小说再试图接上规则。
 
-- 3 个场景、3 名人物、6 条证据，至少一条通过携带前置证据盘问人物才能得到。
+- 3 个场景、3 名人物、6 条证据，至少一条结案必需证据必须通过携带现场物证盘问人物才能得到。带条件的现场笔记不等于人物证词。
 - 现场物证有 sceneId；问话证词 sceneId 必须为 null，只由 topics.reveals 获取。
 - 所有人物必须放进场景 characterIds。场景至少一个无前置证据。
 - 两种结局 kind 分别是 solved、wrong。真相指定嫌疑人以及至少两条必要证据。

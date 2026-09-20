@@ -1,0 +1,359 @@
+{
+  "id": "5465d570-a708-46da-b8da-aa86d6352510",
+  "projectId": "45394866-1f1b-4314-8d52-7250d636aea2",
+  "kind": "generate",
+  "state": "succeeded",
+  "request": {
+    "prompt": "在一座即将闭馆的海边天文台，一块陨石样本被调包。三个成年研究者都有动机，关键在于观测日志与潮汐时间不一致。设计三个可探索场景、六条证据、两种结局。至少一条关键证词必须出示已有物证才能取得。原创中文故事，最后揭示一个合理且不悲惨的动机。"
+  },
+  "events": [
+    {
+      "at": "2026-09-20T20:31:52.532Z",
+      "type": "model",
+      "message": "使用 本地 模型 qwen3-next-80b-q4"
+    },
+    {
+      "at": "2026-09-20T20:32:28.126Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 2784,
+        "output": 2072,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 4856,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3-next-80b-q4"
+      }
+    },
+    {
+      "at": "2026-09-20T20:32:28.128Z",
+      "type": "skill",
+      "message": "读取技能：case-design"
+    },
+    {
+      "at": "2026-09-20T20:32:40.288Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 2499,
+        "output": 624,
+        "cacheRead": 2780,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 5903,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3-next-80b-q4"
+      }
+    },
+    {
+      "at": "2026-09-20T20:32:40.289Z",
+      "type": "tool",
+      "message": "读取案件数据契约"
+    },
+    {
+      "at": "2026-09-20T20:33:57.030Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 3253,
+        "output": 4292,
+        "cacheRead": 5902,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 13447,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3-next-80b-q4"
+      }
+    },
+    {
+      "at": "2026-09-20T20:33:57.042Z",
+      "type": "check",
+      "message": "草稿通过结构与可达性检查",
+      "detail": {
+        "note": "全新案件，3角色、3场景、6证据、2结局。关键证词需前置物证（research_note需analysis_report解锁），动机合理不悲惨。",
+        "issues": []
+      }
+    },
+    {
+      "at": "2026-09-20T20:34:11.629Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 4852,
+        "output": 617,
+        "cacheRead": 9151,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 14620,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3-next-80b-q4"
+      }
+    },
+    {
+      "at": "2026-09-20T20:34:15.579Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 647,
+        "output": 185,
+        "cacheRead": 13999,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 14831,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3-next-80b-q4"
+      }
+    },
+    {
+      "at": "2026-09-20T20:34:15.581Z",
+      "type": "skill",
+      "message": "读取技能：case-audit"
+    },
+    {
+      "at": "2026-09-20T20:34:20.825Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 248,
+        "output": 276,
+        "cacheRead": 14830,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 15354,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3-next-80b-q4"
+      }
+    },
+    {
+      "at": "2026-09-20T20:34:20.835Z",
+      "type": "commit",
+      "message": "保存第 1 版：陨石疑云。案件通过验证，提交发布。",
+      "detail": {
+        "projectId": "45394866-1f1b-4314-8d52-7250d636aea2",
+        "revision": 1,
+        "report": {
+          "passed": true,
+          "issues": [],
+          "reachableClues": [
+            "fake_stone",
+            "security_footage",
+            "tide_log",
+            "equipment_box",
+            "analysis_report",
+            "research_note"
+          ],
+          "reachableScenes": [
+            "main_observatory",
+            "tide_station",
+            "lab"
+          ],
+          "winningPath": [
+            {
+              "type": "collect",
+              "clueId": "fake_stone"
+            },
+            {
+              "type": "collect",
+              "clueId": "security_footage"
+            },
+            {
+              "type": "travel",
+              "sceneId": "tide_station"
+            },
+            {
+              "type": "collect",
+              "clueId": "tide_log"
+            },
+            {
+              "type": "collect",
+              "clueId": "equipment_box"
+            },
+            {
+              "type": "travel",
+              "sceneId": "lab"
+            },
+            {
+              "type": "collect",
+              "clueId": "analysis_report"
+            },
+            {
+              "type": "collect",
+              "clueId": "research_note"
+            },
+            {
+              "type": "travel",
+              "sceneId": "main_observatory"
+            },
+            {
+              "type": "travel",
+              "sceneId": "tide_station"
+            },
+            {
+              "type": "travel",
+              "sceneId": "lab"
+            },
+            {
+              "type": "accuse",
+              "characterId": "zhao_tianyu",
+              "evidenceIds": [
+                "tide_log",
+                "fake_stone",
+                "research_note"
+              ]
+            }
+          ],
+          "actionCount": 12,
+          "checkedAt": "2026-09-20T20:34:20.826Z",
+          "caseHash": "c830a275101ac83f2ae8d48dfdacfb89819419850b939d092e0d64787cc070d0"
+        },
+        "diff": null,
+        "model": "qwen3-next-80b-q4",
+        "provider": "mujian-local"
+      }
+    },
+    {
+      "at": "2026-09-20T20:34:31.247Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 380,
+        "output": 567,
+        "cacheRead": 15353,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 16300,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3-next-80b-q4"
+      }
+    }
+  ],
+  "createdAt": "2026-09-20T20:31:52.502Z",
+  "startedAt": "2026-09-20T20:31:52.502Z",
+  "result": {
+    "projectId": "45394866-1f1b-4314-8d52-7250d636aea2",
+    "revision": 1,
+    "report": {
+      "passed": true,
+      "issues": [],
+      "reachableClues": [
+        "fake_stone",
+        "security_footage",
+        "tide_log",
+        "equipment_box",
+        "analysis_report",
+        "research_note"
+      ],
+      "reachableScenes": [
+        "main_observatory",
+        "tide_station",
+        "lab"
+      ],
+      "winningPath": [
+        {
+          "type": "collect",
+          "clueId": "fake_stone"
+        },
+        {
+          "type": "collect",
+          "clueId": "security_footage"
+        },
+        {
+          "type": "travel",
+          "sceneId": "tide_station"
+        },
+        {
+          "type": "collect",
+          "clueId": "tide_log"
+        },
+        {
+          "type": "collect",
+          "clueId": "equipment_box"
+        },
+        {
+          "type": "travel",
+          "sceneId": "lab"
+        },
+        {
+          "type": "collect",
+          "clueId": "analysis_report"
+        },
+        {
+          "type": "collect",
+          "clueId": "research_note"
+        },
+        {
+          "type": "travel",
+          "sceneId": "main_observatory"
+        },
+        {
+          "type": "travel",
+          "sceneId": "tide_station"
+        },
+        {
+          "type": "travel",
+          "sceneId": "lab"
+        },
+        {
+          "type": "accuse",
+          "characterId": "zhao_tianyu",
+          "evidenceIds": [
+            "tide_log",
+            "fake_stone",
+            "research_note"
+          ]
+        }
+      ],
+      "actionCount": 12,
+      "checkedAt": "2026-09-20T20:34:20.826Z",
+      "caseHash": "c830a275101ac83f2ae8d48dfdacfb89819419850b939d092e0d64787cc070d0"
+    },
+    "diff": null,
+    "model": "qwen3-next-80b-q4",
+    "provider": "mujian-local"
+  },
+  "finishedAt": "2026-09-20T20:34:31.248Z"
+}

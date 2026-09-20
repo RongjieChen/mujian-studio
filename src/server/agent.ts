@@ -8,6 +8,7 @@ import { caseSchema, type Case, type Job } from '../core/schema.ts';
 import { validateCase, hashObject, revisionDiff } from '../core/validate.ts';
 import { atomicWrite, createProject, dataDir, getProject, updateCase } from './store.ts';
 import { sampleCase } from '../core/sample.ts';
+import { workerUrl } from './media.ts';
 
 export function llmConfig() {
   const step = process.env.LLM_PROVIDER === 'stepfun';
@@ -24,6 +25,11 @@ export async function runAgent(job: Job, emit: (type: string, message: string, d
   if (!config.key) throw new Error('StepFun 尚未配置 API Key。请配置后重试，或使用本地模型。');
   const base = job.projectId ? getProject(job.projectId) : null;
   if (base && base.revision !== job.baseRevision) throw new Error('等待期间项目已变更，请针对最新版本重新发起任务。');
+  if(process.env.GPU_EXCLUSIVE==='true'&&config.provider==='mujian-local'){
+    const r=await fetch(`${workerUrl()}/unload`,{method:'POST',signal:AbortSignal.any([signal,AbortSignal.timeout(20_000)])});
+    if(!r.ok)throw new Error('素材模型尚未释放内存，请等待 GPU 作业结束后重试。');
+    emit('memory','素材模型已释放内存，开始案件创作。',await r.json());
+  }
   let draft: Case | null = base ? structuredClone(base.case) : null;
   let committed: unknown = null;
   const loaded = new Set<string>();
@@ -69,7 +75,7 @@ export async function runAgent(job: Job, emit: (type: string, message: string, d
   ];
   const runtimeDir=path.join(dataDir,'runtime',job.id);fs.mkdirSync(runtimeDir,{recursive:true});
   const modelsPath=path.join(runtimeDir,'models.json');
-  atomicWrite(modelsPath,{providers:{[config.provider]:{baseUrl:config.baseUrl,api:'openai-completions',compat:{supportsDeveloperRole:false,supportsReasoningEffort:false,supportsStore:false},models:[{id:config.model,name:config.model,reasoning:config.reasoning,input:['text'],contextWindow:config.contextWindow,maxTokens:config.maxTokens,cost:{input:0,output:0,cacheRead:0,cacheWrite:0}}]}}});
+  atomicWrite(modelsPath,{providers:{[config.provider]:{baseUrl:config.baseUrl,api:'openai-completions',compat:{supportsDeveloperRole:false,supportsReasoningEffort:false,supportsStore:false},models:[{id:config.model,name:config.model,reasoning:config.reasoning,samplingParams:config.reasoning&&config.provider==='mujian-local'?{thinking_budget_tokens:2048}:undefined,input:['text'],contextWindow:config.contextWindow,maxTokens:config.maxTokens,cost:{input:0,output:0,cacheRead:0,cacheWrite:0}}]}}});
   const runtime=await ModelRuntime.create({modelsPath,credentials:new InMemoryCredentialStore(),allowModelNetwork:false});
   await runtime.setRuntimeApiKey(config.provider,config.key);
   const model=runtime.getModel(config.provider,config.model);if(!model)throw new Error('无法加载已配置的模型。');

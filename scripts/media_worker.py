@@ -67,12 +67,13 @@ def render(job, req):
     started = time.monotonic()
     try:
         import torch
+        import diffusers
         from PIL import Image
         from diffusers import StableDiffusionXLPipeline, WanPipeline, WanImageToVideoPipeline, AutoencoderKLWan
         from diffusers.utils import export_to_video
         if not torch.cuda.is_available():
             raise RuntimeError('CUDA GPU unavailable; refusing to label CPU work as Spark generation.')
-        job.update(state='running', phase='loading', device=torch.cuda.get_device_name(0))
+        job.update(state='running', phase='loading', device=torch.cuda.get_device_name(0), diffusersVersion=diffusers.__version__)
         persist(job)
         reference_path = None
         if req.reference:
@@ -92,7 +93,10 @@ def render(job, req):
                 vae = AutoencoderKLWan.from_pretrained(WAN, subfolder='vae', torch_dtype=torch.float32)
                 cls = WanImageToVideoPipeline if reference_path else WanPipeline
                 pipeline = cls.from_pretrained(WAN, vae=vae, torch_dtype=torch.bfloat16).to('cuda')
-                pipeline.vae.enable_tiling()
+                # Diffusers 0.35.2's tiled Wan VAE omits Wan 2.2 patchification.
+                # Use the normal path on Spark; the LLM is unloaded beforehand.
+                pipeline.vae.disable_tiling()
+                job['vaeTiling'] = False
             pipeline_kind = target_kind
         job['loadMs'] = round((time.monotonic() - started) * 1000)
         if job['cancel'].is_set():
@@ -109,7 +113,7 @@ def render(job, req):
             steps = 20 if req.quality == 'draft' else 30
             settings = dict(width=1024, height=576, num_inference_steps=steps, guidance_scale=6.0)
             job['steps'] = steps
-            result = pipeline(prompt=req.prompt, negative_prompt='text, watermark, logo, blurry, distorted, duplicate people', generator=gen, callback_on_step_end=progress, **settings).images[0]
+            result = pipeline(prompt='Photorealistic cinematic photograph, live-action movie still. '+req.prompt, negative_prompt='illustration, anime, cartoon, painting, drawing, 3d render, text, watermark, logo, blurry, distorted, duplicate people', generator=gen, callback_on_step_end=progress, **settings).images[0]
             file = job['id'] + '.png'
             result.save(ROOT / file)
             with Image.open(ROOT / file) as check:
@@ -134,6 +138,8 @@ def render(job, req):
     except InterruptedError as exc:
         job.update(state='cancelled', error=str(exc))
     except Exception as exc:
+        import traceback
+        traceback.print_exc()
         job.update(state='failed', error=f'{type(exc).__name__}: {exc}')
         # Discard potentially half-loaded or corrupted pipelines after an error.
         pipeline = None
@@ -161,6 +167,23 @@ def create(req: Request):
     persist(job)
     threading.Thread(target=render, args=(job,req), daemon=True).start()
     return {'id':job['id'], 'state':job['state']}
+
+@app.post('/unload')
+def unload():
+    global pipeline, pipeline_kind
+    if not lock.acquire(blocking=False):
+        raise HTTPException(409, 'GPU worker is busy')
+    try:
+        import torch
+        pipeline = None
+        pipeline_kind = None
+        gc.collect()
+        if torch.cuda.is_available():
+            torch.cuda.synchronize()
+            torch.cuda.empty_cache()
+        return {'released': True, 'reservedBytes': torch.cuda.memory_reserved() if torch.cuda.is_available() else 0}
+    finally:
+        lock.release()
 
 @app.get('/jobs/{job_id}')
 def status(job_id: str):

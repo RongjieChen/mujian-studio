@@ -1,0 +1,141 @@
+{
+  "id": "8302e658-9b5b-46b8-8185-5928527efbb3",
+  "projectId": "6efb23e6-4ca6-4e45-a13a-7ce58d9c4760",
+  "kind": "image",
+  "state": "succeeded",
+  "request": {
+    "sceneId": "tea",
+    "kind": "image",
+    "seed": 73,
+    "quality": "final",
+    "force": false
+  },
+  "baseRevision": 2,
+  "events": [
+    {
+      "at": "2026-09-20T20:46:33.991Z",
+      "type": "workflow",
+      "message": "执行分镜制作流程：顺序调度、种子固定、保留旧素材"
+    },
+    {
+      "at": "2026-09-20T20:46:33.997Z",
+      "type": "media",
+      "message": "本地 GPU 作业已创建",
+      "detail": {
+        "workerJobId": "35124fad-4791-4d26-872a-cd33a8fcd236",
+        "kind": "image",
+        "seed": 73,
+        "inputHash": "b87106cef2bdaf2ed443114f8c6976c56cb1c25c8b451fa787ade3411f7662f0"
+      }
+    },
+    {
+      "at": "2026-09-20T20:46:34.076Z",
+      "type": "progress",
+      "message": "加载本地生成模型",
+      "detail": {
+        "phase": "loading"
+      }
+    },
+    {
+      "at": "2026-09-20T20:47:19.170Z",
+      "type": "progress",
+      "message": "生成采样 8/30",
+      "detail": {
+        "phase": "sampling",
+        "step": 8,
+        "steps": 30
+      }
+    },
+    {
+      "at": "2026-09-20T20:47:20.977Z",
+      "type": "progress",
+      "message": "生成采样 17/30",
+      "detail": {
+        "phase": "sampling",
+        "step": 17,
+        "steps": 30
+      }
+    },
+    {
+      "at": "2026-09-20T20:47:22.782Z",
+      "type": "progress",
+      "message": "生成采样 27/30",
+      "detail": {
+        "phase": "sampling",
+        "step": 27,
+        "steps": 30
+      }
+    },
+    {
+      "at": "2026-09-20T20:47:24.587Z",
+      "type": "progress",
+      "message": "素材状态：succeeded",
+      "detail": {
+        "phase": "done",
+        "step": 30,
+        "steps": 30
+      }
+    },
+    {
+      "at": "2026-09-20T20:47:24.593Z",
+      "type": "asset",
+      "message": "生成完成，已保存可追溯素材",
+      "detail": {
+        "assetId": "43998cd0-5a60-4f3a-b0a4-2d635d613228",
+        "durationMs": 49903,
+        "stale": false
+      }
+    }
+  ],
+  "createdAt": "2026-09-20T20:42:09.807Z",
+  "startedAt": "2026-09-20T20:46:33.991Z",
+  "result": {
+    "asset": {
+      "id": "43998cd0-5a60-4f3a-b0a4-2d635d613228",
+      "sceneId": "tea",
+      "kind": "image",
+      "file": "43998cd0-5a60-4f3a-b0a4-2d635d613228.png",
+      "mime": "image/png",
+      "inputHash": "b87106cef2bdaf2ed443114f8c6976c56cb1c25c8b451fa787ade3411f7662f0",
+      "seed": 73,
+      "model": "/root/mujian-runtime/models/sdxl-base",
+      "durationMs": 49903,
+      "createdAt": "2026-09-20T20:47:24.592Z",
+      "provenance": "local-generation",
+      "metadata": {
+        "id": "35124fad-4791-4d26-872a-cd33a8fcd236",
+        "state": "succeeded",
+        "createdAt": 1789937193.9945104,
+        "request": {
+          "kind": "image",
+          "prompt": "One 29-year-old Chinese woman with a short black bob, ivory knitted cardigan and dark green dress, sitting beside an upright piano in a small wood-paneled hotel tea room at midnight. Medium shot, warm tungsten lamp, rain on dark windows, realistic skin texture, 35mm film photograph.\nVisual style: 写实悬疑电影，1998 年中国南方山间旅馆，墨绿色与钨丝灯琥珀色，35mm 胶片颗粒，克制的固定镜头，无可读文字，无水印。所有角色均为成年人。",
+          "seed": 73,
+          "reference": null,
+          "quality": "final"
+        },
+        "phase": "done",
+        "device": "NVIDIA GB10",
+        "loadMs": 43692,
+        "steps": 30,
+        "step": 30,
+        "file": "35124fad-4791-4d26-872a-cd33a8fcd236.png",
+        "model": "/root/mujian-runtime/models/sdxl-base",
+        "durationMs": 49903,
+        "peakAllocatedBytes": 9478700032,
+        "settings": {
+          "width": 1024,
+          "height": 576,
+          "num_inference_steps": 30,
+          "guidance_scale": 6
+        },
+        "torchVersion": "2.9.1+cu130",
+        "cudaVersion": "13.0",
+        "finishedAt": 1789937243.8996332,
+        "quality": "final"
+      }
+    },
+    "cacheHit": false,
+    "stale": false
+  },
+  "finishedAt": "2026-09-20T20:47:24.593Z"
+}

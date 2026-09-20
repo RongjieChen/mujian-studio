@@ -43,6 +43,13 @@ export function validateCase(doc: Case): Report {
     if (clue.sceneId) checkRefs([clue.sceneId], sceneIds, `clues.${clue.id}.sceneId`);
     else if (!revealed.has(clue.id)) add('NO_CLUE_SOURCE', `clues.${clue.id}`, `证词「${clue.name}」没有对应问话来源。`, [clue.id]);
   }
+  const topics=doc.characters.flatMap(c=>c.topics);
+  const gatedTestimony=doc.clues.some(clue=>{
+    if(clue.sceneId!==null||!doc.truth.requiredEvidenceIds.includes(clue.id))return false;
+    const sources=topics.filter(t=>t.reveals.includes(clue.id));
+    return sources.length>0&&sources.every(t=>t.requires.some(id=>doc.clues.some(physical=>physical.id===id&&physical.sceneId!==null)));
+  });
+  if(!gatedTestimony)add('MISSING_GATED_TESTIMONY','characters.topics','至少一条结案必需证据必须是盘问证词：sceneId 为 null，由 topics.reveals 给出，且话题 requires 至少包含一条现场物证。');
   const path: Action[] = [];
   let state = initialState(doc);
   const reachableScenes = new Set<string>();
@@ -74,13 +81,13 @@ export function validateCase(doc: Case): Report {
     else add('NO_WINNING_PATH', 'truth.requiredEvidenceIds', '玩家无法获得结案所需的完整证据链。', doc.truth.requiredEvidenceIds.filter(id => !state.inventory.includes(id)));
   }
   if (doc.characters.some(c => c.topics.some(t => !t.requires.length && t.reveals.some(id => doc.truth.requiredEvidenceIds.includes(id))))) add('EARLY_EVIDENCE', 'characters', '部分关键证词开场即可获得，请人工确认推理节奏。', [], 'warning');
-  return { passed: !issues.some(i => i.severity === 'error'), issues, reachableClues: state.inventory, reachableScenes: [...reachableScenes], winningPath: state.ending ? path : [], actionCount: path.length, checkedAt: new Date().toISOString(), caseHash: hashObject(doc) };
+  return { rulesVersion:2, passed: !issues.some(i => i.severity === 'error'), issues, reachableClues: state.inventory, reachableScenes: [...reachableScenes], winningPath: state.ending ? path : [], actionCount: path.length, checkedAt: new Date().toISOString(), caseHash: hashObject(doc) };
 }
 
 export function sceneInput(doc: Case, sceneId: string, kind: 'image' | 'video', seed: number, referenceHash?: string) {
   const scene = doc.scenes.find(s => s.id === sceneId);
   if (!scene) throw new Error('场景不存在');
-  return { recipe: kind === 'image' ? 'sdxl-v1' : 'wan22-5b-v1', kind, seed, style: doc.style, prompt: kind === 'image' ? scene.imagePrompt : scene.videoPrompt, characters: doc.characters.filter(c => scene.characterIds.includes(c.id)).map(c => ({ id: c.id, description: c.description, portraitPrompt: c.portraitPrompt })), referenceHash: referenceHash ?? null };
+  return { recipe: kind === 'image' ? 'sdxl-v2' : 'wan22-5b-v1', kind, seed, style: doc.style, prompt: kind === 'image' ? scene.imagePrompt : scene.videoPrompt, characters: doc.characters.filter(c => scene.characterIds.includes(c.id)).map(c => ({ id: c.id, description: c.description, portraitPrompt: c.portraitPrompt })), referenceHash: referenceHash ?? null };
 }
 export function revisionDiff(before: Case, after: Case) {
   const changes: { section: string; id: string; label: string; kind: 'added' | 'removed' | 'changed' }[] = [];

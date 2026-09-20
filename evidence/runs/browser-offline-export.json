@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-09-20T21:17:32.205257+00:00",
+  "projectId": "6efb23e6-4ca6-4e45-a13a-7ce58d9c4760",
+  "revision": 3,
+  "method": "CUA UI interaction; CDP Network.emulateNetworkConditions offline=true after standalone HTML loaded",
+  "backend": "None for gameplay; file initially served by separate static server on 4319",
+  "video": {
+    "embeddedDataUrl": true,
+    "readyState": 4,
+    "paused": false,
+    "duration": 2.041667,
+    "width": 768,
+    "height": 448
+  },
+  "result": "Collected six clues, obtained evidence-gated testimony, reached correct ending while offline",
+  "networkRestoredAfterTest": true
+}

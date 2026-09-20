@@ -1,0 +1,11 @@
+{
+  "repairJob": "adf22f85-2ea0-43ce-ab00-200d21ccec86",
+  "beforeRevision": 3,
+  "afterRevision": 4,
+  "truthUnchanged": true,
+  "onlyChange": "clues.fake_stone.requires: [fake_stone] -> []",
+  "exportHttpStatus": 200,
+  "exportBytes": 280940,
+  "currentRulesVersion": 2,
+  "structuralPass": true
+}

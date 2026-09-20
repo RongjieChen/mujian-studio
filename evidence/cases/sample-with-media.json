@@ -1,0 +1,1511 @@
+{
+  "id": "6efb23e6-4ca6-4e45-a13a-7ce58d9c4760",
+  "title": "雨停之前",
+  "brief": "手工示例案件；用于体验玩法，不代表 AI 现场生成。",
+  "createdAt": "2026-09-20T20:21:31.169Z",
+  "updatedAt": "2026-09-20T21:17:33.905Z",
+  "revision": 4,
+  "case": {
+    "schemaVersion": 1,
+    "title": "雨停之前",
+    "logline": "暴雨封山，一卷即将公映的老胶片失踪了。每个人都想让今晚的放映停下来。",
+    "opening": "23:20，青苔旅馆的放映员发现胶片铁盒空了。十分钟前，山间旅馆经历过一次短暂停电。你是受邀修复这卷纪录片的档案师，最后一班接驳车要到天亮才能上山。先去大堂看看。",
+    "style": "写实悬疑电影，1998 年中国南方山间旅馆，墨绿色与钨丝灯琥珀色，35mm 胶片颗粒，克制的固定镜头，无可读文字，无水印。所有角色均为成年人。",
+    "truth": {
+      "culpritId": "lin",
+      "motive": "林知夏想找回胶片中母亲的一段未获同意的私人影像，临时藏起胶片阻止放映。",
+      "method": "利用预定的短时停电，在 23:12 取走胶片，藏进茶室通风柜。她用提前录好的钢琴声制造自己一直在茶室弹琴的假象。",
+      "requiredEvidenceIds": [
+        "power_log",
+        "piano_tape",
+        "witness"
+      ],
+      "timeline": [
+        {
+          "time": "22:40",
+          "event": "林知夏向店主借走便携录音机。"
+        },
+        {
+          "time": "23:10",
+          "event": "山庄短暂停电，备用电源随后启动。"
+        },
+        {
+          "time": "23:12",
+          "event": "林知夏从放映室带走胶片。"
+        },
+        {
+          "time": "23:15",
+          "event": "陈默在走廊遇见抱着铁盒的林知夏。"
+        }
+      ]
+    },
+    "characters": [
+      {
+        "id": "lin",
+        "name": "林知夏",
+        "role": "钢琴教师 · 29 岁",
+        "description": "黑色齐肩短发，米白针织衫，墨绿色半裙；右手食指贴着一小块创可贴。",
+        "publicKnowledge": "她受邀为今晚的无声片现场伴奏，自称停电前后一直在茶室练琴。",
+        "secret": "录音机播放着提前录制的琴声，她实际上离开茶室取走胶片。",
+        "portraitPrompt": "Portrait of an original 29 year old Chinese woman, short straight black bob hair, ivory knit cardigan, forest green skirt, reserved expression, warm tungsten light, cinematic 35mm photograph.",
+        "topics": [
+          {
+            "id": "alibi",
+            "question": "停电的时候你在哪里？",
+            "answer": "茶室。那首曲子还没练熟，我一直在弹。你应该也听见琴声了。",
+            "requires": [],
+            "reveals": []
+          },
+          {
+            "id": "tape",
+            "question": "录音机里为什么有和刚才一样的琴声？",
+            "answer": "……那是下午录的练习。我确实出去过，但我没有想过损坏胶片。我只想先和放映的人谈谈。",
+            "requires": [
+              "piano_tape"
+            ],
+            "reveals": []
+          }
+        ]
+      },
+      {
+        "id": "chen",
+        "name": "陈默",
+        "role": "摄影师 · 34 岁",
+        "description": "微卷黑发，深蓝工装外套，旧相机挂在肩侧，眼下疲惫。",
+        "publicKnowledge": "他来拍旅馆停业前的最后一晚，停电后在走廊测试相机。",
+        "secret": "他看见林知夏抱着铁盒，但最初不愿卷入争执。",
+        "portraitPrompt": "Portrait of an original 34 year old Chinese man, slightly curly black hair, navy work jacket, vintage camera over shoulder, tired thoughtful eyes, cinematic 35mm photograph.",
+        "topics": [
+          {
+            "id": "camera",
+            "question": "今晚拍到了什么？",
+            "answer": "都是旅馆的空房间。走廊那盏灯坏了，我想等供电恢复再拍一张。",
+            "requires": [],
+            "reveals": []
+          },
+          {
+            "id": "corridor",
+            "question": "供电记录显示灯在 23:12 恢复，你那时看到了谁？",
+            "answer": "知夏。大概三分钟后，她从放映室方向过来，怀里抱着一个圆铁盒。她让我别把这段拍进去。",
+            "requires": [
+              "power_log"
+            ],
+            "reveals": [
+              "witness"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "zhou",
+        "name": "周叔",
+        "role": "旅馆店主 · 58 岁",
+        "description": "灰白短发，棕色灯芯绒马甲，蓝衬衫，旧钥匙串系在腰间。",
+        "publicKnowledge": "负责旅馆电路和放映室管理，明天就要交还旅馆。",
+        "secret": "他提前知道短时停电；没有告诉客人是怕影响今晚聚会。",
+        "portraitPrompt": "Portrait of an original 58 year old Chinese innkeeper, short grey hair, brown corduroy vest and blue shirt, kind weathered face, cinematic photograph.",
+        "topics": [
+          {
+            "id": "outage",
+            "question": "这次停电是意外吗？",
+            "answer": "电房设备老化，今晚本来就会切换一次线路。我把记录夹放在前台了。",
+            "requires": [],
+            "reveals": []
+          },
+          {
+            "id": "recorder",
+            "question": "有人借过录音机吗？",
+            "answer": "知夏在十点四十借走了，说想听听自己的演奏。我以为她一直在练琴。",
+            "requires": [
+              "piano_tape"
+            ],
+            "reveals": []
+          }
+        ]
+      }
+    ],
+    "scenes": [
+      {
+        "id": "lobby",
+        "name": "旅馆大堂",
+        "description": "雨点敲打玻璃，前台那盏绿罩灯还亮着。电路记录夹摊在来客登记簿旁边。",
+        "requires": [],
+        "characterIds": [
+          "zhou"
+        ],
+        "imagePrompt": "Wide cinematic interior of a remote Chinese mountain inn lobby in 1998 at rainy midnight, empty reception desk with green bankers lamp, an open logbook, wet window, dark wood, amber tungsten light and deep moss green shadows, no people, no readable text.",
+        "videoPrompt": "A locked wide shot of an empty mountain inn lobby at rainy midnight. Rain trails down the window, the green desk lamp flickers once, quiet suspense. No people, no text, subtle movement."
+      },
+      {
+        "id": "screening",
+        "name": "旧放映室",
+        "description": "供电记录让你确认备用电源恢复后门锁已经释放。放映机还温热，铁盒里只剩一张发黄的借阅卡。",
+        "requires": [
+          "power_log"
+        ],
+        "characterIds": [
+          "chen"
+        ],
+        "imagePrompt": "An old empty film projection room in a Chinese mountain hotel, vintage 35mm projector, open round film canister on wooden table, warm dusty light beam, rain outside small window, cinematic suspense, no people, no readable text.",
+        "videoPrompt": "Slow gentle push into an old empty film projection room, projector beam illuminating floating dust, an open film canister on a wooden table. Warm tungsten lighting, no readable text, no people."
+      },
+      {
+        "id": "tea",
+        "name": "临窗茶室",
+        "description": "林知夏坐在钢琴旁，双手没有触碰琴键，房间里却仍传出同一小节。窗边的茶杯已经凉了。",
+        "requires": [],
+        "characterIds": [
+          "lin"
+        ],
+        "imagePrompt": "One 29-year-old Chinese woman with a short black bob, ivory knitted cardigan and dark green dress, sitting beside an upright piano in a small wood-paneled hotel tea room at midnight. Medium shot, warm tungsten lamp, rain on dark windows, realistic skin texture, 35mm film photograph.",
+        "videoPrompt": "The woman from the reference image sits beside the piano. She breathes gently, blinks naturally and slowly turns her gaze towards the camera. Preserve her short black bob, green knitted clothing and warm dim lighting from the reference. Locked medium shot, very subtle movement. No dialogue, no text."
+      }
+    ],
+    "clues": [
+      {
+        "id": "power_log",
+        "name": "备用电源记录",
+        "description": "备用电源于 23:12 恢复，放映室电磁门锁同时释放。记录上保留了当值人的签字。",
+        "sceneId": "lobby",
+        "requires": []
+      },
+      {
+        "id": "guest_book",
+        "name": "最后一晚的来客簿",
+        "description": "三人都在晚饭前登记。林知夏的备注写着：母亲曾在这里工作。",
+        "sceneId": "lobby",
+        "requires": []
+      },
+      {
+        "id": "empty_can",
+        "name": "空胶片盒",
+        "description": "圆铁盒是空的，锁扣完好，没有暴力撬动痕迹。片盒内卡片提到一段私人访谈。",
+        "sceneId": "screening",
+        "requires": []
+      },
+      {
+        "id": "piano_tape",
+        "name": "循环播放的磁带",
+        "description": "琴声来自钢琴上的便携录音机。磁带中同一处错音每隔两分钟重复一次，证明琴声不能作为在场证明。",
+        "sceneId": "tea",
+        "requires": []
+      },
+      {
+        "id": "cold_tea",
+        "name": "窗边的冷茶",
+        "description": "茶杯早已没有温度。杯旁有一张未寄出的信，内容请求在公开放映前删除私人访谈。",
+        "sceneId": "tea",
+        "requires": []
+      },
+      {
+        "id": "witness",
+        "name": "陈默的走廊证词",
+        "description": "23:15，陈默在恢复照明的走廊看见林知夏抱着圆形铁盒从放映室出来。",
+        "sceneId": null,
+        "requires": [
+          "power_log"
+        ]
+      }
+    ],
+    "endings": [
+      {
+        "id": "solved",
+        "kind": "solved",
+        "title": "雨停之前",
+        "text": "你把电源记录、重复的琴声和走廊证词连在一起。林知夏承认取走胶片，并从茶室通风柜里取回它。她请求先征求母亲同意，再放映那段私人访谈。天快亮了，雨也终于小了。"
+      },
+      {
+        "id": "wrong",
+        "kind": "wrong",
+        "title": "未完成的放映",
+        "text": "你的指认缺少完整证据，或指向了错误的人。争论盖过了雨声，胶片仍未找到。重新调查，留意哪些在场证明只是听起来可信。"
+      }
+    ]
+  },
+  "revisions": [
+    {
+      "id": "acca239f-bd65-48ea-ac5e-dc7e2e026dfd",
+      "number": 1,
+      "createdAt": "2026-09-20T20:21:31.169Z",
+      "note": "载入手工编写的示例案件",
+      "case": {
+        "schemaVersion": 1,
+        "title": "雨停之前",
+        "logline": "暴雨封山，一卷即将公映的老胶片失踪了。每个人都想让今晚的放映停下来。",
+        "opening": "23:20，青苔旅馆的放映员发现胶片铁盒空了。十分钟前，山间旅馆经历过一次短暂停电。你是受邀修复这卷纪录片的档案师，最后一班接驳车要到天亮才能上山。先去大堂看看。",
+        "style": "写实悬疑电影，1998 年中国南方山间旅馆，墨绿色与钨丝灯琥珀色，35mm 胶片颗粒，克制的固定镜头，无可读文字，无水印。所有角色均为成年人。",
+        "truth": {
+          "culpritId": "lin",
+          "motive": "林知夏想找回胶片中母亲的一段未获同意的私人影像，临时藏起胶片阻止放映。",
+          "method": "利用预定的短时停电，在 23:12 取走胶片，藏进茶室通风柜。她用提前录好的钢琴声制造自己一直在茶室弹琴的假象。",
+          "requiredEvidenceIds": [
+            "power_log",
+            "piano_tape",
+            "witness"
+          ],
+          "timeline": [
+            {
+              "time": "22:40",
+              "event": "林知夏向店主借走便携录音机。"
+            },
+            {
+              "time": "23:10",
+              "event": "山庄短暂停电，备用电源随后启动。"
+            },
+            {
+              "time": "23:12",
+              "event": "林知夏从放映室带走胶片。"
+            },
+            {
+              "time": "23:15",
+              "event": "陈默在走廊遇见抱着铁盒的林知夏。"
+            }
+          ]
+        },
+        "characters": [
+          {
+            "id": "lin",
+            "name": "林知夏",
+            "role": "钢琴教师 · 29 岁",
+            "description": "黑色齐肩短发，米白针织衫，墨绿色半裙；右手食指贴着一小块创可贴。",
+            "publicKnowledge": "她受邀为今晚的无声片现场伴奏，自称停电前后一直在茶室练琴。",
+            "secret": "录音机播放着提前录制的琴声，她实际上离开茶室取走胶片。",
+            "portraitPrompt": "Portrait of an original 29 year old Chinese woman, short straight black bob hair, ivory knit cardigan, forest green skirt, reserved expression, warm tungsten light, cinematic 35mm photograph.",
+            "topics": [
+              {
+                "id": "alibi",
+                "question": "停电的时候你在哪里？",
+                "answer": "茶室。那首曲子还没练熟，我一直在弹。你应该也听见琴声了。",
+                "requires": [],
+                "reveals": []
+              },
+              {
+                "id": "tape",
+                "question": "录音机里为什么有和刚才一样的琴声？",
+                "answer": "……那是下午录的练习。我确实出去过，但我没有想过损坏胶片。我只想先和放映的人谈谈。",
+                "requires": [
+                  "piano_tape"
+                ],
+                "reveals": []
+              }
+            ]
+          },
+          {
+            "id": "chen",
+            "name": "陈默",
+            "role": "摄影师 · 34 岁",
+            "description": "微卷黑发，深蓝工装外套，旧相机挂在肩侧，眼下疲惫。",
+            "publicKnowledge": "他来拍旅馆停业前的最后一晚，停电后在走廊测试相机。",
+            "secret": "他看见林知夏抱着铁盒，但最初不愿卷入争执。",
+            "portraitPrompt": "Portrait of an original 34 year old Chinese man, slightly curly black hair, navy work jacket, vintage camera over shoulder, tired thoughtful eyes, cinematic 35mm photograph.",
+            "topics": [
+              {
+                "id": "camera",
+                "question": "今晚拍到了什么？",
+                "answer": "都是旅馆的空房间。走廊那盏灯坏了，我想等供电恢复再拍一张。",
+                "requires": [],
+                "reveals": []
+              },
+              {
+                "id": "corridor",
+                "question": "供电记录显示灯在 23:12 恢复，你那时看到了谁？",
+                "answer": "知夏。大概三分钟后，她从放映室方向过来，怀里抱着一个圆铁盒。她让我别把这段拍进去。",
+                "requires": [
+                  "power_log"
+                ],
+                "reveals": [
+                  "witness"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "zhou",
+            "name": "周叔",
+            "role": "旅馆店主 · 58 岁",
+            "description": "灰白短发，棕色灯芯绒马甲，蓝衬衫，旧钥匙串系在腰间。",
+            "publicKnowledge": "负责旅馆电路和放映室管理，明天就要交还旅馆。",
+            "secret": "他提前知道短时停电；没有告诉客人是怕影响今晚聚会。",
+            "portraitPrompt": "Portrait of an original 58 year old Chinese innkeeper, short grey hair, brown corduroy vest and blue shirt, kind weathered face, cinematic photograph.",
+            "topics": [
+              {
+                "id": "outage",
+                "question": "这次停电是意外吗？",
+                "answer": "电房设备老化，今晚本来就会切换一次线路。我把记录夹放在前台了。",
+                "requires": [],
+                "reveals": []
+              },
+              {
+                "id": "recorder",
+                "question": "有人借过录音机吗？",
+                "answer": "知夏在十点四十借走了，说想听听自己的演奏。我以为她一直在练琴。",
+                "requires": [
+                  "piano_tape"
+                ],
+                "reveals": []
+              }
+            ]
+          }
+        ],
+        "scenes": [
+          {
+            "id": "lobby",
+            "name": "旅馆大堂",
+            "description": "雨点敲打玻璃，前台那盏绿罩灯还亮着。电路记录夹摊在来客登记簿旁边。",
+            "requires": [],
+            "characterIds": [
+              "zhou"
+            ],
+            "imagePrompt": "Wide cinematic interior of a remote Chinese mountain inn lobby in 1998 at rainy midnight, empty reception desk with green bankers lamp, an open logbook, wet window, dark wood, amber tungsten light and deep moss green shadows, no people, no readable text.",
+            "videoPrompt": "A locked wide shot of an empty mountain inn lobby at rainy midnight. Rain trails down the window, the green desk lamp flickers once, quiet suspense. No people, no text, subtle movement."
+          },
+          {
+            "id": "screening",
+            "name": "旧放映室",
+            "description": "供电记录让你确认备用电源恢复后门锁已经释放。放映机还温热，铁盒里只剩一张发黄的借阅卡。",
+            "requires": [
+              "power_log"
+            ],
+            "characterIds": [
+              "chen"
+            ],
+            "imagePrompt": "An old empty film projection room in a Chinese mountain hotel, vintage 35mm projector, open round film canister on wooden table, warm dusty light beam, rain outside small window, cinematic suspense, no people, no readable text.",
+            "videoPrompt": "Slow gentle push into an old empty film projection room, projector beam illuminating floating dust, an open film canister on a wooden table. Warm tungsten lighting, no readable text, no people."
+          },
+          {
+            "id": "tea",
+            "name": "临窗茶室",
+            "description": "立式钢琴前空无一人，却仍传出同一小节。靠窗的茶杯已经凉了。林知夏靠在门边望着雨。",
+            "requires": [],
+            "characterIds": [
+              "lin"
+            ],
+            "imagePrompt": "An empty intimate tea room in a 1998 Chinese mountain inn, upright piano with a small portable cassette recorder on top, teacup by rainy window, warm practical light, deep green curtains, cinematic 35mm film still, no people, no readable text.",
+            "videoPrompt": "A quiet fixed shot of an empty tea room, upright piano and cassette recorder, rain moving on the dark window, a green curtain sways slightly, moody cinematic light, no people, no readable text."
+          }
+        ],
+        "clues": [
+          {
+            "id": "power_log",
+            "name": "备用电源记录",
+            "description": "备用电源于 23:12 恢复，放映室电磁门锁同时释放。记录上保留了当值人的签字。",
+            "sceneId": "lobby",
+            "requires": []
+          },
+          {
+            "id": "guest_book",
+            "name": "最后一晚的来客簿",
+            "description": "三人都在晚饭前登记。林知夏的备注写着：母亲曾在这里工作。",
+            "sceneId": "lobby",
+            "requires": []
+          },
+          {
+            "id": "empty_can",
+            "name": "空胶片盒",
+            "description": "圆铁盒是空的，锁扣完好，没有暴力撬动痕迹。片盒内卡片提到一段私人访谈。",
+            "sceneId": "screening",
+            "requires": []
+          },
+          {
+            "id": "piano_tape",
+            "name": "循环播放的磁带",
+            "description": "琴声来自钢琴上的便携录音机。磁带中同一处错音每隔两分钟重复一次，证明琴声不能作为在场证明。",
+            "sceneId": "tea",
+            "requires": []
+          },
+          {
+            "id": "cold_tea",
+            "name": "窗边的冷茶",
+            "description": "茶杯早已没有温度。杯旁有一张未寄出的信，内容请求在公开放映前删除私人访谈。",
+            "sceneId": "tea",
+            "requires": []
+          },
+          {
+            "id": "witness",
+            "name": "陈默的走廊证词",
+            "description": "23:15，陈默在恢复照明的走廊看见林知夏抱着圆形铁盒从放映室出来。",
+            "sceneId": null,
+            "requires": [
+              "power_log"
+            ]
+          }
+        ],
+        "endings": [
+          {
+            "id": "solved",
+            "kind": "solved",
+            "title": "雨停之前",
+            "text": "你把电源记录、重复的琴声和走廊证词连在一起。林知夏承认取走胶片，并从茶室通风柜里取回它。她请求先征求母亲同意，再放映那段私人访谈。天快亮了，雨也终于小了。"
+          },
+          {
+            "id": "wrong",
+            "kind": "wrong",
+            "title": "未完成的放映",
+            "text": "你的指认缺少完整证据，或指向了错误的人。争论盖过了雨声，胶片仍未找到。重新调查，留意哪些在场证明只是听起来可信。"
+          }
+        ]
+      },
+      "hash": "65bd7fc8bfd94c2ddbfef3c80f8337ec9758b1da9ab0f16825c922e1ba0a6af9"
+    },
+    {
+      "id": "89bffa84-dc35-4d01-bd0c-51df4d0fc149",
+      "number": 2,
+      "createdAt": "2026-09-20T20:42:09.699Z",
+      "note": "人工设定：单人分镜参考与固定服装，验证人物短镜头流程",
+      "case": {
+        "schemaVersion": 1,
+        "title": "雨停之前",
+        "logline": "暴雨封山，一卷即将公映的老胶片失踪了。每个人都想让今晚的放映停下来。",
+        "opening": "23:20，青苔旅馆的放映员发现胶片铁盒空了。十分钟前，山间旅馆经历过一次短暂停电。你是受邀修复这卷纪录片的档案师，最后一班接驳车要到天亮才能上山。先去大堂看看。",
+        "style": "写实悬疑电影，1998 年中国南方山间旅馆，墨绿色与钨丝灯琥珀色，35mm 胶片颗粒，克制的固定镜头，无可读文字，无水印。所有角色均为成年人。",
+        "truth": {
+          "culpritId": "lin",
+          "motive": "林知夏想找回胶片中母亲的一段未获同意的私人影像，临时藏起胶片阻止放映。",
+          "method": "利用预定的短时停电，在 23:12 取走胶片，藏进茶室通风柜。她用提前录好的钢琴声制造自己一直在茶室弹琴的假象。",
+          "requiredEvidenceIds": [
+            "power_log",
+            "piano_tape",
+            "witness"
+          ],
+          "timeline": [
+            {
+              "time": "22:40",
+              "event": "林知夏向店主借走便携录音机。"
+            },
+            {
+              "time": "23:10",
+              "event": "山庄短暂停电，备用电源随后启动。"
+            },
+            {
+              "time": "23:12",
+              "event": "林知夏从放映室带走胶片。"
+            },
+            {
+              "time": "23:15",
+              "event": "陈默在走廊遇见抱着铁盒的林知夏。"
+            }
+          ]
+        },
+        "characters": [
+          {
+            "id": "lin",
+            "name": "林知夏",
+            "role": "钢琴教师 · 29 岁",
+            "description": "黑色齐肩短发，米白针织衫，墨绿色半裙；右手食指贴着一小块创可贴。",
+            "publicKnowledge": "她受邀为今晚的无声片现场伴奏，自称停电前后一直在茶室练琴。",
+            "secret": "录音机播放着提前录制的琴声，她实际上离开茶室取走胶片。",
+            "portraitPrompt": "Portrait of an original 29 year old Chinese woman, short straight black bob hair, ivory knit cardigan, forest green skirt, reserved expression, warm tungsten light, cinematic 35mm photograph.",
+            "topics": [
+              {
+                "id": "alibi",
+                "question": "停电的时候你在哪里？",
+                "answer": "茶室。那首曲子还没练熟，我一直在弹。你应该也听见琴声了。",
+                "requires": [],
+                "reveals": []
+              },
+              {
+                "id": "tape",
+                "question": "录音机里为什么有和刚才一样的琴声？",
+                "answer": "……那是下午录的练习。我确实出去过，但我没有想过损坏胶片。我只想先和放映的人谈谈。",
+                "requires": [
+                  "piano_tape"
+                ],
+                "reveals": []
+              }
+            ]
+          },
+          {
+            "id": "chen",
+            "name": "陈默",
+            "role": "摄影师 · 34 岁",
+            "description": "微卷黑发，深蓝工装外套，旧相机挂在肩侧，眼下疲惫。",
+            "publicKnowledge": "他来拍旅馆停业前的最后一晚，停电后在走廊测试相机。",
+            "secret": "他看见林知夏抱着铁盒，但最初不愿卷入争执。",
+            "portraitPrompt": "Portrait of an original 34 year old Chinese man, slightly curly black hair, navy work jacket, vintage camera over shoulder, tired thoughtful eyes, cinematic 35mm photograph.",
+            "topics": [
+              {
+                "id": "camera",
+                "question": "今晚拍到了什么？",
+                "answer": "都是旅馆的空房间。走廊那盏灯坏了，我想等供电恢复再拍一张。",
+                "requires": [],
+                "reveals": []
+              },
+              {
+                "id": "corridor",
+                "question": "供电记录显示灯在 23:12 恢复，你那时看到了谁？",
+                "answer": "知夏。大概三分钟后，她从放映室方向过来，怀里抱着一个圆铁盒。她让我别把这段拍进去。",
+                "requires": [
+                  "power_log"
+                ],
+                "reveals": [
+                  "witness"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "zhou",
+            "name": "周叔",
+            "role": "旅馆店主 · 58 岁",
+            "description": "灰白短发，棕色灯芯绒马甲，蓝衬衫，旧钥匙串系在腰间。",
+            "publicKnowledge": "负责旅馆电路和放映室管理，明天就要交还旅馆。",
+            "secret": "他提前知道短时停电；没有告诉客人是怕影响今晚聚会。",
+            "portraitPrompt": "Portrait of an original 58 year old Chinese innkeeper, short grey hair, brown corduroy vest and blue shirt, kind weathered face, cinematic photograph.",
+            "topics": [
+              {
+                "id": "outage",
+                "question": "这次停电是意外吗？",
+                "answer": "电房设备老化，今晚本来就会切换一次线路。我把记录夹放在前台了。",
+                "requires": [],
+                "reveals": []
+              },
+              {
+                "id": "recorder",
+                "question": "有人借过录音机吗？",
+                "answer": "知夏在十点四十借走了，说想听听自己的演奏。我以为她一直在练琴。",
+                "requires": [
+                  "piano_tape"
+                ],
+                "reveals": []
+              }
+            ]
+          }
+        ],
+        "scenes": [
+          {
+            "id": "lobby",
+            "name": "旅馆大堂",
+            "description": "雨点敲打玻璃，前台那盏绿罩灯还亮着。电路记录夹摊在来客登记簿旁边。",
+            "requires": [],
+            "characterIds": [
+              "zhou"
+            ],
+            "imagePrompt": "Wide cinematic interior of a remote Chinese mountain inn lobby in 1998 at rainy midnight, empty reception desk with green bankers lamp, an open logbook, wet window, dark wood, amber tungsten light and deep moss green shadows, no people, no readable text.",
+            "videoPrompt": "A locked wide shot of an empty mountain inn lobby at rainy midnight. Rain trails down the window, the green desk lamp flickers once, quiet suspense. No people, no text, subtle movement."
+          },
+          {
+            "id": "screening",
+            "name": "旧放映室",
+            "description": "供电记录让你确认备用电源恢复后门锁已经释放。放映机还温热，铁盒里只剩一张发黄的借阅卡。",
+            "requires": [
+              "power_log"
+            ],
+            "characterIds": [
+              "chen"
+            ],
+            "imagePrompt": "An old empty film projection room in a Chinese mountain hotel, vintage 35mm projector, open round film canister on wooden table, warm dusty light beam, rain outside small window, cinematic suspense, no people, no readable text.",
+            "videoPrompt": "Slow gentle push into an old empty film projection room, projector beam illuminating floating dust, an open film canister on a wooden table. Warm tungsten lighting, no readable text, no people."
+          },
+          {
+            "id": "tea",
+            "name": "临窗茶室",
+            "description": "立式钢琴前空无一人，却仍传出同一小节。靠窗的茶杯已经凉了。林知夏靠在门边望着雨。",
+            "requires": [],
+            "characterIds": [
+              "lin"
+            ],
+            "imagePrompt": "One 29-year-old Chinese woman with a short black bob, ivory knitted cardigan and dark green dress, sitting beside an upright piano in a small wood-paneled hotel tea room at midnight. Medium shot, warm tungsten lamp, rain on dark windows, realistic skin texture, 35mm film photograph.",
+            "videoPrompt": "A single Chinese woman with a short black bob, ivory cardigan and dark green dress sits beside a piano in a dim hotel tea room at night. She breathes gently and slowly turns her eyes toward the camera. Locked medium shot, subtle natural movement, consistent clothes and lighting. No dialogue, no text."
+          }
+        ],
+        "clues": [
+          {
+            "id": "power_log",
+            "name": "备用电源记录",
+            "description": "备用电源于 23:12 恢复，放映室电磁门锁同时释放。记录上保留了当值人的签字。",
+            "sceneId": "lobby",
+            "requires": []
+          },
+          {
+            "id": "guest_book",
+            "name": "最后一晚的来客簿",
+            "description": "三人都在晚饭前登记。林知夏的备注写着：母亲曾在这里工作。",
+            "sceneId": "lobby",
+            "requires": []
+          },
+          {
+            "id": "empty_can",
+            "name": "空胶片盒",
+            "description": "圆铁盒是空的，锁扣完好，没有暴力撬动痕迹。片盒内卡片提到一段私人访谈。",
+            "sceneId": "screening",
+            "requires": []
+          },
+          {
+            "id": "piano_tape",
+            "name": "循环播放的磁带",
+            "description": "琴声来自钢琴上的便携录音机。磁带中同一处错音每隔两分钟重复一次，证明琴声不能作为在场证明。",
+            "sceneId": "tea",
+            "requires": []
+          },
+          {
+            "id": "cold_tea",
+            "name": "窗边的冷茶",
+            "description": "茶杯早已没有温度。杯旁有一张未寄出的信，内容请求在公开放映前删除私人访谈。",
+            "sceneId": "tea",
+            "requires": []
+          },
+          {
+            "id": "witness",
+            "name": "陈默的走廊证词",
+            "description": "23:15，陈默在恢复照明的走廊看见林知夏抱着圆形铁盒从放映室出来。",
+            "sceneId": null,
+            "requires": [
+              "power_log"
+            ]
+          }
+        ],
+        "endings": [
+          {
+            "id": "solved",
+            "kind": "solved",
+            "title": "雨停之前",
+            "text": "你把电源记录、重复的琴声和走廊证词连在一起。林知夏承认取走胶片，并从茶室通风柜里取回它。她请求先征求母亲同意，再放映那段私人访谈。天快亮了，雨也终于小了。"
+          },
+          {
+            "id": "wrong",
+            "kind": "wrong",
+            "title": "未完成的放映",
+            "text": "你的指认缺少完整证据，或指向了错误的人。争论盖过了雨声，胶片仍未找到。重新调查，留意哪些在场证明只是听起来可信。"
+          }
+        ]
+      },
+      "hash": "1d1200aef443a804cfd0639e76acff3ae539246f93d2397581c52de7d5b3e650"
+    },
+    {
+      "id": "bbc187ed-036b-40fa-b889-6880d36f30f5",
+      "number": 3,
+      "createdAt": "2026-09-20T20:50:56.433Z",
+      "note": "人工审阅：视频提示匹配已选参考图的绿色针织服装，保持图片可复用",
+      "case": {
+        "schemaVersion": 1,
+        "title": "雨停之前",
+        "logline": "暴雨封山，一卷即将公映的老胶片失踪了。每个人都想让今晚的放映停下来。",
+        "opening": "23:20，青苔旅馆的放映员发现胶片铁盒空了。十分钟前，山间旅馆经历过一次短暂停电。你是受邀修复这卷纪录片的档案师，最后一班接驳车要到天亮才能上山。先去大堂看看。",
+        "style": "写实悬疑电影，1998 年中国南方山间旅馆，墨绿色与钨丝灯琥珀色，35mm 胶片颗粒，克制的固定镜头，无可读文字，无水印。所有角色均为成年人。",
+        "truth": {
+          "culpritId": "lin",
+          "motive": "林知夏想找回胶片中母亲的一段未获同意的私人影像，临时藏起胶片阻止放映。",
+          "method": "利用预定的短时停电，在 23:12 取走胶片，藏进茶室通风柜。她用提前录好的钢琴声制造自己一直在茶室弹琴的假象。",
+          "requiredEvidenceIds": [
+            "power_log",
+            "piano_tape",
+            "witness"
+          ],
+          "timeline": [
+            {
+              "time": "22:40",
+              "event": "林知夏向店主借走便携录音机。"
+            },
+            {
+              "time": "23:10",
+              "event": "山庄短暂停电，备用电源随后启动。"
+            },
+            {
+              "time": "23:12",
+              "event": "林知夏从放映室带走胶片。"
+            },
+            {
+              "time": "23:15",
+              "event": "陈默在走廊遇见抱着铁盒的林知夏。"
+            }
+          ]
+        },
+        "characters": [
+          {
+            "id": "lin",
+            "name": "林知夏",
+            "role": "钢琴教师 · 29 岁",
+            "description": "黑色齐肩短发，米白针织衫，墨绿色半裙；右手食指贴着一小块创可贴。",
+            "publicKnowledge": "她受邀为今晚的无声片现场伴奏，自称停电前后一直在茶室练琴。",
+            "secret": "录音机播放着提前录制的琴声，她实际上离开茶室取走胶片。",
+            "portraitPrompt": "Portrait of an original 29 year old Chinese woman, short straight black bob hair, ivory knit cardigan, forest green skirt, reserved expression, warm tungsten light, cinematic 35mm photograph.",
+            "topics": [
+              {
+                "id": "alibi",
+                "question": "停电的时候你在哪里？",
+                "answer": "茶室。那首曲子还没练熟，我一直在弹。你应该也听见琴声了。",
+                "requires": [],
+                "reveals": []
+              },
+              {
+                "id": "tape",
+                "question": "录音机里为什么有和刚才一样的琴声？",
+                "answer": "……那是下午录的练习。我确实出去过，但我没有想过损坏胶片。我只想先和放映的人谈谈。",
+                "requires": [
+                  "piano_tape"
+                ],
+                "reveals": []
+              }
+            ]
+          },
+          {
+            "id": "chen",
+            "name": "陈默",
+            "role": "摄影师 · 34 岁",
+            "description": "微卷黑发，深蓝工装外套，旧相机挂在肩侧，眼下疲惫。",
+            "publicKnowledge": "他来拍旅馆停业前的最后一晚，停电后在走廊测试相机。",
+            "secret": "他看见林知夏抱着铁盒，但最初不愿卷入争执。",
+            "portraitPrompt": "Portrait of an original 34 year old Chinese man, slightly curly black hair, navy work jacket, vintage camera over shoulder, tired thoughtful eyes, cinematic 35mm photograph.",
+            "topics": [
+              {
+                "id": "camera",
+                "question": "今晚拍到了什么？",
+                "answer": "都是旅馆的空房间。走廊那盏灯坏了，我想等供电恢复再拍一张。",
+                "requires": [],
+                "reveals": []
+              },
+              {
+                "id": "corridor",
+                "question": "供电记录显示灯在 23:12 恢复，你那时看到了谁？",
+                "answer": "知夏。大概三分钟后，她从放映室方向过来，怀里抱着一个圆铁盒。她让我别把这段拍进去。",
+                "requires": [
+                  "power_log"
+                ],
+                "reveals": [
+                  "witness"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "zhou",
+            "name": "周叔",
+            "role": "旅馆店主 · 58 岁",
+            "description": "灰白短发，棕色灯芯绒马甲，蓝衬衫，旧钥匙串系在腰间。",
+            "publicKnowledge": "负责旅馆电路和放映室管理，明天就要交还旅馆。",
+            "secret": "他提前知道短时停电；没有告诉客人是怕影响今晚聚会。",
+            "portraitPrompt": "Portrait of an original 58 year old Chinese innkeeper, short grey hair, brown corduroy vest and blue shirt, kind weathered face, cinematic photograph.",
+            "topics": [
+              {
+                "id": "outage",
+                "question": "这次停电是意外吗？",
+                "answer": "电房设备老化，今晚本来就会切换一次线路。我把记录夹放在前台了。",
+                "requires": [],
+                "reveals": []
+              },
+              {
+                "id": "recorder",
+                "question": "有人借过录音机吗？",
+                "answer": "知夏在十点四十借走了，说想听听自己的演奏。我以为她一直在练琴。",
+                "requires": [
+                  "piano_tape"
+                ],
+                "reveals": []
+              }
+            ]
+          }
+        ],
+        "scenes": [
+          {
+            "id": "lobby",
+            "name": "旅馆大堂",
+            "description": "雨点敲打玻璃，前台那盏绿罩灯还亮着。电路记录夹摊在来客登记簿旁边。",
+            "requires": [],
+            "characterIds": [
+              "zhou"
+            ],
+            "imagePrompt": "Wide cinematic interior of a remote Chinese mountain inn lobby in 1998 at rainy midnight, empty reception desk with green bankers lamp, an open logbook, wet window, dark wood, amber tungsten light and deep moss green shadows, no people, no readable text.",
+            "videoPrompt": "A locked wide shot of an empty mountain inn lobby at rainy midnight. Rain trails down the window, the green desk lamp flickers once, quiet suspense. No people, no text, subtle movement."
+          },
+          {
+            "id": "screening",
+            "name": "旧放映室",
+            "description": "供电记录让你确认备用电源恢复后门锁已经释放。放映机还温热，铁盒里只剩一张发黄的借阅卡。",
+            "requires": [
+              "power_log"
+            ],
+            "characterIds": [
+              "chen"
+            ],
+            "imagePrompt": "An old empty film projection room in a Chinese mountain hotel, vintage 35mm projector, open round film canister on wooden table, warm dusty light beam, rain outside small window, cinematic suspense, no people, no readable text.",
+            "videoPrompt": "Slow gentle push into an old empty film projection room, projector beam illuminating floating dust, an open film canister on a wooden table. Warm tungsten lighting, no readable text, no people."
+          },
+          {
+            "id": "tea",
+            "name": "临窗茶室",
+            "description": "立式钢琴前空无一人，却仍传出同一小节。靠窗的茶杯已经凉了。林知夏靠在门边望着雨。",
+            "requires": [],
+            "characterIds": [
+              "lin"
+            ],
+            "imagePrompt": "One 29-year-old Chinese woman with a short black bob, ivory knitted cardigan and dark green dress, sitting beside an upright piano in a small wood-paneled hotel tea room at midnight. Medium shot, warm tungsten lamp, rain on dark windows, realistic skin texture, 35mm film photograph.",
+            "videoPrompt": "The woman from the reference image sits beside the piano. She breathes gently, blinks naturally and slowly turns her gaze towards the camera. Preserve her short black bob, green knitted clothing and warm dim lighting from the reference. Locked medium shot, very subtle movement. No dialogue, no text."
+          }
+        ],
+        "clues": [
+          {
+            "id": "power_log",
+            "name": "备用电源记录",
+            "description": "备用电源于 23:12 恢复，放映室电磁门锁同时释放。记录上保留了当值人的签字。",
+            "sceneId": "lobby",
+            "requires": []
+          },
+          {
+            "id": "guest_book",
+            "name": "最后一晚的来客簿",
+            "description": "三人都在晚饭前登记。林知夏的备注写着：母亲曾在这里工作。",
+            "sceneId": "lobby",
+            "requires": []
+          },
+          {
+            "id": "empty_can",
+            "name": "空胶片盒",
+            "description": "圆铁盒是空的，锁扣完好，没有暴力撬动痕迹。片盒内卡片提到一段私人访谈。",
+            "sceneId": "screening",
+            "requires": []
+          },
+          {
+            "id": "piano_tape",
+            "name": "循环播放的磁带",
+            "description": "琴声来自钢琴上的便携录音机。磁带中同一处错音每隔两分钟重复一次，证明琴声不能作为在场证明。",
+            "sceneId": "tea",
+            "requires": []
+          },
+          {
+            "id": "cold_tea",
+            "name": "窗边的冷茶",
+            "description": "茶杯早已没有温度。杯旁有一张未寄出的信，内容请求在公开放映前删除私人访谈。",
+            "sceneId": "tea",
+            "requires": []
+          },
+          {
+            "id": "witness",
+            "name": "陈默的走廊证词",
+            "description": "23:15，陈默在恢复照明的走廊看见林知夏抱着圆形铁盒从放映室出来。",
+            "sceneId": null,
+            "requires": [
+              "power_log"
+            ]
+          }
+        ],
+        "endings": [
+          {
+            "id": "solved",
+            "kind": "solved",
+            "title": "雨停之前",
+            "text": "你把电源记录、重复的琴声和走廊证词连在一起。林知夏承认取走胶片，并从茶室通风柜里取回它。她请求先征求母亲同意，再放映那段私人访谈。天快亮了，雨也终于小了。"
+          },
+          {
+            "id": "wrong",
+            "kind": "wrong",
+            "title": "未完成的放映",
+            "text": "你的指认缺少完整证据，或指向了错误的人。争论盖过了雨声，胶片仍未找到。重新调查，留意哪些在场证明只是听起来可信。"
+          }
+        ]
+      },
+      "hash": "3f4454ef4456d3688410a2ad3a9041e0e83ceec9f7281850ee4ec87a1c4256b9"
+    },
+    {
+      "id": "44edb076-c3e8-453a-a189-04f8c817f34a",
+      "number": 4,
+      "createdAt": "2026-09-20T21:17:33.905Z",
+      "note": "人工美术审阅：让现场描述与已生成的钢琴旁人物位置一致；规则与镜头输入不变",
+      "case": {
+        "schemaVersion": 1,
+        "title": "雨停之前",
+        "logline": "暴雨封山，一卷即将公映的老胶片失踪了。每个人都想让今晚的放映停下来。",
+        "opening": "23:20，青苔旅馆的放映员发现胶片铁盒空了。十分钟前，山间旅馆经历过一次短暂停电。你是受邀修复这卷纪录片的档案师，最后一班接驳车要到天亮才能上山。先去大堂看看。",
+        "style": "写实悬疑电影，1998 年中国南方山间旅馆，墨绿色与钨丝灯琥珀色，35mm 胶片颗粒，克制的固定镜头，无可读文字，无水印。所有角色均为成年人。",
+        "truth": {
+          "culpritId": "lin",
+          "motive": "林知夏想找回胶片中母亲的一段未获同意的私人影像，临时藏起胶片阻止放映。",
+          "method": "利用预定的短时停电，在 23:12 取走胶片，藏进茶室通风柜。她用提前录好的钢琴声制造自己一直在茶室弹琴的假象。",
+          "requiredEvidenceIds": [
+            "power_log",
+            "piano_tape",
+            "witness"
+          ],
+          "timeline": [
+            {
+              "time": "22:40",
+              "event": "林知夏向店主借走便携录音机。"
+            },
+            {
+              "time": "23:10",
+              "event": "山庄短暂停电，备用电源随后启动。"
+            },
+            {
+              "time": "23:12",
+              "event": "林知夏从放映室带走胶片。"
+            },
+            {
+              "time": "23:15",
+              "event": "陈默在走廊遇见抱着铁盒的林知夏。"
+            }
+          ]
+        },
+        "characters": [
+          {
+            "id": "lin",
+            "name": "林知夏",
+            "role": "钢琴教师 · 29 岁",
+            "description": "黑色齐肩短发，米白针织衫，墨绿色半裙；右手食指贴着一小块创可贴。",
+            "publicKnowledge": "她受邀为今晚的无声片现场伴奏，自称停电前后一直在茶室练琴。",
+            "secret": "录音机播放着提前录制的琴声，她实际上离开茶室取走胶片。",
+            "portraitPrompt": "Portrait of an original 29 year old Chinese woman, short straight black bob hair, ivory knit cardigan, forest green skirt, reserved expression, warm tungsten light, cinematic 35mm photograph.",
+            "topics": [
+              {
+                "id": "alibi",
+                "question": "停电的时候你在哪里？",
+                "answer": "茶室。那首曲子还没练熟，我一直在弹。你应该也听见琴声了。",
+                "requires": [],
+                "reveals": []
+              },
+              {
+                "id": "tape",
+                "question": "录音机里为什么有和刚才一样的琴声？",
+                "answer": "……那是下午录的练习。我确实出去过，但我没有想过损坏胶片。我只想先和放映的人谈谈。",
+                "requires": [
+                  "piano_tape"
+                ],
+                "reveals": []
+              }
+            ]
+          },
+          {
+            "id": "chen",
+            "name": "陈默",
+            "role": "摄影师 · 34 岁",
+            "description": "微卷黑发，深蓝工装外套，旧相机挂在肩侧，眼下疲惫。",
+            "publicKnowledge": "他来拍旅馆停业前的最后一晚，停电后在走廊测试相机。",
+            "secret": "他看见林知夏抱着铁盒，但最初不愿卷入争执。",
+            "portraitPrompt": "Portrait of an original 34 year old Chinese man, slightly curly black hair, navy work jacket, vintage camera over shoulder, tired thoughtful eyes, cinematic 35mm photograph.",
+            "topics": [
+              {
+                "id": "camera",
+                "question": "今晚拍到了什么？",
+                "answer": "都是旅馆的空房间。走廊那盏灯坏了，我想等供电恢复再拍一张。",
+                "requires": [],
+                "reveals": []
+              },
+              {
+                "id": "corridor",
+                "question": "供电记录显示灯在 23:12 恢复，你那时看到了谁？",
+                "answer": "知夏。大概三分钟后，她从放映室方向过来，怀里抱着一个圆铁盒。她让我别把这段拍进去。",
+                "requires": [
+                  "power_log"
+                ],
+                "reveals": [
+                  "witness"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "zhou",
+            "name": "周叔",
+            "role": "旅馆店主 · 58 岁",
+            "description": "灰白短发，棕色灯芯绒马甲，蓝衬衫，旧钥匙串系在腰间。",
+            "publicKnowledge": "负责旅馆电路和放映室管理，明天就要交还旅馆。",
+            "secret": "他提前知道短时停电；没有告诉客人是怕影响今晚聚会。",
+            "portraitPrompt": "Portrait of an original 58 year old Chinese innkeeper, short grey hair, brown corduroy vest and blue shirt, kind weathered face, cinematic photograph.",
+            "topics": [
+              {
+                "id": "outage",
+                "question": "这次停电是意外吗？",
+                "answer": "电房设备老化，今晚本来就会切换一次线路。我把记录夹放在前台了。",
+                "requires": [],
+                "reveals": []
+              },
+              {
+                "id": "recorder",
+                "question": "有人借过录音机吗？",
+                "answer": "知夏在十点四十借走了，说想听听自己的演奏。我以为她一直在练琴。",
+                "requires": [
+                  "piano_tape"
+                ],
+                "reveals": []
+              }
+            ]
+          }
+        ],
+        "scenes": [
+          {
+            "id": "lobby",
+            "name": "旅馆大堂",
+            "description": "雨点敲打玻璃，前台那盏绿罩灯还亮着。电路记录夹摊在来客登记簿旁边。",
+            "requires": [],
+            "characterIds": [
+              "zhou"
+            ],
+            "imagePrompt": "Wide cinematic interior of a remote Chinese mountain inn lobby in 1998 at rainy midnight, empty reception desk with green bankers lamp, an open logbook, wet window, dark wood, amber tungsten light and deep moss green shadows, no people, no readable text.",
+            "videoPrompt": "A locked wide shot of an empty mountain inn lobby at rainy midnight. Rain trails down the window, the green desk lamp flickers once, quiet suspense. No people, no text, subtle movement."
+          },
+          {
+            "id": "screening",
+            "name": "旧放映室",
+            "description": "供电记录让你确认备用电源恢复后门锁已经释放。放映机还温热，铁盒里只剩一张发黄的借阅卡。",
+            "requires": [
+              "power_log"
+            ],
+            "characterIds": [
+              "chen"
+            ],
+            "imagePrompt": "An old empty film projection room in a Chinese mountain hotel, vintage 35mm projector, open round film canister on wooden table, warm dusty light beam, rain outside small window, cinematic suspense, no people, no readable text.",
+            "videoPrompt": "Slow gentle push into an old empty film projection room, projector beam illuminating floating dust, an open film canister on a wooden table. Warm tungsten lighting, no readable text, no people."
+          },
+          {
+            "id": "tea",
+            "name": "临窗茶室",
+            "description": "林知夏坐在钢琴旁，双手没有触碰琴键，房间里却仍传出同一小节。窗边的茶杯已经凉了。",
+            "requires": [],
+            "characterIds": [
+              "lin"
+            ],
+            "imagePrompt": "One 29-year-old Chinese woman with a short black bob, ivory knitted cardigan and dark green dress, sitting beside an upright piano in a small wood-paneled hotel tea room at midnight. Medium shot, warm tungsten lamp, rain on dark windows, realistic skin texture, 35mm film photograph.",
+            "videoPrompt": "The woman from the reference image sits beside the piano. She breathes gently, blinks naturally and slowly turns her gaze towards the camera. Preserve her short black bob, green knitted clothing and warm dim lighting from the reference. Locked medium shot, very subtle movement. No dialogue, no text."
+          }
+        ],
+        "clues": [
+          {
+            "id": "power_log",
+            "name": "备用电源记录",
+            "description": "备用电源于 23:12 恢复，放映室电磁门锁同时释放。记录上保留了当值人的签字。",
+            "sceneId": "lobby",
+            "requires": []
+          },
+          {
+            "id": "guest_book",
+            "name": "最后一晚的来客簿",
+            "description": "三人都在晚饭前登记。林知夏的备注写着：母亲曾在这里工作。",
+            "sceneId": "lobby",
+            "requires": []
+          },
+          {
+            "id": "empty_can",
+            "name": "空胶片盒",
+            "description": "圆铁盒是空的，锁扣完好，没有暴力撬动痕迹。片盒内卡片提到一段私人访谈。",
+            "sceneId": "screening",
+            "requires": []
+          },
+          {
+            "id": "piano_tape",
+            "name": "循环播放的磁带",
+            "description": "琴声来自钢琴上的便携录音机。磁带中同一处错音每隔两分钟重复一次，证明琴声不能作为在场证明。",
+            "sceneId": "tea",
+            "requires": []
+          },
+          {
+            "id": "cold_tea",
+            "name": "窗边的冷茶",
+            "description": "茶杯早已没有温度。杯旁有一张未寄出的信，内容请求在公开放映前删除私人访谈。",
+            "sceneId": "tea",
+            "requires": []
+          },
+          {
+            "id": "witness",
+            "name": "陈默的走廊证词",
+            "description": "23:15，陈默在恢复照明的走廊看见林知夏抱着圆形铁盒从放映室出来。",
+            "sceneId": null,
+            "requires": [
+              "power_log"
+            ]
+          }
+        ],
+        "endings": [
+          {
+            "id": "solved",
+            "kind": "solved",
+            "title": "雨停之前",
+            "text": "你把电源记录、重复的琴声和走廊证词连在一起。林知夏承认取走胶片，并从茶室通风柜里取回它。她请求先征求母亲同意，再放映那段私人访谈。天快亮了，雨也终于小了。"
+          },
+          {
+            "id": "wrong",
+            "kind": "wrong",
+            "title": "未完成的放映",
+            "text": "你的指认缺少完整证据，或指向了错误的人。争论盖过了雨声，胶片仍未找到。重新调查，留意哪些在场证明只是听起来可信。"
+          }
+        ]
+      },
+      "hash": "ab271d6800e70b88e86ce62d4a776a200f20e9da860988795501ce26600cd771"
+    }
+  ],
+  "assets": [
+    {
+      "id": "70b81fb2-d107-4e3e-b32b-b94343c768bf",
+      "sceneId": "lobby",
+      "kind": "image",
+      "file": "70b81fb2-d107-4e3e-b32b-b94343c768bf.png",
+      "mime": "image/png",
+      "inputHash": "11ad68fffe7ffaf577ebef9e5e361bc220392a7b44585458276369bca57c9243",
+      "seed": 42,
+      "model": "/root/mujian-runtime/models/sdxl-base",
+      "durationMs": 42490,
+      "createdAt": "2026-09-20T20:35:20.048Z",
+      "provenance": "local-generation",
+      "metadata": {
+        "id": "56e25473-7fc9-429a-a887-832e9494b780",
+        "state": "succeeded",
+        "createdAt": 1789936476.7252874,
+        "request": {
+          "kind": "image",
+          "prompt": "Wide cinematic interior of a remote Chinese mountain inn lobby in 1998 at rainy midnight, empty reception desk with green bankers lamp, an open logbook, wet window, dark wood, amber tungsten light and deep moss green shadows, no people, no readable text.\nVisual style: 写实悬疑电影，1998 年中国南方山间旅馆，墨绿色与钨丝灯琥珀色，35mm 胶片颗粒，克制的固定镜头，无可读文字，无水印。所有角色均为成年人。",
+          "seed": 42,
+          "reference": null,
+          "quality": "draft"
+        },
+        "phase": "done",
+        "device": "NVIDIA GB10",
+        "loadMs": 36687,
+        "steps": 20,
+        "step": 20,
+        "file": "56e25473-7fc9-429a-a887-832e9494b780.png",
+        "model": "/root/mujian-runtime/models/sdxl-base",
+        "durationMs": 42490,
+        "peakAllocatedBytes": 9477176320,
+        "settings": {
+          "width": 1024,
+          "height": 576,
+          "num_inference_steps": 20,
+          "guidance_scale": 6
+        },
+        "torchVersion": "2.9.1+cu130",
+        "cudaVersion": "13.0",
+        "finishedAt": 1789936519.2169983,
+        "quality": "draft"
+      }
+    },
+    {
+      "id": "564b5282-fc37-4f6d-ad2d-19fce0d15d25",
+      "sceneId": "tea",
+      "kind": "image",
+      "file": "564b5282-fc37-4f6d-ad2d-19fce0d15d25.png",
+      "mime": "image/png",
+      "inputHash": "c9b9c271476ae395072279a0f6cd203433b0de2e555c109443804a58fd5e58d4",
+      "seed": 42,
+      "model": "/root/mujian-runtime/models/sdxl-base",
+      "durationMs": 4299,
+      "createdAt": "2026-09-20T20:35:25.481Z",
+      "provenance": "local-generation",
+      "metadata": {
+        "id": "ffb18fd0-a7e5-46f1-bd03-cac2881028b8",
+        "state": "succeeded",
+        "createdAt": 1789936520.0529785,
+        "request": {
+          "kind": "image",
+          "prompt": "An empty intimate tea room in a 1998 Chinese mountain inn, upright piano with a small portable cassette recorder on top, teacup by rainy window, warm practical light, deep green curtains, cinematic 35mm film still, no people, no readable text.\nVisual style: 写实悬疑电影，1998 年中国南方山间旅馆，墨绿色与钨丝灯琥珀色，35mm 胶片颗粒，克制的固定镜头，无可读文字，无水印。所有角色均为成年人。",
+          "seed": 42,
+          "reference": null,
+          "quality": "draft"
+        },
+        "phase": "done",
+        "device": "NVIDIA GB10",
+        "loadMs": 0,
+        "steps": 20,
+        "step": 20,
+        "file": "ffb18fd0-a7e5-46f1-bd03-cac2881028b8.png",
+        "model": "/root/mujian-runtime/models/sdxl-base",
+        "durationMs": 4299,
+        "peakAllocatedBytes": 9477438464,
+        "settings": {
+          "width": 1024,
+          "height": 576,
+          "num_inference_steps": 20,
+          "guidance_scale": 6
+        },
+        "torchVersion": "2.9.1+cu130",
+        "cudaVersion": "13.0",
+        "finishedAt": 1789936524.3522568,
+        "quality": "draft"
+      }
+    },
+    {
+      "id": "90ace3dc-ad88-4d86-9c4d-76f368de4909",
+      "sceneId": "lobby",
+      "kind": "image",
+      "file": "90ace3dc-ad88-4d86-9c4d-76f368de4909.png",
+      "mime": "image/png",
+      "inputHash": "40e378cc700623c8710ddd1630070a2826a7929baa351316b8c9352e49bd56e3",
+      "seed": 42,
+      "model": "/root/mujian-runtime/models/sdxl-base",
+      "durationMs": 42694,
+      "createdAt": "2026-09-20T20:40:07.295Z",
+      "provenance": "local-generation",
+      "metadata": {
+        "id": "7800a6cb-1438-4627-8b14-d9fb2e012ffc",
+        "state": "succeeded",
+        "createdAt": 1789936764.011075,
+        "request": {
+          "kind": "image",
+          "prompt": "Wide cinematic interior of a remote Chinese mountain inn lobby in 1998 at rainy midnight, empty reception desk with green bankers lamp, an open logbook, wet window, dark wood, amber tungsten light and deep moss green shadows, no people, no readable text.\nVisual style: 写实悬疑电影，1998 年中国南方山间旅馆，墨绿色与钨丝灯琥珀色，35mm 胶片颗粒，克制的固定镜头，无可读文字，无水印。所有角色均为成年人。",
+          "seed": 42,
+          "reference": null,
+          "quality": "draft"
+        },
+        "phase": "done",
+        "device": "NVIDIA GB10",
+        "loadMs": 37619,
+        "steps": 20,
+        "step": 20,
+        "file": "7800a6cb-1438-4627-8b14-d9fb2e012ffc.png",
+        "model": "/root/mujian-runtime/models/sdxl-base",
+        "durationMs": 42694,
+        "peakAllocatedBytes": 9477176320,
+        "settings": {
+          "width": 1024,
+          "height": 576,
+          "num_inference_steps": 20,
+          "guidance_scale": 6
+        },
+        "torchVersion": "2.9.1+cu130",
+        "cudaVersion": "13.0",
+        "finishedAt": 1789936806.7057502,
+        "quality": "draft"
+      }
+    },
+    {
+      "id": "43998cd0-5a60-4f3a-b0a4-2d635d613228",
+      "sceneId": "tea",
+      "kind": "image",
+      "file": "43998cd0-5a60-4f3a-b0a4-2d635d613228.png",
+      "mime": "image/png",
+      "inputHash": "b87106cef2bdaf2ed443114f8c6976c56cb1c25c8b451fa787ade3411f7662f0",
+      "seed": 73,
+      "model": "/root/mujian-runtime/models/sdxl-base",
+      "durationMs": 49903,
+      "createdAt": "2026-09-20T20:47:24.592Z",
+      "provenance": "local-generation",
+      "metadata": {
+        "id": "35124fad-4791-4d26-872a-cd33a8fcd236",
+        "state": "succeeded",
+        "createdAt": 1789937193.9945104,
+        "request": {
+          "kind": "image",
+          "prompt": "One 29-year-old Chinese woman with a short black bob, ivory knitted cardigan and dark green dress, sitting beside an upright piano in a small wood-paneled hotel tea room at midnight. Medium shot, warm tungsten lamp, rain on dark windows, realistic skin texture, 35mm film photograph.\nVisual style: 写实悬疑电影，1998 年中国南方山间旅馆，墨绿色与钨丝灯琥珀色，35mm 胶片颗粒，克制的固定镜头，无可读文字，无水印。所有角色均为成年人。",
+          "seed": 73,
+          "reference": null,
+          "quality": "final"
+        },
+        "phase": "done",
+        "device": "NVIDIA GB10",
+        "loadMs": 43692,
+        "steps": 30,
+        "step": 30,
+        "file": "35124fad-4791-4d26-872a-cd33a8fcd236.png",
+        "model": "/root/mujian-runtime/models/sdxl-base",
+        "durationMs": 49903,
+        "peakAllocatedBytes": 9478700032,
+        "settings": {
+          "width": 1024,
+          "height": 576,
+          "num_inference_steps": 30,
+          "guidance_scale": 6
+        },
+        "torchVersion": "2.9.1+cu130",
+        "cudaVersion": "13.0",
+        "finishedAt": 1789937243.8996332,
+        "quality": "final"
+      }
+    },
+    {
+      "id": "7eee28d7-8fd2-446c-b05c-579897451ad5",
+      "sceneId": "tea",
+      "kind": "video",
+      "file": "7eee28d7-8fd2-446c-b05c-579897451ad5.mp4",
+      "mime": "video/mp4",
+      "inputHash": "b059638caf438ecfdf54194d95d81f4accb513b2df24de34aa551f1db85052dd",
+      "seed": 73,
+      "model": "/root/mujian-runtime/models/Wan2.2-TI2V-5B-Diffusers",
+      "durationMs": 183559,
+      "createdAt": "2026-09-20T21:13:18.496Z",
+      "provenance": "local-generation",
+      "metadata": {
+        "id": "82fd0748-d6b8-47d1-9dcc-6ea766a74a1f",
+        "state": "succeeded",
+        "createdAt": 1789938614.4211125,
+        "request": {
+          "kind": "video",
+          "prompt": "The woman from the reference image sits beside the piano. She breathes gently, blinks naturally and slowly turns her gaze towards the camera. Preserve her short black bob, green knitted clothing and warm dim lighting from the reference. Locked medium shot, very subtle movement. No dialogue, no text.\nVisual style: 写实悬疑电影，1998 年中国南方山间旅馆，墨绿色与钨丝灯琥珀色，35mm 胶片颗粒，克制的固定镜头，无可读文字，无水印。所有角色均为成年人。",
+          "seed": 73,
+          "reference": "43998cd0-5a60-4f3a-b0a4-2d635d613228.png",
+          "quality": "draft"
+        },
+        "phase": "done",
+        "device": "NVIDIA GB10",
+        "diffusersVersion": "0.35.2",
+        "vaeTiling": false,
+        "loadMs": 94761,
+        "steps": 20,
+        "step": 20,
+        "probe": {
+          "programs": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "width": 768,
+              "height": 448
+            }
+          ],
+          "format": {
+            "duration": "2.041667"
+          }
+        },
+        "file": "82fd0748-d6b8-47d1-9dcc-6ea766a74a1f.mp4",
+        "model": "/root/mujian-runtime/models/Wan2.2-TI2V-5B-Diffusers",
+        "durationMs": 183559,
+        "peakAllocatedBytes": 32255070208,
+        "settings": {
+          "width": 768,
+          "height": 448,
+          "num_frames": 49,
+          "num_inference_steps": 20,
+          "guidance_scale": 5
+        },
+        "torchVersion": "2.9.1+cu130",
+        "cudaVersion": "13.0",
+        "finishedAt": 1789938797.9816158,
+        "quality": "draft",
+        "referenceHash": "33cbf555f1654103b8288593c87e2547a635060e0a048d34bfb4da5d73d93220"
+      }
+    },
+    {
+      "id": "ef5b9af0-3ec1-420f-ad67-c4ec8c3f45ee",
+      "sceneId": "screening",
+      "kind": "image",
+      "file": "ef5b9af0-3ec1-420f-ad67-c4ec8c3f45ee.png",
+      "mime": "image/png",
+      "inputHash": "0b17098c65076d0babeb6e8e9519b2ba138a9641b4603a2f58bec738a969e7bc",
+      "seed": 42,
+      "model": "/root/mujian-runtime/models/sdxl-base",
+      "durationMs": 42629,
+      "createdAt": "2026-09-20T21:14:01.793Z",
+      "provenance": "local-generation",
+      "metadata": {
+        "id": "b5868d6d-e1cf-46df-b144-de308a695dc2",
+        "state": "succeeded",
+        "createdAt": 1789938798.5107443,
+        "request": {
+          "kind": "image",
+          "prompt": "An old empty film projection room in a Chinese mountain hotel, vintage 35mm projector, open round film canister on wooden table, warm dusty light beam, rain outside small window, cinematic suspense, no people, no readable text.\nVisual style: 写实悬疑电影，1998 年中国南方山间旅馆，墨绿色与钨丝灯琥珀色，35mm 胶片颗粒，克制的固定镜头，无可读文字，无水印。所有角色均为成年人。",
+          "seed": 42,
+          "reference": null,
+          "quality": "draft"
+        },
+        "phase": "done",
+        "device": "NVIDIA GB10",
+        "diffusersVersion": "0.35.2",
+        "loadMs": 37602,
+        "steps": 20,
+        "step": 20,
+        "file": "b5868d6d-e1cf-46df-b144-de308a695dc2.png",
+        "model": "/root/mujian-runtime/models/sdxl-base",
+        "durationMs": 42629,
+        "peakAllocatedBytes": 9478700032,
+        "settings": {
+          "width": 1024,
+          "height": 576,
+          "num_inference_steps": 20,
+          "guidance_scale": 6
+        },
+        "torchVersion": "2.9.1+cu130",
+        "cudaVersion": "13.0",
+        "finishedAt": 1789938841.1408005,
+        "quality": "draft"
+      }
+    }
+  ],
+  "report": {
+    "rulesVersion": 2,
+    "passed": true,
+    "issues": [],
+    "reachableClues": [
+      "power_log",
+      "guest_book",
+      "empty_can",
+      "witness",
+      "piano_tape",
+      "cold_tea"
+    ],
+    "reachableScenes": [
+      "lobby",
+      "screening",
+      "tea"
+    ],
+    "winningPath": [
+      {
+        "type": "collect",
+        "clueId": "power_log"
+      },
+      {
+        "type": "collect",
+        "clueId": "guest_book"
+      },
+      {
+        "type": "travel",
+        "sceneId": "screening"
+      },
+      {
+        "type": "collect",
+        "clueId": "empty_can"
+      },
+      {
+        "type": "ask",
+        "characterId": "chen",
+        "topicId": "corridor"
+      },
+      {
+        "type": "travel",
+        "sceneId": "tea"
+      },
+      {
+        "type": "collect",
+        "clueId": "piano_tape"
+      },
+      {
+        "type": "collect",
+        "clueId": "cold_tea"
+      },
+      {
+        "type": "travel",
+        "sceneId": "lobby"
+      },
+      {
+        "type": "travel",
+        "sceneId": "screening"
+      },
+      {
+        "type": "travel",
+        "sceneId": "tea"
+      },
+      {
+        "type": "accuse",
+        "characterId": "lin",
+        "evidenceIds": [
+          "power_log",
+          "piano_tape",
+          "witness"
+        ]
+      }
+    ],
+    "actionCount": 12,
+    "checkedAt": "2026-09-20T21:18:02.171Z",
+    "caseHash": "ab271d6800e70b88e86ce62d4a776a200f20e9da860988795501ce26600cd771"
+  },
+  "source": "sample",
+  "assetStates": [
+    {
+      "id": "70b81fb2-d107-4e3e-b32b-b94343c768bf",
+      "current": false
+    },
+    {
+      "id": "564b5282-fc37-4f6d-ad2d-19fce0d15d25",
+      "current": false
+    },
+    {
+      "id": "90ace3dc-ad88-4d86-9c4d-76f368de4909",
+      "current": true
+    },
+    {
+      "id": "43998cd0-5a60-4f3a-b0a4-2d635d613228",
+      "current": true
+    },
+    {
+      "id": "7eee28d7-8fd2-446c-b05c-579897451ad5",
+      "current": true
+    },
+    {
+      "id": "ef5b9af0-3ec1-420f-ad67-c4ec8c3f45ee",
+      "current": true
+    }
+  ]
+}
