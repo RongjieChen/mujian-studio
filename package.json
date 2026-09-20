@@ -1,0 +1,41 @@
+{
+  "name": "mujian-studio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "幕间 · 基于 Pi 与 DGX Spark 的推理影游创作工坊",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "scripts": {
+    "dev": "tsx watch src/server/index.ts",
+    "dev:web": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build && node scripts/build-player.mjs",
+    "start": "tsx src/server/index.ts",
+    "pretest": "node scripts/build-player.mjs",
+    "test": "tsx --test tests/*.test.ts",
+    "check": "npm test && npm run build"
+  },
+  "dependencies": {
+    "@earendil-works/pi-ai": "0.86.1",
+    "@earendil-works/pi-coding-agent": "0.86.1",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "lucide-react": "^0.468.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "typebox": "^1.0.27",
+    "zod": "^4.1.5"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^22.18.6",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.3",
+    "esbuild": "^0.25.12",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.6"
+  }
+}
