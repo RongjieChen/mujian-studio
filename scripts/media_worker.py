@@ -21,6 +21,26 @@ lock = threading.Lock()
 pipeline = None
 pipeline_kind = None
 
+def model_readiness(model):
+    root = Path(model)
+    if not root.is_absolute():
+        return {'ready': None, 'detail': 'Model repository will be resolved when loading.'}
+    if not (root / 'model_index.json').is_file():
+        return {'ready': False, 'detail': 'Local model directory is missing model_index.json.'}
+    if model == SDXL and any(not (root / component / name).is_file() for component, name in [('unet', 'diffusion_pytorch_model.fp16.safetensors'), ('vae', 'diffusion_pytorch_model.fp16.safetensors'), ('text_encoder', 'model.fp16.safetensors'), ('text_encoder_2', 'model.fp16.safetensors')]):
+        return {'ready': False, 'detail': 'A required SDXL component is missing.'}
+    partials = list(root.rglob('*.incomplete')) + list(root.rglob('*.aria2'))
+    if partials:
+        return {'ready': False, 'detail': f'{len(partials)} model files are still downloading.'}
+    weights = list(root.rglob('*.safetensors'))
+    if not weights:
+        return {'ready': False, 'detail': 'No local model weights found.'}
+    for index in root.rglob('*.safetensors.index.json'):
+        names = set(json.loads(index.read_text()).get('weight_map', {}).values())
+        if any(not (index.parent / name).is_file() for name in names):
+            return {'ready': False, 'detail': 'A model weight shard is missing.'}
+    return {'ready': True, 'detail': 'Local model files are present.'}
+
 class Request(BaseModel):
     kind: str = Field(pattern='^(image|video)$')
     prompt: str = Field(min_length=1, max_length=8000)
@@ -127,10 +147,13 @@ def render(job, req):
 @app.get('/health')
 def health():
     import torch
-    return {'ok': True, 'gpu': torch.cuda.get_device_name(0) if torch.cuda.is_available() else None, 'busy': lock.locked(), 'loaded': pipeline_kind, 'models': {'image': SDXL, 'video': WAN}}
+    return {'ok': True, 'gpu': torch.cuda.get_device_name(0) if torch.cuda.is_available() else None, 'busy': lock.locked(), 'loaded': pipeline_kind, 'models': {'image': SDXL, 'video': WAN}, 'readiness': {'image': model_readiness(SDXL), 'video': model_readiness(WAN)}}
 
 @app.post('/jobs')
 def create(req: Request):
+    ready = model_readiness(SDXL if req.kind == 'image' else WAN)
+    if ready['ready'] is False:
+        raise HTTPException(503, ready['detail'])
     if not lock.acquire(blocking=False):
         raise HTTPException(409, 'GPU worker is busy')
     job = {'id': str(uuid.uuid4()), 'state': 'queued', 'createdAt': time.time(), 'request': req.model_dump(), 'cancel': threading.Event()}

@@ -26,7 +26,7 @@ export async function runMedia(job: Job, emit: (type:string,message:string,detai
   const input=sceneInput(project.case,sceneId,kind,seed,referenceHash);const inputHash=hashObject(input);
   const cached=project.assets.find(a=>a.inputHash===inputHash&&a.metadata?.quality===(job.request.quality||'draft')&&fs.existsSync(path.join(dataDir,'media',a.file)));
   if(cached&&!job.request.force){emit('cache','复用完全相同输入的已有素材',{assetId:cached.id});return {asset:cached,cacheHit:true};}
-  emit('skill','使用分镜制作流程：顺序调度、种子固定、保留旧素材');
+  emit('workflow','执行分镜制作流程：顺序调度、种子固定、保留旧素材');
   let remoteRef: string|undefined;
   if(reference){
     const r=await fetch(`${workerUrl()}/references/${reference.id}`,{method:'PUT',body:fs.readFileSync(path.join(dataDir,'media',reference.file)),signal});

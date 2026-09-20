@@ -1,0 +1,194 @@
+{
+  "id": "7b050e81-8573-4908-8215-6915f09d0d7a",
+  "projectId": null,
+  "kind": "generate",
+  "state": "failed",
+  "request": {
+    "prompt": "在一座即将闭馆的海边天文台，一块陨石样本被调包。三个成年研究者都有动机，关键在于观测日志与潮汐时间不一致。设计三个可探索场景、六条证据、两种结局。至少一条关键证词必须出示已有物证才能取得。原创中文故事，最后揭示一个合理且不悲惨的动机。",
+    "retryOf": "5d5c74ee-eece-4037-a8ac-5d46b560936a"
+  },
+  "events": [
+    {
+      "at": "2026-09-20T20:13:09.668Z",
+      "type": "model",
+      "message": "使用 本地 模型 nemotron-3-nano-q4"
+    },
+    {
+      "at": "2026-09-20T20:13:35.973Z",
+      "type": "model-error",
+      "message": "Connection error."
+    },
+    {
+      "at": "2026-09-20T20:13:35.974Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "nemotron-3-nano-q4"
+      }
+    },
+    {
+      "at": "2026-09-20T20:13:37.979Z",
+      "type": "model-error",
+      "message": "Connection error."
+    },
+    {
+      "at": "2026-09-20T20:13:37.980Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "nemotron-3-nano-q4"
+      }
+    },
+    {
+      "at": "2026-09-20T20:13:37.980Z",
+      "type": "retry",
+      "message": "Agent 尚未提交作品，依据真实检查结果继续修复",
+      "detail": {
+        "attempt": 1,
+        "callsUsed": 0
+      }
+    },
+    {
+      "at": "2026-09-20T20:13:37.984Z",
+      "type": "model-error",
+      "message": "Connection error."
+    },
+    {
+      "at": "2026-09-20T20:13:37.984Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "nemotron-3-nano-q4"
+      }
+    },
+    {
+      "at": "2026-09-20T20:13:39.992Z",
+      "type": "model-error",
+      "message": "Connection error."
+    },
+    {
+      "at": "2026-09-20T20:13:39.993Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "nemotron-3-nano-q4"
+      }
+    },
+    {
+      "at": "2026-09-20T20:13:39.994Z",
+      "type": "retry",
+      "message": "Agent 尚未提交作品，依据真实检查结果继续修复",
+      "detail": {
+        "attempt": 2,
+        "callsUsed": 0
+      }
+    },
+    {
+      "at": "2026-09-20T20:13:39.998Z",
+      "type": "model-error",
+      "message": "Connection error."
+    },
+    {
+      "at": "2026-09-20T20:13:39.999Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "nemotron-3-nano-q4"
+      }
+    },
+    {
+      "at": "2026-09-20T20:13:42.007Z",
+      "type": "model-error",
+      "message": "Connection error."
+    },
+    {
+      "at": "2026-09-20T20:13:42.008Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "nemotron-3-nano-q4"
+      }
+    },
+    {
+      "at": "2026-09-20T20:13:42.009Z",
+      "type": "error",
+      "message": "Agent 尚未提交通过检查的版本。请查看记录后调整要求重试，原项目已保留。"
+    }
+  ],
+  "createdAt": "2026-09-20T20:13:09.661Z",
+  "startedAt": "2026-09-20T20:13:09.662Z",
+  "error": "Agent 尚未提交通过检查的版本。请查看记录后调整要求重试，原项目已保留。",
+  "finishedAt": "2026-09-20T20:13:42.009Z"
+}

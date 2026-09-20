@@ -64,6 +64,12 @@ app.get('/api/projects/:id/json',(req,res)=>{const p=getProject(req.params.id);r
 app.get('/api/jobs',(_req,res)=>res.json(listJobs().slice(0,40)));
 app.get('/api/jobs/:id',(req,res)=>res.json(getJob(req.params.id)));
 app.post('/api/jobs/:id/cancel',(req,res)=>{cancelJob(req.params.id);res.json({ok:true});});
+app.post('/api/jobs/:id/retry',(req,res)=>{
+  const old=getJob(req.params.id);if(!['failed','cancelled','interrupted'].includes(old.state))throw new Error('只有未完成的任务可以重试。');
+  const existing=listJobs().find(j=>j.request.retryOf===old.id&&['queued','running'].includes(j.state));if(existing)return res.status(202).json(existing);
+  const base=old.projectId?getProject(old.projectId):null;
+  res.status(202).json(enqueue(old.kind,{...old.request,retryOf:old.id},old.projectId,base?.revision));
+});
 app.use('/media',express.static(path.join(dataDir,'media'),{dotfiles:'deny',immutable:true,maxAge:'1y'}));
 app.use(express.static(path.resolve('dist/web')));
 app.get('/{*path}',(_req,res)=>res.sendFile(path.resolve('dist/web/index.html')));

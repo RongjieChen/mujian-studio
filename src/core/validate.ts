@@ -34,7 +34,7 @@ export function validateCase(doc: Case): Report {
         revealed.add(id);
         const clue = doc.clues.find(c => c.id === id);
         if (clue?.sceneId) add('CLUE_SOURCE_CONFLICT', `topics.${topic.id}`, `证据 ${id} 同时被配置为现场物证和问话证词。`, [id]);
-        if (clue && !hasAll(topic.requires, clue.requires)) add('TOPIC_GUARD_MISMATCH', `topics.${topic.id}`, `问话条件没有包含证词 ${id} 的获取条件。`, [id]);
+        if (clue && !hasAll(topic.requires, clue.requires)) add('TOPIC_GUARD_MISMATCH', `characters.${char.id}.topics.${topic.id}.requires`, `问话条件缺少证词 ${id} 的前置物证：${clue.requires.filter(r=>!topic.requires.includes(r)).join(', ')}。不要把证词 ${id} 本身加进条件。`, [id,...clue.requires]);
       }
     }
   }

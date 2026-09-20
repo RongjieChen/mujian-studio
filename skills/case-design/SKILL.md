@@ -16,4 +16,4 @@ description: Design a complete, editable short mystery game from a story brief. 
 - 说谎可作为剧情，但固定真相、人物知识、各阶段回答应能解释，不让开场问话直接剧透。
 - 镜头优先空场景或单人轻微动作；固定服装和布景，禁止写“完美一致”一类不可验证保证。
 
-propose_case 提交完整结构；根据返回错误修正。读取 case-audit 并实际 validate_case 后，才能 commit_case。
+propose_case 提交完整结构；根据返回错误使用 patch_case 局部修正，不要反复重写整份案件。返回的 validEvidenceIds 是所有 requires 的合法取值；场景名和场景 ID 不能放入 requires。读取 case-audit 并实际 validate_case 后，才能 commit_case。
