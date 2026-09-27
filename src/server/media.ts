@@ -5,6 +5,7 @@ import { setTimeout as delay } from 'node:timers/promises';
 import type { Asset, Job, Project } from '../core/schema.ts';
 import { hashObject, sceneInput } from '../core/validate.ts';
 import { dataDir, getProject, saveProject } from './store.ts';
+import { withMediaMemory } from './gpu.ts';
 
 export const workerUrl = () => process.env.MEDIA_WORKER_URL || 'http://127.0.0.1:4318';
 async function waitForLlmSleep(emit:(type:string,message:string,detail?:unknown)=>void,signal:AbortSignal){
@@ -33,6 +34,7 @@ export function assetCurrent(project: Project, asset: Asset) {
 export async function runMedia(job: Job, emit: (type:string,message:string,detail?:unknown)=>void, signal: AbortSignal) {
   if (!job.projectId) throw new Error('缺少项目');
   const project=getProject(job.projectId);
+  if(job.baseRevision!==undefined && project.revision!==job.baseRevision)throw new Error('排队期间项目已修改，请基于最新版本重新生成素材。');
   const sceneId=String(job.request.sceneId); const kind=job.kind==='video'?'video':'image'; const seed=Number(job.request.seed??42);
   const scene=project.case.scenes.find(s=>s.id===sceneId); if(!scene)throw new Error('场景不存在');
   const reference=kind==='video' ? [...project.assets].reverse().find(a=>a.sceneId===sceneId&&a.kind==='image'&&assetCurrent(project,a)) : undefined;
@@ -40,6 +42,7 @@ export async function runMedia(job: Job, emit: (type:string,message:string,detai
   const input=sceneInput(project.case,sceneId,kind,seed,referenceHash);const inputHash=hashObject(input);
   const cached=project.assets.find(a=>a.inputHash===inputHash&&a.metadata?.quality===(job.request.quality||'draft')&&fs.existsSync(path.join(dataDir,'media',a.file)));
   if(cached&&!job.request.force){emit('cache','复用完全相同输入的已有素材',{assetId:cached.id});return {asset:cached,cacheHit:true};}
+  return withMediaMemory(async()=>{
   emit('workflow','执行分镜制作流程：顺序调度、种子固定、保留旧素材');
   if(kind==='video')await waitForLlmSleep(emit,signal);
   let remoteRef: string|undefined;
@@ -85,4 +88,5 @@ export async function runMedia(job: Job, emit: (type:string,message:string,detai
     if(signal.aborted)await fetch(`${workerUrl()}/jobs/${remote.id}/cancel`,{method:'POST',signal:AbortSignal.timeout(5000)}).catch(()=>{});
     throw error;
   }
+  },emit,signal);
 }

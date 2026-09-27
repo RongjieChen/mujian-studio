@@ -1,0 +1,647 @@
+{
+  "id": "5210ba41-ab78-4919-9e03-30ba2b69a7cc",
+  "projectId": "d6dea0b2-7673-4747-9aac-ab78e2beb989",
+  "kind": "video",
+  "state": "succeeded",
+  "request": {
+    "sceneId": "ship_tail",
+    "kind": "video",
+    "seed": 927,
+    "quality": "final",
+    "force": true
+  },
+  "baseRevision": 2,
+  "events": [
+    {
+      "at": "2026-09-27T16:30:54.455Z",
+      "type": "memory",
+      "message": "语言模型已休眠，释放 KV 缓存供本地媒体生成。"
+    },
+    {
+      "at": "2026-09-27T16:30:54.455Z",
+      "type": "workflow",
+      "message": "执行分镜制作流程：顺序调度、种子固定、保留旧素材"
+    },
+    {
+      "at": "2026-09-27T16:30:54.795Z",
+      "type": "media",
+      "message": "本地 GPU 作业已创建",
+      "detail": {
+        "workerJobId": "048ad134-71e2-4857-9a4d-669aa5aa0924",
+        "kind": "video",
+        "seed": 927,
+        "inputHash": "00c6eabb570d1f70b322bd918523872ecaea284f73fdd98c9a9bbeda4de4aad1"
+      }
+    },
+    {
+      "at": "2026-09-27T16:30:55.310Z",
+      "type": "progress",
+      "message": "加载本地生成模型",
+      "detail": {
+        "phase": "loading"
+      }
+    },
+    {
+      "at": "2026-09-27T16:33:06.249Z",
+      "type": "progress",
+      "message": "生成采样 1/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 1,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:33:33.321Z",
+      "type": "progress",
+      "message": "生成采样 2/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 2,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:34:02.194Z",
+      "type": "progress",
+      "message": "生成采样 3/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 3,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:34:31.072Z",
+      "type": "progress",
+      "message": "生成采样 4/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 4,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:34:58.142Z",
+      "type": "progress",
+      "message": "生成采样 5/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 5,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:35:27.026Z",
+      "type": "progress",
+      "message": "生成采样 6/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 6,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:35:55.905Z",
+      "type": "progress",
+      "message": "生成采样 7/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 7,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:36:24.777Z",
+      "type": "progress",
+      "message": "生成采样 8/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 8,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:36:51.851Z",
+      "type": "progress",
+      "message": "生成采样 9/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 9,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:37:20.730Z",
+      "type": "progress",
+      "message": "生成采样 10/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 10,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:37:49.601Z",
+      "type": "progress",
+      "message": "生成采样 11/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 11,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:38:18.477Z",
+      "type": "progress",
+      "message": "生成采样 12/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 12,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:38:47.354Z",
+      "type": "progress",
+      "message": "生成采样 13/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 13,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:39:14.425Z",
+      "type": "progress",
+      "message": "生成采样 14/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 14,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:39:43.310Z",
+      "type": "progress",
+      "message": "生成采样 15/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 15,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:40:12.180Z",
+      "type": "progress",
+      "message": "生成采样 16/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 16,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:40:41.059Z",
+      "type": "progress",
+      "message": "生成采样 17/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 17,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:41:08.130Z",
+      "type": "progress",
+      "message": "生成采样 18/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 18,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:41:37.010Z",
+      "type": "progress",
+      "message": "生成采样 19/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 19,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:42:05.892Z",
+      "type": "progress",
+      "message": "生成采样 20/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 20,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:42:34.775Z",
+      "type": "progress",
+      "message": "生成采样 21/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 21,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:43:01.854Z",
+      "type": "progress",
+      "message": "生成采样 22/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 22,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:43:30.738Z",
+      "type": "progress",
+      "message": "生成采样 23/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 23,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:43:59.612Z",
+      "type": "progress",
+      "message": "生成采样 24/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 24,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:44:28.486Z",
+      "type": "progress",
+      "message": "生成采样 25/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 25,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:44:55.569Z",
+      "type": "progress",
+      "message": "生成采样 26/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 26,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:45:24.449Z",
+      "type": "progress",
+      "message": "生成采样 27/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 27,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:45:53.333Z",
+      "type": "progress",
+      "message": "生成采样 28/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 28,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:46:20.399Z",
+      "type": "progress",
+      "message": "生成采样 29/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 29,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:46:49.287Z",
+      "type": "progress",
+      "message": "生成采样 30/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 30,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:47:18.167Z",
+      "type": "progress",
+      "message": "生成采样 31/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 31,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:47:47.052Z",
+      "type": "progress",
+      "message": "生成采样 32/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 32,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:48:14.130Z",
+      "type": "progress",
+      "message": "生成采样 33/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 33,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:48:42.998Z",
+      "type": "progress",
+      "message": "生成采样 34/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 34,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:49:11.863Z",
+      "type": "progress",
+      "message": "生成采样 35/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 35,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:49:40.746Z",
+      "type": "progress",
+      "message": "生成采样 36/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 36,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:50:09.627Z",
+      "type": "progress",
+      "message": "生成采样 37/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 37,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:50:36.710Z",
+      "type": "progress",
+      "message": "生成采样 38/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 38,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:51:05.587Z",
+      "type": "progress",
+      "message": "生成采样 39/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 39,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:51:34.460Z",
+      "type": "progress",
+      "message": "生成采样 40/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 40,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:52:03.345Z",
+      "type": "progress",
+      "message": "生成采样 41/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 41,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:52:30.415Z",
+      "type": "progress",
+      "message": "生成采样 42/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 42,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:52:59.293Z",
+      "type": "progress",
+      "message": "生成采样 43/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 43,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:53:28.174Z",
+      "type": "progress",
+      "message": "生成采样 44/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 44,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:53:57.043Z",
+      "type": "progress",
+      "message": "生成采样 45/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 45,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:54:24.111Z",
+      "type": "progress",
+      "message": "生成采样 46/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 46,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:54:52.986Z",
+      "type": "progress",
+      "message": "生成采样 47/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 47,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:55:21.871Z",
+      "type": "progress",
+      "message": "生成采样 48/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 48,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:55:48.941Z",
+      "type": "progress",
+      "message": "生成采样 49/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 49,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:56:17.818Z",
+      "type": "progress",
+      "message": "生成采样 50/50",
+      "detail": {
+        "phase": "sampling",
+        "step": 50,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:59:09.173Z",
+      "type": "progress",
+      "message": "素材状态：succeeded",
+      "detail": {
+        "phase": "done",
+        "step": 50,
+        "steps": 50
+      }
+    },
+    {
+      "at": "2026-09-27T16:59:09.200Z",
+      "type": "asset",
+      "message": "生成完成，已保存可追溯素材",
+      "detail": {
+        "assetId": "c48c9075-5fbd-439d-9a9b-2c35d0cbceb3",
+        "durationMs": 1693021,
+        "stale": false
+      }
+    },
+    {
+      "at": "2026-09-27T16:59:10.402Z",
+      "type": "memory",
+      "message": "已释放素材模型内存。",
+      "detail": {
+        "released": true,
+        "reservedBytes": 23068672
+      }
+    },
+    {
+      "at": "2026-09-27T16:59:13.031Z",
+      "type": "memory",
+      "message": "语言模型已唤醒。"
+    }
+  ],
+  "createdAt": "2026-09-27T16:30:53.092Z",
+  "startedAt": "2026-09-27T16:30:53.092Z",
+  "result": {
+    "asset": {
+      "id": "c48c9075-5fbd-439d-9a9b-2c35d0cbceb3",
+      "sceneId": "ship_tail",
+      "kind": "video",
+      "file": "c48c9075-5fbd-439d-9a9b-2c35d0cbceb3.mp4",
+      "mime": "video/mp4",
+      "inputHash": "00c6eabb570d1f70b322bd918523872ecaea284f73fdd98c9a9bbeda4de4aad1",
+      "seed": 927,
+      "model": "/root/mujian-runtime/models/Wan2.2-TI2V-5B-Diffusers",
+      "durationMs": 1693021,
+      "createdAt": "2026-09-27T16:59:09.192Z",
+      "provenance": "local-generation",
+      "metadata": {
+        "id": "048ad134-71e2-4857-9a4d-669aa5aa0924",
+        "state": "succeeded",
+        "createdAt": 1790526654.7205458,
+        "request": {
+          "kind": "video",
+          "prompt": "A fixed medium shot of an empty ferry tail deck at dusk in rain. Blue wax fragments lie near a half-open wooden mail box. Teal mist rolls in from the harbor, warm cabin light flickers. No people, no text, subtle rain.\nVisual style: 写实悬疑电影，2009年中国南方海港渡轮，傍晚雨雾，青蓝色金属甲板与暖黄舱灯，手持微晃镜头，克制对白，无可读文字，无水印。所有角色均为成年人。",
+          "seed": 927,
+          "reference": "35224548-5e54-4c5d-b44d-875b52822e59.png",
+          "quality": "final"
+        },
+        "phase": "done",
+        "device": "NVIDIA GB10",
+        "diffusersVersion": "0.35.2",
+        "vaeTiling": false,
+        "loadMs": 100685,
+        "steps": 50,
+        "step": 50,
+        "probe": {
+          "programs": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "width": 1280,
+              "height": 704
+            }
+          ],
+          "format": {
+            "duration": "5.041667"
+          }
+        },
+        "file": "048ad134-71e2-4857-9a4d-669aa5aa0924.mp4",
+        "model": "/root/mujian-runtime/models/Wan2.2-TI2V-5B-Diffusers",
+        "durationMs": 1693021,
+        "peakAllocatedBytes": 46065842176,
+        "settings": {
+          "width": 1280,
+          "height": 704,
+          "num_frames": 121,
+          "num_inference_steps": 50,
+          "guidance_scale": 5
+        },
+        "torchVersion": "2.9.1+cu130",
+        "cudaVersion": "13.0",
+        "finishedAt": 1790528347.7571487,
+        "quality": "final",
+        "referenceHash": "17d7e9686c4fa553eb1fc1acbdb325d6b9ba49057dd12abeebdd5bee6fb41476"
+      }
+    },
+    "cacheHit": false,
+    "stale": false
+  },
+  "finishedAt": "2026-09-27T16:59:13.031Z"
+}

@@ -1,0 +1,36 @@
+[
+  {
+    "name": "fresh-generation-saved",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "name": "preset-counts",
+    "passed": true,
+    "detail": {
+      "characters": 3,
+      "scenes": 3,
+      "clues": 6
+    }
+  },
+  {
+    "name": "opening-only-real-edit",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "name": "patch-story-tool-used",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "name": "hostile-repair-preserves-all-story-fields",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "name": "hostile-repair-completes",
+    "passed": true,
+    "detail": null
+  }
+]

@@ -1,0 +1,321 @@
+{
+  "id": "c9f5cc24-efd3-4e11-9ca2-d94b4dc70978",
+  "projectId": null,
+  "kind": "generate",
+  "state": "failed",
+  "request": {
+    "prompt": "创作原创短篇《旧书店最后一张借书卡》。打烊前，一张夹着道歉留言的借书卡被人调换。严格三个成年人物、三个场景、六条证据、两个结局；至少一条证词在出示物证后才能获得。真相围绕一次不愿当面承认的误会，不用旅馆、胶片、渡轮或示例人物。时间线与借阅记录清楚，所有必需证据足以支持结案，不靠角色自白作为唯一证据。"
+  },
+  "events": [
+    {
+      "at": "2026-09-27T16:59:13.092Z",
+      "type": "memory",
+      "message": "已释放素材模型内存。",
+      "detail": {
+        "released": true,
+        "reservedBytes": 23068672
+      }
+    },
+    {
+      "at": "2026-09-27T16:59:13.132Z",
+      "type": "model",
+      "message": "使用 本地 模型 qwen3.8-27b"
+    },
+    {
+      "at": "2026-09-27T16:59:22.335Z",
+      "type": "tool-call",
+      "message": "请求工具：read_skill"
+    },
+    {
+      "at": "2026-09-27T16:59:22.335Z",
+      "type": "tool-call",
+      "message": "请求工具：read_case_schema"
+    },
+    {
+      "at": "2026-09-27T16:59:22.336Z",
+      "type": "tool-call",
+      "message": "请求工具：read_case"
+    },
+    {
+      "at": "2026-09-27T16:59:22.336Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 3134,
+        "output": 55,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 3189,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T16:59:22.340Z",
+      "type": "skill",
+      "message": "读取技能：case-design",
+      "detail": {
+        "hash": "ed42ac688d07fc463f0208f9d385b03cb1d1c5f9812685dcfbf2f51faf00647f"
+      }
+    },
+    {
+      "at": "2026-09-27T16:59:22.340Z",
+      "type": "tool",
+      "message": "读取案件数据契约"
+    },
+    {
+      "at": "2026-09-27T16:59:22.343Z",
+      "type": "tool",
+      "message": "读取工作版本"
+    },
+    {
+      "at": "2026-09-27T17:01:47.302Z",
+      "type": "tool-call",
+      "message": "请求工具：propose_case"
+    },
+    {
+      "at": "2026-09-27T17:01:47.302Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 6790,
+        "output": 2989,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 9779,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:02:55.758Z",
+      "type": "tool-call",
+      "message": "请求工具：propose_case"
+    },
+    {
+      "at": "2026-09-27T17:02:55.759Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 12838,
+        "output": 2997,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 15835,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:03:54.103Z",
+      "type": "tool-call",
+      "message": "请求工具：propose_case"
+    },
+    {
+      "at": "2026-09-27T17:03:54.104Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 18894,
+        "output": 2295,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 21189,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:04:10.794Z",
+      "type": "tool-call",
+      "message": "请求工具：propose_case"
+    },
+    {
+      "at": "2026-09-27T17:04:10.795Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 23539,
+        "output": 563,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 24102,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:04:10.799Z",
+      "type": "check",
+      "message": "草稿与新建短篇的规模约定不符",
+      "detail": [
+        {
+          "field": "characters",
+          "expected": 3,
+          "actual": 2
+        },
+        {
+          "field": "scenes",
+          "expected": 3,
+          "actual": 2
+        },
+        {
+          "field": "clues",
+          "expected": 6,
+          "actual": 3
+        }
+      ]
+    },
+    {
+      "at": "2026-09-27T17:05:17.034Z",
+      "type": "tool-call",
+      "message": "请求工具：propose_case"
+    },
+    {
+      "at": "2026-09-27T17:05:17.035Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 24213,
+        "output": 2967,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 27180,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:05:20.953Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 30198,
+        "output": 1,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 30199,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:05:20.954Z",
+      "type": "retry",
+      "message": "Agent 尚未提交作品，依据真实检查结果继续修复",
+      "detail": {
+        "attempt": 1,
+        "callsUsed": 4
+      }
+    },
+    {
+      "at": "2026-09-27T17:05:22.812Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 30277,
+        "output": 1,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 30278,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:05:22.813Z",
+      "type": "retry",
+      "message": "Agent 尚未提交作品，依据真实检查结果继续修复",
+      "detail": {
+        "attempt": 2,
+        "callsUsed": 4
+      }
+    },
+    {
+      "at": "2026-09-27T17:05:24.700Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 30356,
+        "output": 1,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 30357,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:05:24.701Z",
+      "type": "error",
+      "message": "Agent 尚未提交通过检查的版本。请查看记录后调整要求重试，原项目已保留。"
+    }
+  ],
+  "createdAt": "2026-09-27T16:35:04.097Z",
+  "startedAt": "2026-09-27T16:59:13.032Z",
+  "error": "Agent 尚未提交通过检查的版本。请查看记录后调整要求重试，原项目已保留。",
+  "finishedAt": "2026-09-27T17:05:24.701Z"
+}

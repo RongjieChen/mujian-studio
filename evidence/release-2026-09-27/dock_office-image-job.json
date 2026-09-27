@@ -1,0 +1,151 @@
+{
+  "id": "6623fdfb-18a1-4cc2-b637-2b670b13be81",
+  "projectId": "d6dea0b2-7673-4747-9aac-ab78e2beb989",
+  "kind": "image",
+  "state": "succeeded",
+  "request": {
+    "sceneId": "dock_office",
+    "kind": "image",
+    "seed": 927,
+    "quality": "draft",
+    "force": false
+  },
+  "baseRevision": 4,
+  "events": [
+    {
+      "at": "2026-09-27T17:20:01.784Z",
+      "type": "memory",
+      "message": "语言模型已休眠，释放 KV 缓存供本地媒体生成。"
+    },
+    {
+      "at": "2026-09-27T17:20:01.785Z",
+      "type": "workflow",
+      "message": "执行分镜制作流程：顺序调度、种子固定、保留旧素材"
+    },
+    {
+      "at": "2026-09-27T17:20:01.799Z",
+      "type": "media",
+      "message": "本地 GPU 作业已创建",
+      "detail": {
+        "workerJobId": "71cdbcb6-4388-45a7-a191-a1f3e25e661d",
+        "kind": "image",
+        "seed": 927,
+        "inputHash": "aa93658f0eef6f885f3fa05aaa739f8fc219b6434ad9c3398f91c6c530cde591"
+      }
+    },
+    {
+      "at": "2026-09-27T17:20:01.866Z",
+      "type": "progress",
+      "message": "加载本地生成模型",
+      "detail": {
+        "phase": "loading"
+      }
+    },
+    {
+      "at": "2026-09-27T17:20:46.977Z",
+      "type": "progress",
+      "message": "生成采样 8/20",
+      "detail": {
+        "phase": "sampling",
+        "step": 8,
+        "steps": 20
+      }
+    },
+    {
+      "at": "2026-09-27T17:20:48.783Z",
+      "type": "progress",
+      "message": "生成采样 18/20",
+      "detail": {
+        "phase": "sampling",
+        "step": 18,
+        "steps": 20
+      }
+    },
+    {
+      "at": "2026-09-27T17:20:50.588Z",
+      "type": "progress",
+      "message": "素材状态：succeeded",
+      "detail": {
+        "phase": "done",
+        "step": 20,
+        "steps": 20
+      }
+    },
+    {
+      "at": "2026-09-27T17:20:50.605Z",
+      "type": "asset",
+      "message": "生成完成，已保存可追溯素材",
+      "detail": {
+        "assetId": "e1d3c0ff-5089-4142-b5b7-7f9bb467a0bf",
+        "durationMs": 47961,
+        "stale": false
+      }
+    },
+    {
+      "at": "2026-09-27T17:20:50.832Z",
+      "type": "memory",
+      "message": "已释放素材模型内存。",
+      "detail": {
+        "released": true,
+        "reservedBytes": 23068672
+      }
+    },
+    {
+      "at": "2026-09-27T17:20:55.362Z",
+      "type": "memory",
+      "message": "语言模型已唤醒。"
+    }
+  ],
+  "createdAt": "2026-09-27T17:11:19.076Z",
+  "startedAt": "2026-09-27T17:20:00.308Z",
+  "result": {
+    "asset": {
+      "id": "e1d3c0ff-5089-4142-b5b7-7f9bb467a0bf",
+      "sceneId": "dock_office",
+      "kind": "image",
+      "file": "e1d3c0ff-5089-4142-b5b7-7f9bb467a0bf.png",
+      "mime": "image/png",
+      "inputHash": "aa93658f0eef6f885f3fa05aaa739f8fc219b6434ad9c3398f91c6c530cde591",
+      "seed": 927,
+      "model": "/root/mujian-runtime/models/sdxl-base",
+      "durationMs": 47961,
+      "createdAt": "2026-09-27T17:20:50.604Z",
+      "provenance": "local-generation",
+      "metadata": {
+        "id": "71cdbcb6-4388-45a7-a191-a1f3e25e661d",
+        "state": "succeeded",
+        "createdAt": 1790529601.7968867,
+        "request": {
+          "kind": "image",
+          "prompt": "Cinematic empty maritime registration office at a 2009 Chinese harbor at dusk in rain, wooden desk, an open logbook, a small harbor window, teal blue light and warm desk lamp, no people, no readable text.\nVisual style: 写实悬疑电影，2009年中国南方海港渡轮，傍晚雨雾，青蓝色金属甲板与暖黄舱灯，手持微晃镜头，克制对白，无可读文字，无水印。所有角色均为成年人。",
+          "seed": 927,
+          "reference": null,
+          "quality": "draft"
+        },
+        "phase": "done",
+        "device": "NVIDIA GB10",
+        "diffusersVersion": "0.35.2",
+        "loadMs": 43641,
+        "steps": 20,
+        "step": 20,
+        "file": "71cdbcb6-4388-45a7-a191-a1f3e25e661d.png",
+        "model": "/root/mujian-runtime/models/sdxl-base",
+        "durationMs": 47961,
+        "peakAllocatedBytes": 9478700032,
+        "settings": {
+          "width": 1024,
+          "height": 576,
+          "num_inference_steps": 20,
+          "guidance_scale": 6
+        },
+        "torchVersion": "2.9.1+cu130",
+        "cudaVersion": "13.0",
+        "finishedAt": 1790529649.7587757,
+        "quality": "draft"
+      }
+    },
+    "cacheHit": false,
+    "stale": false
+  },
+  "finishedAt": "2026-09-27T17:20:55.363Z"
+}

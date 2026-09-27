@@ -1,0 +1,32 @@
+[
+  {
+    "assetId": "35224548-5e54-4c5d-b44d-875b52822e59",
+    "file": "35224548-5e54-4c5d-b44d-875b52822e59.png",
+    "bytes": 803338,
+    "sha256": "5e16706a863bd00621163dc61166ffbb5cd4673e38eed26d7d88d5c808205907"
+  },
+  {
+    "assetId": "c6b7473b-a1bc-403d-83da-e3b9e44403ed",
+    "file": "c6b7473b-a1bc-403d-83da-e3b9e44403ed.mp4",
+    "bytes": 190990,
+    "sha256": "9f86035185a5aa419d4b51aa1e28b1b73e82378114ad4e94c191cc8d48cb4fb5"
+  },
+  {
+    "assetId": "c48c9075-5fbd-439d-9a9b-2c35d0cbceb3",
+    "file": "c48c9075-5fbd-439d-9a9b-2c35d0cbceb3.mp4",
+    "bytes": 756540,
+    "sha256": "e250c2da8efe3e36b51b8f1956a4e7a755f07bd0afb68dc7b0c58015fb90e994"
+  },
+  {
+    "assetId": "c0733382-66a4-44c2-93f0-265952777eec",
+    "file": "c0733382-66a4-44c2-93f0-265952777eec.png",
+    "bytes": 782545,
+    "sha256": "e5ce37f1b48d96a12b3e9fd90c2f1c8214936b95f1d154b3021fe31b1924b391"
+  },
+  {
+    "assetId": "e1d3c0ff-5089-4142-b5b7-7f9bb467a0bf",
+    "file": "e1d3c0ff-5089-4142-b5b7-7f9bb467a0bf.png",
+    "bytes": 803384,
+    "sha256": "2cbb034b32566b07c280996ddc06271be57512c55dcf65f174c7b6c6763ca194"
+  }
+]

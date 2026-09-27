@@ -1,0 +1,711 @@
+{
+  "id": "0b85ab3a-d47a-49a2-a8a0-d098d79c7dfa",
+  "title": "旧书店最后一张借书卡",
+  "brief": "创作原创短篇《旧书店最后一张借书卡》。打烊前，一张夹着道歉留言的借书卡被人调换。严格三个成年人物、三个场景、六条证据、两个结局；至少一条证词在出示物证后才能获得。真相围绕一次不愿当面承认的误会，不用旅馆、胶片、渡轮或示例人物。时间线与借阅记录清楚，所有必需证据足以支持结案，不靠角色自白作为唯一证据。",
+  "createdAt": "2026-09-27T17:23:41.577Z",
+  "updatedAt": "2026-09-27T17:24:28.430Z",
+  "revision": 2,
+  "case": {
+    "schemaVersion": 1,
+    "title": "旧书店最后一张借书卡",
+    "logline": "打烊前，一张夹着道歉留言的旧借书卡被人悄悄调换。你必须在闭店前找出谁动了它，以及那句未说出口的道歉真正属于谁。",
+    "opening": "「槐安旧书」只剩最后一盏灯，雨刚停，湿透的旧纸页混着樟木气味漫进店里。你正在把还回的旧书放回原架，收店铃声先一步响起，提醒你只剩十分钟。就在此刻，你发现《旧城手记》里多了一行铅笔字：『那年不该那样对他说。』这张卡你下午刚整理过，本该没有这行字——有人趁你不注意，换走了原来的卡。",
+    "style": "慢节奏室内悬疑，对白短促克制，重点落在物证与借阅记录。",
+    "truth": {
+      "culpritId": "wei",
+      "motive": "沈苇和何声十二年前因一次当众争执而绝交。沈苇一直想当面道歉却说不出口，于是写在这张借书卡上。何声知道后，担心这行字被看见会让他难堪，也为了不让沈苇再次当众出丑，偷偷把夹着留言的卡换下、塞回抽屉，又留了一张干净的旧卡。他以为这是替两人保密，却造成了卡片被调换的疑云。",
+      "method": "何声下午两点半在还书时借机取下沈苇刚夹好留言的那张卡，把它塞进柜台抽屉夹层，再放进一张干净的旧卡占位。抽屉钥匙、带他指纹的旧卡、以及借阅记录时间线都能证明他动过这张卡。",
+      "requiredEvidenceIds": [
+        "drawer_key",
+        "stolen_card",
+        "borrow_log",
+        "testimony_wei"
+      ],
+      "timeline": [
+        {
+          "time": "14:00",
+          "event": "沈苇还回《旧城手记》，趁看店人不注意，把写有道歉留言的借书卡夹进书里。"
+        },
+        {
+          "time": "14:30",
+          "event": "何声来还另一本书，趁乱取下那张带留言的卡，塞进柜台抽屉夹层，放回一张干净旧卡。"
+        },
+        {
+          "time": "17:00",
+          "event": "看店人整理旧书，发现卡片被调换、多出道歉留言，开始追查。"
+        },
+        {
+          "time": "17:20",
+          "event": "周桐整理时值机，确认她整晚没离开柜台区域，也没碰过《旧城手记》。"
+        }
+      ]
+    },
+    "characters": [
+      {
+        "id": "wei",
+        "name": "何声",
+        "role": "常客 / 旧友",
+        "description": "四十岁左右的修复师，常来店里还书。说话谨慎，习惯把东西藏起来保管。",
+        "publicKnowledge": "何声是书店的常客，和沈苇曾是多年好友。",
+        "secret": "他和沈苇十二年前因一次争执绝交，一直想道歉却说不出口。他看到道歉留言后，偷偷换走了卡片。",
+        "portraitPrompt": "A 40-year-old East Asian man, calm expression, work apron, soft warm interior lighting, neutral background, portrait.",
+        "topics": [
+          {
+            "id": "wei_afternoon",
+            "question": "下午两点半你在店里做什么？",
+            "answer": "我来还一本修复完的书。我没碰过《旧城手记》。",
+            "requires": [],
+            "reveals": []
+          },
+          {
+            "id": "wei_apology",
+            "question": "看到那张带道歉留言的卡后，你怎么解释它被换走了？",
+            "answer": "……是我拿走的。那行字太刺眼，我怕它被别人看见。我不是想害谁，只是想替我们把这件事藏起来。",
+            "requires": [
+              "stolen_card",
+              "drawer_key"
+            ],
+            "reveals": [
+              "testimony_wei"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "shen",
+        "name": "沈苇",
+        "role": "常客 / 沈苇",
+        "description": "三十六岁的教师，最近常来店里还书，情绪有些低落。",
+        "publicKnowledge": "沈苇和何声是旧友，最近两人似乎有误会。",
+        "secret": "她写了那句道歉留言，却不敢当面说。",
+        "portraitPrompt": "A 36-year-old East Asian woman, soft hair, gentle but worried face, neutral interior lighting, portrait.",
+        "topics": [
+          {
+            "id": "shen_card",
+            "question": "这张借书卡是你夹进书里的吗？",
+            "answer": "是我。我夹的是我自己的卡，背面写了我想说的话。我没想让它被看见。",
+            "requires": [],
+            "reveals": []
+          }
+        ]
+      },
+      {
+        "id": "zhou",
+        "name": "周桐",
+        "role": "店员 / 周桐",
+        "description": "二十八岁的店员，负责日常整理与收银，动作利索。",
+        "publicKnowledge": "周桐当班时一直守在柜台附近。",
+        "secret": "她确实没离开柜台区域，也没碰过那本书。",
+        "portraitPrompt": "A 28-year-old East Asian woman, neat hair, apron, focused expression, neutral background, portrait.",
+        "topics": [
+          {
+            "id": "zhou_shift",
+            "question": "你整个下午有没有离开过柜台区域？",
+            "answer": "没有。我一直在柜台这边整理和收银，没碰过《旧城手记》。",
+            "requires": [],
+            "reveals": []
+          }
+        ]
+      }
+    ],
+    "scenes": [
+      {
+        "id": "counter",
+        "name": "柜台与书架",
+        "description": "书店主区域，收银柜台、几排旧书架和一张整理桌。灯光是暖黄的。",
+        "requires": [],
+        "characterIds": [
+          "zhou",
+          "shen",
+          "wei"
+        ],
+        "imagePrompt": "A cozy used bookstore counter and bookshelves, warm yellow light, wooden desk, empty, no people, detailed interior.",
+        "videoPrompt": "Slow static shot of a warm-lit bookstore counter and shelves, dust in light, no dialogue, gentle atmosphere."
+      },
+      {
+        "id": "drawer",
+        "name": "柜台抽屉",
+        "description": "柜台下方一个带小锁的抽屉，里面散放着旧卡、收据和一把小铜钥匙。",
+        "requires": [],
+        "characterIds": [
+          "zhou"
+        ],
+        "imagePrompt": "A small locked wooden drawer under a counter, old cards and receipts inside, warm light, no people.",
+        "videoPrompt": "A drawer slowly opening to reveal old cards and a small brass key, warm soft light, no people."
+      },
+      {
+        "id": "archive",
+        "name": "借阅登记台",
+        "description": "墙边一台旧登记本和读卡器，记录着每位客人的姓名、日期与借阅书目。",
+        "requires": [],
+        "characterIds": [
+          "wei"
+        ],
+        "imagePrompt": "A worn archive desk with a leather ledger and a card reader, neat rows of records, warm light, no people.",
+        "videoPrompt": "A hand-free shot of a leather ledger being flipped through, rows of names and dates, warm light, no people."
+      }
+    ],
+    "clues": [
+      {
+        "id": "drawer_key",
+        "name": "抽屉小铜钥匙",
+        "description": "柜台抽屉上的一把小铜钥匙，柄上有一道旧刻痕。",
+        "sceneId": "drawer",
+        "requires": []
+      },
+      {
+        "id": "receipt",
+        "name": "还书收据",
+        "description": "周桐下午登记的一张还书收据，记录着她一直在柜台区域。",
+        "sceneId": "counter",
+        "requires": []
+      },
+      {
+        "id": "old_card",
+        "name": "干净的旧借书卡",
+        "description": "被放回书里的那张干净旧卡，卡角有一处折痕，与夹层里那张不同。",
+        "sceneId": "counter",
+        "requires": []
+      },
+      {
+        "id": "stolen_card",
+        "name": "带留言的借书卡",
+        "description": "被何声取走、藏在抽屉夹层里的那张卡，背面有铅笔道歉留言。",
+        "sceneId": "drawer",
+        "requires": []
+      },
+      {
+        "id": "borrow_log",
+        "name": "借阅记录时间线",
+        "description": "登记本显示：沈苇14:00还书并夹卡，何声14:30来还书，之后《旧城手记》未再被借阅。",
+        "sceneId": "archive",
+        "requires": []
+      },
+      {
+        "id": "testimony_wei",
+        "name": "何声的承认",
+        "description": "在出示被取走的卡和抽屉钥匙后，何声承认是他换走了卡片。",
+        "sceneId": null,
+        "requires": [
+          "stolen_card",
+          "drawer_key"
+        ]
+      }
+    ],
+    "endings": [
+      {
+        "id": "solved",
+        "kind": "solved",
+        "title": "藏起来的道歉",
+        "text": "卡片夹层里的旧卡、抽屉上的铜钥匙，和登记本上的时间线指向同一个人——何声。他不是想偷，而是怕那句道歉被看见。你让他把卡还回书里，两个旧友终于把这句话当面说了出来。"
+      },
+      {
+        "id": "wrong",
+        "kind": "wrong",
+        "title": "被调换的卡",
+        "text": "你怀疑错了人。带留言的卡其实藏在抽屉夹层，抽屉钥匙和时间线都指向另一个人。真相还差一步：再核对一次谁在14:30动过那本书。"
+      }
+    ]
+  },
+  "revisions": [
+    {
+      "id": "6db37e79-2a5a-47c8-b267-420636727b47",
+      "number": 1,
+      "createdAt": "2026-09-27T17:23:41.577Z",
+      "note": "创建案件",
+      "case": {
+        "schemaVersion": 1,
+        "title": "旧书店最后一张借书卡",
+        "logline": "打烊前，一张夹着道歉留言的旧借书卡被人悄悄调换。你必须在闭店前找出谁动了它，以及那句未说出口的道歉真正属于谁。",
+        "opening": "「槐安旧书」只剩最后一盏灯。你负责看店，习惯在打烊前把当天还回的旧书放回原架。闭店前十分钟，你发现《旧城手记》夹着一张褪色的借书卡，卡背多了一行铅笔字：『那年不该那样对他说。』可这张卡你下午刚整理过，本该没有这行字。有人趁你不注意换走了原来的卡，又留了一张新的。",
+        "style": "慢节奏室内悬疑，对白短促克制，重点落在物证与借阅记录。",
+        "truth": {
+          "culpritId": "wei",
+          "motive": "沈苇和何声十二年前因一次当众争执而绝交。沈苇一直想当面道歉却说不出口，于是写在这张借书卡上。何声知道后，担心这行字被看见会让他难堪，也为了不让沈苇再次当众出丑，偷偷把夹着留言的卡换下、塞回抽屉，又留了一张干净的旧卡。他以为这是替两人保密，却造成了卡片被调换的疑云。",
+          "method": "何声下午两点半在还书时借机取下沈苇刚夹好留言的那张卡，把它塞进柜台抽屉夹层，再放进一张干净的旧卡占位。抽屉钥匙、带他指纹的旧卡、以及借阅记录时间线都能证明他动过这张卡。",
+          "requiredEvidenceIds": [
+            "drawer_key",
+            "stolen_card",
+            "borrow_log",
+            "testimony_wei"
+          ],
+          "timeline": [
+            {
+              "time": "14:00",
+              "event": "沈苇还回《旧城手记》，趁看店人不注意，把写有道歉留言的借书卡夹进书里。"
+            },
+            {
+              "time": "14:30",
+              "event": "何声来还另一本书，趁乱取下那张带留言的卡，塞进柜台抽屉夹层，放回一张干净旧卡。"
+            },
+            {
+              "time": "17:00",
+              "event": "看店人整理旧书，发现卡片被调换、多出道歉留言，开始追查。"
+            },
+            {
+              "time": "17:20",
+              "event": "周桐整理时值机，确认她整晚没离开柜台区域，也没碰过《旧城手记》。"
+            }
+          ]
+        },
+        "characters": [
+          {
+            "id": "wei",
+            "name": "何声",
+            "role": "常客 / 旧友",
+            "description": "四十岁左右的修复师，常来店里还书。说话谨慎，习惯把东西藏起来保管。",
+            "publicKnowledge": "何声是书店的常客，和沈苇曾是多年好友。",
+            "secret": "他和沈苇十二年前因一次争执绝交，一直想道歉却说不出口。他看到道歉留言后，偷偷换走了卡片。",
+            "portraitPrompt": "A 40-year-old East Asian man, calm expression, work apron, soft warm interior lighting, neutral background, portrait.",
+            "topics": [
+              {
+                "id": "wei_afternoon",
+                "question": "下午两点半你在店里做什么？",
+                "answer": "我来还一本修复完的书。我没碰过《旧城手记》。",
+                "requires": [],
+                "reveals": []
+              },
+              {
+                "id": "wei_apology",
+                "question": "看到那张带道歉留言的卡后，你怎么解释它被换走了？",
+                "answer": "……是我拿走的。那行字太刺眼，我怕它被别人看见。我不是想害谁，只是想替我们把这件事藏起来。",
+                "requires": [
+                  "stolen_card",
+                  "drawer_key"
+                ],
+                "reveals": [
+                  "testimony_wei"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "shen",
+            "name": "沈苇",
+            "role": "常客 / 沈苇",
+            "description": "三十六岁的教师，最近常来店里还书，情绪有些低落。",
+            "publicKnowledge": "沈苇和何声是旧友，最近两人似乎有误会。",
+            "secret": "她写了那句道歉留言，却不敢当面说。",
+            "portraitPrompt": "A 36-year-old East Asian woman, soft hair, gentle but worried face, neutral interior lighting, portrait.",
+            "topics": [
+              {
+                "id": "shen_card",
+                "question": "这张借书卡是你夹进书里的吗？",
+                "answer": "是我。我夹的是我自己的卡，背面写了我想说的话。我没想让它被看见。",
+                "requires": [],
+                "reveals": []
+              }
+            ]
+          },
+          {
+            "id": "zhou",
+            "name": "周桐",
+            "role": "店员 / 周桐",
+            "description": "二十八岁的店员，负责日常整理与收银，动作利索。",
+            "publicKnowledge": "周桐当班时一直守在柜台附近。",
+            "secret": "她确实没离开柜台区域，也没碰过那本书。",
+            "portraitPrompt": "A 28-year-old East Asian woman, neat hair, apron, focused expression, neutral background, portrait.",
+            "topics": [
+              {
+                "id": "zhou_shift",
+                "question": "你整个下午有没有离开过柜台区域？",
+                "answer": "没有。我一直在柜台这边整理和收银，没碰过《旧城手记》。",
+                "requires": [],
+                "reveals": []
+              }
+            ]
+          }
+        ],
+        "scenes": [
+          {
+            "id": "counter",
+            "name": "柜台与书架",
+            "description": "书店主区域，收银柜台、几排旧书架和一张整理桌。灯光是暖黄的。",
+            "requires": [],
+            "characterIds": [
+              "zhou",
+              "shen",
+              "wei"
+            ],
+            "imagePrompt": "A cozy used bookstore counter and bookshelves, warm yellow light, wooden desk, empty, no people, detailed interior.",
+            "videoPrompt": "Slow static shot of a warm-lit bookstore counter and shelves, dust in light, no dialogue, gentle atmosphere."
+          },
+          {
+            "id": "drawer",
+            "name": "柜台抽屉",
+            "description": "柜台下方一个带小锁的抽屉，里面散放着旧卡、收据和一把小铜钥匙。",
+            "requires": [],
+            "characterIds": [
+              "zhou"
+            ],
+            "imagePrompt": "A small locked wooden drawer under a counter, old cards and receipts inside, warm light, no people.",
+            "videoPrompt": "A drawer slowly opening to reveal old cards and a small brass key, warm soft light, no people."
+          },
+          {
+            "id": "archive",
+            "name": "借阅登记台",
+            "description": "墙边一台旧登记本和读卡器，记录着每位客人的姓名、日期与借阅书目。",
+            "requires": [],
+            "characterIds": [
+              "wei"
+            ],
+            "imagePrompt": "A worn archive desk with a leather ledger and a card reader, neat rows of records, warm light, no people.",
+            "videoPrompt": "A hand-free shot of a leather ledger being flipped through, rows of names and dates, warm light, no people."
+          }
+        ],
+        "clues": [
+          {
+            "id": "drawer_key",
+            "name": "抽屉小铜钥匙",
+            "description": "柜台抽屉上的一把小铜钥匙，柄上有一道旧刻痕。",
+            "sceneId": "drawer",
+            "requires": []
+          },
+          {
+            "id": "receipt",
+            "name": "还书收据",
+            "description": "周桐下午登记的一张还书收据，记录着她一直在柜台区域。",
+            "sceneId": "counter",
+            "requires": []
+          },
+          {
+            "id": "old_card",
+            "name": "干净的旧借书卡",
+            "description": "被放回书里的那张干净旧卡，卡角有一处折痕，与夹层里那张不同。",
+            "sceneId": "counter",
+            "requires": []
+          },
+          {
+            "id": "stolen_card",
+            "name": "带留言的借书卡",
+            "description": "被何声取走、藏在抽屉夹层里的那张卡，背面有铅笔道歉留言。",
+            "sceneId": "drawer",
+            "requires": []
+          },
+          {
+            "id": "borrow_log",
+            "name": "借阅记录时间线",
+            "description": "登记本显示：沈苇14:00还书并夹卡，何声14:30来还书，之后《旧城手记》未再被借阅。",
+            "sceneId": "archive",
+            "requires": []
+          },
+          {
+            "id": "testimony_wei",
+            "name": "何声的承认",
+            "description": "在出示被取走的卡和抽屉钥匙后，何声承认是他换走了卡片。",
+            "sceneId": null,
+            "requires": [
+              "stolen_card",
+              "drawer_key"
+            ]
+          }
+        ],
+        "endings": [
+          {
+            "id": "solved",
+            "kind": "solved",
+            "title": "藏起来的道歉",
+            "text": "卡片夹层里的旧卡、抽屉上的铜钥匙，和登记本上的时间线指向同一个人——何声。他不是想偷，而是怕那句道歉被看见。你让他把卡还回书里，两个旧友终于把这句话当面说了出来。"
+          },
+          {
+            "id": "wrong",
+            "kind": "wrong",
+            "title": "被调换的卡",
+            "text": "你怀疑错了人。带留言的卡其实藏在抽屉夹层，抽屉钥匙和时间线都指向另一个人。真相还差一步：再核对一次谁在14:30动过那本书。"
+          }
+        ]
+      },
+      "hash": "5e20a796e99ebcb0bfa8ff5723cd31843d16795f832f22a81843349c3d108a2e"
+    },
+    {
+      "id": "111db2f7-f36a-451e-8cde-0288b38111e4",
+      "number": 2,
+      "createdAt": "2026-09-27T17:24:28.430Z",
+      "note": "仅局部修改 opening 开场字段，加入雨后旧书店的纸张气味与收店铃声，保持两三句话；其余字段未改。已读技能、validate_case 通过。",
+      "case": {
+        "schemaVersion": 1,
+        "title": "旧书店最后一张借书卡",
+        "logline": "打烊前，一张夹着道歉留言的旧借书卡被人悄悄调换。你必须在闭店前找出谁动了它，以及那句未说出口的道歉真正属于谁。",
+        "opening": "「槐安旧书」只剩最后一盏灯，雨刚停，湿透的旧纸页混着樟木气味漫进店里。你正在把还回的旧书放回原架，收店铃声先一步响起，提醒你只剩十分钟。就在此刻，你发现《旧城手记》里多了一行铅笔字：『那年不该那样对他说。』这张卡你下午刚整理过，本该没有这行字——有人趁你不注意，换走了原来的卡。",
+        "style": "慢节奏室内悬疑，对白短促克制，重点落在物证与借阅记录。",
+        "truth": {
+          "culpritId": "wei",
+          "motive": "沈苇和何声十二年前因一次当众争执而绝交。沈苇一直想当面道歉却说不出口，于是写在这张借书卡上。何声知道后，担心这行字被看见会让他难堪，也为了不让沈苇再次当众出丑，偷偷把夹着留言的卡换下、塞回抽屉，又留了一张干净的旧卡。他以为这是替两人保密，却造成了卡片被调换的疑云。",
+          "method": "何声下午两点半在还书时借机取下沈苇刚夹好留言的那张卡，把它塞进柜台抽屉夹层，再放进一张干净的旧卡占位。抽屉钥匙、带他指纹的旧卡、以及借阅记录时间线都能证明他动过这张卡。",
+          "requiredEvidenceIds": [
+            "drawer_key",
+            "stolen_card",
+            "borrow_log",
+            "testimony_wei"
+          ],
+          "timeline": [
+            {
+              "time": "14:00",
+              "event": "沈苇还回《旧城手记》，趁看店人不注意，把写有道歉留言的借书卡夹进书里。"
+            },
+            {
+              "time": "14:30",
+              "event": "何声来还另一本书，趁乱取下那张带留言的卡，塞进柜台抽屉夹层，放回一张干净旧卡。"
+            },
+            {
+              "time": "17:00",
+              "event": "看店人整理旧书，发现卡片被调换、多出道歉留言，开始追查。"
+            },
+            {
+              "time": "17:20",
+              "event": "周桐整理时值机，确认她整晚没离开柜台区域，也没碰过《旧城手记》。"
+            }
+          ]
+        },
+        "characters": [
+          {
+            "id": "wei",
+            "name": "何声",
+            "role": "常客 / 旧友",
+            "description": "四十岁左右的修复师，常来店里还书。说话谨慎，习惯把东西藏起来保管。",
+            "publicKnowledge": "何声是书店的常客，和沈苇曾是多年好友。",
+            "secret": "他和沈苇十二年前因一次争执绝交，一直想道歉却说不出口。他看到道歉留言后，偷偷换走了卡片。",
+            "portraitPrompt": "A 40-year-old East Asian man, calm expression, work apron, soft warm interior lighting, neutral background, portrait.",
+            "topics": [
+              {
+                "id": "wei_afternoon",
+                "question": "下午两点半你在店里做什么？",
+                "answer": "我来还一本修复完的书。我没碰过《旧城手记》。",
+                "requires": [],
+                "reveals": []
+              },
+              {
+                "id": "wei_apology",
+                "question": "看到那张带道歉留言的卡后，你怎么解释它被换走了？",
+                "answer": "……是我拿走的。那行字太刺眼，我怕它被别人看见。我不是想害谁，只是想替我们把这件事藏起来。",
+                "requires": [
+                  "stolen_card",
+                  "drawer_key"
+                ],
+                "reveals": [
+                  "testimony_wei"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "shen",
+            "name": "沈苇",
+            "role": "常客 / 沈苇",
+            "description": "三十六岁的教师，最近常来店里还书，情绪有些低落。",
+            "publicKnowledge": "沈苇和何声是旧友，最近两人似乎有误会。",
+            "secret": "她写了那句道歉留言，却不敢当面说。",
+            "portraitPrompt": "A 36-year-old East Asian woman, soft hair, gentle but worried face, neutral interior lighting, portrait.",
+            "topics": [
+              {
+                "id": "shen_card",
+                "question": "这张借书卡是你夹进书里的吗？",
+                "answer": "是我。我夹的是我自己的卡，背面写了我想说的话。我没想让它被看见。",
+                "requires": [],
+                "reveals": []
+              }
+            ]
+          },
+          {
+            "id": "zhou",
+            "name": "周桐",
+            "role": "店员 / 周桐",
+            "description": "二十八岁的店员，负责日常整理与收银，动作利索。",
+            "publicKnowledge": "周桐当班时一直守在柜台附近。",
+            "secret": "她确实没离开柜台区域，也没碰过那本书。",
+            "portraitPrompt": "A 28-year-old East Asian woman, neat hair, apron, focused expression, neutral background, portrait.",
+            "topics": [
+              {
+                "id": "zhou_shift",
+                "question": "你整个下午有没有离开过柜台区域？",
+                "answer": "没有。我一直在柜台这边整理和收银，没碰过《旧城手记》。",
+                "requires": [],
+                "reveals": []
+              }
+            ]
+          }
+        ],
+        "scenes": [
+          {
+            "id": "counter",
+            "name": "柜台与书架",
+            "description": "书店主区域，收银柜台、几排旧书架和一张整理桌。灯光是暖黄的。",
+            "requires": [],
+            "characterIds": [
+              "zhou",
+              "shen",
+              "wei"
+            ],
+            "imagePrompt": "A cozy used bookstore counter and bookshelves, warm yellow light, wooden desk, empty, no people, detailed interior.",
+            "videoPrompt": "Slow static shot of a warm-lit bookstore counter and shelves, dust in light, no dialogue, gentle atmosphere."
+          },
+          {
+            "id": "drawer",
+            "name": "柜台抽屉",
+            "description": "柜台下方一个带小锁的抽屉，里面散放着旧卡、收据和一把小铜钥匙。",
+            "requires": [],
+            "characterIds": [
+              "zhou"
+            ],
+            "imagePrompt": "A small locked wooden drawer under a counter, old cards and receipts inside, warm light, no people.",
+            "videoPrompt": "A drawer slowly opening to reveal old cards and a small brass key, warm soft light, no people."
+          },
+          {
+            "id": "archive",
+            "name": "借阅登记台",
+            "description": "墙边一台旧登记本和读卡器，记录着每位客人的姓名、日期与借阅书目。",
+            "requires": [],
+            "characterIds": [
+              "wei"
+            ],
+            "imagePrompt": "A worn archive desk with a leather ledger and a card reader, neat rows of records, warm light, no people.",
+            "videoPrompt": "A hand-free shot of a leather ledger being flipped through, rows of names and dates, warm light, no people."
+          }
+        ],
+        "clues": [
+          {
+            "id": "drawer_key",
+            "name": "抽屉小铜钥匙",
+            "description": "柜台抽屉上的一把小铜钥匙，柄上有一道旧刻痕。",
+            "sceneId": "drawer",
+            "requires": []
+          },
+          {
+            "id": "receipt",
+            "name": "还书收据",
+            "description": "周桐下午登记的一张还书收据，记录着她一直在柜台区域。",
+            "sceneId": "counter",
+            "requires": []
+          },
+          {
+            "id": "old_card",
+            "name": "干净的旧借书卡",
+            "description": "被放回书里的那张干净旧卡，卡角有一处折痕，与夹层里那张不同。",
+            "sceneId": "counter",
+            "requires": []
+          },
+          {
+            "id": "stolen_card",
+            "name": "带留言的借书卡",
+            "description": "被何声取走、藏在抽屉夹层里的那张卡，背面有铅笔道歉留言。",
+            "sceneId": "drawer",
+            "requires": []
+          },
+          {
+            "id": "borrow_log",
+            "name": "借阅记录时间线",
+            "description": "登记本显示：沈苇14:00还书并夹卡，何声14:30来还书，之后《旧城手记》未再被借阅。",
+            "sceneId": "archive",
+            "requires": []
+          },
+          {
+            "id": "testimony_wei",
+            "name": "何声的承认",
+            "description": "在出示被取走的卡和抽屉钥匙后，何声承认是他换走了卡片。",
+            "sceneId": null,
+            "requires": [
+              "stolen_card",
+              "drawer_key"
+            ]
+          }
+        ],
+        "endings": [
+          {
+            "id": "solved",
+            "kind": "solved",
+            "title": "藏起来的道歉",
+            "text": "卡片夹层里的旧卡、抽屉上的铜钥匙，和登记本上的时间线指向同一个人——何声。他不是想偷，而是怕那句道歉被看见。你让他把卡还回书里，两个旧友终于把这句话当面说了出来。"
+          },
+          {
+            "id": "wrong",
+            "kind": "wrong",
+            "title": "被调换的卡",
+            "text": "你怀疑错了人。带留言的卡其实藏在抽屉夹层，抽屉钥匙和时间线都指向另一个人。真相还差一步：再核对一次谁在14:30动过那本书。"
+          }
+        ]
+      },
+      "hash": "9405fbe1e5b41a9230dda26cf11302b72099ab596c1c078ac77c2c6961f37eb7"
+    }
+  ],
+  "assets": [],
+  "report": {
+    "rulesVersion": 2,
+    "passed": true,
+    "issues": [],
+    "reachableClues": [
+      "receipt",
+      "old_card",
+      "drawer_key",
+      "stolen_card",
+      "borrow_log",
+      "testimony_wei"
+    ],
+    "reachableScenes": [
+      "counter",
+      "drawer",
+      "archive"
+    ],
+    "winningPath": [
+      {
+        "type": "collect",
+        "clueId": "receipt"
+      },
+      {
+        "type": "collect",
+        "clueId": "old_card"
+      },
+      {
+        "type": "travel",
+        "sceneId": "drawer"
+      },
+      {
+        "type": "collect",
+        "clueId": "drawer_key"
+      },
+      {
+        "type": "collect",
+        "clueId": "stolen_card"
+      },
+      {
+        "type": "travel",
+        "sceneId": "archive"
+      },
+      {
+        "type": "collect",
+        "clueId": "borrow_log"
+      },
+      {
+        "type": "ask",
+        "characterId": "wei",
+        "topicId": "wei_apology"
+      },
+      {
+        "type": "travel",
+        "sceneId": "counter"
+      },
+      {
+        "type": "travel",
+        "sceneId": "drawer"
+      },
+      {
+        "type": "travel",
+        "sceneId": "archive"
+      },
+      {
+        "type": "accuse",
+        "characterId": "wei",
+        "evidenceIds": [
+          "drawer_key",
+          "stolen_card",
+          "borrow_log",
+          "testimony_wei"
+        ]
+      }
+    ],
+    "actionCount": 12,
+    "checkedAt": "2026-09-27T17:24:40.787Z",
+    "caseHash": "9405fbe1e5b41a9230dda26cf11302b72099ab596c1c078ac77c2c6961f37eb7"
+  },
+  "source": "generated",
+  "assetStates": []
+}

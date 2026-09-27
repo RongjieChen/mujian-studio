@@ -1,0 +1,570 @@
+{
+  "id": "ed96a6fa-2bde-4320-8f34-623fea17a01e",
+  "title": "旧书店最后一张借书卡",
+  "brief": "创作原创短篇《旧书店最后一张借书卡》。打烊前，一张夹着道歉留言的借书卡被人调换。严格三个成年人物、三个场景、六条证据、两个结局；至少一条证词在出示物证后才能获得。真相围绕一次不愿当面承认的误会，不用旅馆、胶片、渡轮或示例人物。时间线与借阅记录清楚，所有必需证据足以支持结案，不靠角色自白作为唯一证据。",
+  "createdAt": "2026-09-27T17:19:05.201Z",
+  "updatedAt": "2026-09-27T17:19:05.201Z",
+  "revision": 1,
+  "case": {
+    "schemaVersion": 1,
+    "title": "旧书店最后一张借书卡",
+    "logline": "打烊前，夹着道歉留言的旧借书卡被人悄悄调换。三位常客与店员各自守着一段不愿当面试说的旧事，谁在借书卡背后动了手脚，又为何留下这句迟到的道歉？",
+    "opening": "梅雨季，巷尾的旧书店‘拾页’。晚九点，老板娘沈砚清正准备关灯，发现常客的借书卡被人收走了——那是本店最后一张还在流通的老式纸质卡。卡上夹着一张写着“对不起，是我欠你的那本，我一直没敢还”的便签，可字迹工整得不像任何一个常客的笔迹。桌上那本《雨巷手记》的书袋里，卡位空了。",
+    "style": "克制、冷调的短篇推理：对白简洁，证据以借阅记录与物证为主，避免靠人物自白破案。",
+    "truth": {
+      "culpritId": "zou",
+      "motive": "老顾客邹明远多年前借走《雨巷手记》，因一场误会始终没敢当面归还或致谢。他误以为当年自己弄丢了沈砚清替他保管、用来抵作借书的旧怀表，害她为一张旧表赔了钱，也让她以为他赖账失联。多年愧疚发酵成一句不敢当面试说的道歉。打烊前他悄悄收回自己那张被调换位置的借书卡，塞进道歉便签，希望不被人看见地“还债”。",
+      "method": "他趁晚九点打烊前、店员整理借书柜的几分钟，把原本挂在书袋里的旧借书卡取回，并在卡里夹入道歉便签。便签用他惯用的钢笔正楷书写（他写得很规整，所以不像手写留言而显得工整），但便签纸张是他随身带的米黄信笺，与店里白底借书卡明显不同，且卡上仍带他常带的那枚铜质书签坠。他没有偷任何财物，只是收回自己的卡并留下道歉。",
+      "requiredEvidenceIds": [
+        "note_paper",
+        "bookmark_token",
+        "loan_record",
+        "testimony"
+      ],
+      "timeline": [
+        {
+          "time": "2019-03",
+          "event": "邹明远借走《雨巷手记》，旧怀表暂由沈砚清代为保管作抵押。"
+        },
+        {
+          "time": "2019-06",
+          "event": "沈砚清点表时发现表不见了，记为邹明远未归还，账上挂一笔旧账。"
+        },
+        {
+          "time": "2024-05-14",
+          "event": "沈砚清重新整理旧账，才把《雨巷手记》与旧怀表两笔分开核对，仍只记为“借书未还”。"
+        },
+        {
+          "time": "2024-05-18 20:40",
+          "event": "晚九点前，邹明远回到拾页，趁整理借书柜时收回自己的借书卡并夹入道歉便签。"
+        },
+        {
+          "time": "2024-05-18 21:00",
+          "event": "沈砚清打烊时发现卡被调换、便签被夹入，开始盘问常客。"
+        }
+      ]
+    },
+    "characters": [
+      {
+        "id": "shen",
+        "name": "沈砚清",
+        "role": "旧书店老板娘（店主）",
+        "description": "四十岁出头，安静细致，守着拾页和一本老式借阅登记册。她记得每一张旧借书卡和每笔旧账。",
+        "publicKnowledge": "她是店员，案发当晚最后发现借书卡被调换和便签被夹入的人。",
+        "secret": "她真正愧疚的是：当年她误判是邹明远弄丢旧怀表，记了旧账却没有当面说清，让误会拖了五年。",
+        "portraitPrompt": "East Asian woman in her early 40s, warm apron over muted sweater, standing in a small used-book shop, soft warm lamp, calm tired expression, holding a paper lending card, cinematic, muted tones",
+        "topics": [
+          {
+            "id": "shen_when",
+            "question": "你是什么时候发现借书卡被调换的？",
+            "answer": "晚九点关灯前。书袋里卡位是空的，便签夹在柜台那本《雨巷手记》的书袋内侧，字迹很工整，不像手写留言。",
+            "requires": [],
+            "reveals": []
+          }
+        ]
+      },
+      {
+        "id": "wei",
+        "name": "魏临",
+        "role": "常客、夜班印刷工人",
+        "description": "三十五岁，常来拾页借书还书。他记不清最近一次还书是哪天，对《雨巷手记》的借阅细节含糊。",
+        "publicKnowledge": "他是常客，案发当晚在店里坐了一会儿。",
+        "secret": "他确实借过《雨巷手记》，但他五月中旬已把书连同借书卡一起还回，并不像登记册上写的那样“未还”。",
+        "portraitPrompt": "East Asian man mid 30s, work shirt sleeves rolled up, tired but honest face, sitting at a small wooden table in a used-book shop, warm lamplight, muted color palette, cinematic",
+        "topics": [
+          {
+            "id": "wei_loan",
+            "question": "你最近借还过《雨巷手记》吗？",
+            "answer": "借过……但五月里我连书带卡一起还回去了，应该早就清了。我哪有空一直占着那本书？",
+            "requires": [],
+            "reveals": []
+          },
+          {
+            "id": "wei_note",
+            "question": "这张道歉便签是你留下的吗？",
+            "answer": "不是我。我的字写得很潦草，你看这便签——正楷、纸也黄，根本不像我随手写的字。我五月中旬就把卡还了，没理由现在又塞什么道歉进去。",
+            "requires": [
+              "note_paper",
+              "bookmark_token"
+            ],
+            "reveals": [
+              "testimony"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "zou",
+        "name": "邹明远",
+        "role": "常客、退休教师",
+        "description": "五十多岁，退休后常来拾页安静坐坐。他写字工整规整，随身带一枚铜质书签坠。",
+        "publicKnowledge": "他是常客，案发当晚晚九点前后出现在店里。",
+        "secret": "他以为当年弄丢的是沈砚清替他保管的旧怀表，害她赔钱、以为他赖账，愧疚五年不敢当面试说。打烊前他悄悄收回自己的借书卡并夹入道歉便签。",
+        "portraitPrompt": "East Asian man in his 50s, retired teacher, neat cardigan, quiet contemplative posture, seated by a bookshelf in a used-book shop, soft warm light, subtle melancholy, muted cinematic tones",
+        "topics": [
+          {
+            "id": "zou_book",
+            "question": "《雨巷手记》和你有关吗？",
+            "answer": "……是我借的那本。我借走它好几年了，一直没还。我一直想着，总有一天要还，也要把当年的事说清楚。",
+            "requires": [],
+            "reveals": []
+          },
+          {
+            "id": "zou_confess",
+            "question": "这张道歉便签，是你夹进去的吗？",
+            "answer": "……是我。我不该在你关灯前偷偷动那张卡。我夹进去的，就是想说一句当面试不出口的道歉——我欠的那本，和当年让我以为我弄丢你旧表的事，我一直没敢当面承认。便签是我信笺纸上写的，书签坠我也一直带着，别当成谁在陷害。",
+            "requires": [
+              "note_paper",
+              "bookmark_token"
+            ],
+            "reveals": [
+              "testimony"
+            ]
+          }
+        ]
+      }
+    ],
+    "scenes": [
+      {
+        "id": "shop_floor",
+        "name": "旧书店柜台与书袋",
+        "description": "拾页打烊前的柜台与陈列架。《雨巷手记》躺在书袋里，卡位空着；旁边柜台上压着一张米黄便签。",
+        "requires": [],
+        "characterIds": [
+          "shen"
+        ],
+        "imagePrompt": "Small cozy used-book shop at dusk, wooden counter, a book in a cloth bag with an empty card slot, warm lamp, rain outside the window, muted tones, cinematic",
+        "videoPrompt": "Slow static shot of the shop counter at dusk; a hand places a pale-yellow note into a book bag, warm lamp flickers gently, rain streaks the window, muted cinematic color"
+      },
+      {
+        "id": "loan_desk",
+        "name": "借阅登记桌",
+        "description": "登记旧借书卡和借阅记录的长桌。旧登记册翻开在2024年5月那一页，桌上摊着几张旧借书卡和一枚铜质书签坠。",
+        "requires": [
+          "loan_record"
+        ],
+        "characterIds": [
+          "wei",
+          "zou"
+        ],
+        "imagePrompt": "Old lending ledger open on a wooden desk, several paper lending cards, a small brass bookmark pendant, warm lamplight, dust in the air, muted cinematic tones",
+        "videoPrompt": "Slow close-up of an old ledger page being turned; paper lending cards and a brass bookmark rest on the desk, warm lamplight, quiet and still, muted cinematic color"
+      },
+      {
+        "id": "corner_table",
+        "name": "窗边小桌",
+        "description": "靠近玻璃门的角落小桌，常客常在此坐坐。桌上留着邹明远用过的茶杯和那枚铜质书签坠的痕迹。",
+        "requires": [
+          "bookmark_token"
+        ],
+        "characterIds": [
+          "zou"
+        ],
+        "imagePrompt": "A small table by a rain-streaked window in a used-book shop, an empty teacup, a brass bookmark pendant left on the table, soft warm light, muted cinematic tones",
+        "videoPrompt": "Slow static shot of a corner table by a rain-streaked window; an empty teacup and a brass bookmark pendant, a chair slightly pulled back, warm lamplight, quiet, muted color"
+      }
+    ],
+    "clues": [
+      {
+        "id": "note_paper",
+        "name": "道歉便签与米黄信笺",
+        "description": "夹在《雨巷手记》书袋里的便签：“对不起，是我欠你的那本，我一直没敢还。”纸张是米黄信笺，非店里的白底借书卡纸；字迹为工整钢笔正楷，与店里常客的随手留言不同。",
+        "sceneId": "shop_floor",
+        "requires": []
+      },
+      {
+        "id": "bookmark_token",
+        "name": "铜质书签坠",
+        "description": "一枚旧铜质书签坠，刻着极小的“远”字，常被夹进借书卡里。这是邹明远随身带多年的旧物。",
+        "sceneId": "corner_table",
+        "requires": []
+      },
+      {
+        "id": "loan_record",
+        "name": "旧借阅登记册",
+        "description": "2024年5月的借阅登记页：邹明远名下《雨巷手记》状态为“在借、未还”，借出日期为2019年3月；魏临同名条目已盖“2024-05-12 已还”红章且书袋无卡；另附一笔旧怀表抵押记录。",
+        "sceneId": "loan_desk",
+        "requires": []
+      },
+      {
+        "id": "loan_stamp",
+        "name": "还书日章",
+        "description": "魏临名下《雨巷手记》一栏盖着“2024-05-12 已还”的红章，且书袋卡位无卡——说明他已按时归还，不是留卡的人。",
+        "sceneId": "loan_desk",
+        "requires": [
+          "loan_record"
+        ]
+      },
+      {
+        "id": "shen_note",
+        "name": "沈砚清的旧账备注",
+        "description": "登记册边角的店主笔迹：“旧表一笔，误记入邹名下，待核。”说明她当年误把旧怀表算进邹的账，误会由此而起，并非邹赖账。",
+        "sceneId": "loan_desk",
+        "requires": [
+          "loan_record"
+        ]
+      },
+      {
+        "id": "testimony",
+        "name": "两位常客的证词",
+        "description": "出示便签与铜书签坠后，邹明远承认：是他打烊前悄悄收回自己的旧借书卡并夹入道歉便签，只为一句当面不敢试说的道歉。魏临也证实他5月12日已连书带卡归还、卡位空了，便签正楷黄纸也不像他的字，排除自己是留卡者。两条证词合起来指向邹明远。",
+        "sceneId": null,
+        "requires": [
+          "note_paper",
+          "bookmark_token"
+        ]
+      }
+    ],
+    "endings": [
+      {
+        "id": "solved",
+        "kind": "solved",
+        "title": "最后一张借书卡",
+        "text": "便签是米黄信笺、钢笔正楷，铜书签坠刻着“远”，而魏临名下《雨巷手记》早在5月12日已盖还章、卡位空了——留卡的不是他。老借阅册与店主备注合起来，露出真相：当年旧怀表被误记进邹的账，他误以为是自己弄丢、害她赔钱，愧疚五年。打烊前他悄悄收回自己的旧借书卡、夹入那句不敢当面试说的道歉。误会解开了，旧表也该重新记到它该在的名字下。"
+      },
+      {
+        "id": "wrong",
+        "kind": "wrong",
+        "title": "错认的字迹",
+        "text": "只凭“字迹工整、像谁的手笔”就下结论，会错认留卡者。真正的线索不在字迹，而在便签的米黄信笺、刻着“远”的铜书签坠，以及借阅记录上谁已还、谁在借。没有这些物证与登记页，任何指认都站不住脚。"
+      }
+    ]
+  },
+  "revisions": [
+    {
+      "id": "4f03bc7b-76d1-4d2e-bf05-7c18cf62d616",
+      "number": 1,
+      "createdAt": "2026-09-27T17:19:05.201Z",
+      "note": "创建案件",
+      "case": {
+        "schemaVersion": 1,
+        "title": "旧书店最后一张借书卡",
+        "logline": "打烊前，夹着道歉留言的旧借书卡被人悄悄调换。三位常客与店员各自守着一段不愿当面试说的旧事，谁在借书卡背后动了手脚，又为何留下这句迟到的道歉？",
+        "opening": "梅雨季，巷尾的旧书店‘拾页’。晚九点，老板娘沈砚清正准备关灯，发现常客的借书卡被人收走了——那是本店最后一张还在流通的老式纸质卡。卡上夹着一张写着“对不起，是我欠你的那本，我一直没敢还”的便签，可字迹工整得不像任何一个常客的笔迹。桌上那本《雨巷手记》的书袋里，卡位空了。",
+        "style": "克制、冷调的短篇推理：对白简洁，证据以借阅记录与物证为主，避免靠人物自白破案。",
+        "truth": {
+          "culpritId": "zou",
+          "motive": "老顾客邹明远多年前借走《雨巷手记》，因一场误会始终没敢当面归还或致谢。他误以为当年自己弄丢了沈砚清替他保管、用来抵作借书的旧怀表，害她为一张旧表赔了钱，也让她以为他赖账失联。多年愧疚发酵成一句不敢当面试说的道歉。打烊前他悄悄收回自己那张被调换位置的借书卡，塞进道歉便签，希望不被人看见地“还债”。",
+          "method": "他趁晚九点打烊前、店员整理借书柜的几分钟，把原本挂在书袋里的旧借书卡取回，并在卡里夹入道歉便签。便签用他惯用的钢笔正楷书写（他写得很规整，所以不像手写留言而显得工整），但便签纸张是他随身带的米黄信笺，与店里白底借书卡明显不同，且卡上仍带他常带的那枚铜质书签坠。他没有偷任何财物，只是收回自己的卡并留下道歉。",
+          "requiredEvidenceIds": [
+            "note_paper",
+            "bookmark_token",
+            "loan_record",
+            "testimony"
+          ],
+          "timeline": [
+            {
+              "time": "2019-03",
+              "event": "邹明远借走《雨巷手记》，旧怀表暂由沈砚清代为保管作抵押。"
+            },
+            {
+              "time": "2019-06",
+              "event": "沈砚清点表时发现表不见了，记为邹明远未归还，账上挂一笔旧账。"
+            },
+            {
+              "time": "2024-05-14",
+              "event": "沈砚清重新整理旧账，才把《雨巷手记》与旧怀表两笔分开核对，仍只记为“借书未还”。"
+            },
+            {
+              "time": "2024-05-18 20:40",
+              "event": "晚九点前，邹明远回到拾页，趁整理借书柜时收回自己的借书卡并夹入道歉便签。"
+            },
+            {
+              "time": "2024-05-18 21:00",
+              "event": "沈砚清打烊时发现卡被调换、便签被夹入，开始盘问常客。"
+            }
+          ]
+        },
+        "characters": [
+          {
+            "id": "shen",
+            "name": "沈砚清",
+            "role": "旧书店老板娘（店主）",
+            "description": "四十岁出头，安静细致，守着拾页和一本老式借阅登记册。她记得每一张旧借书卡和每笔旧账。",
+            "publicKnowledge": "她是店员，案发当晚最后发现借书卡被调换和便签被夹入的人。",
+            "secret": "她真正愧疚的是：当年她误判是邹明远弄丢旧怀表，记了旧账却没有当面说清，让误会拖了五年。",
+            "portraitPrompt": "East Asian woman in her early 40s, warm apron over muted sweater, standing in a small used-book shop, soft warm lamp, calm tired expression, holding a paper lending card, cinematic, muted tones",
+            "topics": [
+              {
+                "id": "shen_when",
+                "question": "你是什么时候发现借书卡被调换的？",
+                "answer": "晚九点关灯前。书袋里卡位是空的，便签夹在柜台那本《雨巷手记》的书袋内侧，字迹很工整，不像手写留言。",
+                "requires": [],
+                "reveals": []
+              }
+            ]
+          },
+          {
+            "id": "wei",
+            "name": "魏临",
+            "role": "常客、夜班印刷工人",
+            "description": "三十五岁，常来拾页借书还书。他记不清最近一次还书是哪天，对《雨巷手记》的借阅细节含糊。",
+            "publicKnowledge": "他是常客，案发当晚在店里坐了一会儿。",
+            "secret": "他确实借过《雨巷手记》，但他五月中旬已把书连同借书卡一起还回，并不像登记册上写的那样“未还”。",
+            "portraitPrompt": "East Asian man mid 30s, work shirt sleeves rolled up, tired but honest face, sitting at a small wooden table in a used-book shop, warm lamplight, muted color palette, cinematic",
+            "topics": [
+              {
+                "id": "wei_loan",
+                "question": "你最近借还过《雨巷手记》吗？",
+                "answer": "借过……但五月里我连书带卡一起还回去了，应该早就清了。我哪有空一直占着那本书？",
+                "requires": [],
+                "reveals": []
+              },
+              {
+                "id": "wei_note",
+                "question": "这张道歉便签是你留下的吗？",
+                "answer": "不是我。我的字写得很潦草，你看这便签——正楷、纸也黄，根本不像我随手写的字。我五月中旬就把卡还了，没理由现在又塞什么道歉进去。",
+                "requires": [
+                  "note_paper",
+                  "bookmark_token"
+                ],
+                "reveals": [
+                  "testimony"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "zou",
+            "name": "邹明远",
+            "role": "常客、退休教师",
+            "description": "五十多岁，退休后常来拾页安静坐坐。他写字工整规整，随身带一枚铜质书签坠。",
+            "publicKnowledge": "他是常客，案发当晚晚九点前后出现在店里。",
+            "secret": "他以为当年弄丢的是沈砚清替他保管的旧怀表，害她赔钱、以为他赖账，愧疚五年不敢当面试说。打烊前他悄悄收回自己的借书卡并夹入道歉便签。",
+            "portraitPrompt": "East Asian man in his 50s, retired teacher, neat cardigan, quiet contemplative posture, seated by a bookshelf in a used-book shop, soft warm light, subtle melancholy, muted cinematic tones",
+            "topics": [
+              {
+                "id": "zou_book",
+                "question": "《雨巷手记》和你有关吗？",
+                "answer": "……是我借的那本。我借走它好几年了，一直没还。我一直想着，总有一天要还，也要把当年的事说清楚。",
+                "requires": [],
+                "reveals": []
+              },
+              {
+                "id": "zou_confess",
+                "question": "这张道歉便签，是你夹进去的吗？",
+                "answer": "……是我。我不该在你关灯前偷偷动那张卡。我夹进去的，就是想说一句当面试不出口的道歉——我欠的那本，和当年让我以为我弄丢你旧表的事，我一直没敢当面承认。便签是我信笺纸上写的，书签坠我也一直带着，别当成谁在陷害。",
+                "requires": [
+                  "note_paper",
+                  "bookmark_token"
+                ],
+                "reveals": [
+                  "testimony"
+                ]
+              }
+            ]
+          }
+        ],
+        "scenes": [
+          {
+            "id": "shop_floor",
+            "name": "旧书店柜台与书袋",
+            "description": "拾页打烊前的柜台与陈列架。《雨巷手记》躺在书袋里，卡位空着；旁边柜台上压着一张米黄便签。",
+            "requires": [],
+            "characterIds": [
+              "shen"
+            ],
+            "imagePrompt": "Small cozy used-book shop at dusk, wooden counter, a book in a cloth bag with an empty card slot, warm lamp, rain outside the window, muted tones, cinematic",
+            "videoPrompt": "Slow static shot of the shop counter at dusk; a hand places a pale-yellow note into a book bag, warm lamp flickers gently, rain streaks the window, muted cinematic color"
+          },
+          {
+            "id": "loan_desk",
+            "name": "借阅登记桌",
+            "description": "登记旧借书卡和借阅记录的长桌。旧登记册翻开在2024年5月那一页，桌上摊着几张旧借书卡和一枚铜质书签坠。",
+            "requires": [
+              "loan_record"
+            ],
+            "characterIds": [
+              "wei",
+              "zou"
+            ],
+            "imagePrompt": "Old lending ledger open on a wooden desk, several paper lending cards, a small brass bookmark pendant, warm lamplight, dust in the air, muted cinematic tones",
+            "videoPrompt": "Slow close-up of an old ledger page being turned; paper lending cards and a brass bookmark rest on the desk, warm lamplight, quiet and still, muted cinematic color"
+          },
+          {
+            "id": "corner_table",
+            "name": "窗边小桌",
+            "description": "靠近玻璃门的角落小桌，常客常在此坐坐。桌上留着邹明远用过的茶杯和那枚铜质书签坠的痕迹。",
+            "requires": [
+              "bookmark_token"
+            ],
+            "characterIds": [
+              "zou"
+            ],
+            "imagePrompt": "A small table by a rain-streaked window in a used-book shop, an empty teacup, a brass bookmark pendant left on the table, soft warm light, muted cinematic tones",
+            "videoPrompt": "Slow static shot of a corner table by a rain-streaked window; an empty teacup and a brass bookmark pendant, a chair slightly pulled back, warm lamplight, quiet, muted color"
+          }
+        ],
+        "clues": [
+          {
+            "id": "note_paper",
+            "name": "道歉便签与米黄信笺",
+            "description": "夹在《雨巷手记》书袋里的便签：“对不起，是我欠你的那本，我一直没敢还。”纸张是米黄信笺，非店里的白底借书卡纸；字迹为工整钢笔正楷，与店里常客的随手留言不同。",
+            "sceneId": "shop_floor",
+            "requires": []
+          },
+          {
+            "id": "bookmark_token",
+            "name": "铜质书签坠",
+            "description": "一枚旧铜质书签坠，刻着极小的“远”字，常被夹进借书卡里。这是邹明远随身带多年的旧物。",
+            "sceneId": "corner_table",
+            "requires": []
+          },
+          {
+            "id": "loan_record",
+            "name": "旧借阅登记册",
+            "description": "2024年5月的借阅登记页：邹明远名下《雨巷手记》状态为“在借、未还”，借出日期为2019年3月；魏临同名条目已盖“2024-05-12 已还”红章且书袋无卡；另附一笔旧怀表抵押记录。",
+            "sceneId": "loan_desk",
+            "requires": []
+          },
+          {
+            "id": "loan_stamp",
+            "name": "还书日章",
+            "description": "魏临名下《雨巷手记》一栏盖着“2024-05-12 已还”的红章，且书袋卡位无卡——说明他已按时归还，不是留卡的人。",
+            "sceneId": "loan_desk",
+            "requires": [
+              "loan_record"
+            ]
+          },
+          {
+            "id": "shen_note",
+            "name": "沈砚清的旧账备注",
+            "description": "登记册边角的店主笔迹：“旧表一笔，误记入邹名下，待核。”说明她当年误把旧怀表算进邹的账，误会由此而起，并非邹赖账。",
+            "sceneId": "loan_desk",
+            "requires": [
+              "loan_record"
+            ]
+          },
+          {
+            "id": "testimony",
+            "name": "两位常客的证词",
+            "description": "出示便签与铜书签坠后，邹明远承认：是他打烊前悄悄收回自己的旧借书卡并夹入道歉便签，只为一句当面不敢试说的道歉。魏临也证实他5月12日已连书带卡归还、卡位空了，便签正楷黄纸也不像他的字，排除自己是留卡者。两条证词合起来指向邹明远。",
+            "sceneId": null,
+            "requires": [
+              "note_paper",
+              "bookmark_token"
+            ]
+          }
+        ],
+        "endings": [
+          {
+            "id": "solved",
+            "kind": "solved",
+            "title": "最后一张借书卡",
+            "text": "便签是米黄信笺、钢笔正楷，铜书签坠刻着“远”，而魏临名下《雨巷手记》早在5月12日已盖还章、卡位空了——留卡的不是他。老借阅册与店主备注合起来，露出真相：当年旧怀表被误记进邹的账，他误以为是自己弄丢、害她赔钱，愧疚五年。打烊前他悄悄收回自己的旧借书卡、夹入那句不敢当面试说的道歉。误会解开了，旧表也该重新记到它该在的名字下。"
+          },
+          {
+            "id": "wrong",
+            "kind": "wrong",
+            "title": "错认的字迹",
+            "text": "只凭“字迹工整、像谁的手笔”就下结论，会错认留卡者。真正的线索不在字迹，而在便签的米黄信笺、刻着“远”的铜书签坠，以及借阅记录上谁已还、谁在借。没有这些物证与登记页，任何指认都站不住脚。"
+          }
+        ]
+      },
+      "hash": "0097e698fe866d06cc0355e46b359dafe9f72cb437212e38fed8e7661e36ee15"
+    }
+  ],
+  "assets": [],
+  "report": {
+    "rulesVersion": 2,
+    "passed": false,
+    "issues": [
+      {
+        "code": "UNREACHABLE_CLUE",
+        "path": "clues.bookmark_token",
+        "message": "证据「铜质书签坠」不可达，检查场景开放和证据之间的循环依赖。",
+        "relatedIds": [
+          "bookmark_token",
+          "corner_table"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "UNREACHABLE_CLUE",
+        "path": "clues.loan_record",
+        "message": "证据「旧借阅登记册」不可达，检查场景开放和证据之间的循环依赖。",
+        "relatedIds": [
+          "loan_record",
+          "loan_desk"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "UNREACHABLE_CLUE",
+        "path": "clues.loan_stamp",
+        "message": "证据「还书日章」不可达，检查场景开放和证据之间的循环依赖。",
+        "relatedIds": [
+          "loan_stamp",
+          "loan_desk",
+          "loan_record"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "UNREACHABLE_CLUE",
+        "path": "clues.shen_note",
+        "message": "证据「沈砚清的旧账备注」不可达，检查场景开放和证据之间的循环依赖。",
+        "relatedIds": [
+          "shen_note",
+          "loan_desk",
+          "loan_record"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "UNREACHABLE_CLUE",
+        "path": "clues.testimony",
+        "message": "证据「两位常客的证词」不可达，检查场景开放和证据之间的循环依赖。",
+        "relatedIds": [
+          "testimony",
+          "note_paper",
+          "bookmark_token"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "UNREACHABLE_SCENE",
+        "path": "scenes.loan_desk",
+        "message": "场景「借阅登记桌」不可达。",
+        "relatedIds": [
+          "loan_desk",
+          "loan_record"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "UNREACHABLE_SCENE",
+        "path": "scenes.corner_table",
+        "message": "场景「窗边小桌」不可达。",
+        "relatedIds": [
+          "corner_table",
+          "bookmark_token"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "NO_WINNING_PATH",
+        "path": "truth.requiredEvidenceIds",
+        "message": "玩家无法获得结案所需的完整证据链。",
+        "relatedIds": [
+          "bookmark_token",
+          "loan_record",
+          "testimony"
+        ],
+        "severity": "error"
+      }
+    ],
+    "reachableClues": [
+      "note_paper"
+    ],
+    "reachableScenes": [
+      "shop_floor"
+    ],
+    "winningPath": [],
+    "actionCount": 1,
+    "checkedAt": "2026-09-27T17:19:07.818Z",
+    "caseHash": "0097e698fe866d06cc0355e46b359dafe9f72cb437212e38fed8e7661e36ee15"
+  },
+  "source": "generated",
+  "assetStates": []
+}

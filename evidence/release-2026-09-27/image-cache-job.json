@@ -1,0 +1,75 @@
+{
+  "id": "306d8740-3bce-4007-8e1b-80a2c746a074",
+  "projectId": "d6dea0b2-7673-4747-9aac-ab78e2beb989",
+  "kind": "image",
+  "state": "succeeded",
+  "request": {
+    "sceneId": "ship_tail",
+    "kind": "image",
+    "seed": 927,
+    "quality": "draft",
+    "force": false
+  },
+  "baseRevision": 2,
+  "events": [
+    {
+      "at": "2026-09-27T16:15:00.907Z",
+      "type": "cache",
+      "message": "复用完全相同输入的已有素材",
+      "detail": {
+        "assetId": "35224548-5e54-4c5d-b44d-875b52822e59"
+      }
+    }
+  ],
+  "createdAt": "2026-09-27T16:15:00.907Z",
+  "startedAt": "2026-09-27T16:15:00.907Z",
+  "result": {
+    "asset": {
+      "id": "35224548-5e54-4c5d-b44d-875b52822e59",
+      "sceneId": "ship_tail",
+      "kind": "image",
+      "file": "35224548-5e54-4c5d-b44d-875b52822e59.png",
+      "mime": "image/png",
+      "inputHash": "153bf89b2371bb0991e1bfb2eb50021b2ee1f07740d671dbddd921b16aa29690",
+      "seed": 927,
+      "model": "/root/mujian-runtime/models/sdxl-base",
+      "durationMs": 53262,
+      "createdAt": "2026-09-27T16:14:51.641Z",
+      "provenance": "local-generation",
+      "metadata": {
+        "id": "f0c70c9a-afb4-480e-8b6c-e8bf09320d2d",
+        "state": "succeeded",
+        "createdAt": 1790525637.4914148,
+        "request": {
+          "kind": "image",
+          "prompt": "Cinematic empty ship tail deck of a Chinese sea ferry at dusk in 2009, light rain, a half-open wooden mail box under a small shelter, scattered blue wax seal fragments on metal grating, warm cabin light, teal mist, no people, no readable text.\nVisual style: 写实悬疑电影，2009年中国南方海港渡轮，傍晚雨雾，青蓝色金属甲板与暖黄舱灯，手持微晃镜头，克制对白，无可读文字，无水印。所有角色均为成年人。",
+          "seed": 927,
+          "reference": null,
+          "quality": "draft"
+        },
+        "phase": "done",
+        "device": "NVIDIA GB10",
+        "diffusersVersion": "0.35.2",
+        "loadMs": 47698,
+        "steps": 20,
+        "step": 20,
+        "file": "f0c70c9a-afb4-480e-8b6c-e8bf09320d2d.png",
+        "model": "/root/mujian-runtime/models/sdxl-base",
+        "durationMs": 53262,
+        "peakAllocatedBytes": 9477176320,
+        "settings": {
+          "width": 1024,
+          "height": 576,
+          "num_inference_steps": 20,
+          "guidance_scale": 6
+        },
+        "torchVersion": "2.9.1+cu130",
+        "cudaVersion": "13.0",
+        "finishedAt": 1790525690.7545648,
+        "quality": "draft"
+      }
+    },
+    "cacheHit": true
+  },
+  "finishedAt": "2026-09-27T16:15:00.908Z"
+}

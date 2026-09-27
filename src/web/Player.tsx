@@ -18,7 +18,7 @@ export function Player({doc,media={},onExit}:{doc:Case;media?:MediaMap;onExit?:(
   const ending=doc.endings.find(e=>e.id===state.ending);
   const topics=useMemo(()=>character?availableTopics(doc,state,character):[],[doc,state,character]);
   function act(action:Action){try{const next=reduceGame(doc,state,action);setState(next);setMessage(next.history.at(-1)!.text);setError('');if(action.type==='travel')setCharacter(null);if(action.type==='accuse')setAccusing(false);}catch(e){setError((e as Error).message);}}
-  function reset(){setState(initialState(doc));setMessage(doc.opening);setCharacter(null);setAccusing(false);setEvidence([]);setSuspect('');}
+  function reset(){setState(initialState(doc));setMessage(doc.opening);setCharacter(null);setAccusing(false);setNotebook(false);setError('');setEvidence([]);setSuspect('');}
   const currentMedia=scene?media[scene.id]:undefined;
   return <div className="player">
     <div className="player-top"><button className="icon-button" onClick={onExit||reset} aria-label={onExit?'退出试玩':'重新开始'}><ArrowLeft size={18}/></button><div><span className="eyebrow">幕间 · 互动悬疑</span><strong>{doc.title}</strong></div><span className="player-progress">已收集 {state.inventory.length} / {doc.clues.length} 条证据</span><button className="subtle" onClick={reset}><RotateCcw size={14}/>重新开始</button></div>

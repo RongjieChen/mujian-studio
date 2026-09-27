@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import type { NarrativeReview } from './narrative.ts';
 
 const id = z.string().regex(/^[a-z][a-z0-9_-]{0,47}$/);
 const text = z.string().trim().min(1).max(6000);
@@ -39,6 +40,6 @@ export type Issue = { code: string; severity: 'error' | 'warning'; path: string;
 export type Report = { rulesVersion:number; passed: boolean; issues: Issue[]; reachableClues: string[]; reachableScenes: string[]; winningPath: Action[]; actionCount: number; checkedAt: string; caseHash: string };
 export type Asset = { id: string; sceneId: string; kind: 'image' | 'video'; file: string; mime: string; inputHash: string; seed: number; model: string; durationMs: number; createdAt: string; provenance: 'local-generation' | 'upload'; metadata?: Record<string, unknown> };
 export type Revision = { id: string; number: number; createdAt: string; note: string; case: Case; hash: string };
-export type Project = { id: string; title: string; brief: string; createdAt: string; updatedAt: string; revision: number; case: Case; revisions: Revision[]; assets: Asset[]; report: Report | null; source: 'sample' | 'generated' | 'imported' };
+export type Project = { id: string; title: string; brief: string; createdAt: string; updatedAt: string; revision: number; case: Case; revisions: Revision[]; assets: Asset[]; report: Report | null; narrativeReview?:NarrativeReview; source: 'sample' | 'generated' | 'imported' };
 export type Event = { at: string; type: string; message: string; detail?: unknown };
-export type Job = { id: string; projectId: string | null; kind: 'generate' | 'edit' | 'repair' | 'image' | 'video'; state: 'queued' | 'running' | 'succeeded' | 'failed' | 'cancelled' | 'interrupted'; request: Record<string, unknown>; events: Event[]; result?: unknown; error?: string; createdAt: string; startedAt?: string; finishedAt?: string; baseRevision?: number };
+export type Job = { id: string; projectId: string | null; kind: 'generate' | 'edit' | 'repair' | 'audit' | 'image' | 'video'; state: 'queued' | 'running' | 'succeeded' | 'failed' | 'cancelled' | 'interrupted'; request: Record<string, unknown>; events: Event[]; result?: unknown; error?: string; createdAt: string; startedAt?: string; finishedAt?: string; baseRevision?: number };

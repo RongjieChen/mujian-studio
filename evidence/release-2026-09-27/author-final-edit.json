@@ -1,0 +1,1822 @@
+{
+  "request": {
+    "case": {
+      "schemaVersion": 1,
+      "title": "末班渡轮的蓝色信封",
+      "logline": "末班渡轮离港前，一封寄给对岸旧友的蓝色信封被调包。你要在船上三人之间核对行踪，找回没有寄出的道歉。",
+      "opening": "海雾压低了港口，雨水沿海燕号的栏杆滴落。这是退役前的最后一班渡轮，十九点十分离港。十八点四十分，发信员周棠请你帮忙：她放进船尾发信箱、寄给对岸旧友何岸的蓝色信封，被换成了陌生笔迹的“勿再联系”。何岸没有上船，真正的信必须在离港前找回来。",
+      "style": "写实悬疑电影，2009年中国南方海港渡轮，傍晚雨雾，青蓝色金属甲板与暖黄舱灯，手持微晃镜头，克制对白，无可读文字，无水印。所有角色均为成年人。",
+      "truth": {
+        "culpritId": "lao_chen",
+        "motive": "五年前，周棠的父亲和老陈共同签署了一份隐瞒检修疏漏的报告，何岸因此被误责而离岛。周棠依据亡父遗稿誊写了道歉信。老陈知道遗稿提及自己的签字，害怕旧事被重新追问，试图用“勿再联系”阻断这次通信。",
+        "method": "老陈十八点零五分开始检修压力表，十八点零八分从登记间借走唯一的船尾检修通道钥匙，十八点十分从发信箱取走原信，拆开蓝色蜡封，放入事先准备的同色信封。十八点十五分前，他把原信藏进压力表后盖并归还通道钥匙，返回工位。面对调查，他故意谎称零五分至十五分一直守着压力表。",
+        "requiredEvidenceIds": [
+          "maintenance_log",
+          "log_error",
+          "laochen_admit"
+        ],
+        "timeline": [
+          {
+            "time": "18:00",
+            "event": "周棠将依据亡父遗稿誊写、寄给何岸的道歉信放进船尾发信箱，随后回前舱清点邮袋。"
+          },
+          {
+            "time": "18:08",
+            "event": "老陈向沈一借走唯一的船尾检修通道钥匙；周棠在前舱清点邮袋，沈一在登记间值班。"
+          },
+          {
+            "time": "18:10",
+            "event": "老陈取走发信箱里的蓝色原信，撕下蜡封，调换成写着“勿再联系”的信。"
+          },
+          {
+            "time": "18:15",
+            "event": "老陈把原信藏进轮机舱压力表后盖，归还钥匙后返回轮机舱工位。"
+          },
+          {
+            "time": "18:35",
+            "event": "周棠回到发信甲板发现信被调包，带着替换信去轮机舱口询问老陈。此时原信已藏好二十分钟。"
+          },
+          {
+            "time": "18:40",
+            "event": "周棠开始追查，你加入调查。"
+          },
+          {
+            "time": "19:10",
+            "event": "海燕号离港，渡轮驶向对岸。"
+          }
+        ]
+      },
+      "characters": [
+        {
+          "id": "zhou_tang",
+          "name": "周棠",
+          "role": "渡轮发信员 · 31岁",
+          "description": "短发染成栗色，深蓝色工作背心，手腕戴旧表带，常把发信箱抱在胸前。",
+          "publicKnowledge": "她在海燕号做了六年发信员，今晚想把根据亡父遗稿誊写的道歉信寄给对岸的何岸。",
+          "secret": "亡父留下的遗稿承认五年前检修报告有假，她一直不敢把这份迟来的道歉寄出去，直到渡轮将要退役。",
+          "portraitPrompt": "Portrait of an original 31 year old Chinese woman, chestnut short hair, navy work vest over white shirt, old watch strap, calm and tired eyes, cinematic photograph, dusk harbor light.",
+          "topics": [
+            {
+              "id": "letter",
+              "question": "这封蓝色信封原本要寄给谁？",
+              "answer": "寄给对岸的何岸。我根据父亲留下的遗稿誊写了道歉信，十八点把它放进发信箱，就回前舱清点邮袋。三十五分回来才发现信被换了。",
+              "requires": [],
+              "reveals": []
+            },
+            {
+              "id": "sealed",
+              "question": "信封被调包前是什么样子？",
+              "answer": "蓝色信封，封口是我家旧时常用的蓝色蜡封，边缘有齿纹。我拆开换过的信封，只看到“勿再联系”四个字。",
+              "requires": [],
+              "reveals": []
+            }
+          ]
+        },
+        {
+          "id": "lao_chen",
+          "name": "老陈",
+          "role": "轮机工 · 54岁",
+          "description": "灰白寸头，橙色安全背心，手上全是机油，习惯把工具套挂在小指上。",
+          "publicKnowledge": "他是海燕号老轮机工，今晚负责最后一次压力表检修，十八点零五分开始工作。",
+          "secret": "他知道周棠父亲的遗稿提及那份虚假检修报告，也提及他的签字。他不愿再次面对曾被误责的何岸。",
+          "portraitPrompt": "Portrait of an original 54 year old Chinese man, grey buzz cut, orange safety vest, oil stained hands, a tool loop on his little finger, weathered and guilty, cinematic photograph.",
+          "topics": [
+            {
+              "id": "maintenance",
+              "question": "18:05到18:15，你在轮机舱做什么？",
+              "answer": "例行检修压力表。我一直守在压力表前没动，出入记录也能对上。",
+              "requires": [],
+              "reveals": []
+            },
+            {
+              "id": "press_gauge",
+              "question": "为什么原信会在压力表后盖里？",
+              "answer": "……信是我藏进去的。借钥匙的记录、藏在我工位的原信和封口碎片，都没法解释成巧合。五年前那份报告也有我的签字，我怕何岸看到道歉信后再来问我，所以换了它。周棠没有做错，该认错的是我。",
+              "requires": [
+                "maintenance_log",
+                "log_error",
+                "blue_seal"
+              ],
+              "reveals": [
+                "laochen_admit"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "shen_yi",
+          "name": "沈一",
+          "role": "海事登记员 · 40岁",
+          "description": "黑发束成低马尾，灰色制服，胸前挂着登记表，说话前习惯把登记表按平。",
+          "publicKnowledge": "她负责今晚渡轮的最后登记，熟悉轮机舱与值班安排。",
+          "secret": "她其实认得何岸，五年前替他做过一次临时登记，所以更知道这封信会掀起什么。",
+          "portraitPrompt": "Portrait of an original 40 year old Chinese woman, low ponytail, grey maritime uniform, clipped badge, precise and calm expression, cinematic photograph, dusk light.",
+          "topics": [
+            {
+              "id": "register",
+              "question": "18:05到18:15，值班出入记录有什么情况？",
+              "answer": "记录显示十八点零八分老陈借走唯一的船尾检修通道钥匙，十五分归还；这期间没有别人借用。周棠在前舱清点邮袋，我在登记间值班。钥匙只能证明他有通行机会，不能单独证明他换了信。",
+              "requires": [],
+              "reveals": []
+            },
+            {
+              "id": "dock",
+              "question": "18:35左右，轮机舱口那边，你看到谁追出来？",
+              "answer": "十八点三十五分，周棠拿着一封打开的蓝色信封走到轮机舱口，老陈从自己的工位出来。他们争论了几句，我看了值班钟，记得这个时间。",
+              "requires": [
+                "maintenance_log"
+              ],
+              "reveals": [
+                "dock_sight"
+              ]
+            }
+          ]
+        }
+      ],
+      "scenes": [
+        {
+          "id": "ship_tail",
+          "name": "船尾发信甲板",
+          "description": "雨棚下的发信箱敞着，蓝色蜡封碎片散在甲板缝隙里。发信箱里只剩那封换过的信封。",
+          "requires": [],
+          "characterIds": [
+            "zhou_tang"
+          ],
+          "imagePrompt": "Cinematic empty ship tail deck of a Chinese sea ferry at dusk in 2009, light rain, a half-open wooden mail box under a small shelter, scattered blue wax seal fragments on metal grating, warm cabin light, teal mist, no people, no readable text.",
+          "videoPrompt": "A fixed medium shot of an empty ferry tail deck at dusk in rain. Blue wax fragments lie near a half-open wooden mail box. Teal mist rolls in from the harbor, warm cabin light flickers. No people, no text, subtle rain."
+        },
+        {
+          "id": "engine_room",
+          "name": "轮机舱",
+          "description": "暖灯照着老陈的检修工位。压力表后盖有新鲜拆装痕迹，一角露出蓝色信封；墙上挂着一张检修流程表。",
+          "requires": [],
+          "characterIds": [
+            "lao_chen"
+          ],
+          "imagePrompt": "Cinematic empty engine room of a 2009 Chinese sea ferry, warm tungsten work light, large pressure gauge with its back cover slightly open, a small envelope hidden behind it, maintenance log pinned to the wall, no people, no readable text.",
+          "videoPrompt": "Slow gentle push into an empty engine room, a large pressure gauge with a slightly open back cover, a small envelope hidden behind it, warm tungsten work light, dust in the air. No people, no text, subtle motion."
+        },
+        {
+          "id": "dock_office",
+          "name": "码头登记间",
+          "description": "登记桌上摊着今晚的出入与钥匙借还记录，雨点敲打玻璃。十八点零八分和十五分的签字在同一页上。",
+          "requires": [],
+          "characterIds": [
+            "shen_yi"
+          ],
+          "imagePrompt": "Cinematic empty maritime registration office at a 2009 Chinese harbor at dusk in rain, wooden desk, an open logbook, a small harbor window, teal blue light and warm desk lamp, no people, no readable text.",
+          "videoPrompt": "A quiet fixed shot of an empty registration office at dusk in rain, an open logbook on a wooden desk, rain on the harbor window, warm desk lamp, teal shadows. No people, no text, subtle movement."
+        }
+      ],
+      "clues": [
+        {
+          "id": "swapped_letter",
+          "name": "被换上的蓝色信封",
+          "description": "信封外壳仍是蓝色，但封条是普通白胶，内部只有一张写着“勿再联系”四个字的便条。笔迹不是何岸，也不是周棠。",
+          "sceneId": "ship_tail",
+          "requires": []
+        },
+        {
+          "id": "blue_seal",
+          "name": "船尾的蜡封碎片",
+          "description": "甲板缝隙里找到几片蓝色蜡封碎片，边缘齿纹与周棠家旧蜡封一致，证明原信确实被拆开过。",
+          "sceneId": "ship_tail",
+          "requires": []
+        },
+        {
+          "id": "maintenance_log",
+          "name": "值班出入记录",
+          "description": "沈一值班时逐笔记录并签名：十八点零八分老陈借走唯一的船尾检修通道钥匙，十五分归还；期间无其他借用。周棠的前舱邮袋清点联有十八点零九分至十六分的逐项签记。记录支持老陈曾离开压力表工位，但单独不能证明调包。",
+          "sceneId": "dock_office",
+          "requires": []
+        },
+        {
+          "id": "log_error",
+          "name": "压力表后盖里的原信",
+          "description": "你从老陈工位的压力表后盖里取出原信。信上是周棠依据亡父遗稿誊写的道歉，提到五年前一份由父亲与老陈共同签署的虚假检修报告。封口残留的蓝蜡与船尾碎片有可拼合的断面，说明这是从发信箱取走的那一封。",
+          "sceneId": "engine_room",
+          "requires": []
+        },
+        {
+          "id": "dock_sight",
+          "name": "十八点三十五分的争执",
+          "description": "沈一看到周棠拿着替换信到轮机舱口询问老陈；她看过值班钟，确认是十八点三十五分。这只能确定发现后的争执时间，不能作为老陈当时藏信的证据。",
+          "sceneId": null,
+          "requires": []
+        },
+        {
+          "id": "laochen_admit",
+          "name": "老陈的认罪口供",
+          "description": "面对钥匙借还记录、压力表后盖里的原信和可拼合的蓝色蜡封，老陈承认调包。他害怕原信揭开五年前自己在虚假检修报告上的签字。",
+          "sceneId": null,
+          "requires": [
+            "maintenance_log",
+            "log_error",
+            "blue_seal"
+          ]
+        }
+      ],
+      "endings": [
+        {
+          "id": "solved",
+          "kind": "solved",
+          "title": "末班渡轮",
+          "text": "借还钥匙的时间拆穿了老陈“一直没离开”的说法；工位里找回的原信，与甲板上的蜡封断面拼合。老陈终于承认调包，也承认自己不敢面对五年前的签字。周棠接过信，重新封好，放进要随渡轮送往对岸的邮袋。十九点十分，海燕号离港。雨停了，迟来的道歉终于驶向何岸。"
+        },
+        {
+          "id": "wrong",
+          "kind": "wrong",
+          "title": "未寄出的信",
+          "text": "你的指认还缺少完整证据，或指向了错误的人。争论没能说明信被谁换走。重新调查，核对出入记录与找到的原信，再带着证据追问；发现信之后的争执，不能直接证明此前的调包。"
+        }
+      ]
+    },
+    "baseRevision": 3,
+    "note": "作者终审：模型修订仍遗漏第四人物并残留18:15/18:35时间矛盾。人工删除背景人物的交互实体，统一代写来源、借钥匙时间与证据解释；保留全部视觉提示和既有素材。"
+  },
+  "response": {
+    "project": {
+      "id": "d6dea0b2-7673-4747-9aac-ab78e2beb989",
+      "title": "末班渡轮的蓝色信封",
+      "brief": "创作原创短篇《末班渡轮的蓝色信封》：海岛渡轮即将停航，一封归还旧友的信被掉包。三个成年嫌疑人、三个可搜证场景、六条证据，其中至少一条需要出示物证才能获得的人物证词。真相温暖但时间线明确，不要使用旅馆、胶片或示例中的人物。",
+      "createdAt": "2026-09-27T16:11:52.035Z",
+      "updatedAt": "2026-09-27T17:10:06.822Z",
+      "revision": 4,
+      "case": {
+        "schemaVersion": 1,
+        "title": "末班渡轮的蓝色信封",
+        "logline": "末班渡轮离港前，一封寄给对岸旧友的蓝色信封被调包。你要在船上三人之间核对行踪，找回没有寄出的道歉。",
+        "opening": "海雾压低了港口，雨水沿海燕号的栏杆滴落。这是退役前的最后一班渡轮，十九点十分离港。十八点四十分，发信员周棠请你帮忙：她放进船尾发信箱、寄给对岸旧友何岸的蓝色信封，被换成了陌生笔迹的“勿再联系”。何岸没有上船，真正的信必须在离港前找回来。",
+        "style": "写实悬疑电影，2009年中国南方海港渡轮，傍晚雨雾，青蓝色金属甲板与暖黄舱灯，手持微晃镜头，克制对白，无可读文字，无水印。所有角色均为成年人。",
+        "truth": {
+          "culpritId": "lao_chen",
+          "motive": "五年前，周棠的父亲和老陈共同签署了一份隐瞒检修疏漏的报告，何岸因此被误责而离岛。周棠依据亡父遗稿誊写了道歉信。老陈知道遗稿提及自己的签字，害怕旧事被重新追问，试图用“勿再联系”阻断这次通信。",
+          "method": "老陈十八点零五分开始检修压力表，十八点零八分从登记间借走唯一的船尾检修通道钥匙，十八点十分从发信箱取走原信，拆开蓝色蜡封，放入事先准备的同色信封。十八点十五分前，他把原信藏进压力表后盖并归还通道钥匙，返回工位。面对调查，他故意谎称零五分至十五分一直守着压力表。",
+          "requiredEvidenceIds": [
+            "maintenance_log",
+            "log_error",
+            "laochen_admit"
+          ],
+          "timeline": [
+            {
+              "time": "18:00",
+              "event": "周棠将依据亡父遗稿誊写、寄给何岸的道歉信放进船尾发信箱，随后回前舱清点邮袋。"
+            },
+            {
+              "time": "18:08",
+              "event": "老陈向沈一借走唯一的船尾检修通道钥匙；周棠在前舱清点邮袋，沈一在登记间值班。"
+            },
+            {
+              "time": "18:10",
+              "event": "老陈取走发信箱里的蓝色原信，撕下蜡封，调换成写着“勿再联系”的信。"
+            },
+            {
+              "time": "18:15",
+              "event": "老陈把原信藏进轮机舱压力表后盖，归还钥匙后返回轮机舱工位。"
+            },
+            {
+              "time": "18:35",
+              "event": "周棠回到发信甲板发现信被调包，带着替换信去轮机舱口询问老陈。此时原信已藏好二十分钟。"
+            },
+            {
+              "time": "18:40",
+              "event": "周棠开始追查，你加入调查。"
+            },
+            {
+              "time": "19:10",
+              "event": "海燕号离港，渡轮驶向对岸。"
+            }
+          ]
+        },
+        "characters": [
+          {
+            "id": "zhou_tang",
+            "name": "周棠",
+            "role": "渡轮发信员 · 31岁",
+            "description": "短发染成栗色，深蓝色工作背心，手腕戴旧表带，常把发信箱抱在胸前。",
+            "publicKnowledge": "她在海燕号做了六年发信员，今晚想把根据亡父遗稿誊写的道歉信寄给对岸的何岸。",
+            "secret": "亡父留下的遗稿承认五年前检修报告有假，她一直不敢把这份迟来的道歉寄出去，直到渡轮将要退役。",
+            "portraitPrompt": "Portrait of an original 31 year old Chinese woman, chestnut short hair, navy work vest over white shirt, old watch strap, calm and tired eyes, cinematic photograph, dusk harbor light.",
+            "topics": [
+              {
+                "id": "letter",
+                "question": "这封蓝色信封原本要寄给谁？",
+                "answer": "寄给对岸的何岸。我根据父亲留下的遗稿誊写了道歉信，十八点把它放进发信箱，就回前舱清点邮袋。三十五分回来才发现信被换了。",
+                "requires": [],
+                "reveals": []
+              },
+              {
+                "id": "sealed",
+                "question": "信封被调包前是什么样子？",
+                "answer": "蓝色信封，封口是我家旧时常用的蓝色蜡封，边缘有齿纹。我拆开换过的信封，只看到“勿再联系”四个字。",
+                "requires": [],
+                "reveals": []
+              }
+            ]
+          },
+          {
+            "id": "lao_chen",
+            "name": "老陈",
+            "role": "轮机工 · 54岁",
+            "description": "灰白寸头，橙色安全背心，手上全是机油，习惯把工具套挂在小指上。",
+            "publicKnowledge": "他是海燕号老轮机工，今晚负责最后一次压力表检修，十八点零五分开始工作。",
+            "secret": "他知道周棠父亲的遗稿提及那份虚假检修报告，也提及他的签字。他不愿再次面对曾被误责的何岸。",
+            "portraitPrompt": "Portrait of an original 54 year old Chinese man, grey buzz cut, orange safety vest, oil stained hands, a tool loop on his little finger, weathered and guilty, cinematic photograph.",
+            "topics": [
+              {
+                "id": "maintenance",
+                "question": "18:05到18:15，你在轮机舱做什么？",
+                "answer": "例行检修压力表。我一直守在压力表前没动，出入记录也能对上。",
+                "requires": [],
+                "reveals": []
+              },
+              {
+                "id": "press_gauge",
+                "question": "为什么原信会在压力表后盖里？",
+                "answer": "……信是我藏进去的。借钥匙的记录、藏在我工位的原信和封口碎片，都没法解释成巧合。五年前那份报告也有我的签字，我怕何岸看到道歉信后再来问我，所以换了它。周棠没有做错，该认错的是我。",
+                "requires": [
+                  "maintenance_log",
+                  "log_error",
+                  "blue_seal"
+                ],
+                "reveals": [
+                  "laochen_admit"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "shen_yi",
+            "name": "沈一",
+            "role": "海事登记员 · 40岁",
+            "description": "黑发束成低马尾，灰色制服，胸前挂着登记表，说话前习惯把登记表按平。",
+            "publicKnowledge": "她负责今晚渡轮的最后登记，熟悉轮机舱与值班安排。",
+            "secret": "她其实认得何岸，五年前替他做过一次临时登记，所以更知道这封信会掀起什么。",
+            "portraitPrompt": "Portrait of an original 40 year old Chinese woman, low ponytail, grey maritime uniform, clipped badge, precise and calm expression, cinematic photograph, dusk light.",
+            "topics": [
+              {
+                "id": "register",
+                "question": "18:05到18:15，值班出入记录有什么情况？",
+                "answer": "记录显示十八点零八分老陈借走唯一的船尾检修通道钥匙，十五分归还；这期间没有别人借用。周棠在前舱清点邮袋，我在登记间值班。钥匙只能证明他有通行机会，不能单独证明他换了信。",
+                "requires": [],
+                "reveals": []
+              },
+              {
+                "id": "dock",
+                "question": "18:35左右，轮机舱口那边，你看到谁追出来？",
+                "answer": "十八点三十五分，周棠拿着一封打开的蓝色信封走到轮机舱口，老陈从自己的工位出来。他们争论了几句，我看了值班钟，记得这个时间。",
+                "requires": [
+                  "maintenance_log"
+                ],
+                "reveals": [
+                  "dock_sight"
+                ]
+              }
+            ]
+          }
+        ],
+        "scenes": [
+          {
+            "id": "ship_tail",
+            "name": "船尾发信甲板",
+            "description": "雨棚下的发信箱敞着，蓝色蜡封碎片散在甲板缝隙里。发信箱里只剩那封换过的信封。",
+            "requires": [],
+            "characterIds": [
+              "zhou_tang"
+            ],
+            "imagePrompt": "Cinematic empty ship tail deck of a Chinese sea ferry at dusk in 2009, light rain, a half-open wooden mail box under a small shelter, scattered blue wax seal fragments on metal grating, warm cabin light, teal mist, no people, no readable text.",
+            "videoPrompt": "A fixed medium shot of an empty ferry tail deck at dusk in rain. Blue wax fragments lie near a half-open wooden mail box. Teal mist rolls in from the harbor, warm cabin light flickers. No people, no text, subtle rain."
+          },
+          {
+            "id": "engine_room",
+            "name": "轮机舱",
+            "description": "暖灯照着老陈的检修工位。压力表后盖有新鲜拆装痕迹，一角露出蓝色信封；墙上挂着一张检修流程表。",
+            "requires": [],
+            "characterIds": [
+              "lao_chen"
+            ],
+            "imagePrompt": "Cinematic empty engine room of a 2009 Chinese sea ferry, warm tungsten work light, large pressure gauge with its back cover slightly open, a small envelope hidden behind it, maintenance log pinned to the wall, no people, no readable text.",
+            "videoPrompt": "Slow gentle push into an empty engine room, a large pressure gauge with a slightly open back cover, a small envelope hidden behind it, warm tungsten work light, dust in the air. No people, no text, subtle motion."
+          },
+          {
+            "id": "dock_office",
+            "name": "码头登记间",
+            "description": "登记桌上摊着今晚的出入与钥匙借还记录，雨点敲打玻璃。十八点零八分和十五分的签字在同一页上。",
+            "requires": [],
+            "characterIds": [
+              "shen_yi"
+            ],
+            "imagePrompt": "Cinematic empty maritime registration office at a 2009 Chinese harbor at dusk in rain, wooden desk, an open logbook, a small harbor window, teal blue light and warm desk lamp, no people, no readable text.",
+            "videoPrompt": "A quiet fixed shot of an empty registration office at dusk in rain, an open logbook on a wooden desk, rain on the harbor window, warm desk lamp, teal shadows. No people, no text, subtle movement."
+          }
+        ],
+        "clues": [
+          {
+            "id": "swapped_letter",
+            "name": "被换上的蓝色信封",
+            "description": "信封外壳仍是蓝色，但封条是普通白胶，内部只有一张写着“勿再联系”四个字的便条。笔迹不是何岸，也不是周棠。",
+            "sceneId": "ship_tail",
+            "requires": []
+          },
+          {
+            "id": "blue_seal",
+            "name": "船尾的蜡封碎片",
+            "description": "甲板缝隙里找到几片蓝色蜡封碎片，边缘齿纹与周棠家旧蜡封一致，证明原信确实被拆开过。",
+            "sceneId": "ship_tail",
+            "requires": []
+          },
+          {
+            "id": "maintenance_log",
+            "name": "值班出入记录",
+            "description": "沈一值班时逐笔记录并签名：十八点零八分老陈借走唯一的船尾检修通道钥匙，十五分归还；期间无其他借用。周棠的前舱邮袋清点联有十八点零九分至十六分的逐项签记。记录支持老陈曾离开压力表工位，但单独不能证明调包。",
+            "sceneId": "dock_office",
+            "requires": []
+          },
+          {
+            "id": "log_error",
+            "name": "压力表后盖里的原信",
+            "description": "你从老陈工位的压力表后盖里取出原信。信上是周棠依据亡父遗稿誊写的道歉，提到五年前一份由父亲与老陈共同签署的虚假检修报告。封口残留的蓝蜡与船尾碎片有可拼合的断面，说明这是从发信箱取走的那一封。",
+            "sceneId": "engine_room",
+            "requires": []
+          },
+          {
+            "id": "dock_sight",
+            "name": "十八点三十五分的争执",
+            "description": "沈一看到周棠拿着替换信到轮机舱口询问老陈；她看过值班钟，确认是十八点三十五分。这只能确定发现后的争执时间，不能作为老陈当时藏信的证据。",
+            "sceneId": null,
+            "requires": []
+          },
+          {
+            "id": "laochen_admit",
+            "name": "老陈的认罪口供",
+            "description": "面对钥匙借还记录、压力表后盖里的原信和可拼合的蓝色蜡封，老陈承认调包。他害怕原信揭开五年前自己在虚假检修报告上的签字。",
+            "sceneId": null,
+            "requires": [
+              "maintenance_log",
+              "log_error",
+              "blue_seal"
+            ]
+          }
+        ],
+        "endings": [
+          {
+            "id": "solved",
+            "kind": "solved",
+            "title": "末班渡轮",
+            "text": "借还钥匙的时间拆穿了老陈“一直没离开”的说法；工位里找回的原信，与甲板上的蜡封断面拼合。老陈终于承认调包，也承认自己不敢面对五年前的签字。周棠接过信，重新封好，放进要随渡轮送往对岸的邮袋。十九点十分，海燕号离港。雨停了，迟来的道歉终于驶向何岸。"
+          },
+          {
+            "id": "wrong",
+            "kind": "wrong",
+            "title": "未寄出的信",
+            "text": "你的指认还缺少完整证据，或指向了错误的人。争论没能说明信被谁换走。重新调查，核对出入记录与找到的原信，再带着证据追问；发现信之后的争执，不能直接证明此前的调包。"
+          }
+        ]
+      },
+      "revisions": [
+        {
+          "id": "004ea67e-2419-49cf-b9d3-18fb687e14d8",
+          "number": 1,
+          "createdAt": "2026-09-27T16:11:52.035Z",
+          "note": "创建案件",
+          "case": {
+            "schemaVersion": 1,
+            "title": "末班渡轮的蓝色信封",
+            "logline": "停航前最后一班海岛渡轮，一封寄给旧友的蓝色信封被换成写着“勿再联系”的信。三人都有一夜可查的行踪。",
+            "opening": "18:40，南屿渡轮“海燕号”停在码头，明早起它就要退役。发信员周棠准备把最后一批信件寄上岸，却发现给旧友何岸的蓝色信封被换成了一封陌生笔迹的信，内容只有三个字：勿再联系。渡轮将在半小时后离港，码头上只下着小雨。你在船尾找到周棠。",
+            "style": "写实悬疑电影，2009年中国南方海港渡轮，傍晚雨雾，青蓝色金属甲板与暖黄舱灯，手持微晃镜头，克制对白，无可读文字，无水印。所有角色均为成年人。",
+            "truth": {
+              "culpritId": "lao_chen",
+              "motive": "老陈五年前因一桩海难和何岸断交，一直不肯承认是自己的责任。他看到周棠准备寄出旧信，怕何岸因此重新找他，临时把信封调包成“勿再联系”，想让这次旧事永远停下。",
+              "method": "老陈利用船舱检修通道，在18:10从船尾货箱取走蓝色信封，撕下何岸的封条，换成自己提前藏好的同色信封；原信被他塞进轮机舱压力表后盖，18:15离开。他在18:35被周棠撞见，因此谎称自己一直在轮机舱修压力表，并用检修登记单掩盖时间。",
+              "requiredEvidenceIds": [
+                "maintenance_log",
+                "blue_seal",
+                "laochen_admit"
+              ],
+              "timeline": [
+                {
+                  "time": "18:00",
+                  "event": "周棠把蓝色信封放进船尾发信箱，准备等离港后寄出。"
+                },
+                {
+                  "time": "18:05",
+                  "event": "老陈借检修之名进入船尾货箱，登记单显示他18:05起检查压力表。"
+                },
+                {
+                  "time": "18:10",
+                  "event": "老陈取走蓝色信封，拆开并调包成自己的信封，原信塞进压力表后盖。"
+                },
+                {
+                  "time": "18:15",
+                  "event": "老陈离开轮机舱，把蓝色封条留在货箱角落。"
+                },
+                {
+                  "time": "18:35",
+                  "event": "周棠在码头雨棚发现掉包信封，追到轮机舱口撞见老陈。"
+                }
+              ]
+            },
+            "characters": [
+              {
+                "id": "zhou_tang",
+                "name": "周棠",
+                "role": "渡轮发信员 · 31岁",
+                "description": "短发染成栗色，深蓝色工作背心，手腕戴旧表带，常把发信箱抱在胸前。",
+                "publicKnowledge": "她在海燕号做了六年发信员，明早退役前想替老船员何岸把一封旧信寄出去。",
+                "secret": "这封信其实是她替已故的父亲写给何岸的道歉，父亲当年那艘船的失事她一直没告诉何岸。",
+                "portraitPrompt": "Portrait of an original 31 year old Chinese woman, chestnut short hair, navy work vest over white shirt, old watch strap, calm and tired eyes, cinematic photograph, dusk harbor light.",
+                "topics": [
+                  {
+                    "id": "letter",
+                    "question": "这封蓝色信封原本要寄给谁？",
+                    "answer": "何岸。他五年前离开海岛，我父亲生前一直想给他道歉。我替他装进了船尾发信箱。",
+                    "requires": [],
+                    "reveals": []
+                  },
+                  {
+                    "id": "sealed",
+                    "question": "信封被调包前是什么样子？",
+                    "answer": "蓝色信封，封口是我家旧时常用的蜡封，边缘有齿纹。我拆开掉包信封时只看到“勿再联系”。",
+                    "requires": [],
+                    "reveals": []
+                  }
+                ]
+              },
+              {
+                "id": "lao_chen",
+                "name": "老陈",
+                "role": "轮机工 · 54岁",
+                "description": "灰白寸头，橙色安全背心，手上全是机油，习惯把工具套挂在小指上。",
+                "publicKnowledge": "他是海燕号老轮机工，今晚例行检修压力表，登记单在他口袋里。",
+                "secret": "他看到周棠抱着发信箱离开，知道她准备寄出那封旧信。他提前藏了一个同色信封，想阻止何岸再和他联系。",
+                "portraitPrompt": "Portrait of an original 54 year old Chinese man, grey buzz cut, orange safety vest, oil stained hands, a tool loop on his little finger, weathered and guilty, cinematic photograph.",
+                "topics": [
+                  {
+                    "id": "maintenance",
+                    "question": "18:05到18:15你在轮机舱做什么？",
+                    "answer": "例行检修压力表，登记单在我口袋里。我一直坐在压力表前没动。",
+                    "requires": [],
+                    "reveals": []
+                  },
+                  {
+                    "id": "press_gauge",
+                    "question": "压力表后盖里为什么会有这封被拆开过的旧信？",
+                    "answer": "……是我放进去的。我怕何岸看到道歉信又找我。那封信是周棠替她父亲写的，我不该偷，也不该换。它本来不该在船上。",
+                    "requires": [
+                      "blue_seal",
+                      "maintenance_log"
+                    ],
+                    "reveals": [
+                      "laochen_admit"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "shen_yi",
+                "name": "沈一",
+                "role": "海事登记员 · 40岁",
+                "description": "黑发束成低马尾，灰色制服，胸前挂着登记表，说话前习惯把登记表按平。",
+                "publicKnowledge": "她负责今晚渡轮的最后登记，熟悉船尾货箱和检修通道。",
+                "secret": "她其实认得何岸，五年前她替他做过一次临时登记，所以更知道这封信会掀起什么。",
+                "portraitPrompt": "Portrait of an original 40 year old Chinese woman, low ponytail, grey maritime uniform, clipped badge, precise and calm expression, cinematic photograph, dusk light.",
+                "topics": [
+                  {
+                    "id": "register",
+                    "question": "18:05到18:15，检修登记记录有什么异常？",
+                    "answer": "老陈的登记单写着18:05开始检修，但18:10那一栏的机油编号写反了。说明他中途分过心，或者有人在逼他。",
+                    "requires": [
+                      "maintenance_log"
+                    ],
+                    "reveals": []
+                  },
+                  {
+                    "id": "dock",
+                    "question": "码头雨棚那边18:35左右，你看到谁追出来？",
+                    "answer": "周棠抱着空发信箱追出雨棚，老陈从轮机舱口出来。我没有跟过去，但登记单时间对得上。",
+                    "requires": [],
+                    "reveals": [
+                      "dock_sight"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "he_an",
+                "name": "何岸",
+                "role": "旧船员 · 46岁",
+                "description": "花白短发，深棕色粗呢外套，手上留着多年海上工作留下的疤。",
+                "publicKnowledge": "他是海燕号的老船员，五年前离开海岛，今晚是退役仪式前回来的。",
+                "secret": "他其实早就知道周棠的父亲当年那艘船发生了什么，但一直没有说破。",
+                "portraitPrompt": "Portrait of an original 46 year old Chinese man, salt-and-pepper short hair, brown tweed coat, weathered hands with old scars, weary but kind eyes, cinematic photograph, dusk harbor light.",
+                "topics": [
+                  {
+                    "id": "departure",
+                    "question": "五年前为什么离开海岛？",
+                    "answer": "那艘船出事之后，我没法再留在岛上。周棠的父亲是个好人，他该早点告诉何岸。",
+                    "requires": [],
+                    "reveals": []
+                  }
+                ]
+              }
+            ],
+            "scenes": [
+              {
+                "id": "ship_tail",
+                "name": "船尾发信甲板",
+                "description": "雨棚下的发信箱敞着，蓝色蜡封碎片散在甲板缝隙里。发信箱里空了。",
+                "requires": [],
+                "characterIds": [
+                  "zhou_tang"
+                ],
+                "imagePrompt": "Cinematic empty ship tail deck of a Chinese sea ferry at dusk in 2009, light rain, a half-open wooden mail box under a small shelter, scattered blue wax seal fragments on metal grating, warm cabin light, teal mist, no people, no readable text.",
+                "videoPrompt": "A fixed medium shot of an empty ferry tail deck at dusk in rain. Blue wax fragments lie near a half-open wooden mail box. Teal mist rolls in from the harbor, warm cabin light flickers. No people, no text, subtle rain."
+              },
+              {
+                "id": "engine_room",
+                "name": "轮机舱",
+                "description": "压力表后盖被拆过一角，里面塞着一封被撕开封条的旧信。检修登记单挂在墙上。",
+                "requires": [],
+                "characterIds": [
+                  "lao_chen"
+                ],
+                "imagePrompt": "Cinematic empty engine room of a 2009 Chinese sea ferry, warm tungsten work light, large pressure gauge with its back cover slightly open, a small envelope hidden behind it, maintenance log pinned to the wall, no people, no readable text.",
+                "videoPrompt": "Slow gentle push into an empty engine room, a large pressure gauge with a slightly open back cover, a small envelope hidden behind it, warm tungsten work light, dust in the air. No people, no text, subtle motion."
+              },
+              {
+                "id": "dock_office",
+                "name": "码头登记间",
+                "description": "登记桌上摊着今晚的检修和登船记录，雨点敲打玻璃。老陈的登记单被翻到18:10那一页。",
+                "requires": [],
+                "characterIds": [
+                  "shen_yi",
+                  "he_an"
+                ],
+                "imagePrompt": "Cinematic empty maritime registration office at a 2009 Chinese harbor at dusk in rain, wooden desk, an open logbook, a small harbor window, teal blue light and warm desk lamp, no people, no readable text.",
+                "videoPrompt": "A quiet fixed shot of an empty registration office at dusk in rain, an open logbook on a wooden desk, rain on the harbor window, warm desk lamp, teal shadows. No people, no text, subtle movement."
+              }
+            ],
+            "clues": [
+              {
+                "id": "swapped_letter",
+                "name": "被换上的蓝色信封",
+                "description": "信封外壳仍是蓝色，但封条是普通白胶，内部只有一张写着“勿再联系”的便条。笔迹不是何岸，也不是周棠。",
+                "sceneId": "ship_tail",
+                "requires": []
+              },
+              {
+                "id": "blue_seal",
+                "name": "船尾的蜡封碎片",
+                "description": "甲板缝隙里找到几片蓝色蜡封碎片，边缘齿纹与周棠家旧蜡封一致，证明原信确实被拆开过。",
+                "sceneId": "ship_tail",
+                "requires": []
+              },
+              {
+                "id": "maintenance_log",
+                "name": "轮机舱检修登记单",
+                "description": "老陈18:05开始检修压力表，18:10机油编号写反，18:15结束登记。中间五分钟他不在登记状态。",
+                "sceneId": "dock_office",
+                "requires": []
+              },
+              {
+                "id": "log_error",
+                "name": "写反的机油编号",
+                "description": "18:10那一栏的机油编号写反，说明老陈在拆信封时被打断或分心。这是他中途离开压力表的证据。",
+                "sceneId": "dock_office",
+                "requires": []
+              },
+              {
+                "id": "dock_sight",
+                "name": "雨棚外的追赶",
+                "description": "18:35，周棠抱着空发信箱追出雨棚，老陈从轮机舱口出来。沈一的登记时间与这一目击吻合。",
+                "sceneId": null,
+                "requires": []
+              },
+              {
+                "id": "laochen_admit",
+                "name": "老陈的认罪口供",
+                "description": "面对蓝色蜡封碎片和登记单，老陈承认自己取走并调包了那封旧信，原信藏在压力表后盖。他怕何岸再找他。",
+                "sceneId": null,
+                "requires": [
+                  "blue_seal",
+                  "maintenance_log"
+                ]
+              }
+            ],
+            "endings": [
+              {
+                "id": "solved",
+                "kind": "solved",
+                "title": "末班渡轮",
+                "text": "你把蜡封碎片、写反的机油编号和老陈的认罪口供连在一起。老陈从压力表后盖取出那封旧信，承认是自己怕旧事重开才调包。周棠没有骂他，只是把信封交还给何岸。渡轮离港时雨停了，蓝色信封最终被寄上岸。"
+              },
+              {
+                "id": "wrong",
+                "kind": "wrong",
+                "title": "未寄出的信",
+                "text": "你的指认缺少完整证据，或指向了错误的人。争论在雨里散去，那封信仍没有找到。重新调查，留意哪些登记和哪片封条能证明信封被拆开过。"
+              }
+            ]
+          },
+          "hash": "96a683448bb4797a67864258a225d896960e1db746cacd989fe2e22b8c57a6e5"
+        },
+        {
+          "id": "ec95a91b-231c-4a07-a7c1-211e2b0ae8cf",
+          "number": 2,
+          "createdAt": "2026-09-27T16:13:33.394Z",
+          "note": "仅改写故事开场，加入海雾与汽笛氛围，其余内容不变。验证通过。",
+          "case": {
+            "schemaVersion": 1,
+            "title": "末班渡轮的蓝色信封",
+            "logline": "停航前最后一班海岛渡轮，一封寄给旧友的蓝色信封被换成写着“勿再联系”的信。三人都有一夜可查的行踪。",
+            "opening": "海雾压得很低，把整片码头吞进一片青灰色的潮水里。海燕号发出最后一声长而哑的汽笛，震得雨棚上的积水都滴落下来——明早起，它就要退役了。周棠抱着发信箱站在雾里，却发现给旧友何岸的蓝色信封被换成了陌生笔迹的“勿再联系”。渡轮半小时后离港，你循着汽笛的余音，在船尾找到了她。",
+            "style": "写实悬疑电影，2009年中国南方海港渡轮，傍晚雨雾，青蓝色金属甲板与暖黄舱灯，手持微晃镜头，克制对白，无可读文字，无水印。所有角色均为成年人。",
+            "truth": {
+              "culpritId": "lao_chen",
+              "motive": "老陈五年前因一桩海难和何岸断交，一直不肯承认是自己的责任。他看到周棠准备寄出旧信，怕何岸因此重新找他，临时把信封调包成“勿再联系”，想让这次旧事永远停下。",
+              "method": "老陈利用船舱检修通道，在18:10从船尾货箱取走蓝色信封，撕下何岸的封条，换成自己提前藏好的同色信封；原信被他塞进轮机舱压力表后盖，18:15离开。他在18:35被周棠撞见，因此谎称自己一直在轮机舱修压力表，并用检修登记单掩盖时间。",
+              "requiredEvidenceIds": [
+                "maintenance_log",
+                "blue_seal",
+                "laochen_admit"
+              ],
+              "timeline": [
+                {
+                  "time": "18:00",
+                  "event": "周棠把蓝色信封放进船尾发信箱，准备等离港后寄出。"
+                },
+                {
+                  "time": "18:05",
+                  "event": "老陈借检修之名进入船尾货箱，登记单显示他18:05起检查压力表。"
+                },
+                {
+                  "time": "18:10",
+                  "event": "老陈取走蓝色信封，拆开并调包成自己的信封，原信塞进压力表后盖。"
+                },
+                {
+                  "time": "18:15",
+                  "event": "老陈离开轮机舱，把蓝色封条留在货箱角落。"
+                },
+                {
+                  "time": "18:35",
+                  "event": "周棠在码头雨棚发现掉包信封，追到轮机舱口撞见老陈。"
+                }
+              ]
+            },
+            "characters": [
+              {
+                "id": "zhou_tang",
+                "name": "周棠",
+                "role": "渡轮发信员 · 31岁",
+                "description": "短发染成栗色，深蓝色工作背心，手腕戴旧表带，常把发信箱抱在胸前。",
+                "publicKnowledge": "她在海燕号做了六年发信员，明早退役前想替老船员何岸把一封旧信寄出去。",
+                "secret": "这封信其实是她替已故的父亲写给何岸的道歉，父亲当年那艘船的失事她一直没告诉何岸。",
+                "portraitPrompt": "Portrait of an original 31 year old Chinese woman, chestnut short hair, navy work vest over white shirt, old watch strap, calm and tired eyes, cinematic photograph, dusk harbor light.",
+                "topics": [
+                  {
+                    "id": "letter",
+                    "question": "这封蓝色信封原本要寄给谁？",
+                    "answer": "何岸。他五年前离开海岛，我父亲生前一直想给他道歉。我替他装进了船尾发信箱。",
+                    "requires": [],
+                    "reveals": []
+                  },
+                  {
+                    "id": "sealed",
+                    "question": "信封被调包前是什么样子？",
+                    "answer": "蓝色信封，封口是我家旧时常用的蜡封，边缘有齿纹。我拆开掉包信封时只看到“勿再联系”。",
+                    "requires": [],
+                    "reveals": []
+                  }
+                ]
+              },
+              {
+                "id": "lao_chen",
+                "name": "老陈",
+                "role": "轮机工 · 54岁",
+                "description": "灰白寸头，橙色安全背心，手上全是机油，习惯把工具套挂在小指上。",
+                "publicKnowledge": "他是海燕号老轮机工，今晚例行检修压力表，登记单在他口袋里。",
+                "secret": "他看到周棠抱着发信箱离开，知道她准备寄出那封旧信。他提前藏了一个同色信封，想阻止何岸再和他联系。",
+                "portraitPrompt": "Portrait of an original 54 year old Chinese man, grey buzz cut, orange safety vest, oil stained hands, a tool loop on his little finger, weathered and guilty, cinematic photograph.",
+                "topics": [
+                  {
+                    "id": "maintenance",
+                    "question": "18:05到18:15你在轮机舱做什么？",
+                    "answer": "例行检修压力表，登记单在我口袋里。我一直坐在压力表前没动。",
+                    "requires": [],
+                    "reveals": []
+                  },
+                  {
+                    "id": "press_gauge",
+                    "question": "压力表后盖里为什么会有这封被拆开过的旧信？",
+                    "answer": "……是我放进去的。我怕何岸看到道歉信又找我。那封信是周棠替她父亲写的，我不该偷，也不该换。它本来不该在船上。",
+                    "requires": [
+                      "blue_seal",
+                      "maintenance_log"
+                    ],
+                    "reveals": [
+                      "laochen_admit"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "shen_yi",
+                "name": "沈一",
+                "role": "海事登记员 · 40岁",
+                "description": "黑发束成低马尾，灰色制服，胸前挂着登记表，说话前习惯把登记表按平。",
+                "publicKnowledge": "她负责今晚渡轮的最后登记，熟悉船尾货箱和检修通道。",
+                "secret": "她其实认得何岸，五年前她替他做过一次临时登记，所以更知道这封信会掀起什么。",
+                "portraitPrompt": "Portrait of an original 40 year old Chinese woman, low ponytail, grey maritime uniform, clipped badge, precise and calm expression, cinematic photograph, dusk light.",
+                "topics": [
+                  {
+                    "id": "register",
+                    "question": "18:05到18:15，检修登记记录有什么异常？",
+                    "answer": "老陈的登记单写着18:05开始检修，但18:10那一栏的机油编号写反了。说明他中途分过心，或者有人在逼他。",
+                    "requires": [
+                      "maintenance_log"
+                    ],
+                    "reveals": []
+                  },
+                  {
+                    "id": "dock",
+                    "question": "码头雨棚那边18:35左右，你看到谁追出来？",
+                    "answer": "周棠抱着空发信箱追出雨棚，老陈从轮机舱口出来。我没有跟过去，但登记单时间对得上。",
+                    "requires": [],
+                    "reveals": [
+                      "dock_sight"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "he_an",
+                "name": "何岸",
+                "role": "旧船员 · 46岁",
+                "description": "花白短发，深棕色粗呢外套，手上留着多年海上工作留下的疤。",
+                "publicKnowledge": "他是海燕号的老船员，五年前离开海岛，今晚是退役仪式前回来的。",
+                "secret": "他其实早就知道周棠的父亲当年那艘船发生了什么，但一直没有说破。",
+                "portraitPrompt": "Portrait of an original 46 year old Chinese man, salt-and-pepper short hair, brown tweed coat, weathered hands with old scars, weary but kind eyes, cinematic photograph, dusk harbor light.",
+                "topics": [
+                  {
+                    "id": "departure",
+                    "question": "五年前为什么离开海岛？",
+                    "answer": "那艘船出事之后，我没法再留在岛上。周棠的父亲是个好人，他该早点告诉何岸。",
+                    "requires": [],
+                    "reveals": []
+                  }
+                ]
+              }
+            ],
+            "scenes": [
+              {
+                "id": "ship_tail",
+                "name": "船尾发信甲板",
+                "description": "雨棚下的发信箱敞着，蓝色蜡封碎片散在甲板缝隙里。发信箱里空了。",
+                "requires": [],
+                "characterIds": [
+                  "zhou_tang"
+                ],
+                "imagePrompt": "Cinematic empty ship tail deck of a Chinese sea ferry at dusk in 2009, light rain, a half-open wooden mail box under a small shelter, scattered blue wax seal fragments on metal grating, warm cabin light, teal mist, no people, no readable text.",
+                "videoPrompt": "A fixed medium shot of an empty ferry tail deck at dusk in rain. Blue wax fragments lie near a half-open wooden mail box. Teal mist rolls in from the harbor, warm cabin light flickers. No people, no text, subtle rain."
+              },
+              {
+                "id": "engine_room",
+                "name": "轮机舱",
+                "description": "压力表后盖被拆过一角，里面塞着一封被撕开封条的旧信。检修登记单挂在墙上。",
+                "requires": [],
+                "characterIds": [
+                  "lao_chen"
+                ],
+                "imagePrompt": "Cinematic empty engine room of a 2009 Chinese sea ferry, warm tungsten work light, large pressure gauge with its back cover slightly open, a small envelope hidden behind it, maintenance log pinned to the wall, no people, no readable text.",
+                "videoPrompt": "Slow gentle push into an empty engine room, a large pressure gauge with a slightly open back cover, a small envelope hidden behind it, warm tungsten work light, dust in the air. No people, no text, subtle motion."
+              },
+              {
+                "id": "dock_office",
+                "name": "码头登记间",
+                "description": "登记桌上摊着今晚的检修和登船记录，雨点敲打玻璃。老陈的登记单被翻到18:10那一页。",
+                "requires": [],
+                "characterIds": [
+                  "shen_yi",
+                  "he_an"
+                ],
+                "imagePrompt": "Cinematic empty maritime registration office at a 2009 Chinese harbor at dusk in rain, wooden desk, an open logbook, a small harbor window, teal blue light and warm desk lamp, no people, no readable text.",
+                "videoPrompt": "A quiet fixed shot of an empty registration office at dusk in rain, an open logbook on a wooden desk, rain on the harbor window, warm desk lamp, teal shadows. No people, no text, subtle movement."
+              }
+            ],
+            "clues": [
+              {
+                "id": "swapped_letter",
+                "name": "被换上的蓝色信封",
+                "description": "信封外壳仍是蓝色，但封条是普通白胶，内部只有一张写着“勿再联系”的便条。笔迹不是何岸，也不是周棠。",
+                "sceneId": "ship_tail",
+                "requires": []
+              },
+              {
+                "id": "blue_seal",
+                "name": "船尾的蜡封碎片",
+                "description": "甲板缝隙里找到几片蓝色蜡封碎片，边缘齿纹与周棠家旧蜡封一致，证明原信确实被拆开过。",
+                "sceneId": "ship_tail",
+                "requires": []
+              },
+              {
+                "id": "maintenance_log",
+                "name": "轮机舱检修登记单",
+                "description": "老陈18:05开始检修压力表，18:10机油编号写反，18:15结束登记。中间五分钟他不在登记状态。",
+                "sceneId": "dock_office",
+                "requires": []
+              },
+              {
+                "id": "log_error",
+                "name": "写反的机油编号",
+                "description": "18:10那一栏的机油编号写反，说明老陈在拆信封时被打断或分心。这是他中途离开压力表的证据。",
+                "sceneId": "dock_office",
+                "requires": []
+              },
+              {
+                "id": "dock_sight",
+                "name": "雨棚外的追赶",
+                "description": "18:35，周棠抱着空发信箱追出雨棚，老陈从轮机舱口出来。沈一的登记时间与这一目击吻合。",
+                "sceneId": null,
+                "requires": []
+              },
+              {
+                "id": "laochen_admit",
+                "name": "老陈的认罪口供",
+                "description": "面对蓝色蜡封碎片和登记单，老陈承认自己取走并调包了那封旧信，原信藏在压力表后盖。他怕何岸再找他。",
+                "sceneId": null,
+                "requires": [
+                  "blue_seal",
+                  "maintenance_log"
+                ]
+              }
+            ],
+            "endings": [
+              {
+                "id": "solved",
+                "kind": "solved",
+                "title": "末班渡轮",
+                "text": "你把蜡封碎片、写反的机油编号和老陈的认罪口供连在一起。老陈从压力表后盖取出那封旧信，承认是自己怕旧事重开才调包。周棠没有骂他，只是把信封交还给何岸。渡轮离港时雨停了，蓝色信封最终被寄上岸。"
+              },
+              {
+                "id": "wrong",
+                "kind": "wrong",
+                "title": "未寄出的信",
+                "text": "你的指认缺少完整证据，或指向了错误的人。争论在雨里散去，那封信仍没有找到。重新调查，留意哪些登记和哪片封条能证明信封被拆开过。"
+              }
+            ]
+          },
+          "hash": "e73db9e628756c08cc5e8cc1512edbbf35e10f191f99a12091aebe414853efef"
+        },
+        {
+          "id": "18e9861b-2020-451d-9917-7dc1d137daa7",
+          "number": 3,
+          "createdAt": "2026-09-27T17:07:56.983Z",
+          "note": "润色《末班渡轮的蓝色信封》修订版：移除he_an问话引用（何岸为对岸背景收信人，未上船）；统一时间线18:00放信/18:10调包/18:15藏原信返工位/18:35发现/18:40调查/19:10离港；“勿再联系”四字；maintenance_log改值班出入记录并区分事实与推断；log_error改“压力表后盖里的原信”移至engine_room；老陈口供与结案需出入记录+原信+蜡封；保留标题、老陈为责任人、温暖结局及三场景imagePrompt/videoPrompt/style原文。验证通过。",
+          "case": {
+            "schemaVersion": 1,
+            "title": "末班渡轮的蓝色信封",
+            "logline": "停航前最后一班海岛渡轮，一封寄给对岸旧友的蓝色信封被换成写着“勿再联系”的信。船上三人都有一夜可查的行踪。",
+            "opening": "海雾压得很低，把整片码头吞进一片青灰色的潮水里。海燕号发出最后一班长而哑的汽笛，震得雨棚上的积水都滴落下来——明早起，它就要退役了。发信员周棠抱着发信箱站在船尾，发现她刚放进发信箱、准备寄给对岸旧友何岸的蓝色信封，被换成了陌生笔迹的“勿再联系”。何岸此刻在对岸，并不在船上。渡轮十九点十分离港，你循着汽笛的余音，在船尾找到了她。",
+            "style": "写实悬疑电影，2009年中国南方海港渡轮，傍晚雨雾，青蓝色金属甲板与暖黄舱灯，手持微晃镜头，克制对白，无可读文字，无水印。所有角色均为成年人。",
+            "truth": {
+              "culpritId": "lao_chen",
+              "motive": "老陈五年前因一桩海难和何岸断交，一直不肯承认是自己的责任。他看到周棠把替亡父写给何岸的道歉信放进船尾发信箱，怕何岸因此重新找他，临时把信封调包成“勿再联系”，想让这次旧事永远停下。",
+              "method": "老陈在18:05借签出之机进入轮机舱，领取船尾通道钥匙；18:10取走发信箱里周棠父亲的原信，撕下蜡封，换成自己提前藏好的同色信封（写着“勿再联系”）；18:15把原信塞进轮机舱压力表后盖，归还钥匙返回工位。他最初谎称18:05至18:15一直守在压力表前没动；出示出入记录、原信和蜡封后，他才承认调包。",
+              "requiredEvidenceIds": [
+                "maintenance_log",
+                "log_error",
+                "laochen_admit"
+              ],
+              "timeline": [
+                {
+                  "time": "18:00",
+                  "event": "周棠把唯一一封信（替亡父写给何岸的道歉）放进船尾发信箱，准备等离港后寄出。"
+                },
+                {
+                  "time": "18:10",
+                  "event": "老陈取走发信箱里的蓝色原信，撕下蜡封，调换成写着“勿再联系”的信。"
+                },
+                {
+                  "time": "18:15",
+                  "event": "老陈把原信藏进轮机舱压力表后盖，归还钥匙后返回轮机舱工位。"
+                },
+                {
+                  "time": "18:35",
+                  "event": "周棠发现发信箱里只剩换过的信，追到轮机舱口撞见刚藏完原信的老陈。"
+                },
+                {
+                  "time": "18:40",
+                  "event": "周棠开始追查，你加入调查。"
+                },
+                {
+                  "time": "19:10",
+                  "event": "海燕号离港，渡轮驶向对岸。"
+                }
+              ]
+            },
+            "characters": [
+              {
+                "id": "zhou_tang",
+                "name": "周棠",
+                "role": "渡轮发信员 · 31岁",
+                "description": "短发染成栗色，深蓝色工作背心，手腕戴旧表带，常把发信箱抱在胸前。",
+                "publicKnowledge": "她在海燕号做了六年发信员，明早退役前想替已故的父亲，把一封写给对岸旧友何岸的旧信寄出去。",
+                "secret": "这封信是她替已故的父亲写给何岸的道歉，不是替何岸寄信。父亲当年那艘船的失事，她一直没告诉何岸。",
+                "portraitPrompt": "Portrait of an original 31 year old Chinese woman, chestnut short hair, navy work vest over white shirt, old watch strap, calm and tired eyes, cinematic photograph, dusk harbor light.",
+                "topics": [
+                  {
+                    "id": "letter",
+                    "question": "这封蓝色信封原本要寄给谁？",
+                    "answer": "何岸。此刻他在对岸，不在船上。我父亲生前一直想给他道歉，我替他装进了船尾发信箱。",
+                    "requires": [],
+                    "reveals": []
+                  },
+                  {
+                    "id": "sealed",
+                    "question": "信封被调包前是什么样子？",
+                    "answer": "蓝色信封，封口是我家旧时常用的蓝色蜡封，边缘有齿纹。我拆开换过的信封，只看到“勿再联系”四个字。",
+                    "requires": [],
+                    "reveals": []
+                  }
+                ]
+              },
+              {
+                "id": "lao_chen",
+                "name": "老陈",
+                "role": "轮机工 · 54岁",
+                "description": "灰白寸头，橙色安全背心，手上全是机油，习惯把工具套挂在小指上。",
+                "publicKnowledge": "他是海燕号老轮机工，今晚例行检修压力表。出入记录显示他18:08至18:15签出轮机舱领取船尾通道钥匙。",
+                "secret": "他看到周棠把发信箱留在船尾，知道她要寄出那封旧信。他提前藏了一个同色信封，想阻止何岸再和他联系。",
+                "portraitPrompt": "Portrait of an original 54 year old Chinese man, grey buzz cut, orange safety vest, oil stained hands, a tool loop on his little finger, weathered and guilty, cinematic photograph.",
+                "topics": [
+                  {
+                    "id": "maintenance",
+                    "question": "18:05到18:15，你在轮机舱做什么？",
+                    "answer": "例行检修压力表。我一直守在压力表前没动，出入记录也能对上。",
+                    "requires": [],
+                    "reveals": []
+                  },
+                  {
+                    "id": "press_gauge",
+                    "question": "为什么原信会在压力表后盖里？",
+                    "answer": "……是我藏进去的。出入记录、原信和蜡封都摆在这了，我没法再抵赖。我原以为那封信不该寄出去，怕何岸看到道歉信又找我。可那是周棠替她父亲写的，我不该偷，也不该换。",
+                    "requires": [
+                      "maintenance_log",
+                      "log_error",
+                      "blue_seal"
+                    ],
+                    "reveals": [
+                      "laochen_admit"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "shen_yi",
+                "name": "沈一",
+                "role": "海事登记员 · 40岁",
+                "description": "黑发束成低马尾，灰色制服，胸前挂着登记表，说话前习惯把登记表按平。",
+                "publicKnowledge": "她负责今晚渡轮的最后登记，熟悉轮机舱与值班安排。",
+                "secret": "她其实认得何岸，五年前替他做过一次临时登记，所以更知道这封信会掀起什么。",
+                "portraitPrompt": "Portrait of an original 40 year old Chinese woman, low ponytail, grey maritime uniform, clipped badge, precise and calm expression, cinematic photograph, dusk light.",
+                "topics": [
+                  {
+                    "id": "register",
+                    "question": "18:05到18:15，值班出入记录有什么情况？",
+                    "answer": "记录只写事实：周棠18:00离开甲板去发信箱；18:08至18:15只有老陈签出轮机舱，领取船尾通道钥匙再归还；我18:00至18:35一直在登记间值守。至于老陈领钥匙去做什么，记录里没有写，得他自己说。",
+                    "requires": [],
+                    "reveals": []
+                  },
+                  {
+                    "id": "dock",
+                    "question": "18:35左右，轮机舱口那边，你看到谁追出来？",
+                    "answer": "周棠抱着空发信箱追出，老陈从轮机舱口出来。我没有跟过去，只是出入记录上的时间对得上。",
+                    "requires": [
+                      "maintenance_log"
+                    ],
+                    "reveals": [
+                      "dock_sight"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "he_an",
+                "name": "何岸",
+                "role": "旧船员 · 46岁",
+                "description": "花白短发，深棕色粗呢外套，手上留着多年海上工作留下的疤。",
+                "publicKnowledge": "他是海燕号的老船员，五年前离开海岛，此刻在对岸，今晚并未上船。",
+                "secret": "他其实早就知道周棠的父亲当年那艘船发生了什么，但一直没有说破。",
+                "portraitPrompt": "Portrait of an original 46 year old Chinese man, salt-and-pepper short hair, brown tweed coat, weathered hands with old scars, weary but kind eyes, cinematic photograph, dusk harbor light.",
+                "topics": [
+                  {
+                    "id": "departure",
+                    "question": "五年前为什么离开海岛？",
+                    "answer": "那艘船出事之后，我没法再留在岛上。周棠的父亲是个好人，他该早点把实情告诉我。",
+                    "requires": [],
+                    "reveals": []
+                  }
+                ]
+              }
+            ],
+            "scenes": [
+              {
+                "id": "ship_tail",
+                "name": "船尾发信甲板",
+                "description": "雨棚下的发信箱敞着，蓝色蜡封碎片散在甲板缝隙里。发信箱里只剩那封换过的信封。",
+                "requires": [],
+                "characterIds": [
+                  "zhou_tang"
+                ],
+                "imagePrompt": "Cinematic empty ship tail deck of a Chinese sea ferry at dusk in 2009, light rain, a half-open wooden mail box under a small shelter, scattered blue wax seal fragments on metal grating, warm cabin light, teal mist, no people, no readable text.",
+                "videoPrompt": "A fixed medium shot of an empty ferry tail deck at dusk in rain. Blue wax fragments lie near a half-open wooden mail box. Teal mist rolls in from the harbor, warm cabin light flickers. No people, no text, subtle rain."
+              },
+              {
+                "id": "engine_room",
+                "name": "轮机舱",
+                "description": "压力表后盖被拆过一角，里面塞着一封被撕开封条的旧信。值班出入记录挂在墙上。",
+                "requires": [],
+                "characterIds": [
+                  "lao_chen"
+                ],
+                "imagePrompt": "Cinematic empty engine room of a 2009 Chinese sea ferry, warm tungsten work light, large pressure gauge with its back cover slightly open, a small envelope hidden behind it, maintenance log pinned to the wall, no people, no readable text.",
+                "videoPrompt": "Slow gentle push into an empty engine room, a large pressure gauge with a slightly open back cover, a small envelope hidden behind it, warm tungsten work light, dust in the air. No people, no text, subtle motion."
+              },
+              {
+                "id": "dock_office",
+                "name": "码头登记间",
+                "description": "登记桌上摊着今晚的值班出入和登船记录，雨点敲打玻璃。值班出入记录被翻到18:08至18:15那几页。",
+                "requires": [],
+                "characterIds": [
+                  "shen_yi",
+                  "he_an"
+                ],
+                "imagePrompt": "Cinematic empty maritime registration office at a 2009 Chinese harbor at dusk in rain, wooden desk, an open logbook, a small harbor window, teal blue light and warm desk lamp, no people, no readable text.",
+                "videoPrompt": "A quiet fixed shot of an empty registration office at dusk in rain, an open logbook on a wooden desk, rain on the harbor window, warm desk lamp, teal shadows. No people, no text, subtle movement."
+              }
+            ],
+            "clues": [
+              {
+                "id": "swapped_letter",
+                "name": "被换上的蓝色信封",
+                "description": "信封外壳仍是蓝色，但封条是普通白胶，内部只有一张写着“勿再联系”四个字的便条。笔迹不是何岸，也不是周棠。",
+                "sceneId": "ship_tail",
+                "requires": []
+              },
+              {
+                "id": "blue_seal",
+                "name": "船尾的蜡封碎片",
+                "description": "甲板缝隙里找到几片蓝色蜡封碎片，边缘齿纹与周棠家旧蜡封一致，证明原信确实被拆开过。",
+                "sceneId": "ship_tail",
+                "requires": []
+              },
+              {
+                "id": "maintenance_log",
+                "name": "值班出入记录",
+                "description": "记录只写事实：周棠18:00离开甲板前往发信箱；沈一18:00至18:35在登记间值守；18:08至18:15仅老陈签出轮机舱，领取船尾通道钥匙再归还。记录本身不直接证明谁调包了信封。",
+                "sceneId": "dock_office",
+                "requires": []
+              },
+              {
+                "id": "log_error",
+                "name": "压力表后盖里的原信",
+                "description": "拆开压力表后盖，里面有周棠父亲写给何岸的原信，落款仍是家中之名；封蜡破口与船尾蓝色蜡封碎片吻合，信纸边还留着老陈的机油手印。",
+                "sceneId": "engine_room",
+                "requires": []
+              },
+              {
+                "id": "dock_sight",
+                "name": "雨棚外的追赶",
+                "description": "18:35，周棠抱着空发信箱追出雨棚，老陈从轮机舱口出来。沈一的时间与这一目击吻合。",
+                "sceneId": null,
+                "requires": []
+              },
+              {
+                "id": "laochen_admit",
+                "name": "老陈的认罪口供",
+                "description": "面对值班出入记录、压力表后盖里的原信和蓝色蜡封碎片，老陈承认自己取走并调包了那封旧信，原信藏进压力表后盖。他说自己怕何岸再找他。",
+                "sceneId": null,
+                "requires": [
+                  "maintenance_log",
+                  "log_error",
+                  "blue_seal"
+                ]
+              }
+            ],
+            "endings": [
+              {
+                "id": "solved",
+                "kind": "solved",
+                "title": "末班渡轮",
+                "text": "你把值班出入记录、压力表后盖里的原信和蓝色蜡封碎片放在一起，老陈终于承认：是他怕旧事重开，才把周棠亡父写给何岸的道歉信调包成“勿再联系”。周棠没有发火，只把原信接回手里，随发信箱一起由渡轮送往对岸，交给何岸。渡轮离港时雨停了，蓝色信封终于被寄到对岸。老陈望着船尾，轻声说，该道歉的，早该是他。"
+              },
+              {
+                "id": "wrong",
+                "kind": "wrong",
+                "title": "未寄出的信",
+                "text": "你的指认缺少完整证据，或指向了错误的人。争论在雨里散去，那封原信仍藏在压力表后盖里。重新调查：先看值班出入记录能确认谁在何时离开了哪里，再找到那封原信与船尾蜡封碎片如何对得上，最后才问老陈为什么原信会在压力表后盖里。"
+              }
+            ]
+          },
+          "hash": "62b8f7a01ecdd30378fe50b88084ac3c151a8f694a9241110434573102424a68"
+        },
+        {
+          "id": "a43ca7d6-5b9d-47cf-8247-343eeb8930ac",
+          "number": 4,
+          "createdAt": "2026-09-27T17:10:06.822Z",
+          "note": "作者终审：模型修订仍遗漏第四人物并残留18:15/18:35时间矛盾。人工删除背景人物的交互实体，统一代写来源、借钥匙时间与证据解释；保留全部视觉提示和既有素材。",
+          "case": {
+            "schemaVersion": 1,
+            "title": "末班渡轮的蓝色信封",
+            "logline": "末班渡轮离港前，一封寄给对岸旧友的蓝色信封被调包。你要在船上三人之间核对行踪，找回没有寄出的道歉。",
+            "opening": "海雾压低了港口，雨水沿海燕号的栏杆滴落。这是退役前的最后一班渡轮，十九点十分离港。十八点四十分，发信员周棠请你帮忙：她放进船尾发信箱、寄给对岸旧友何岸的蓝色信封，被换成了陌生笔迹的“勿再联系”。何岸没有上船，真正的信必须在离港前找回来。",
+            "style": "写实悬疑电影，2009年中国南方海港渡轮，傍晚雨雾，青蓝色金属甲板与暖黄舱灯，手持微晃镜头，克制对白，无可读文字，无水印。所有角色均为成年人。",
+            "truth": {
+              "culpritId": "lao_chen",
+              "motive": "五年前，周棠的父亲和老陈共同签署了一份隐瞒检修疏漏的报告，何岸因此被误责而离岛。周棠依据亡父遗稿誊写了道歉信。老陈知道遗稿提及自己的签字，害怕旧事被重新追问，试图用“勿再联系”阻断这次通信。",
+              "method": "老陈十八点零五分开始检修压力表，十八点零八分从登记间借走唯一的船尾检修通道钥匙，十八点十分从发信箱取走原信，拆开蓝色蜡封，放入事先准备的同色信封。十八点十五分前，他把原信藏进压力表后盖并归还通道钥匙，返回工位。面对调查，他故意谎称零五分至十五分一直守着压力表。",
+              "requiredEvidenceIds": [
+                "maintenance_log",
+                "log_error",
+                "laochen_admit"
+              ],
+              "timeline": [
+                {
+                  "time": "18:00",
+                  "event": "周棠将依据亡父遗稿誊写、寄给何岸的道歉信放进船尾发信箱，随后回前舱清点邮袋。"
+                },
+                {
+                  "time": "18:08",
+                  "event": "老陈向沈一借走唯一的船尾检修通道钥匙；周棠在前舱清点邮袋，沈一在登记间值班。"
+                },
+                {
+                  "time": "18:10",
+                  "event": "老陈取走发信箱里的蓝色原信，撕下蜡封，调换成写着“勿再联系”的信。"
+                },
+                {
+                  "time": "18:15",
+                  "event": "老陈把原信藏进轮机舱压力表后盖，归还钥匙后返回轮机舱工位。"
+                },
+                {
+                  "time": "18:35",
+                  "event": "周棠回到发信甲板发现信被调包，带着替换信去轮机舱口询问老陈。此时原信已藏好二十分钟。"
+                },
+                {
+                  "time": "18:40",
+                  "event": "周棠开始追查，你加入调查。"
+                },
+                {
+                  "time": "19:10",
+                  "event": "海燕号离港，渡轮驶向对岸。"
+                }
+              ]
+            },
+            "characters": [
+              {
+                "id": "zhou_tang",
+                "name": "周棠",
+                "role": "渡轮发信员 · 31岁",
+                "description": "短发染成栗色，深蓝色工作背心，手腕戴旧表带，常把发信箱抱在胸前。",
+                "publicKnowledge": "她在海燕号做了六年发信员，今晚想把根据亡父遗稿誊写的道歉信寄给对岸的何岸。",
+                "secret": "亡父留下的遗稿承认五年前检修报告有假，她一直不敢把这份迟来的道歉寄出去，直到渡轮将要退役。",
+                "portraitPrompt": "Portrait of an original 31 year old Chinese woman, chestnut short hair, navy work vest over white shirt, old watch strap, calm and tired eyes, cinematic photograph, dusk harbor light.",
+                "topics": [
+                  {
+                    "id": "letter",
+                    "question": "这封蓝色信封原本要寄给谁？",
+                    "answer": "寄给对岸的何岸。我根据父亲留下的遗稿誊写了道歉信，十八点把它放进发信箱，就回前舱清点邮袋。三十五分回来才发现信被换了。",
+                    "requires": [],
+                    "reveals": []
+                  },
+                  {
+                    "id": "sealed",
+                    "question": "信封被调包前是什么样子？",
+                    "answer": "蓝色信封，封口是我家旧时常用的蓝色蜡封，边缘有齿纹。我拆开换过的信封，只看到“勿再联系”四个字。",
+                    "requires": [],
+                    "reveals": []
+                  }
+                ]
+              },
+              {
+                "id": "lao_chen",
+                "name": "老陈",
+                "role": "轮机工 · 54岁",
+                "description": "灰白寸头，橙色安全背心，手上全是机油，习惯把工具套挂在小指上。",
+                "publicKnowledge": "他是海燕号老轮机工，今晚负责最后一次压力表检修，十八点零五分开始工作。",
+                "secret": "他知道周棠父亲的遗稿提及那份虚假检修报告，也提及他的签字。他不愿再次面对曾被误责的何岸。",
+                "portraitPrompt": "Portrait of an original 54 year old Chinese man, grey buzz cut, orange safety vest, oil stained hands, a tool loop on his little finger, weathered and guilty, cinematic photograph.",
+                "topics": [
+                  {
+                    "id": "maintenance",
+                    "question": "18:05到18:15，你在轮机舱做什么？",
+                    "answer": "例行检修压力表。我一直守在压力表前没动，出入记录也能对上。",
+                    "requires": [],
+                    "reveals": []
+                  },
+                  {
+                    "id": "press_gauge",
+                    "question": "为什么原信会在压力表后盖里？",
+                    "answer": "……信是我藏进去的。借钥匙的记录、藏在我工位的原信和封口碎片，都没法解释成巧合。五年前那份报告也有我的签字，我怕何岸看到道歉信后再来问我，所以换了它。周棠没有做错，该认错的是我。",
+                    "requires": [
+                      "maintenance_log",
+                      "log_error",
+                      "blue_seal"
+                    ],
+                    "reveals": [
+                      "laochen_admit"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "shen_yi",
+                "name": "沈一",
+                "role": "海事登记员 · 40岁",
+                "description": "黑发束成低马尾，灰色制服，胸前挂着登记表，说话前习惯把登记表按平。",
+                "publicKnowledge": "她负责今晚渡轮的最后登记，熟悉轮机舱与值班安排。",
+                "secret": "她其实认得何岸，五年前替他做过一次临时登记，所以更知道这封信会掀起什么。",
+                "portraitPrompt": "Portrait of an original 40 year old Chinese woman, low ponytail, grey maritime uniform, clipped badge, precise and calm expression, cinematic photograph, dusk light.",
+                "topics": [
+                  {
+                    "id": "register",
+                    "question": "18:05到18:15，值班出入记录有什么情况？",
+                    "answer": "记录显示十八点零八分老陈借走唯一的船尾检修通道钥匙，十五分归还；这期间没有别人借用。周棠在前舱清点邮袋，我在登记间值班。钥匙只能证明他有通行机会，不能单独证明他换了信。",
+                    "requires": [],
+                    "reveals": []
+                  },
+                  {
+                    "id": "dock",
+                    "question": "18:35左右，轮机舱口那边，你看到谁追出来？",
+                    "answer": "十八点三十五分，周棠拿着一封打开的蓝色信封走到轮机舱口，老陈从自己的工位出来。他们争论了几句，我看了值班钟，记得这个时间。",
+                    "requires": [
+                      "maintenance_log"
+                    ],
+                    "reveals": [
+                      "dock_sight"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "scenes": [
+              {
+                "id": "ship_tail",
+                "name": "船尾发信甲板",
+                "description": "雨棚下的发信箱敞着，蓝色蜡封碎片散在甲板缝隙里。发信箱里只剩那封换过的信封。",
+                "requires": [],
+                "characterIds": [
+                  "zhou_tang"
+                ],
+                "imagePrompt": "Cinematic empty ship tail deck of a Chinese sea ferry at dusk in 2009, light rain, a half-open wooden mail box under a small shelter, scattered blue wax seal fragments on metal grating, warm cabin light, teal mist, no people, no readable text.",
+                "videoPrompt": "A fixed medium shot of an empty ferry tail deck at dusk in rain. Blue wax fragments lie near a half-open wooden mail box. Teal mist rolls in from the harbor, warm cabin light flickers. No people, no text, subtle rain."
+              },
+              {
+                "id": "engine_room",
+                "name": "轮机舱",
+                "description": "暖灯照着老陈的检修工位。压力表后盖有新鲜拆装痕迹，一角露出蓝色信封；墙上挂着一张检修流程表。",
+                "requires": [],
+                "characterIds": [
+                  "lao_chen"
+                ],
+                "imagePrompt": "Cinematic empty engine room of a 2009 Chinese sea ferry, warm tungsten work light, large pressure gauge with its back cover slightly open, a small envelope hidden behind it, maintenance log pinned to the wall, no people, no readable text.",
+                "videoPrompt": "Slow gentle push into an empty engine room, a large pressure gauge with a slightly open back cover, a small envelope hidden behind it, warm tungsten work light, dust in the air. No people, no text, subtle motion."
+              },
+              {
+                "id": "dock_office",
+                "name": "码头登记间",
+                "description": "登记桌上摊着今晚的出入与钥匙借还记录，雨点敲打玻璃。十八点零八分和十五分的签字在同一页上。",
+                "requires": [],
+                "characterIds": [
+                  "shen_yi"
+                ],
+                "imagePrompt": "Cinematic empty maritime registration office at a 2009 Chinese harbor at dusk in rain, wooden desk, an open logbook, a small harbor window, teal blue light and warm desk lamp, no people, no readable text.",
+                "videoPrompt": "A quiet fixed shot of an empty registration office at dusk in rain, an open logbook on a wooden desk, rain on the harbor window, warm desk lamp, teal shadows. No people, no text, subtle movement."
+              }
+            ],
+            "clues": [
+              {
+                "id": "swapped_letter",
+                "name": "被换上的蓝色信封",
+                "description": "信封外壳仍是蓝色，但封条是普通白胶，内部只有一张写着“勿再联系”四个字的便条。笔迹不是何岸，也不是周棠。",
+                "sceneId": "ship_tail",
+                "requires": []
+              },
+              {
+                "id": "blue_seal",
+                "name": "船尾的蜡封碎片",
+                "description": "甲板缝隙里找到几片蓝色蜡封碎片，边缘齿纹与周棠家旧蜡封一致，证明原信确实被拆开过。",
+                "sceneId": "ship_tail",
+                "requires": []
+              },
+              {
+                "id": "maintenance_log",
+                "name": "值班出入记录",
+                "description": "沈一值班时逐笔记录并签名：十八点零八分老陈借走唯一的船尾检修通道钥匙，十五分归还；期间无其他借用。周棠的前舱邮袋清点联有十八点零九分至十六分的逐项签记。记录支持老陈曾离开压力表工位，但单独不能证明调包。",
+                "sceneId": "dock_office",
+                "requires": []
+              },
+              {
+                "id": "log_error",
+                "name": "压力表后盖里的原信",
+                "description": "你从老陈工位的压力表后盖里取出原信。信上是周棠依据亡父遗稿誊写的道歉，提到五年前一份由父亲与老陈共同签署的虚假检修报告。封口残留的蓝蜡与船尾碎片有可拼合的断面，说明这是从发信箱取走的那一封。",
+                "sceneId": "engine_room",
+                "requires": []
+              },
+              {
+                "id": "dock_sight",
+                "name": "十八点三十五分的争执",
+                "description": "沈一看到周棠拿着替换信到轮机舱口询问老陈；她看过值班钟，确认是十八点三十五分。这只能确定发现后的争执时间，不能作为老陈当时藏信的证据。",
+                "sceneId": null,
+                "requires": []
+              },
+              {
+                "id": "laochen_admit",
+                "name": "老陈的认罪口供",
+                "description": "面对钥匙借还记录、压力表后盖里的原信和可拼合的蓝色蜡封，老陈承认调包。他害怕原信揭开五年前自己在虚假检修报告上的签字。",
+                "sceneId": null,
+                "requires": [
+                  "maintenance_log",
+                  "log_error",
+                  "blue_seal"
+                ]
+              }
+            ],
+            "endings": [
+              {
+                "id": "solved",
+                "kind": "solved",
+                "title": "末班渡轮",
+                "text": "借还钥匙的时间拆穿了老陈“一直没离开”的说法；工位里找回的原信，与甲板上的蜡封断面拼合。老陈终于承认调包，也承认自己不敢面对五年前的签字。周棠接过信，重新封好，放进要随渡轮送往对岸的邮袋。十九点十分，海燕号离港。雨停了，迟来的道歉终于驶向何岸。"
+              },
+              {
+                "id": "wrong",
+                "kind": "wrong",
+                "title": "未寄出的信",
+                "text": "你的指认还缺少完整证据，或指向了错误的人。争论没能说明信被谁换走。重新调查，核对出入记录与找到的原信，再带着证据追问；发现信之后的争执，不能直接证明此前的调包。"
+              }
+            ]
+          },
+          "hash": "f731d377de3e6c739cd0465471df0ca871bad1a62c21b9e30ac63a78c59da3d7"
+        }
+      ],
+      "assets": [
+        {
+          "id": "35224548-5e54-4c5d-b44d-875b52822e59",
+          "sceneId": "ship_tail",
+          "kind": "image",
+          "file": "35224548-5e54-4c5d-b44d-875b52822e59.png",
+          "mime": "image/png",
+          "inputHash": "153bf89b2371bb0991e1bfb2eb50021b2ee1f07740d671dbddd921b16aa29690",
+          "seed": 927,
+          "model": "/root/mujian-runtime/models/sdxl-base",
+          "durationMs": 53262,
+          "createdAt": "2026-09-27T16:14:51.641Z",
+          "provenance": "local-generation",
+          "metadata": {
+            "id": "f0c70c9a-afb4-480e-8b6c-e8bf09320d2d",
+            "state": "succeeded",
+            "createdAt": 1790525637.4914148,
+            "request": {
+              "kind": "image",
+              "prompt": "Cinematic empty ship tail deck of a Chinese sea ferry at dusk in 2009, light rain, a half-open wooden mail box under a small shelter, scattered blue wax seal fragments on metal grating, warm cabin light, teal mist, no people, no readable text.\nVisual style: 写实悬疑电影，2009年中国南方海港渡轮，傍晚雨雾，青蓝色金属甲板与暖黄舱灯，手持微晃镜头，克制对白，无可读文字，无水印。所有角色均为成年人。",
+              "seed": 927,
+              "reference": null,
+              "quality": "draft"
+            },
+            "phase": "done",
+            "device": "NVIDIA GB10",
+            "diffusersVersion": "0.35.2",
+            "loadMs": 47698,
+            "steps": 20,
+            "step": 20,
+            "file": "f0c70c9a-afb4-480e-8b6c-e8bf09320d2d.png",
+            "model": "/root/mujian-runtime/models/sdxl-base",
+            "durationMs": 53262,
+            "peakAllocatedBytes": 9477176320,
+            "settings": {
+              "width": 1024,
+              "height": 576,
+              "num_inference_steps": 20,
+              "guidance_scale": 6
+            },
+            "torchVersion": "2.9.1+cu130",
+            "cudaVersion": "13.0",
+            "finishedAt": 1790525690.7545648,
+            "quality": "draft"
+          }
+        },
+        {
+          "id": "c6b7473b-a1bc-403d-83da-e3b9e44403ed",
+          "sceneId": "ship_tail",
+          "kind": "video",
+          "file": "c6b7473b-a1bc-403d-83da-e3b9e44403ed.mp4",
+          "mime": "video/mp4",
+          "inputHash": "00c6eabb570d1f70b322bd918523872ecaea284f73fdd98c9a9bbeda4de4aad1",
+          "seed": 927,
+          "model": "/root/mujian-runtime/models/Wan2.2-TI2V-5B-Diffusers",
+          "durationMs": 289600,
+          "createdAt": "2026-09-27T16:19:57.979Z",
+          "provenance": "local-generation",
+          "metadata": {
+            "id": "98d4de14-e45e-44be-b77c-3acee58b946a",
+            "state": "succeeded",
+            "createdAt": 1790525707.3488762,
+            "request": {
+              "kind": "video",
+              "prompt": "A fixed medium shot of an empty ferry tail deck at dusk in rain. Blue wax fragments lie near a half-open wooden mail box. Teal mist rolls in from the harbor, warm cabin light flickers. No people, no text, subtle rain.\nVisual style: 写实悬疑电影，2009年中国南方海港渡轮，傍晚雨雾，青蓝色金属甲板与暖黄舱灯，手持微晃镜头，克制对白，无可读文字，无水印。所有角色均为成年人。",
+              "seed": 927,
+              "reference": "35224548-5e54-4c5d-b44d-875b52822e59.png",
+              "quality": "draft"
+            },
+            "phase": "done",
+            "device": "NVIDIA GB10",
+            "diffusersVersion": "0.35.2",
+            "vaeTiling": false,
+            "loadMs": 116520,
+            "steps": 20,
+            "step": 20,
+            "probe": {
+              "programs": [],
+              "streams": [
+                {
+                  "codec_name": "h264",
+                  "width": 768,
+                  "height": 448
+                }
+              ],
+              "format": {
+                "duration": "2.041667"
+              }
+            },
+            "file": "98d4de14-e45e-44be-b77c-3acee58b946a.mp4",
+            "model": "/root/mujian-runtime/models/Wan2.2-TI2V-5B-Diffusers",
+            "durationMs": 289600,
+            "peakAllocatedBytes": 32252588032,
+            "settings": {
+              "width": 768,
+              "height": 448,
+              "num_frames": 49,
+              "num_inference_steps": 20,
+              "guidance_scale": 5
+            },
+            "torchVersion": "2.9.1+cu130",
+            "cudaVersion": "13.0",
+            "finishedAt": 1790525996.9513426,
+            "quality": "draft",
+            "referenceHash": "17d7e9686c4fa553eb1fc1acbdb325d6b9ba49057dd12abeebdd5bee6fb41476"
+          }
+        },
+        {
+          "id": "c48c9075-5fbd-439d-9a9b-2c35d0cbceb3",
+          "sceneId": "ship_tail",
+          "kind": "video",
+          "file": "c48c9075-5fbd-439d-9a9b-2c35d0cbceb3.mp4",
+          "mime": "video/mp4",
+          "inputHash": "00c6eabb570d1f70b322bd918523872ecaea284f73fdd98c9a9bbeda4de4aad1",
+          "seed": 927,
+          "model": "/root/mujian-runtime/models/Wan2.2-TI2V-5B-Diffusers",
+          "durationMs": 1693021,
+          "createdAt": "2026-09-27T16:59:09.192Z",
+          "provenance": "local-generation",
+          "metadata": {
+            "id": "048ad134-71e2-4857-9a4d-669aa5aa0924",
+            "state": "succeeded",
+            "createdAt": 1790526654.7205458,
+            "request": {
+              "kind": "video",
+              "prompt": "A fixed medium shot of an empty ferry tail deck at dusk in rain. Blue wax fragments lie near a half-open wooden mail box. Teal mist rolls in from the harbor, warm cabin light flickers. No people, no text, subtle rain.\nVisual style: 写实悬疑电影，2009年中国南方海港渡轮，傍晚雨雾，青蓝色金属甲板与暖黄舱灯，手持微晃镜头，克制对白，无可读文字，无水印。所有角色均为成年人。",
+              "seed": 927,
+              "reference": "35224548-5e54-4c5d-b44d-875b52822e59.png",
+              "quality": "final"
+            },
+            "phase": "done",
+            "device": "NVIDIA GB10",
+            "diffusersVersion": "0.35.2",
+            "vaeTiling": false,
+            "loadMs": 100685,
+            "steps": 50,
+            "step": 50,
+            "probe": {
+              "programs": [],
+              "streams": [
+                {
+                  "codec_name": "h264",
+                  "width": 1280,
+                  "height": 704
+                }
+              ],
+              "format": {
+                "duration": "5.041667"
+              }
+            },
+            "file": "048ad134-71e2-4857-9a4d-669aa5aa0924.mp4",
+            "model": "/root/mujian-runtime/models/Wan2.2-TI2V-5B-Diffusers",
+            "durationMs": 1693021,
+            "peakAllocatedBytes": 46065842176,
+            "settings": {
+              "width": 1280,
+              "height": 704,
+              "num_frames": 121,
+              "num_inference_steps": 50,
+              "guidance_scale": 5
+            },
+            "torchVersion": "2.9.1+cu130",
+            "cudaVersion": "13.0",
+            "finishedAt": 1790528347.7571487,
+            "quality": "final",
+            "referenceHash": "17d7e9686c4fa553eb1fc1acbdb325d6b9ba49057dd12abeebdd5bee6fb41476"
+          }
+        }
+      ],
+      "report": {
+        "rulesVersion": 2,
+        "passed": true,
+        "issues": [],
+        "reachableClues": [
+          "swapped_letter",
+          "blue_seal",
+          "log_error",
+          "maintenance_log",
+          "dock_sight",
+          "laochen_admit"
+        ],
+        "reachableScenes": [
+          "ship_tail",
+          "engine_room",
+          "dock_office"
+        ],
+        "winningPath": [
+          {
+            "type": "collect",
+            "clueId": "swapped_letter"
+          },
+          {
+            "type": "collect",
+            "clueId": "blue_seal"
+          },
+          {
+            "type": "travel",
+            "sceneId": "engine_room"
+          },
+          {
+            "type": "collect",
+            "clueId": "log_error"
+          },
+          {
+            "type": "travel",
+            "sceneId": "dock_office"
+          },
+          {
+            "type": "collect",
+            "clueId": "maintenance_log"
+          },
+          {
+            "type": "ask",
+            "characterId": "shen_yi",
+            "topicId": "dock"
+          },
+          {
+            "type": "travel",
+            "sceneId": "ship_tail"
+          },
+          {
+            "type": "travel",
+            "sceneId": "engine_room"
+          },
+          {
+            "type": "ask",
+            "characterId": "lao_chen",
+            "topicId": "press_gauge"
+          },
+          {
+            "type": "travel",
+            "sceneId": "dock_office"
+          },
+          {
+            "type": "travel",
+            "sceneId": "ship_tail"
+          },
+          {
+            "type": "travel",
+            "sceneId": "engine_room"
+          },
+          {
+            "type": "travel",
+            "sceneId": "dock_office"
+          },
+          {
+            "type": "accuse",
+            "characterId": "lao_chen",
+            "evidenceIds": [
+              "maintenance_log",
+              "log_error",
+              "laochen_admit"
+            ]
+          }
+        ],
+        "actionCount": 15,
+        "checkedAt": "2026-09-27T17:10:06.822Z",
+        "caseHash": "f731d377de3e6c739cd0465471df0ca871bad1a62c21b9e30ac63a78c59da3d7"
+      },
+      "source": "generated"
+    },
+    "diff": {
+      "changes": [
+        {
+          "section": "characters",
+          "id": "zhou_tang",
+          "label": "周棠",
+          "kind": "changed"
+        },
+        {
+          "section": "characters",
+          "id": "lao_chen",
+          "label": "老陈",
+          "kind": "changed"
+        },
+        {
+          "section": "characters",
+          "id": "shen_yi",
+          "label": "沈一",
+          "kind": "changed"
+        },
+        {
+          "section": "characters",
+          "id": "he_an",
+          "label": "何岸",
+          "kind": "removed"
+        },
+        {
+          "section": "scenes",
+          "id": "engine_room",
+          "label": "轮机舱",
+          "kind": "changed"
+        },
+        {
+          "section": "scenes",
+          "id": "dock_office",
+          "label": "码头登记间",
+          "kind": "changed"
+        },
+        {
+          "section": "clues",
+          "id": "maintenance_log",
+          "label": "值班出入记录",
+          "kind": "changed"
+        },
+        {
+          "section": "clues",
+          "id": "log_error",
+          "label": "压力表后盖里的原信",
+          "kind": "changed"
+        },
+        {
+          "section": "clues",
+          "id": "dock_sight",
+          "label": "十八点三十五分的争执",
+          "kind": "changed"
+        },
+        {
+          "section": "clues",
+          "id": "laochen_admit",
+          "label": "老陈的认罪口供",
+          "kind": "changed"
+        },
+        {
+          "section": "endings",
+          "id": "solved",
+          "label": "末班渡轮",
+          "kind": "changed"
+        },
+        {
+          "section": "endings",
+          "id": "wrong",
+          "label": "未寄出的信",
+          "kind": "changed"
+        },
+        {
+          "section": "truth",
+          "id": "truth",
+          "label": "truth",
+          "kind": "changed"
+        },
+        {
+          "section": "logline",
+          "id": "logline",
+          "label": "logline",
+          "kind": "changed"
+        },
+        {
+          "section": "opening",
+          "id": "opening",
+          "label": "opening",
+          "kind": "changed"
+        }
+      ],
+      "affectedScenes": [
+        "dock_office"
+      ]
+    }
+  }
+}

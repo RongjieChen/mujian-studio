@@ -10,8 +10,10 @@ export function exportGame(project: Project) {
   if(!report.passed)throw new Error('案件仍有规则错误，修复并检查通过后才能导出。');
   const jsPath=path.resolve('dist/player-runtime.js'),cssPath=path.resolve('dist/player-runtime.css');
   if(!fs.existsSync(jsPath))throw new Error('独立播放器尚未构建，请先运行 npm run build。');
-  const media:Record<string,{image?:string;video?:string}>={};
-  for(const asset of project.assets){
+  const media:Record<string,{image?:string;video?:string}>=Object.create(null);
+  const selected=new Map<string,Project['assets'][number]>();
+  for(const asset of project.assets)if(assetCurrent(project,asset))selected.set(`${asset.sceneId}:${asset.kind}`,asset);
+  for(const asset of selected.values()){
     if(!assetCurrent(project,asset))continue;
     const file=path.join(dataDir,'media',asset.file);
     if(!fs.existsSync(file))throw new Error(`素材 ${asset.id} 的文件缺失，导出已阻止。`);

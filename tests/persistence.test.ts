@@ -45,3 +45,21 @@ test('HTML export escapes user-authored script delimiters and needs no remote UR
   assert.equal(JSON.parse(embedded).case.title,p.case.title);
   assert(!html.includes('src="https://'));
 });
+test('export embeds a replacement asset even if an older replaced file is missing',()=>{
+  const p=createProject(structuredClone(sampleCase),'test','sample');
+  const sceneId=p.case.scenes[0].id;
+  const asset={id:'old',sceneId,kind:'image' as const,file:'missing.png',mime:'image/png',inputHash:hashObject(sceneInput(p.case,sceneId,'image',42)),seed:42,model:'fixture',durationMs:1,createdAt:new Date().toISOString(),provenance:'local-generation' as const};
+  p.assets.push(asset,{...asset,id:'new',file:'replacement.png'});
+  fs.writeFileSync(path.join(dataDir,'media','replacement.png'),'fixture-image');
+  assert(exportGame(p).includes(Buffer.from('fixture-image').toString('base64')));
+  fs.unlinkSync(path.join(dataDir,'media','replacement.png'));
+  assert.throws(()=>exportGame(p),/文件缺失/);
+});
+test('schema-valid scene ID constructor cannot collide with object prototype in exports',()=>{
+  const p=createProject(structuredClone(sampleCase),'test','sample');const old=p.case.scenes[0].id;p.case.scenes[0].id='constructor';
+  for(const c of p.case.clues)if(c.sceneId===old)c.sceneId='constructor';
+  p.assets.push({id:'constructor-image',sceneId:'constructor',kind:'image',file:'constructor.png',mime:'image/png',inputHash:hashObject(sceneInput(p.case,'constructor','image',0)),seed:0,model:'fixture',durationMs:0,createdAt:new Date().toISOString(),provenance:'upload'});
+  fs.writeFileSync(path.join(dataDir,'media','constructor.png'),'constructor fixture');
+  const html=exportGame(p),embedded=html.match(/<script type="application\/json" id="game-data">([\s\S]*?)<\/script>/)![1];
+  assert(JSON.parse(embedded).media.constructor.image.startsWith('data:image/png'));
+});

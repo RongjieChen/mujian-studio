@@ -1,0 +1,29 @@
+{
+  "llm": {
+    "provider": "mujian-local",
+    "model": "qwen3.8-27b",
+    "configured": true,
+    "reachable": true
+  },
+  "media": {
+    "ok": true,
+    "gpu": "NVIDIA GB10",
+    "busy": false,
+    "loaded": null,
+    "models": {
+      "image": "/root/mujian-runtime/models/sdxl-base",
+      "video": "/root/mujian-runtime/models/Wan2.2-TI2V-5B-Diffusers"
+    },
+    "readiness": {
+      "image": {
+        "ready": true,
+        "detail": "Local model files are present."
+      },
+      "video": {
+        "ready": true,
+        "detail": "Local model files are present."
+      }
+    }
+  },
+  "activeJobs": 0
+}

@@ -1,0 +1,599 @@
+{
+  "id": "a1981fba-effd-4b23-904b-c81afa34c250",
+  "projectId": "0b85ab3a-d47a-49a2-a8a0-d098d79c7dfa",
+  "kind": "edit",
+  "state": "succeeded",
+  "request": {
+    "prompt": "仅修改 opening 开场字段，增加雨后旧书店的纸张气味与收店铃声，保持两三句话。请用 patch_story 局部修改；标题、简介、视觉风格、人物、真相、场景、证据、条件和结局一字不改。"
+  },
+  "baseRevision": 1,
+  "events": [
+    {
+      "at": "2026-09-27T17:23:55.751Z",
+      "type": "memory",
+      "message": "已释放素材模型内存。",
+      "detail": {
+        "released": true,
+        "reservedBytes": 23068672
+      }
+    },
+    {
+      "at": "2026-09-27T17:23:55.780Z",
+      "type": "model",
+      "message": "使用 本地 模型 qwen3.8-27b"
+    },
+    {
+      "at": "2026-09-27T17:23:56.819Z",
+      "type": "tool-call",
+      "message": "请求工具：read_case"
+    },
+    {
+      "at": "2026-09-27T17:23:56.819Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 1573,
+        "output": 14,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 1587,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:23:56.830Z",
+      "type": "tool",
+      "message": "读取工作版本"
+    },
+    {
+      "at": "2026-09-27T17:24:05.037Z",
+      "type": "tool-call",
+      "message": "请求工具：patch_story"
+    },
+    {
+      "at": "2026-09-27T17:24:05.038Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 3386,
+        "output": 172,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 3558,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:24:05.041Z",
+      "type": "patch",
+      "message": "仅修改 opening，加入雨后旧书店的纸张气味与收店铃声，保持两三句话。",
+      "detail": {
+        "field": "opening"
+      }
+    },
+    {
+      "at": "2026-09-27T17:24:06.879Z",
+      "type": "tool-call",
+      "message": "请求工具：read_skill"
+    },
+    {
+      "at": "2026-09-27T17:24:06.880Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 4154,
+        "output": 27,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 4181,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:24:06.882Z",
+      "type": "skill",
+      "message": "读取技能：case-audit",
+      "detail": {
+        "hash": "1ea6b660bbcb3a01d84eb9a93ac4eecb64aad029990d05d9139a04a22af4c87e"
+      }
+    },
+    {
+      "at": "2026-09-27T17:24:08.570Z",
+      "type": "tool-call",
+      "message": "请求工具：validate_case"
+    },
+    {
+      "at": "2026-09-27T17:24:08.571Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 4413,
+        "output": 15,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 4428,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:24:08.582Z",
+      "type": "check",
+      "message": "实际检查 6/6 条证据，12 步通关路径",
+      "detail": {
+        "rulesVersion": 2,
+        "passed": true,
+        "issues": [],
+        "reachableClues": [
+          "receipt",
+          "old_card",
+          "drawer_key",
+          "stolen_card",
+          "borrow_log",
+          "testimony_wei"
+        ],
+        "reachableScenes": [
+          "counter",
+          "drawer",
+          "archive"
+        ],
+        "winningPath": [
+          {
+            "type": "collect",
+            "clueId": "receipt"
+          },
+          {
+            "type": "collect",
+            "clueId": "old_card"
+          },
+          {
+            "type": "travel",
+            "sceneId": "drawer"
+          },
+          {
+            "type": "collect",
+            "clueId": "drawer_key"
+          },
+          {
+            "type": "collect",
+            "clueId": "stolen_card"
+          },
+          {
+            "type": "travel",
+            "sceneId": "archive"
+          },
+          {
+            "type": "collect",
+            "clueId": "borrow_log"
+          },
+          {
+            "type": "ask",
+            "characterId": "wei",
+            "topicId": "wei_apology"
+          },
+          {
+            "type": "travel",
+            "sceneId": "counter"
+          },
+          {
+            "type": "travel",
+            "sceneId": "drawer"
+          },
+          {
+            "type": "travel",
+            "sceneId": "archive"
+          },
+          {
+            "type": "accuse",
+            "characterId": "wei",
+            "evidenceIds": [
+              "drawer_key",
+              "stolen_card",
+              "borrow_log",
+              "testimony_wei"
+            ]
+          }
+        ],
+        "actionCount": 12,
+        "checkedAt": "2026-09-27T17:24:08.582Z",
+        "caseHash": "9405fbe1e5b41a9230dda26cf11302b72099ab596c1c078ac77c2c6961f37eb7"
+      }
+    },
+    {
+      "at": "2026-09-27T17:24:12.092Z",
+      "type": "tool-call",
+      "message": "请求工具：commit_case"
+    },
+    {
+      "at": "2026-09-27T17:24:12.093Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 5021,
+        "output": 63,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 5084,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:24:16.507Z",
+      "type": "tool-call",
+      "message": "请求工具：read_skill"
+    },
+    {
+      "at": "2026-09-27T17:24:16.507Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 5112,
+        "output": 55,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 5167,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:24:16.518Z",
+      "type": "skill",
+      "message": "读取技能：case-design",
+      "detail": {
+        "hash": "d4affaa726b7ac281661181062b0179cc5f4285ccf79286c3027f96960c76741"
+      }
+    },
+    {
+      "at": "2026-09-27T17:24:22.531Z",
+      "type": "tool-call",
+      "message": "请求工具：commit_case"
+    },
+    {
+      "at": "2026-09-27T17:24:22.532Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 5785,
+        "output": 67,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 5852,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:24:25.539Z",
+      "type": "tool-call",
+      "message": "请求工具：read_skill"
+    },
+    {
+      "at": "2026-09-27T17:24:25.540Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 5880,
+        "output": 27,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 5907,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:24:25.551Z",
+      "type": "skill",
+      "message": "读取技能：case-repair",
+      "detail": {
+        "hash": "15e3bc90f514883f519df3be43bcbeba133ac77ae7058d5ac98c2b4442cd588b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:24:28.417Z",
+      "type": "tool-call",
+      "message": "请求工具：commit_case"
+    },
+    {
+      "at": "2026-09-27T17:24:28.418Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 6305,
+        "output": 64,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 6369,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:24:28.430Z",
+      "type": "commit",
+      "message": "保存第 2 版：旧书店最后一张借书卡。仅局部修改 opening 开场字段，加入雨后旧书店的纸张气味与收店铃声，保持两三句话；其余字段未改。已读技能、validate_case 通过。",
+      "detail": {
+        "projectId": "0b85ab3a-d47a-49a2-a8a0-d098d79c7dfa",
+        "revision": 2,
+        "report": {
+          "rulesVersion": 2,
+          "passed": true,
+          "issues": [],
+          "reachableClues": [
+            "receipt",
+            "old_card",
+            "drawer_key",
+            "stolen_card",
+            "borrow_log",
+            "testimony_wei"
+          ],
+          "reachableScenes": [
+            "counter",
+            "drawer",
+            "archive"
+          ],
+          "winningPath": [
+            {
+              "type": "collect",
+              "clueId": "receipt"
+            },
+            {
+              "type": "collect",
+              "clueId": "old_card"
+            },
+            {
+              "type": "travel",
+              "sceneId": "drawer"
+            },
+            {
+              "type": "collect",
+              "clueId": "drawer_key"
+            },
+            {
+              "type": "collect",
+              "clueId": "stolen_card"
+            },
+            {
+              "type": "travel",
+              "sceneId": "archive"
+            },
+            {
+              "type": "collect",
+              "clueId": "borrow_log"
+            },
+            {
+              "type": "ask",
+              "characterId": "wei",
+              "topicId": "wei_apology"
+            },
+            {
+              "type": "travel",
+              "sceneId": "counter"
+            },
+            {
+              "type": "travel",
+              "sceneId": "drawer"
+            },
+            {
+              "type": "travel",
+              "sceneId": "archive"
+            },
+            {
+              "type": "accuse",
+              "characterId": "wei",
+              "evidenceIds": [
+                "drawer_key",
+                "stolen_card",
+                "borrow_log",
+                "testimony_wei"
+              ]
+            }
+          ],
+          "actionCount": 12,
+          "checkedAt": "2026-09-27T17:24:28.428Z",
+          "caseHash": "9405fbe1e5b41a9230dda26cf11302b72099ab596c1c078ac77c2c6961f37eb7"
+        },
+        "diff": {
+          "changes": [
+            {
+              "section": "opening",
+              "id": "opening",
+              "label": "opening",
+              "kind": "changed"
+            }
+          ],
+          "affectedScenes": []
+        },
+        "model": "qwen3.8-27b",
+        "provider": "mujian-local"
+      }
+    },
+    {
+      "at": "2026-09-27T17:24:35.932Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 6761,
+        "output": 132,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 6893,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    }
+  ],
+  "createdAt": "2026-09-27T17:23:55.690Z",
+  "startedAt": "2026-09-27T17:23:55.690Z",
+  "result": {
+    "projectId": "0b85ab3a-d47a-49a2-a8a0-d098d79c7dfa",
+    "revision": 2,
+    "report": {
+      "rulesVersion": 2,
+      "passed": true,
+      "issues": [],
+      "reachableClues": [
+        "receipt",
+        "old_card",
+        "drawer_key",
+        "stolen_card",
+        "borrow_log",
+        "testimony_wei"
+      ],
+      "reachableScenes": [
+        "counter",
+        "drawer",
+        "archive"
+      ],
+      "winningPath": [
+        {
+          "type": "collect",
+          "clueId": "receipt"
+        },
+        {
+          "type": "collect",
+          "clueId": "old_card"
+        },
+        {
+          "type": "travel",
+          "sceneId": "drawer"
+        },
+        {
+          "type": "collect",
+          "clueId": "drawer_key"
+        },
+        {
+          "type": "collect",
+          "clueId": "stolen_card"
+        },
+        {
+          "type": "travel",
+          "sceneId": "archive"
+        },
+        {
+          "type": "collect",
+          "clueId": "borrow_log"
+        },
+        {
+          "type": "ask",
+          "characterId": "wei",
+          "topicId": "wei_apology"
+        },
+        {
+          "type": "travel",
+          "sceneId": "counter"
+        },
+        {
+          "type": "travel",
+          "sceneId": "drawer"
+        },
+        {
+          "type": "travel",
+          "sceneId": "archive"
+        },
+        {
+          "type": "accuse",
+          "characterId": "wei",
+          "evidenceIds": [
+            "drawer_key",
+            "stolen_card",
+            "borrow_log",
+            "testimony_wei"
+          ]
+        }
+      ],
+      "actionCount": 12,
+      "checkedAt": "2026-09-27T17:24:28.428Z",
+      "caseHash": "9405fbe1e5b41a9230dda26cf11302b72099ab596c1c078ac77c2c6961f37eb7"
+    },
+    "diff": {
+      "changes": [
+        {
+          "section": "opening",
+          "id": "opening",
+          "label": "opening",
+          "kind": "changed"
+        }
+      ],
+      "affectedScenes": []
+    },
+    "model": "qwen3.8-27b",
+    "provider": "mujian-local"
+  },
+  "finishedAt": "2026-09-27T17:24:35.933Z"
+}

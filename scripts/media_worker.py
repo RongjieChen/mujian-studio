@@ -202,13 +202,17 @@ def cancel(job_id: str):
 async def reference(ref_id: str, request: __import__('fastapi').Request):
     if not ref_id.replace('-','').isalnum():
         raise HTTPException(400, 'Invalid reference ID')
-    content = await request.body()
-    if len(content) > 20*1024*1024:
-        raise HTTPException(413, 'Reference too large')
+    content = bytearray()
+    async for chunk in request.stream():
+        if len(content) + len(chunk) > 20*1024*1024:
+            raise HTTPException(413, 'Reference too large')
+        content.extend(chunk)
     import io
     from PIL import Image
     try:
         image = Image.open(io.BytesIO(content))
+        if image.format not in ('PNG', 'JPEG') or image.width * image.height > 24_000_000 or getattr(image, 'n_frames', 1) != 1:
+            raise ValueError('Unsupported reference image')
         image.load()
         image.convert('RGB').save(ROOT / (ref_id+'.png'))
     except Exception:

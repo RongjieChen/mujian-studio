@@ -2,7 +2,36 @@
 
 以下路径均为独立项目目录示例，不会覆盖系统模型或修改现有业务服务。远程主机地址和凭证不写入仓库。
 
-## 1. 案件模型
+## 当前 vLLM 接入（2026-09-28 更新）
+
+当前实机使用机器既有目录标称 Qwen3.8-27B-NVFP4 的权重，服务别名 `qwen3.8-27b`，端口 8000。权重来源尚未独立核实，模型目录名不作为官方发布身份的证明。与下方 9 月 21 日的 llama.cpp 路径分别记录，不能混用休眠接口；权重不是本项目重新量化所得。
+
+工作台配置：
+
+```dotenv
+LLM_PROVIDER=local
+LLM_BASE_URL=http://127.0.0.1:8000/v1
+LLM_MODEL=qwen3.8-27b
+LLM_API_KEY=填写你的服务密钥
+LLM_CONTEXT=32768
+LLM_MAX_TOKENS=12000
+LLM_REASONING=false
+LLM_THINKING_FORMAT=qwen-chat-template
+GPU_EXCLUSIVE=true
+GPU_BACKEND=vllm
+LLM_ADMIN_URL=http://127.0.0.1:8000
+LLM_WAIT_FOR_SLEEP=false
+```
+
+本轮运行环境为 vLLM 0.29.0、PyTorch 2.13.0、Transformers 5.17.0（与媒体服务的 PyTorch 2.9.1 环境分开）。已验证的服务参数封装在 `scripts/start-vllm.sh`：设置 `VLLM_ENV`、`MODEL_DIR`、`VLLM_API_KEY` 后执行 `bash scripts/start-vllm.sh`。模型目录需包含匹配权重与 `chat_template.jinja`。这份脚本复现启动参数，不负责安装全部 CUDA/ARM64 推理环境；不能把已有环境中的通过宣称为所有干净系统一键安装通过。
+
+模型服务需要 `--enable-sleep-mode`、本地控制接口，以及与模型匹配的聊天模板、工具解析器和 CUDA 环境。实机保留既有 NVFP4、FP8 KV 与 MTP 配方，应用侧将服务上下文缩至 32768、max-num-seqs=2、max-num-batched-tokens=4096、gpu-memory-utilization=0.45。此配置是当前工作负载的运行参数，不是所有 Spark 的最佳配置。完整版本与实机验证状态见 RELEASE-AUDIT。
+
+启用 `VLLM_SERVER_DEV_MODE=1` 后的 `/sleep`、`/wake_up` 等控制路由不能假定受普通 API Key 保护，因此**必须将 vLLM 绑定到 127.0.0.1**。不要公开这个端口。工作台只允许 loopback 的管理地址。媒体任务前调用 `/sleep?level=1&mode=wait`，等待现有推理完成，不使用默认 abort 模式；媒体结束后卸载扩散模型，再恢复语言模型。请求取消时也使用独立恢复信号，避免留下无人恢复的休眠状态。
+
+图像上传使用 sharp 完整解码，Spark 的 ARM64 依赖由 `npm ci` 按锁文件安装。视频服务还需要 `ffmpeg` 和 `ffprobe`。开发界面单独使用 Vite 端口时，在 `APP_ALLOWED_ORIGINS` 中明确填写该来源；默认不放开所有 localhost 端口。
+
+## 历史可复现路径：llama.cpp（9 月 21 日）
 
 在 Spark 上构建已固定版本的 llama.cpp。已在本次机器编译成功的版本：`b11062`，提交 `3cf03257f219afbe7334045ff7c6a06ac68c627d`。
 

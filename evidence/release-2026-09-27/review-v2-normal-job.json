@@ -1,0 +1,190 @@
+{
+  "id": "dea84c17-f4ad-46e9-a9d5-6ee60ea85014",
+  "projectId": "a0e59a68-7819-4002-9545-6aca2eafd648",
+  "kind": "audit",
+  "state": "succeeded",
+  "request": {
+    "prompt": "只读审阅案件事实与时间线，结合问答上下文、角色隐瞒与反证，逐字引用重要疑点。不要凑问题。"
+  },
+  "baseRevision": 1,
+  "events": [
+    {
+      "at": "2026-09-27T16:06:40.116Z",
+      "type": "memory",
+      "message": "已释放素材模型内存。",
+      "detail": {
+        "released": true,
+        "reservedBytes": 0
+      }
+    },
+    {
+      "at": "2026-09-27T16:06:40.148Z",
+      "type": "model",
+      "message": "使用 本地 模型 qwen3.8-27b"
+    },
+    {
+      "at": "2026-09-27T16:06:41.937Z",
+      "type": "tool-call",
+      "message": "请求工具：read_skill"
+    },
+    {
+      "at": "2026-09-27T16:06:41.938Z",
+      "type": "tool-call",
+      "message": "请求工具：read_case"
+    },
+    {
+      "at": "2026-09-27T16:06:41.940Z",
+      "type": "tool-call",
+      "message": "请求工具：read_case_sources"
+    },
+    {
+      "at": "2026-09-27T16:06:41.940Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 1062,
+        "output": 56,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 1118,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T16:06:41.943Z",
+      "type": "skill",
+      "message": "读取技能：case-consistency",
+      "detail": {
+        "hash": "7829ce017da8c1cc56db7adbe336911e5b5819dab7e96a3bb222772a7c2ba113"
+      }
+    },
+    {
+      "at": "2026-09-27T16:06:41.943Z",
+      "type": "tool",
+      "message": "读取工作版本"
+    },
+    {
+      "at": "2026-09-27T16:06:41.944Z",
+      "type": "tool",
+      "message": "读取叙事原文字段与引用路径"
+    },
+    {
+      "at": "2026-09-27T16:07:09.579Z",
+      "type": "tool-call",
+      "message": "请求工具：submit_review"
+    },
+    {
+      "at": "2026-09-27T16:07:09.580Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 6014,
+        "output": 575,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 6589,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T16:07:09.594Z",
+      "type": "review",
+      "message": "叙事初审已保存：1 个待作者审阅的疑点。",
+      "detail": {
+        "summary": "时间线核对通过：停电23:10、备用电源23:12恢复、林知夏23:12取片、陈默23:15目击，先后无矛盾；陈默\"三分钟后\"与23:15吻合。陈默\"最初不愿卷入争执\"与林知夏\"自称一直在茶室\"的隐瞒均已有说明，未报为漏洞。主要疑点一项：真相称胶片藏于茶室通风柜，但玩家可见线索中没有该藏匿位置，且破案证据清单不含它，可能导致\"找到胶片\"缺乏依据，需作者确认。",
+        "issues": [
+          {
+            "kind": "missing_support",
+            "severity": "concern",
+            "explanation": "真相设定称胶片被“藏进茶室通风柜”，且 solved 结局要求从通风柜取回胶片。但 /clues 下的线索（power_log、guest_book、empty_can、piano_tape、cold_tea、witness）均未提及通风柜或藏匿位置，/truth/requiredEvidenceIds 只要求 power_log、piano_tape、witness。玩家在收集这些证据时没有任何可见途径推断出或找到茶室通风柜，可能无法真正定位胶片，使“找到胶片”缺乏依据。",
+            "suggestion": "建议在茶室场景或 cold_tea/tea 相关线索中加入可被发现的通风柜线索（例如柜缝、琴声从柜内传出、冷茶附近的异常），或将其列入 requiredEvidenceIds，以便玩家能据此定位并取回胶片。",
+            "citations": [
+              {
+                "path": "/truth/method",
+                "quote": "利用预定的短时停电，在 23:12 取走胶片，藏进茶室通风柜。"
+              },
+              {
+                "path": "/endings/0/text",
+                "quote": "林知夏承认取走胶片，并从茶室通风柜里取回它。"
+              }
+            ]
+          }
+        ],
+        "caseHash": "bb1c557a03e7d1dc740b3b5a92aca47932bf2e41ed00fd02d47f0f5759fe08e0",
+        "revision": 1,
+        "checkedAt": "2026-09-27T16:07:09.594Z",
+        "model": "qwen3.8-27b",
+        "provider": "mujian-local"
+      }
+    },
+    {
+      "at": "2026-09-27T16:07:14.923Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 7144,
+        "output": 68,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 7212,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    }
+  ],
+  "createdAt": "2026-09-27T16:06:40.082Z",
+  "startedAt": "2026-09-27T16:06:40.082Z",
+  "result": {
+    "projectId": "a0e59a68-7819-4002-9545-6aca2eafd648",
+    "review": {
+      "summary": "时间线核对通过：停电23:10、备用电源23:12恢复、林知夏23:12取片、陈默23:15目击，先后无矛盾；陈默\"三分钟后\"与23:15吻合。陈默\"最初不愿卷入争执\"与林知夏\"自称一直在茶室\"的隐瞒均已有说明，未报为漏洞。主要疑点一项：真相称胶片藏于茶室通风柜，但玩家可见线索中没有该藏匿位置，且破案证据清单不含它，可能导致\"找到胶片\"缺乏依据，需作者确认。",
+      "issues": [
+        {
+          "kind": "missing_support",
+          "severity": "concern",
+          "explanation": "真相设定称胶片被“藏进茶室通风柜”，且 solved 结局要求从通风柜取回胶片。但 /clues 下的线索（power_log、guest_book、empty_can、piano_tape、cold_tea、witness）均未提及通风柜或藏匿位置，/truth/requiredEvidenceIds 只要求 power_log、piano_tape、witness。玩家在收集这些证据时没有任何可见途径推断出或找到茶室通风柜，可能无法真正定位胶片，使“找到胶片”缺乏依据。",
+          "suggestion": "建议在茶室场景或 cold_tea/tea 相关线索中加入可被发现的通风柜线索（例如柜缝、琴声从柜内传出、冷茶附近的异常），或将其列入 requiredEvidenceIds，以便玩家能据此定位并取回胶片。",
+          "citations": [
+            {
+              "path": "/truth/method",
+              "quote": "利用预定的短时停电，在 23:12 取走胶片，藏进茶室通风柜。"
+            },
+            {
+              "path": "/endings/0/text",
+              "quote": "林知夏承认取走胶片，并从茶室通风柜里取回它。"
+            }
+          ]
+        }
+      ],
+      "caseHash": "bb1c557a03e7d1dc740b3b5a92aca47932bf2e41ed00fd02d47f0f5759fe08e0",
+      "revision": 1,
+      "checkedAt": "2026-09-27T16:07:09.594Z",
+      "model": "qwen3.8-27b",
+      "provider": "mujian-local"
+    }
+  },
+  "finishedAt": "2026-09-27T16:07:14.924Z"
+}

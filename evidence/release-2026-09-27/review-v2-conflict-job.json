@@ -1,0 +1,230 @@
+{
+  "id": "af73ab9d-39cd-4f9c-947b-67f57290c338",
+  "projectId": "c54f1e1b-c447-44ee-84f6-774217518f49",
+  "kind": "audit",
+  "state": "succeeded",
+  "request": {
+    "prompt": "只读审阅案件事实与时间线，结合问答上下文、角色隐瞒与反证，逐字引用重要疑点。不要凑问题。"
+  },
+  "baseRevision": 1,
+  "events": [
+    {
+      "at": "2026-09-27T16:07:15.049Z",
+      "type": "memory",
+      "message": "已释放素材模型内存。",
+      "detail": {
+        "released": true,
+        "reservedBytes": 0
+      }
+    },
+    {
+      "at": "2026-09-27T16:07:15.072Z",
+      "type": "model",
+      "message": "使用 本地 模型 qwen3.8-27b"
+    },
+    {
+      "at": "2026-09-27T16:07:16.822Z",
+      "type": "tool-call",
+      "message": "请求工具：read_skill"
+    },
+    {
+      "at": "2026-09-27T16:07:16.823Z",
+      "type": "tool-call",
+      "message": "请求工具：read_case"
+    },
+    {
+      "at": "2026-09-27T16:07:16.832Z",
+      "type": "tool-call",
+      "message": "请求工具：read_case_sources"
+    },
+    {
+      "at": "2026-09-27T16:07:16.832Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 1066,
+        "output": 56,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 1122,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T16:07:16.834Z",
+      "type": "skill",
+      "message": "读取技能：case-consistency",
+      "detail": {
+        "hash": "7829ce017da8c1cc56db7adbe336911e5b5819dab7e96a3bb222772a7c2ba113"
+      }
+    },
+    {
+      "at": "2026-09-27T16:07:16.834Z",
+      "type": "tool",
+      "message": "读取工作版本"
+    },
+    {
+      "at": "2026-09-27T16:07:16.835Z",
+      "type": "tool",
+      "message": "读取叙事原文字段与引用路径"
+    },
+    {
+      "at": "2026-09-27T16:07:55.821Z",
+      "type": "tool-call",
+      "message": "请求工具：submit_review"
+    },
+    {
+      "at": "2026-09-27T16:07:55.822Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 6058,
+        "output": 864,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 6922,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T16:07:55.836Z",
+      "type": "review",
+      "message": "叙事初审已保存：2 个待作者审阅的疑点。",
+      "detail": {
+        "summary": "已按技能要求通读真相、物证、证词与场景，逐字引用核对时间先后、可靠证据与角色有意隐瞒。本次初审只报告 2 个最重要疑点，其余未报项目说明如下：周叔提前知道停电未告知客人，属于其“secret”有意隐瞒，非设定矛盾；林知夏在磁带线索解锁后坦承“确实出去过”，属于分阶段揭示。边界：本审只核对给定字段内部一致性，无法验证 1998 年电磁门锁、磁带重复音等细节的真实可行性；陈默录像的拍摄位置与为何此前称“拍到空房间”未进一步确认，列为问题而非矛盾。",
+        "issues": [
+          {
+            "kind": "contradiction",
+            "severity": "concern",
+            "explanation": "真相时间线写明 23:15 陈默在走廊遇见抱着铁盒的林知夏，且陈默的 secret 也确认“他看见林知夏抱着铁盒”。但 clue witness 与陈默的 corridor 回答均声称他出示“连续录像：23:00 至 23:30，林知夏一直在茶室，没有离开过。录像完整且时间准确”。若录像完整准确且覆盖 23:12–23:15，则她不可能同时在走廊被看见；若走廊证词为真，则“录像完整且时间准确”的可靠证据说法被排除。这是设定中声称可靠的证据与既定真相互相排斥。",
+            "suggestion": "将录像内容改为只能证明“茶室有持续琴声/画面在茶室门口”，或把录像时段改为不含 23:12–23:15（如 23:00–23:10 或 23:16 起），让走廊目击成为唯一在场反证；同时保留“录像完整且时间准确”的措辞仅针对其实际覆盖时段。",
+            "citations": [
+              {
+                "path": "/truth/timeline/3/event",
+                "quote": "陈默在走廊遇见抱着铁盒的林知夏。"
+              },
+              {
+                "path": "/clues/5/description",
+                "quote": "陈默出示连续录像：23:00 至 23:30，林知夏一直在茶室，没有离开过。录像完整且时间准确。"
+              },
+              {
+                "path": "/characters/1/secret",
+                "quote": "他看见林知夏抱着铁盒，但最初不愿卷入争执。"
+              }
+            ]
+          },
+          {
+            "kind": "missing_support",
+            "severity": "question",
+            "explanation": "陈默的 camera 回答只说“都是旅馆的空房间。走廊那盏灯坏了，我想等供电恢复再拍一张。”，而他的 secret 与 witness 线索却依赖他在 23:15 前后于走廊拍摄/看见林知夏。现有文本没有说明他何时开机、摄像机朝向哪里、为何此前说只拍到空房间。若录像实际存在，缺少“为何未第一时间提供”的可见依据；若录像其实是后来剪辑，则与“连续录像”表述冲突。",
+            "suggestion": "在 camera 回答中补一句时间线锚点，例如“供电恢复后我把机器支在走廊尽头，对着茶室门口录到后半夜”，或把 witness 改为“他先只愿提供胶片，后来才承认走廊那几分钟”；需要作者确认录像的机位与提供时机。",
+            "citations": [
+              {
+                "path": "/characters/1/topics/0/answer",
+                "quote": "都是旅馆的空房间。走廊那盏灯坏了，我想等供电恢复再拍一张。"
+              },
+              {
+                "path": "/characters/1/topics/1/answer",
+                "quote": "陈默出示连续录像：23:00 至 23:30，林知夏一直在茶室，没有离开过。录像完整且时间准确。"
+              }
+            ]
+          }
+        ],
+        "caseHash": "a7f9c27128d64aeca0532f0eca6ad0edb71e04a1e852cb30613c65912aef20b0",
+        "revision": 1,
+        "checkedAt": "2026-09-27T16:07:55.835Z",
+        "model": "qwen3.8-27b",
+        "provider": "mujian-local"
+      }
+    },
+    {
+      "at": "2026-09-27T16:08:03.370Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 7884,
+        "output": 171,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 8055,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    }
+  ],
+  "createdAt": "2026-09-27T16:06:40.090Z",
+  "startedAt": "2026-09-27T16:07:14.933Z",
+  "result": {
+    "projectId": "c54f1e1b-c447-44ee-84f6-774217518f49",
+    "review": {
+      "summary": "已按技能要求通读真相、物证、证词与场景，逐字引用核对时间先后、可靠证据与角色有意隐瞒。本次初审只报告 2 个最重要疑点，其余未报项目说明如下：周叔提前知道停电未告知客人，属于其“secret”有意隐瞒，非设定矛盾；林知夏在磁带线索解锁后坦承“确实出去过”，属于分阶段揭示。边界：本审只核对给定字段内部一致性，无法验证 1998 年电磁门锁、磁带重复音等细节的真实可行性；陈默录像的拍摄位置与为何此前称“拍到空房间”未进一步确认，列为问题而非矛盾。",
+      "issues": [
+        {
+          "kind": "contradiction",
+          "severity": "concern",
+          "explanation": "真相时间线写明 23:15 陈默在走廊遇见抱着铁盒的林知夏，且陈默的 secret 也确认“他看见林知夏抱着铁盒”。但 clue witness 与陈默的 corridor 回答均声称他出示“连续录像：23:00 至 23:30，林知夏一直在茶室，没有离开过。录像完整且时间准确”。若录像完整准确且覆盖 23:12–23:15，则她不可能同时在走廊被看见；若走廊证词为真，则“录像完整且时间准确”的可靠证据说法被排除。这是设定中声称可靠的证据与既定真相互相排斥。",
+          "suggestion": "将录像内容改为只能证明“茶室有持续琴声/画面在茶室门口”，或把录像时段改为不含 23:12–23:15（如 23:00–23:10 或 23:16 起），让走廊目击成为唯一在场反证；同时保留“录像完整且时间准确”的措辞仅针对其实际覆盖时段。",
+          "citations": [
+            {
+              "path": "/truth/timeline/3/event",
+              "quote": "陈默在走廊遇见抱着铁盒的林知夏。"
+            },
+            {
+              "path": "/clues/5/description",
+              "quote": "陈默出示连续录像：23:00 至 23:30，林知夏一直在茶室，没有离开过。录像完整且时间准确。"
+            },
+            {
+              "path": "/characters/1/secret",
+              "quote": "他看见林知夏抱着铁盒，但最初不愿卷入争执。"
+            }
+          ]
+        },
+        {
+          "kind": "missing_support",
+          "severity": "question",
+          "explanation": "陈默的 camera 回答只说“都是旅馆的空房间。走廊那盏灯坏了，我想等供电恢复再拍一张。”，而他的 secret 与 witness 线索却依赖他在 23:15 前后于走廊拍摄/看见林知夏。现有文本没有说明他何时开机、摄像机朝向哪里、为何此前说只拍到空房间。若录像实际存在，缺少“为何未第一时间提供”的可见依据；若录像其实是后来剪辑，则与“连续录像”表述冲突。",
+          "suggestion": "在 camera 回答中补一句时间线锚点，例如“供电恢复后我把机器支在走廊尽头，对着茶室门口录到后半夜”，或把 witness 改为“他先只愿提供胶片，后来才承认走廊那几分钟”；需要作者确认录像的机位与提供时机。",
+          "citations": [
+            {
+              "path": "/characters/1/topics/0/answer",
+              "quote": "都是旅馆的空房间。走廊那盏灯坏了，我想等供电恢复再拍一张。"
+            },
+            {
+              "path": "/characters/1/topics/1/answer",
+              "quote": "陈默出示连续录像：23:00 至 23:30，林知夏一直在茶室，没有离开过。录像完整且时间准确。"
+            }
+          ]
+        }
+      ],
+      "caseHash": "a7f9c27128d64aeca0532f0eca6ad0edb71e04a1e852cb30613c65912aef20b0",
+      "revision": 1,
+      "checkedAt": "2026-09-27T16:07:55.835Z",
+      "model": "qwen3.8-27b",
+      "provider": "mujian-local"
+    }
+  },
+  "finishedAt": "2026-09-27T16:08:03.371Z"
+}

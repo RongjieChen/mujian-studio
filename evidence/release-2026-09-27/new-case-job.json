@@ -1,0 +1,741 @@
+{
+  "id": "fd22be41-1dcd-446d-a8a2-062d4fe29b3a",
+  "projectId": "d6dea0b2-7673-4747-9aac-ab78e2beb989",
+  "kind": "generate",
+  "state": "succeeded",
+  "request": {
+    "prompt": "创作原创短篇《末班渡轮的蓝色信封》：海岛渡轮即将停航，一封归还旧友的信被掉包。三个成年嫌疑人、三个可搜证场景、六条证据，其中至少一条需要出示物证才能获得的人物证词。真相温暖但时间线明确，不要使用旅馆、胶片或示例中的人物。"
+  },
+  "events": [
+    {
+      "at": "2026-09-27T16:08:03.492Z",
+      "type": "memory",
+      "message": "已释放素材模型内存。",
+      "detail": {
+        "released": true,
+        "reservedBytes": 0
+      }
+    },
+    {
+      "at": "2026-09-27T16:08:03.507Z",
+      "type": "model",
+      "message": "使用 本地 模型 qwen3.8-27b"
+    },
+    {
+      "at": "2026-09-27T16:08:05.961Z",
+      "type": "tool-call",
+      "message": "请求工具：read_skill"
+    },
+    {
+      "at": "2026-09-27T16:08:05.962Z",
+      "type": "tool-call",
+      "message": "请求工具：read_case_schema"
+    },
+    {
+      "at": "2026-09-27T16:08:05.971Z",
+      "type": "tool-call",
+      "message": "请求工具：read_case"
+    },
+    {
+      "at": "2026-09-27T16:08:05.971Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 2941,
+        "output": 55,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 2996,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T16:08:05.974Z",
+      "type": "skill",
+      "message": "读取技能：case-design",
+      "detail": {
+        "hash": "44a4078ac1ba12615dc92feb70127a452333152b578b7f0aee81effe5f310534"
+      }
+    },
+    {
+      "at": "2026-09-27T16:08:05.974Z",
+      "type": "tool",
+      "message": "读取案件数据契约"
+    },
+    {
+      "at": "2026-09-27T16:08:05.975Z",
+      "type": "tool",
+      "message": "读取工作版本"
+    },
+    {
+      "at": "2026-09-27T16:10:12.222Z",
+      "type": "tool-call",
+      "message": "请求工具：propose_case"
+    },
+    {
+      "at": "2026-09-27T16:10:12.223Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 6573,
+        "output": 2729,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 9302,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T16:10:16.778Z",
+      "type": "tool-call",
+      "message": "请求工具：read_skill"
+    },
+    {
+      "at": "2026-09-27T16:10:16.779Z",
+      "type": "tool-call",
+      "message": "请求工具：read_case_schema"
+    },
+    {
+      "at": "2026-09-27T16:10:16.788Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 12096,
+        "output": 41,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 12137,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T16:10:16.789Z",
+      "type": "skill",
+      "message": "读取技能：case-design",
+      "detail": {
+        "hash": "44a4078ac1ba12615dc92feb70127a452333152b578b7f0aee81effe5f310534"
+      }
+    },
+    {
+      "at": "2026-09-27T16:10:16.789Z",
+      "type": "tool",
+      "message": "读取案件数据契约"
+    },
+    {
+      "at": "2026-09-27T16:11:26.976Z",
+      "type": "tool-call",
+      "message": "请求工具：propose_case"
+    },
+    {
+      "at": "2026-09-27T16:11:26.977Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 15708,
+        "output": 2930,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 18638,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T16:11:26.991Z",
+      "type": "check",
+      "message": "草稿存在需要修复的规则问题",
+      "detail": {
+        "note": "生成《末班渡轮的蓝色信封》完整案件：三人物、三场景、六证据，至少一条证词需出示物证，真相温暖但时间线明确。",
+        "issues": [
+          {
+            "code": "CLUE_SOURCE_CONFLICT",
+            "path": "topics.sealed",
+            "message": "证据 swapped_letter 同时被配置为现场物证和问话证词。",
+            "relatedIds": [
+              "swapped_letter"
+            ],
+            "severity": "error"
+          },
+          {
+            "code": "CLUE_SOURCE_CONFLICT",
+            "path": "topics.register",
+            "message": "证据 log_error 同时被配置为现场物证和问话证词。",
+            "relatedIds": [
+              "log_error"
+            ],
+            "severity": "error"
+          },
+          {
+            "code": "UNPLACED_CHARACTER",
+            "path": "characters.he_an",
+            "message": "何岸未出现在任何场景。",
+            "relatedIds": [
+              "he_an"
+            ],
+            "severity": "error"
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-09-27T16:11:33.638Z",
+      "type": "tool-call",
+      "message": "请求工具：patch_case"
+    },
+    {
+      "at": "2026-09-27T16:11:33.639Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 19145,
+        "output": 211,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 19356,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T16:11:33.653Z",
+      "type": "patch",
+      "message": "移除周棠话题揭示 swapped_letter，避免现场物证与问话证词冲突。",
+      "detail": {
+        "collection": "characters",
+        "id": "zhou_tang",
+        "fields": [
+          "topics"
+        ],
+        "issues": [
+          {
+            "code": "CLUE_SOURCE_CONFLICT",
+            "path": "topics.register",
+            "message": "证据 log_error 同时被配置为现场物证和问话证词。",
+            "relatedIds": [
+              "log_error"
+            ],
+            "severity": "error"
+          },
+          {
+            "code": "UNPLACED_CHARACTER",
+            "path": "characters.he_an",
+            "message": "何岸未出现在任何场景。",
+            "relatedIds": [
+              "he_an"
+            ],
+            "severity": "error"
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-09-27T16:11:41.259Z",
+      "type": "tool-call",
+      "message": "请求工具：patch_case"
+    },
+    {
+      "at": "2026-09-27T16:11:41.259Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 19815,
+        "output": 250,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 20065,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T16:11:41.271Z",
+      "type": "patch",
+      "message": "移除沈一话题揭示 log_error，避免现场物证与问话证词冲突。",
+      "detail": {
+        "collection": "characters",
+        "id": "shen_yi",
+        "fields": [
+          "topics"
+        ],
+        "issues": [
+          {
+            "code": "UNPLACED_CHARACTER",
+            "path": "characters.he_an",
+            "message": "何岸未出现在任何场景。",
+            "relatedIds": [
+              "he_an"
+            ],
+            "severity": "error"
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-09-27T16:11:45.165Z",
+      "type": "tool-call",
+      "message": "请求工具：patch_case"
+    },
+    {
+      "at": "2026-09-27T16:11:45.166Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 20475,
+        "output": 88,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 20563,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T16:11:45.178Z",
+      "type": "patch",
+      "message": "将何岸放入码头登记间场景，使其出现在游戏中。",
+      "detail": {
+        "collection": "scenes",
+        "id": "dock_office",
+        "fields": [
+          "characterIds"
+        ],
+        "issues": []
+      }
+    },
+    {
+      "at": "2026-09-27T16:11:48.102Z",
+      "type": "tool-call",
+      "message": "请求工具：read_skill"
+    },
+    {
+      "at": "2026-09-27T16:11:48.103Z",
+      "type": "tool-call",
+      "message": "请求工具：validate_case"
+    },
+    {
+      "at": "2026-09-27T16:11:48.113Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 21170,
+        "output": 42,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 21212,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T16:11:48.115Z",
+      "type": "skill",
+      "message": "读取技能：case-audit",
+      "detail": {
+        "hash": "1ea6b660bbcb3a01d84eb9a93ac4eecb64aad029990d05d9139a04a22af4c87e"
+      }
+    },
+    {
+      "at": "2026-09-27T16:11:48.117Z",
+      "type": "check",
+      "message": "实际检查 6/6 条证据，15 步通关路径",
+      "detail": {
+        "rulesVersion": 2,
+        "passed": true,
+        "issues": [],
+        "reachableClues": [
+          "swapped_letter",
+          "blue_seal",
+          "maintenance_log",
+          "log_error",
+          "dock_sight",
+          "laochen_admit"
+        ],
+        "reachableScenes": [
+          "ship_tail",
+          "engine_room",
+          "dock_office"
+        ],
+        "winningPath": [
+          {
+            "type": "collect",
+            "clueId": "swapped_letter"
+          },
+          {
+            "type": "collect",
+            "clueId": "blue_seal"
+          },
+          {
+            "type": "travel",
+            "sceneId": "engine_room"
+          },
+          {
+            "type": "travel",
+            "sceneId": "dock_office"
+          },
+          {
+            "type": "collect",
+            "clueId": "maintenance_log"
+          },
+          {
+            "type": "collect",
+            "clueId": "log_error"
+          },
+          {
+            "type": "ask",
+            "characterId": "shen_yi",
+            "topicId": "dock"
+          },
+          {
+            "type": "travel",
+            "sceneId": "ship_tail"
+          },
+          {
+            "type": "travel",
+            "sceneId": "engine_room"
+          },
+          {
+            "type": "ask",
+            "characterId": "lao_chen",
+            "topicId": "press_gauge"
+          },
+          {
+            "type": "travel",
+            "sceneId": "dock_office"
+          },
+          {
+            "type": "travel",
+            "sceneId": "ship_tail"
+          },
+          {
+            "type": "travel",
+            "sceneId": "engine_room"
+          },
+          {
+            "type": "travel",
+            "sceneId": "dock_office"
+          },
+          {
+            "type": "accuse",
+            "characterId": "lao_chen",
+            "evidenceIds": [
+              "maintenance_log",
+              "blue_seal",
+              "laochen_admit"
+            ]
+          }
+        ],
+        "actionCount": 15,
+        "checkedAt": "2026-09-27T16:11:48.117Z",
+        "caseHash": "96a683448bb4797a67864258a225d896960e1db746cacd989fe2e22b8c57a6e5"
+      }
+    },
+    {
+      "at": "2026-09-27T16:11:52.022Z",
+      "type": "tool-call",
+      "message": "请求工具：commit_case"
+    },
+    {
+      "at": "2026-09-27T16:11:52.023Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 22035,
+        "output": 58,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 22093,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T16:11:52.037Z",
+      "type": "commit",
+      "message": "保存第 1 版：末班渡轮的蓝色信封。《末班渡轮的蓝色信封》已通过确定性验收：证据依赖、人物位置、问话证词来源、场景可达与结案路径均通过。",
+      "detail": {
+        "projectId": "d6dea0b2-7673-4747-9aac-ab78e2beb989",
+        "revision": 1,
+        "report": {
+          "rulesVersion": 2,
+          "passed": true,
+          "issues": [],
+          "reachableClues": [
+            "swapped_letter",
+            "blue_seal",
+            "maintenance_log",
+            "log_error",
+            "dock_sight",
+            "laochen_admit"
+          ],
+          "reachableScenes": [
+            "ship_tail",
+            "engine_room",
+            "dock_office"
+          ],
+          "winningPath": [
+            {
+              "type": "collect",
+              "clueId": "swapped_letter"
+            },
+            {
+              "type": "collect",
+              "clueId": "blue_seal"
+            },
+            {
+              "type": "travel",
+              "sceneId": "engine_room"
+            },
+            {
+              "type": "travel",
+              "sceneId": "dock_office"
+            },
+            {
+              "type": "collect",
+              "clueId": "maintenance_log"
+            },
+            {
+              "type": "collect",
+              "clueId": "log_error"
+            },
+            {
+              "type": "ask",
+              "characterId": "shen_yi",
+              "topicId": "dock"
+            },
+            {
+              "type": "travel",
+              "sceneId": "ship_tail"
+            },
+            {
+              "type": "travel",
+              "sceneId": "engine_room"
+            },
+            {
+              "type": "ask",
+              "characterId": "lao_chen",
+              "topicId": "press_gauge"
+            },
+            {
+              "type": "travel",
+              "sceneId": "dock_office"
+            },
+            {
+              "type": "travel",
+              "sceneId": "ship_tail"
+            },
+            {
+              "type": "travel",
+              "sceneId": "engine_room"
+            },
+            {
+              "type": "travel",
+              "sceneId": "dock_office"
+            },
+            {
+              "type": "accuse",
+              "characterId": "lao_chen",
+              "evidenceIds": [
+                "maintenance_log",
+                "blue_seal",
+                "laochen_admit"
+              ]
+            }
+          ],
+          "actionCount": 15,
+          "checkedAt": "2026-09-27T16:11:52.035Z",
+          "caseHash": "96a683448bb4797a67864258a225d896960e1db746cacd989fe2e22b8c57a6e5"
+        },
+        "diff": null,
+        "model": "qwen3.8-27b",
+        "provider": "mujian-local"
+      }
+    },
+    {
+      "at": "2026-09-27T16:11:58.406Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 22517,
+        "output": 119,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 22636,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    }
+  ],
+  "createdAt": "2026-09-27T16:06:40.099Z",
+  "startedAt": "2026-09-27T16:08:03.371Z",
+  "result": {
+    "projectId": "d6dea0b2-7673-4747-9aac-ab78e2beb989",
+    "revision": 1,
+    "report": {
+      "rulesVersion": 2,
+      "passed": true,
+      "issues": [],
+      "reachableClues": [
+        "swapped_letter",
+        "blue_seal",
+        "maintenance_log",
+        "log_error",
+        "dock_sight",
+        "laochen_admit"
+      ],
+      "reachableScenes": [
+        "ship_tail",
+        "engine_room",
+        "dock_office"
+      ],
+      "winningPath": [
+        {
+          "type": "collect",
+          "clueId": "swapped_letter"
+        },
+        {
+          "type": "collect",
+          "clueId": "blue_seal"
+        },
+        {
+          "type": "travel",
+          "sceneId": "engine_room"
+        },
+        {
+          "type": "travel",
+          "sceneId": "dock_office"
+        },
+        {
+          "type": "collect",
+          "clueId": "maintenance_log"
+        },
+        {
+          "type": "collect",
+          "clueId": "log_error"
+        },
+        {
+          "type": "ask",
+          "characterId": "shen_yi",
+          "topicId": "dock"
+        },
+        {
+          "type": "travel",
+          "sceneId": "ship_tail"
+        },
+        {
+          "type": "travel",
+          "sceneId": "engine_room"
+        },
+        {
+          "type": "ask",
+          "characterId": "lao_chen",
+          "topicId": "press_gauge"
+        },
+        {
+          "type": "travel",
+          "sceneId": "dock_office"
+        },
+        {
+          "type": "travel",
+          "sceneId": "ship_tail"
+        },
+        {
+          "type": "travel",
+          "sceneId": "engine_room"
+        },
+        {
+          "type": "travel",
+          "sceneId": "dock_office"
+        },
+        {
+          "type": "accuse",
+          "characterId": "lao_chen",
+          "evidenceIds": [
+            "maintenance_log",
+            "blue_seal",
+            "laochen_admit"
+          ]
+        }
+      ],
+      "actionCount": 15,
+      "checkedAt": "2026-09-27T16:11:52.035Z",
+      "caseHash": "96a683448bb4797a67864258a225d896960e1db746cacd989fe2e22b8c57a6e5"
+    },
+    "diff": null,
+    "model": "qwen3.8-27b",
+    "provider": "mujian-local"
+  },
+  "finishedAt": "2026-09-27T16:11:58.407Z"
+}

@@ -1,0 +1,41 @@
+{
+  "reason": "Only task-created UI verification fixtures; recoverable copies preserved outside the app project list.",
+  "projects": [
+    {
+      "id": "d4abd081-e84c-4c8e-9ef4-b9396bbf692e",
+      "title": "界面验收专用 d4abd081"
+    },
+    {
+      "id": "40c19f80-b01e-4968-bbc6-dc51796086de",
+      "title": "界面验收专用 40c19f80"
+    },
+    {
+      "id": "bd1147cd-ad1e-41c0-9068-f23df6b37716",
+      "title": "界面验收专用 bd1147cd"
+    },
+    {
+      "id": "968123b6-24f9-4ad0-8e4c-13a9fe50936c",
+      "title": "界面验收专用 968123b6"
+    },
+    {
+      "id": "4fdb83b3-7aba-4ba2-ab05-e540139ca835",
+      "title": "界面验收专用 4fdb83b3"
+    },
+    {
+      "id": "e1215166-db7e-4f41-ac66-99fd94786304",
+      "title": "界面验收专用 e1215166"
+    },
+    {
+      "id": "0a393f56-3025-4b0a-bc2b-0223caf27f92",
+      "title": "界面验收专用 0a393f56"
+    },
+    {
+      "id": "2f9fd22e-f958-46bd-a490-0791e9b56aa9",
+      "title": "界面验收专用 · 雨停之前"
+    },
+    {
+      "id": "75ae436d-dc7a-4342-b5a4-156495595079",
+      "title": "界面验收专用 · 雨停之前"
+    }
+  ]
+}

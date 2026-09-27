@@ -1,0 +1,59 @@
+[
+  {
+    "name": "repair-protects-entire-story",
+    "passed": true,
+    "diff": {
+      "changes": [
+        {
+          "section": "clues",
+          "id": "power_log",
+          "label": "备用电源记录",
+          "kind": "changed"
+        }
+      ],
+      "affectedScenes": []
+    }
+  },
+  {
+    "name": "normal-audit-literal-sources",
+    "passed": true,
+    "issues": 3
+  },
+  {
+    "name": "contradiction-audit-literal-sources",
+    "passed": true,
+    "issues": 5
+  },
+  {
+    "name": "review-v2-normal-literal-sources",
+    "passed": true,
+    "issues": 1
+  },
+  {
+    "name": "review-v2-conflict-literal-sources",
+    "passed": true,
+    "issues": 2
+  },
+  {
+    "name": "deadlock-repair-project-replay",
+    "passed": true,
+    "steps": 12,
+    "caseHash": "c20bb45d01d87d91c80d1da0dfc05d0f01186c0baf198ea8e5a98fb401538d56"
+  },
+  {
+    "name": "new-case-project-replay",
+    "passed": true,
+    "steps": 15,
+    "caseHash": "96a683448bb4797a67864258a225d896960e1db746cacd989fe2e22b8c57a6e5"
+  },
+  {
+    "name": "new-case-edit-project-replay",
+    "passed": true,
+    "steps": 15,
+    "caseHash": "e73db9e628756c08cc5e8cc1512edbbf35e10f191f99a12091aebe414853efef"
+  },
+  {
+    "name": "requested-edit-changes-only-opening",
+    "passed": true
+  }
+]

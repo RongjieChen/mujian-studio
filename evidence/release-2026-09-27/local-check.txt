@@ -1,0 +1,82 @@
+
+> mujian-studio@0.1.0 check
+> npm test && npm run build
+
+
+> mujian-studio@0.1.0 pretest
+> node scripts/build-player.mjs
+
+Standalone player built.
+
+> mujian-studio@0.1.0 test
+> tsx --test tests/*.test.ts
+
+✔ repair cannot pass by deleting evidence, rewriting testimony or changing the truth (1.613458ms)
+✔ unknown player actions cannot be treated as an accusation (0.2005ms)
+✔ review rejects invented quotation, prototype paths and one-source contradictions (2.168917ms)
+✔ image imports fully decode rather than trusting magic bytes (6.315667ms)
+✔ Pi tool loop refuses commit without actual validation and invalidates validation after an edit (155.4825ms)
+✔ malicious repair proposal cannot rewrite protected story through the real Pi tools (30.538ms)
+✔ audit exposes no write tools and persists only a source-checked review without revising the case (22.91825ms)
+✔ top-level patch edits only the requested field and needs fresh validation (32.136917ms)
+✔ generation rejects an extra character instead of silently violating the short-story preset (44.519541ms)
+✔ malformed case objects return recorded field errors before a corrected draft can commit (27.251ms)
+✔ generation can correct required evidence locally, but must revalidate the changed truth (30.230333ms)
+✔ sample schema and validator produce a replayable solution (7.835375ms)
+✔ unseen scenes and evidence cannot be accessed by guessed IDs (0.220375ms)
+✔ evidence gates a witness statement and topic never invents a clue (0.919042ms)
+✔ a correct suspect without the required evidence is not a successful solution (0.084709ms)
+✔ critical evidence locked behind itself blocks export eligibility (0.351167ms)
+✔ a two-clue cycle is found even when both sources are open (0.242875ms)
+✔ missing references, duplicate IDs, orphan testimony and mismatched guards are rejected (0.527667ms)
+✔ the fixed-point validator does not depend on scene/clue traversal order (0.605667ms)
+✔ changing dialogue keeps visual cache valid; changing an actor invalidates only their scenes (0.827375ms)
+✔ added entities are diffed without throwing on missing old values (0.393792ms)
+✔ all 64 subsets of sample evidence obey ending conditions (0.907833ms)
+✔ a collectible note cannot substitute for required gated testimony (0.23025ms)
+✔ an alternative ungated topic cannot bypass the required evidence conversation (0.168958ms)
+✔ GPU memory is restored after rendering failure and after a lost sleep response (48.888459ms)
+✔ HTTP boundaries reject hostile requests and stale restores without corrupting a project (1466.25ms)
+✔ queued cancellations, active cancellations and cancellation after commit have distinct outcomes (36.075709ms)
+✔ restart marks unfinished jobs interrupted and preserves completed outcomes (27.863708ms)
+✔ optimistic concurrency rejects outdated edits and preserves revisions (13.607375ms)
+✔ unsafe file identifiers cannot escape project storage (0.09325ms)
+✔ export rechecks actual data rather than trusting a stale passed report (2.030208ms)
+✔ generated images go stale on visual edits and videos follow the current reference (1.141583ms)
+✔ HTML export escapes user-authored script delimiters and needs no remote URLs (1.764958ms)
+✔ export embeds a replacement asset even if an older replaced file is missing (1.852917ms)
+✔ schema-valid scene ID constructor cannot collide with object prototype in exports (1.618ms)
+ℹ tests 35
+ℹ suites 0
+ℹ pass 35
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1707.576917
+
+> mujian-studio@0.1.0 build
+> tsc --noEmit && vite build && node scripts/build-player.mjs
+
+vite v7.3.6 building client environment for production...
+transforming...
+node_modules/zod/v4/core/util.js (400:0): A comment
+
+"// Wrapped in a `@__PURE__` IIFE: esbuild never tree-shakes a top-level initializer that contains a member access on `Number`, so the bare object literal survived into every bundle."
+
+in "node_modules/zod/v4/core/util.js" contains an annotation that Rollup cannot interpret due to the position of the comment. The comment will be removed to avoid issues.
+node_modules/zod/v4/core/regexes.js (74:0): A comment
+
+"/** Anchors a pattern source. The interpolation lives here rather than at the call site because
+ * esbuild will not drop a `@__PURE__` call whose own argument interpolates a variable, but it
+ * will drop `anchor(dateSource)`. Keeping it inline pinned `date` into every bundle. */"
+
+in "node_modules/zod/v4/core/regexes.js" contains an annotation that Rollup cannot interpret due to the position of the comment. The comment will be removed to avoid issues.
+✓ 1679 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/web/index.html                   0.43 kB │ gzip:   0.33 kB
+dist/web/assets/index-D2aduN2Q.css   32.64 kB │ gzip:   8.24 kB
+dist/web/assets/index-BsJ96ffp.js   362.48 kB │ gzip: 112.09 kB
+✓ built in 1.21s
+Standalone player built.

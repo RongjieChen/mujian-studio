@@ -7,7 +7,7 @@ description: Edit an existing mystery case or repair blocked evidence paths whil
 
 先 read_case 与 validate_case，定位具体失败字段和依赖链。保留现有 ID，优先改最少字段。
 
-修复任务必须保留 truth 完全不变，不得降低结案要求。若证据被锁在需其自身才能进入的场景，应把物证放到逻辑合理且可进入的场景，或更正误写的前置条件；不是删除证据。修复后读 case-audit 并重新验证。
+修复任务必须保留 truth、所有人物/证据/对白/结局的文字、实体 ID 和实体数量完全不变，不得降低结案要求。只允许调整 scenes.requires、clues.sceneId/requires 和现有 topics.requires/reveals；不得通过删除或改写原作让检查通过。若证据被锁在需其自身才能进入的场景，应把物证放到逻辑合理且可进入的场景，或更正误写的前置条件；不是删除证据。修复后读 case-audit 并重新验证。
 
 优先使用 patch_case 局部修改一个实体。例如 collection=scenes、id=archive、updates={"requires":["observation_log"]}。requires 只能放返回的 validEvidenceIds，不能放 scene ID。证词缺少来源时，修改相关人物的 topics，使一个合理的话题 reveals 包含该证词 ID，且 requires 包含证词的前置证据。不要重复提交与上次相同的错误草稿。
 

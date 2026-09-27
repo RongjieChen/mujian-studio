@@ -33,13 +33,15 @@ export function reduceGame(doc: Case, state: GameState, action: Action): GameSta
     const key = `${action.characterId}:${topic.id}`;
     if (!next.asked.includes(key)) next.asked.push(key);
     result = topic.answer;
-  } else {
+  } else if (action.type === 'accuse') {
     if (!doc.characters.some(c => c.id === action.characterId)) throw new Error('嫌疑人不存在。');
     if (!hasAll(state.inventory, action.evidenceIds)) throw new Error('只能提交已经获得的证据。');
     const solved = action.characterId === doc.truth.culpritId && hasAll(action.evidenceIds, doc.truth.requiredEvidenceIds);
     const ending = doc.endings.find(e => e.kind === (solved ? 'solved' : 'wrong'));
     if (!ending) throw new Error('缺少结局。');
     next.ending = ending.id; result = ending.text;
+  } else {
+    throw new Error('不支持的玩家操作。');
   }
   next.history.push({ action, text: result });
   return next;

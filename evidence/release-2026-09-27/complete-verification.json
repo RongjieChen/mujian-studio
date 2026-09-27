@@ -1,0 +1,95 @@
+[
+  {
+    "name": "repair-protects-entire-story",
+    "passed": true,
+    "diff": {
+      "changes": [
+        {
+          "section": "clues",
+          "id": "power_log",
+          "label": "备用电源记录",
+          "kind": "changed"
+        }
+      ],
+      "affectedScenes": []
+    }
+  },
+  {
+    "name": "normal-audit-literal-sources",
+    "passed": true,
+    "issues": 3
+  },
+  {
+    "name": "contradiction-audit-literal-sources",
+    "passed": true,
+    "issues": 5
+  },
+  {
+    "name": "review-v2-normal-literal-sources",
+    "passed": true,
+    "issues": 1
+  },
+  {
+    "name": "review-v2-conflict-literal-sources",
+    "passed": true,
+    "issues": 2
+  },
+  {
+    "name": "deadlock-repair-project-replay",
+    "passed": true,
+    "steps": 12,
+    "caseHash": "c20bb45d01d87d91c80d1da0dfc05d0f01186c0baf198ea8e5a98fb401538d56"
+  },
+  {
+    "name": "new-case-project-replay",
+    "passed": true,
+    "steps": 15,
+    "caseHash": "96a683448bb4797a67864258a225d896960e1db746cacd989fe2e22b8c57a6e5"
+  },
+  {
+    "name": "new-case-edit-project-replay",
+    "passed": true,
+    "steps": 15,
+    "caseHash": "e73db9e628756c08cc5e8cc1512edbbf35e10f191f99a12091aebe414853efef"
+  },
+  {
+    "name": "requested-edit-changes-only-opening",
+    "passed": true
+  },
+  {
+    "name": "fresh-preset-and-real-patch-story",
+    "passed": true
+  },
+  {
+    "name": "real-hostile-story-data-cannot-rewrite-repair",
+    "passed": true
+  },
+  {
+    "name": "strict-generation-project-replay",
+    "passed": true,
+    "caseHash": "5e20a796e99ebcb0bfa8ff5723cd31843d16795f832f22a81843349c3d108a2e",
+    "steps": 12
+  },
+  {
+    "name": "patch-opening-project-replay",
+    "passed": true,
+    "caseHash": "9405fbe1e5b41a9230dda26cf11302b72099ab596c1c078ac77c2c6961f37eb7",
+    "steps": 12
+  },
+  {
+    "name": "hostile-repair-project-replay",
+    "passed": true,
+    "caseHash": "51a9db292692b4be6c80fd5c14eed8f350c72a79fb34d791fd8c85eca0871dac",
+    "steps": 12
+  },
+  {
+    "name": "final-ready-project-replay",
+    "passed": true,
+    "caseHash": "f731d377de3e6c739cd0465471df0ca871bad1a62c21b9e30ac63a78c59da3d7",
+    "steps": 15
+  },
+  {
+    "name": "formal-video-and-current-game-offline",
+    "passed": true
+  }
+]

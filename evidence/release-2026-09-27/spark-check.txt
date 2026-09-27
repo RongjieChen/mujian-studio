@@ -1,0 +1,259 @@
+
+> mujian-studio@0.1.0 check
+> npm test && npm run build
+
+
+> mujian-studio@0.1.0 pretest
+> node scripts/build-player.mjs
+
+Standalone player built.
+
+> mujian-studio@0.1.0 test
+> tsx --test tests/*.test.ts
+
+TAP version 13
+# Subtest: repair cannot pass by deleting evidence, rewriting testimony or changing the truth
+ok 1 - repair cannot pass by deleting evidence, rewriting testimony or changing the truth
+  ---
+  duration_ms: 4.588894
+  type: 'test'
+  ...
+# Subtest: unknown player actions cannot be treated as an accusation
+ok 2 - unknown player actions cannot be treated as an accusation
+  ---
+  duration_ms: 0.227504
+  type: 'test'
+  ...
+# Subtest: review rejects invented quotation, prototype paths and one-source contradictions
+ok 3 - review rejects invented quotation, prototype paths and one-source contradictions
+  ---
+  duration_ms: 3.619167
+  type: 'test'
+  ...
+# Subtest: image imports fully decode rather than trusting magic bytes
+ok 4 - image imports fully decode rather than trusting magic bytes
+  ---
+  duration_ms: 16.20244
+  type: 'test'
+  ...
+# Subtest: Pi tool loop refuses commit without actual validation and invalidates validation after an edit
+ok 5 - Pi tool loop refuses commit without actual validation and invalidates validation after an edit
+  ---
+  duration_ms: 204.954323
+  type: 'test'
+  ...
+# Subtest: malicious repair proposal cannot rewrite protected story through the real Pi tools
+ok 6 - malicious repair proposal cannot rewrite protected story through the real Pi tools
+  ---
+  duration_ms: 50.806741
+  type: 'test'
+  ...
+# Subtest: audit exposes no write tools and persists only a source-checked review without revising the case
+ok 7 - audit exposes no write tools and persists only a source-checked review without revising the case
+  ---
+  duration_ms: 44.287992
+  type: 'test'
+  ...
+# Subtest: top-level patch edits only the requested field and needs fresh validation
+ok 8 - top-level patch edits only the requested field and needs fresh validation
+  ---
+  duration_ms: 31.353919
+  type: 'test'
+  ...
+# Subtest: generation rejects an extra character instead of silently violating the short-story preset
+ok 9 - generation rejects an extra character instead of silently violating the short-story preset
+  ---
+  duration_ms: 33.595454
+  type: 'test'
+  ...
+# Subtest: malformed case objects return recorded field errors before a corrected draft can commit
+ok 10 - malformed case objects return recorded field errors before a corrected draft can commit
+  ---
+  duration_ms: 36.374445
+  type: 'test'
+  ...
+# Subtest: generation can correct required evidence locally, but must revalidate the changed truth
+ok 11 - generation can correct required evidence locally, but must revalidate the changed truth
+  ---
+  duration_ms: 39.185083
+  type: 'test'
+  ...
+# Subtest: sample schema and validator produce a replayable solution
+ok 12 - sample schema and validator produce a replayable solution
+  ---
+  duration_ms: 8.07854
+  type: 'test'
+  ...
+# Subtest: unseen scenes and evidence cannot be accessed by guessed IDs
+ok 13 - unseen scenes and evidence cannot be accessed by guessed IDs
+  ---
+  duration_ms: 0.387216
+  type: 'test'
+  ...
+# Subtest: evidence gates a witness statement and topic never invents a clue
+ok 14 - evidence gates a witness statement and topic never invents a clue
+  ---
+  duration_ms: 0.631199
+  type: 'test'
+  ...
+# Subtest: a correct suspect without the required evidence is not a successful solution
+ok 15 - a correct suspect without the required evidence is not a successful solution
+  ---
+  duration_ms: 0.08672
+  type: 'test'
+  ...
+# Subtest: critical evidence locked behind itself blocks export eligibility
+ok 16 - critical evidence locked behind itself blocks export eligibility
+  ---
+  duration_ms: 0.857648
+  type: 'test'
+  ...
+# Subtest: a two-clue cycle is found even when both sources are open
+ok 17 - a two-clue cycle is found even when both sources are open
+  ---
+  duration_ms: 0.3548
+  type: 'test'
+  ...
+# Subtest: missing references, duplicate IDs, orphan testimony and mismatched guards are rejected
+ok 18 - missing references, duplicate IDs, orphan testimony and mismatched guards are rejected
+  ---
+  duration_ms: 0.834543
+  type: 'test'
+  ...
+# Subtest: the fixed-point validator does not depend on scene/clue traversal order
+ok 19 - the fixed-point validator does not depend on scene/clue traversal order
+  ---
+  duration_ms: 0.6364
+  type: 'test'
+  ...
+# Subtest: changing dialogue keeps visual cache valid; changing an actor invalidates only their scenes
+ok 20 - changing dialogue keeps visual cache valid; changing an actor invalidates only their scenes
+  ---
+  duration_ms: 1.130383
+  type: 'test'
+  ...
+# Subtest: added entities are diffed without throwing on missing old values
+ok 21 - added entities are diffed without throwing on missing old values
+  ---
+  duration_ms: 0.638448
+  type: 'test'
+  ...
+# Subtest: all 64 subsets of sample evidence obey ending conditions
+ok 22 - all 64 subsets of sample evidence obey ending conditions
+  ---
+  duration_ms: 1.016863
+  type: 'test'
+  ...
+# Subtest: a collectible note cannot substitute for required gated testimony
+ok 23 - a collectible note cannot substitute for required gated testimony
+  ---
+  duration_ms: 0.213136
+  type: 'test'
+  ...
+# Subtest: an alternative ungated topic cannot bypass the required evidence conversation
+ok 24 - an alternative ungated topic cannot bypass the required evidence conversation
+  ---
+  duration_ms: 0.137008
+  type: 'test'
+  ...
+# Subtest: GPU memory is restored after rendering failure and after a lost sleep response
+ok 25 - GPU memory is restored after rendering failure and after a lost sleep response
+  ---
+  duration_ms: 57.410865
+  type: 'test'
+  ...
+# Subtest: HTTP boundaries reject hostile requests and stale restores without corrupting a project
+ok 26 - HTTP boundaries reject hostile requests and stale restores without corrupting a project
+  ---
+  duration_ms: 1544.154342
+  type: 'test'
+  ...
+# Subtest: queued cancellations, active cancellations and cancellation after commit have distinct outcomes
+ok 27 - queued cancellations, active cancellations and cancellation after commit have distinct outcomes
+  ---
+  duration_ms: 23.880931
+  type: 'test'
+  ...
+# Subtest: restart marks unfinished jobs interrupted and preserves completed outcomes
+ok 28 - restart marks unfinished jobs interrupted and preserves completed outcomes
+  ---
+  duration_ms: 17.57759
+  type: 'test'
+  ...
+# Subtest: optimistic concurrency rejects outdated edits and preserves revisions
+ok 29 - optimistic concurrency rejects outdated edits and preserves revisions
+  ---
+  duration_ms: 6.554956
+  type: 'test'
+  ...
+# Subtest: unsafe file identifiers cannot escape project storage
+ok 30 - unsafe file identifiers cannot escape project storage
+  ---
+  duration_ms: 0.105792
+  type: 'test'
+  ...
+# Subtest: export rechecks actual data rather than trusting a stale passed report
+ok 31 - export rechecks actual data rather than trusting a stale passed report
+  ---
+  duration_ms: 1.002591
+  type: 'test'
+  ...
+# Subtest: generated images go stale on visual edits and videos follow the current reference
+ok 32 - generated images go stale on visual edits and videos follow the current reference
+  ---
+  duration_ms: 0.973616
+  type: 'test'
+  ...
+# Subtest: HTML export escapes user-authored script delimiters and needs no remote URLs
+ok 33 - HTML export escapes user-authored script delimiters and needs no remote URLs
+  ---
+  duration_ms: 3.05187
+  type: 'test'
+  ...
+# Subtest: export embeds a replacement asset even if an older replaced file is missing
+ok 34 - export embeds a replacement asset even if an older replaced file is missing
+  ---
+  duration_ms: 5.441053
+  type: 'test'
+  ...
+# Subtest: schema-valid scene ID constructor cannot collide with object prototype in exports
+ok 35 - schema-valid scene ID constructor cannot collide with object prototype in exports
+  ---
+  duration_ms: 3.237678
+  type: 'test'
+  ...
+1..35
+# tests 35
+# suites 0
+# pass 35
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1917.335918
+
+> mujian-studio@0.1.0 build
+> tsc --noEmit && vite build && node scripts/build-player.mjs
+
+vite v7.3.6 building client environment for production...
+transforming...
+node_modules/zod/v4/core/util.js (400:0): A comment
+
+"// Wrapped in a `@__PURE__` IIFE: esbuild never tree-shakes a top-level initializer that contains a member access on `Number`, so the bare object literal survived into every bundle."
+
+in "node_modules/zod/v4/core/util.js" contains an annotation that Rollup cannot interpret due to the position of the comment. The comment will be removed to avoid issues.
+node_modules/zod/v4/core/regexes.js (74:0): A comment
+
+"/** Anchors a pattern source. The interpolation lives here rather than at the call site because
+ * esbuild will not drop a `@__PURE__` call whose own argument interpolates a variable, but it
+ * will drop `anchor(dateSource)`. Keeping it inline pinned `date` into every bundle. */"
+
+in "node_modules/zod/v4/core/regexes.js" contains an annotation that Rollup cannot interpret due to the position of the comment. The comment will be removed to avoid issues.
+✓ 1679 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/web/index.html                   0.43 kB │ gzip:   0.34 kB
+dist/web/assets/index-D2aduN2Q.css   32.64 kB │ gzip:   8.20 kB
+dist/web/assets/index-BsJ96ffp.js   362.48 kB │ gzip: 112.24 kB
+✓ built in 2.03s
+Standalone player built.

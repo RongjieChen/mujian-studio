@@ -1,0 +1,5 @@
+{
+  "checkedFiles": 196,
+  "credentialOrPrivateEndpointPatternMatches": [],
+  "note": "Pattern scan of selected source/evidence files; not a general security audit. Environment, runtime data and model weights excluded."
+}

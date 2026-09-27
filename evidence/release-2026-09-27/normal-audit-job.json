@@ -1,0 +1,271 @@
+{
+  "id": "41db9823-c6ae-4dda-917c-f27f8fdfcbd8",
+  "projectId": "703f9624-898b-4992-885e-9bd43b17bd93",
+  "kind": "audit",
+  "state": "succeeded",
+  "request": {
+    "prompt": "只读检查时间线、证据与披露；区分人物有意撒谎与作者真相矛盾，引用原文。"
+  },
+  "baseRevision": 1,
+  "events": [
+    {
+      "at": "2026-09-27T15:59:46.409Z",
+      "type": "memory",
+      "message": "已释放素材模型内存。",
+      "detail": {
+        "released": true,
+        "reservedBytes": 0
+      }
+    },
+    {
+      "at": "2026-09-27T15:59:46.447Z",
+      "type": "model",
+      "message": "使用 本地 模型 qwen3.8-27b"
+    },
+    {
+      "at": "2026-09-27T15:59:48.278Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 1086,
+        "output": 56,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 1142,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T15:59:48.281Z",
+      "type": "skill",
+      "message": "读取技能：case-consistency"
+    },
+    {
+      "at": "2026-09-27T15:59:48.288Z",
+      "type": "tool",
+      "message": "读取工作版本"
+    },
+    {
+      "at": "2026-09-27T16:00:44.151Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 5855,
+        "output": 1283,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 7138,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T16:01:13.583Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 8612,
+        "output": 1282,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 9894,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T16:01:13.594Z",
+      "type": "review",
+      "message": "叙事初审已保存：3 个待作者审阅的疑点。",
+      "detail": {
+        "summary": "本次为《雨停之前》第 1 版只读初审，重点核对时间线、物证可得性、证词与信息披露，并区分角色有意撒谎与作者层面的真相矛盾。整体时间线自洽：22:40 借录音机、23:10 停电、23:12 备用电源恢复并同步取走胶片、23:15 陈默在走廊见到抱铁盒的林知夏、23:20 放映员发现空盒，均能相互衔接；“录音机循环琴声 + 冷茶 + 走廊证词 + 电源记录”构成的核心证据链与 truth.requiredEvidenceIds 一致。林知夏与陈默的若干证词出入属于角色有意隐瞒/撒谎，符合悬疑设计，不判为矛盾。主要待确认点集中在：①“停电前后一直在茶室练琴”与录音机 22:40 才借出这一客观事实之间的表述张力；②陈默在停电黑暗中如何辨识圆铁盒；③陈默走廊证词与其公开陈述“拍空房间”的表面出入。其余物证（冷茶、信件、空盒）为情境性辅助证据，不进入必需证据，未见硬矛盾。",
+        "issues": [
+          {
+            "kind": "disclosure",
+            "severity": "concern",
+            "explanation": "林知夏的公开知识写为“停电前后一直在茶室练琴”，而作者真相 timeline 明确 22:40 才向店主借走便携录音机（/truth/timeline/0），周叔在 /characters/2/topics/1 也说“十点四十借走了”。这意味着停电（23:10）之前她不可能在茶室“用录音机循环演奏”；若“练琴”指真弹钢琴，则“停电前后一直”又与 truth/method 中“离开茶室取走胶片、用提前录好的钢琴声制造假象”不完全吻合。建议统一措辞，避免读者/玩家把“停电前后”当成可被 22:40 借机时间直接证伪的硬口供，或补充她此前确实在茶室、停电后才开始循环播放的明确节点。",
+            "suggestion": "将 publicKnowledge 改为“她自称停电前后都在茶室练琴”，并在 method/timeline 中补一句“录音机于 23:10 停电前后开始循环播放”，或在林知夏 tape 回答中明确“循环播放从停电那一刻开始”。",
+            "citations": [
+              {
+                "path": "/characters/0/publicKnowledge",
+                "quote": "她受邀为今晚的无声片现场伴奏，自称停电前后一直在茶室练琴。"
+              },
+              {
+                "path": "/truth/timeline/0/event",
+                "quote": "林知夏向店主借走便携录音机。"
+              },
+              {
+                "path": "/truth/method",
+                "quote": "利用预定的短时停电，在 23:12 取走胶片，藏进茶室通风柜。她用提前录好的钢琴声制造自己一直在茶室弹琴的假象。"
+              },
+              {
+                "path": "/characters/2/topics/1/answer",
+                "quote": "知夏在十点四十借走了，说想听听自己的演奏。我以为她一直在练琴。"
+              }
+            ]
+          },
+          {
+            "kind": "missing_support",
+            "severity": "question",
+            "explanation": "陈默的 corridor 回答称 23:12 恢复照明后“大概三分钟后”看见林知夏抱着圆铁盒，与 truth/timeline/3（23:15）一致；但他 publicKnowledge 只说“停电后在走廊测试相机”，且 camera 话题回答“都是旅馆的空房间”。在 23:10–23:12 这段停电/切换照明时间内，走廊是否仍有足够光线、他能否辨认出“圆形铁盒”这一具体物件，目前无明确依据。这是可接受的叙事留白，但建议作者确认停电窗口内的照明条件，避免玩家质疑证词可靠性。",
+            "suggestion": "可在陈默描述或 scenes/lobby 描述中补一句“备用电源切换的瞬间走廊灯重新亮起”，或在 witness 线索中说明“恢复照明后”的措辞已由 power_log 背书。",
+            "citations": [
+              {
+                "path": "/characters/1/topics/1/answer",
+                "quote": "知夏。大概三分钟后，她从放映室方向过来，怀里抱着一个圆铁盒。她让我别把这段拍进去。"
+              },
+              {
+                "path": "/characters/1/publicKnowledge",
+                "quote": "他来拍旅馆停业前的最后一晚，停电后在走廊测试相机。"
+              },
+              {
+                "path": "/truth/timeline/3/event",
+                "quote": "陈默在走廊遇见抱着铁盒的林知夏。"
+              }
+            ]
+          },
+          {
+            "kind": "missing_support",
+            "severity": "question",
+            "explanation": "陈默 camera 话题回答“都是旅馆的空房间”与其 corridor 回答中拍到林知夏抱铁盒并“让我别把这段拍进去”存在表面张力：既然拍到了人，为何公开口径仍说只拍到空房间？这可能是陈默有意隐瞒（与 secret“最初不愿卷入争执”一致），也可能是作者表述未区分“主动展示的照片”与“实际底片”。建议作者明确这属于角色隐瞒，以免被误读为证词自相矛盾。",
+            "suggestion": "在陈默 secret 或 camera 回答中加一句“底片里其实有那一帧，但他没打算主动提起”，把隐瞒动机写明。",
+            "citations": [
+              {
+                "path": "/characters/1/topics/0/answer",
+                "quote": "都是旅馆的空房间。走廊那盏灯坏了，我想等供电恢复再拍一张。"
+              },
+              {
+                "path": "/characters/1/secret",
+                "quote": "他看见林知夏抱着铁盒，但最初不愿卷入争执。"
+              }
+            ]
+          }
+        ],
+        "caseHash": "c20bb45d01d87d91c80d1da0dfc05d0f01186c0baf198ea8e5a98fb401538d56",
+        "revision": 1,
+        "checkedAt": "2026-09-27T16:01:13.587Z",
+        "model": "qwen3.8-27b",
+        "provider": "mujian-local"
+      }
+    },
+    {
+      "at": "2026-09-27T16:01:24.362Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 11251,
+        "output": 253,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 11504,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    }
+  ],
+  "createdAt": "2026-09-27T15:59:46.193Z",
+  "startedAt": "2026-09-27T15:59:46.193Z",
+  "result": {
+    "projectId": "703f9624-898b-4992-885e-9bd43b17bd93",
+    "review": {
+      "summary": "本次为《雨停之前》第 1 版只读初审，重点核对时间线、物证可得性、证词与信息披露，并区分角色有意撒谎与作者层面的真相矛盾。整体时间线自洽：22:40 借录音机、23:10 停电、23:12 备用电源恢复并同步取走胶片、23:15 陈默在走廊见到抱铁盒的林知夏、23:20 放映员发现空盒，均能相互衔接；“录音机循环琴声 + 冷茶 + 走廊证词 + 电源记录”构成的核心证据链与 truth.requiredEvidenceIds 一致。林知夏与陈默的若干证词出入属于角色有意隐瞒/撒谎，符合悬疑设计，不判为矛盾。主要待确认点集中在：①“停电前后一直在茶室练琴”与录音机 22:40 才借出这一客观事实之间的表述张力；②陈默在停电黑暗中如何辨识圆铁盒；③陈默走廊证词与其公开陈述“拍空房间”的表面出入。其余物证（冷茶、信件、空盒）为情境性辅助证据，不进入必需证据，未见硬矛盾。",
+      "issues": [
+        {
+          "kind": "disclosure",
+          "severity": "concern",
+          "explanation": "林知夏的公开知识写为“停电前后一直在茶室练琴”，而作者真相 timeline 明确 22:40 才向店主借走便携录音机（/truth/timeline/0），周叔在 /characters/2/topics/1 也说“十点四十借走了”。这意味着停电（23:10）之前她不可能在茶室“用录音机循环演奏”；若“练琴”指真弹钢琴，则“停电前后一直”又与 truth/method 中“离开茶室取走胶片、用提前录好的钢琴声制造假象”不完全吻合。建议统一措辞，避免读者/玩家把“停电前后”当成可被 22:40 借机时间直接证伪的硬口供，或补充她此前确实在茶室、停电后才开始循环播放的明确节点。",
+          "suggestion": "将 publicKnowledge 改为“她自称停电前后都在茶室练琴”，并在 method/timeline 中补一句“录音机于 23:10 停电前后开始循环播放”，或在林知夏 tape 回答中明确“循环播放从停电那一刻开始”。",
+          "citations": [
+            {
+              "path": "/characters/0/publicKnowledge",
+              "quote": "她受邀为今晚的无声片现场伴奏，自称停电前后一直在茶室练琴。"
+            },
+            {
+              "path": "/truth/timeline/0/event",
+              "quote": "林知夏向店主借走便携录音机。"
+            },
+            {
+              "path": "/truth/method",
+              "quote": "利用预定的短时停电，在 23:12 取走胶片，藏进茶室通风柜。她用提前录好的钢琴声制造自己一直在茶室弹琴的假象。"
+            },
+            {
+              "path": "/characters/2/topics/1/answer",
+              "quote": "知夏在十点四十借走了，说想听听自己的演奏。我以为她一直在练琴。"
+            }
+          ]
+        },
+        {
+          "kind": "missing_support",
+          "severity": "question",
+          "explanation": "陈默的 corridor 回答称 23:12 恢复照明后“大概三分钟后”看见林知夏抱着圆铁盒，与 truth/timeline/3（23:15）一致；但他 publicKnowledge 只说“停电后在走廊测试相机”，且 camera 话题回答“都是旅馆的空房间”。在 23:10–23:12 这段停电/切换照明时间内，走廊是否仍有足够光线、他能否辨认出“圆形铁盒”这一具体物件，目前无明确依据。这是可接受的叙事留白，但建议作者确认停电窗口内的照明条件，避免玩家质疑证词可靠性。",
+          "suggestion": "可在陈默描述或 scenes/lobby 描述中补一句“备用电源切换的瞬间走廊灯重新亮起”，或在 witness 线索中说明“恢复照明后”的措辞已由 power_log 背书。",
+          "citations": [
+            {
+              "path": "/characters/1/topics/1/answer",
+              "quote": "知夏。大概三分钟后，她从放映室方向过来，怀里抱着一个圆铁盒。她让我别把这段拍进去。"
+            },
+            {
+              "path": "/characters/1/publicKnowledge",
+              "quote": "他来拍旅馆停业前的最后一晚，停电后在走廊测试相机。"
+            },
+            {
+              "path": "/truth/timeline/3/event",
+              "quote": "陈默在走廊遇见抱着铁盒的林知夏。"
+            }
+          ]
+        },
+        {
+          "kind": "missing_support",
+          "severity": "question",
+          "explanation": "陈默 camera 话题回答“都是旅馆的空房间”与其 corridor 回答中拍到林知夏抱铁盒并“让我别把这段拍进去”存在表面张力：既然拍到了人，为何公开口径仍说只拍到空房间？这可能是陈默有意隐瞒（与 secret“最初不愿卷入争执”一致），也可能是作者表述未区分“主动展示的照片”与“实际底片”。建议作者明确这属于角色隐瞒，以免被误读为证词自相矛盾。",
+          "suggestion": "在陈默 secret 或 camera 回答中加一句“底片里其实有那一帧，但他没打算主动提起”，把隐瞒动机写明。",
+          "citations": [
+            {
+              "path": "/characters/1/topics/0/answer",
+              "quote": "都是旅馆的空房间。走廊那盏灯坏了，我想等供电恢复再拍一张。"
+            },
+            {
+              "path": "/characters/1/secret",
+              "quote": "他看见林知夏抱着铁盒，但最初不愿卷入争执。"
+            }
+          ]
+        }
+      ],
+      "caseHash": "c20bb45d01d87d91c80d1da0dfc05d0f01186c0baf198ea8e5a98fb401538d56",
+      "revision": 1,
+      "checkedAt": "2026-09-27T16:01:13.587Z",
+      "model": "qwen3.8-27b",
+      "provider": "mujian-local"
+    }
+  },
+  "finishedAt": "2026-09-27T16:01:24.364Z"
+}

@@ -1,0 +1,461 @@
+{
+  "id": "41d31bd6-49ff-45d2-8fb1-17db55ee3dc5",
+  "projectId": "0b85ab3a-d47a-49a2-a8a0-d098d79c7dfa",
+  "kind": "generate",
+  "state": "succeeded",
+  "request": {
+    "prompt": "创作原创短篇《旧书店最后一张借书卡》。打烊前，一张夹着道歉留言的借书卡被人调换。严格三个成年人物、三个场景、六条证据、两个结局；至少一条证词在出示物证后才能获得。真相围绕一次不愿当面承认的误会，不用旅馆、胶片、渡轮或示例人物。时间线与借阅记录清楚，所有必需证据足以支持结案，不靠角色自白作为唯一证据。"
+  },
+  "events": [
+    {
+      "at": "2026-09-27T17:21:15.592Z",
+      "type": "memory",
+      "message": "已释放素材模型内存。",
+      "detail": {
+        "released": true,
+        "reservedBytes": 23068672
+      }
+    },
+    {
+      "at": "2026-09-27T17:21:15.611Z",
+      "type": "model",
+      "message": "使用 本地 模型 qwen3.8-27b"
+    },
+    {
+      "at": "2026-09-27T17:21:19.824Z",
+      "type": "tool-call",
+      "message": "请求工具：read_skill"
+    },
+    {
+      "at": "2026-09-27T17:21:19.824Z",
+      "type": "tool-call",
+      "message": "请求工具：read_case_schema"
+    },
+    {
+      "at": "2026-09-27T17:21:19.834Z",
+      "type": "tool-call",
+      "message": "请求工具：read_case"
+    },
+    {
+      "at": "2026-09-27T17:21:19.834Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 1611,
+        "output": 55,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 1666,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:21:19.837Z",
+      "type": "skill",
+      "message": "读取技能：case-design",
+      "detail": {
+        "hash": "d4affaa726b7ac281661181062b0179cc5f4285ccf79286c3027f96960c76741"
+      }
+    },
+    {
+      "at": "2026-09-27T17:21:19.837Z",
+      "type": "tool",
+      "message": "读取案件数据契约"
+    },
+    {
+      "at": "2026-09-27T17:21:19.840Z",
+      "type": "tool",
+      "message": "读取工作版本"
+    },
+    {
+      "at": "2026-09-27T17:23:25.398Z",
+      "type": "tool-call",
+      "message": "请求工具：propose_case"
+    },
+    {
+      "at": "2026-09-27T17:23:25.399Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 3602,
+        "output": 2104,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 5706,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:23:25.419Z",
+      "type": "check",
+      "message": "草稿通过结构与可达性检查",
+      "detail": {
+        "note": "创建全新原创案件《旧书店最后一张借书卡》：3人物、3场景、6证据、2结局，证词 testimony_wei 由两条物证解锁。",
+        "issues": []
+      }
+    },
+    {
+      "at": "2026-09-27T17:23:33.719Z",
+      "type": "tool-call",
+      "message": "请求工具：read_skill"
+    },
+    {
+      "at": "2026-09-27T17:23:33.719Z",
+      "type": "tool-call",
+      "message": "请求工具：validate_case"
+    },
+    {
+      "at": "2026-09-27T17:23:33.729Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 6309,
+        "output": 55,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 6364,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:23:33.731Z",
+      "type": "skill",
+      "message": "读取技能：case-audit",
+      "detail": {
+        "hash": "1ea6b660bbcb3a01d84eb9a93ac4eecb64aad029990d05d9139a04a22af4c87e"
+      }
+    },
+    {
+      "at": "2026-09-27T17:23:33.732Z",
+      "type": "check",
+      "message": "实际检查 6/6 条证据，12 步通关路径",
+      "detail": {
+        "rulesVersion": 2,
+        "passed": true,
+        "issues": [],
+        "reachableClues": [
+          "receipt",
+          "old_card",
+          "drawer_key",
+          "stolen_card",
+          "borrow_log",
+          "testimony_wei"
+        ],
+        "reachableScenes": [
+          "counter",
+          "drawer",
+          "archive"
+        ],
+        "winningPath": [
+          {
+            "type": "collect",
+            "clueId": "receipt"
+          },
+          {
+            "type": "collect",
+            "clueId": "old_card"
+          },
+          {
+            "type": "travel",
+            "sceneId": "drawer"
+          },
+          {
+            "type": "collect",
+            "clueId": "drawer_key"
+          },
+          {
+            "type": "collect",
+            "clueId": "stolen_card"
+          },
+          {
+            "type": "travel",
+            "sceneId": "archive"
+          },
+          {
+            "type": "collect",
+            "clueId": "borrow_log"
+          },
+          {
+            "type": "ask",
+            "characterId": "wei",
+            "topicId": "wei_apology"
+          },
+          {
+            "type": "travel",
+            "sceneId": "counter"
+          },
+          {
+            "type": "travel",
+            "sceneId": "drawer"
+          },
+          {
+            "type": "travel",
+            "sceneId": "archive"
+          },
+          {
+            "type": "accuse",
+            "characterId": "wei",
+            "evidenceIds": [
+              "drawer_key",
+              "stolen_card",
+              "borrow_log",
+              "testimony_wei"
+            ]
+          }
+        ],
+        "actionCount": 12,
+        "checkedAt": "2026-09-27T17:23:33.732Z",
+        "caseHash": "5e20a796e99ebcb0bfa8ff5723cd31843d16795f832f22a81843349c3d108a2e"
+      }
+    },
+    {
+      "at": "2026-09-27T17:23:41.564Z",
+      "type": "tool-call",
+      "message": "请求工具：commit_case"
+    },
+    {
+      "at": "2026-09-27T17:23:41.565Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 7180,
+        "output": 52,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 7232,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:23:41.579Z",
+      "type": "commit",
+      "message": "保存第 1 版：旧书店最后一张借书卡。验证通过，提交《旧书店最后一张借书卡》新案件。",
+      "detail": {
+        "projectId": "0b85ab3a-d47a-49a2-a8a0-d098d79c7dfa",
+        "revision": 1,
+        "report": {
+          "rulesVersion": 2,
+          "passed": true,
+          "issues": [],
+          "reachableClues": [
+            "receipt",
+            "old_card",
+            "drawer_key",
+            "stolen_card",
+            "borrow_log",
+            "testimony_wei"
+          ],
+          "reachableScenes": [
+            "counter",
+            "drawer",
+            "archive"
+          ],
+          "winningPath": [
+            {
+              "type": "collect",
+              "clueId": "receipt"
+            },
+            {
+              "type": "collect",
+              "clueId": "old_card"
+            },
+            {
+              "type": "travel",
+              "sceneId": "drawer"
+            },
+            {
+              "type": "collect",
+              "clueId": "drawer_key"
+            },
+            {
+              "type": "collect",
+              "clueId": "stolen_card"
+            },
+            {
+              "type": "travel",
+              "sceneId": "archive"
+            },
+            {
+              "type": "collect",
+              "clueId": "borrow_log"
+            },
+            {
+              "type": "ask",
+              "characterId": "wei",
+              "topicId": "wei_apology"
+            },
+            {
+              "type": "travel",
+              "sceneId": "counter"
+            },
+            {
+              "type": "travel",
+              "sceneId": "drawer"
+            },
+            {
+              "type": "travel",
+              "sceneId": "archive"
+            },
+            {
+              "type": "accuse",
+              "characterId": "wei",
+              "evidenceIds": [
+                "drawer_key",
+                "stolen_card",
+                "borrow_log",
+                "testimony_wei"
+              ]
+            }
+          ],
+          "actionCount": 12,
+          "checkedAt": "2026-09-27T17:23:41.577Z",
+          "caseHash": "5e20a796e99ebcb0bfa8ff5723cd31843d16795f832f22a81843349c3d108a2e"
+        },
+        "diff": null,
+        "model": "qwen3.8-27b",
+        "provider": "mujian-local"
+      }
+    },
+    {
+      "at": "2026-09-27T17:23:53.657Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 7604,
+        "output": 270,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 7874,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    }
+  ],
+  "createdAt": "2026-09-27T17:21:15.522Z",
+  "startedAt": "2026-09-27T17:21:15.522Z",
+  "result": {
+    "projectId": "0b85ab3a-d47a-49a2-a8a0-d098d79c7dfa",
+    "revision": 1,
+    "report": {
+      "rulesVersion": 2,
+      "passed": true,
+      "issues": [],
+      "reachableClues": [
+        "receipt",
+        "old_card",
+        "drawer_key",
+        "stolen_card",
+        "borrow_log",
+        "testimony_wei"
+      ],
+      "reachableScenes": [
+        "counter",
+        "drawer",
+        "archive"
+      ],
+      "winningPath": [
+        {
+          "type": "collect",
+          "clueId": "receipt"
+        },
+        {
+          "type": "collect",
+          "clueId": "old_card"
+        },
+        {
+          "type": "travel",
+          "sceneId": "drawer"
+        },
+        {
+          "type": "collect",
+          "clueId": "drawer_key"
+        },
+        {
+          "type": "collect",
+          "clueId": "stolen_card"
+        },
+        {
+          "type": "travel",
+          "sceneId": "archive"
+        },
+        {
+          "type": "collect",
+          "clueId": "borrow_log"
+        },
+        {
+          "type": "ask",
+          "characterId": "wei",
+          "topicId": "wei_apology"
+        },
+        {
+          "type": "travel",
+          "sceneId": "counter"
+        },
+        {
+          "type": "travel",
+          "sceneId": "drawer"
+        },
+        {
+          "type": "travel",
+          "sceneId": "archive"
+        },
+        {
+          "type": "accuse",
+          "characterId": "wei",
+          "evidenceIds": [
+            "drawer_key",
+            "stolen_card",
+            "borrow_log",
+            "testimony_wei"
+          ]
+        }
+      ],
+      "actionCount": 12,
+      "checkedAt": "2026-09-27T17:23:41.577Z",
+      "caseHash": "5e20a796e99ebcb0bfa8ff5723cd31843d16795f832f22a81843349c3d108a2e"
+    },
+    "diff": null,
+    "model": "qwen3.8-27b",
+    "provider": "mujian-local"
+  },
+  "finishedAt": "2026-09-27T17:23:53.659Z"
+}

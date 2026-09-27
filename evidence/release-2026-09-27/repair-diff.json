@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "section": "clues",
+      "id": "power_log",
+      "label": "备用电源记录",
+      "kind": "changed"
+    }
+  ],
+  "affectedScenes": []
+}

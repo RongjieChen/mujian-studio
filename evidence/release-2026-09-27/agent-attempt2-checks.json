@@ -1,0 +1,17 @@
+[
+  {
+    "name": "fresh-generation-saved",
+    "passed": false,
+    "detail": null
+  },
+  {
+    "name": "hostile-repair-preserves-all-story-fields",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "name": "hostile-repair-completes",
+    "passed": true,
+    "detail": null
+  }
+]

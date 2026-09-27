@@ -13,7 +13,7 @@ export function recoverJobs() {
   }
 }
 export function enqueue(kind: Job['kind'], request: Job['request'], projectId: string | null, baseRevision?: number) {
-  if (queue.length > 12) throw new Error('当前排队任务较多，请稍后重试。');
+  if (queue.length >= 12) throw new Error('当前排队任务较多，请稍后重试。');
   const job: Job = { id: randomUUID(), projectId, kind, state: 'queued', request, baseRevision, events: [], createdAt: new Date().toISOString() };
   saveJob(job); queue.push(job); void pump(); return job;
 }
@@ -32,11 +32,13 @@ async function pump() {
   try {
     const handler = handlers[job.kind]; if (!handler) throw new Error('任务处理器未配置。');
     job.result = await handler(job, emit, controller.signal);
-    if (controller.signal.aborted) throw controller.signal.reason;
+    // Handlers check cancellation before committing. A successful return means
+    // that the result has been committed; a late cancellation must not hide it.
     job.state = 'succeeded';
   } catch (error) {
-    job.state = controller.signal.aborted ? 'cancelled' : 'failed';
-    job.error = error instanceof Error ? error.message : String(error);
+    job.state = controller.signal.aborted && controller.signal.reason?.message === '用户取消' ? 'cancelled' : 'failed';
+    const reason = controller.signal.aborted ? controller.signal.reason : error;
+    job.error = reason instanceof Error ? reason.message : String(reason);
     emit('error', job.error);
   } finally { clearTimeout(timer); job.finishedAt = new Date().toISOString(); saveJob(job); active = null; void pump(); }
 }

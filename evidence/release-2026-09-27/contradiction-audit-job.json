@@ -1,0 +1,424 @@
+{
+  "id": "cf184668-4f93-45bd-8d56-8a87b3bb4f5e",
+  "projectId": "24137d8d-2e65-41de-8370-1f99cd406c8a",
+  "kind": "audit",
+  "state": "succeeded",
+  "request": {
+    "prompt": "只读审阅所有案件事实和时间线，引用确切原文，提出重要疑点。"
+  },
+  "baseRevision": 1,
+  "events": [
+    {
+      "at": "2026-09-27T16:01:26.348Z",
+      "type": "memory",
+      "message": "已释放素材模型内存。",
+      "detail": {
+        "released": true,
+        "reservedBytes": 0
+      }
+    },
+    {
+      "at": "2026-09-27T16:01:26.360Z",
+      "type": "model",
+      "message": "使用 本地 模型 qwen3.8-27b"
+    },
+    {
+      "at": "2026-09-27T16:01:28.124Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 1096,
+        "output": 56,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 1152,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T16:01:28.127Z",
+      "type": "skill",
+      "message": "读取技能：case-consistency"
+    },
+    {
+      "at": "2026-09-27T16:01:28.127Z",
+      "type": "tool",
+      "message": "读取工作版本"
+    },
+    {
+      "at": "2026-09-27T16:01:31.419Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 5921,
+        "output": 27,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 5948,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T16:01:31.420Z",
+      "type": "skill",
+      "message": "读取技能：case-audit"
+    },
+    {
+      "at": "2026-09-27T16:02:55.370Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 6180,
+        "output": 2019,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 8199,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T16:02:58.131Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 8247,
+        "output": 15,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 8262,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T16:03:40.435Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 10724,
+        "output": 1668,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 12392,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T16:03:43.065Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 12439,
+        "output": 15,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 12454,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T16:04:22.397Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 14916,
+        "output": 1690,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 16606,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T16:04:22.400Z",
+      "type": "review",
+      "message": "叙事初审已保存：5 个待作者审阅的疑点。",
+      "detail": {
+        "summary": "本案件为标注的\"对抗样例：录像与真相冲突（故意注入）\"。初审发现 4 项主要矛盾/疑点：①录像声称完整覆盖茶室却与真相时间线直接矛盾；②林知夏自白与真相动机/方法不一致；③requiredEvidenceIds 中的 witness 实际是清白证据，推理链断裂；④钢琴声\"提前录好\"与\"循环错音\"的描述细节不统一。另附 1 项信息披露节奏问题。以下逐项引用原文并给出建议。",
+        "issues": [
+          {
+            "kind": "contradiction",
+            "severity": "concern",
+            "explanation": "核心矛盾：truth 设定林知夏在 23:12 从放映室带走胶片、23:15 在走廊被陈默遇见；但陈默 corridor 对话声称'23:00 至 23:30，林知夏一直在茶室，没有离开过。录像完整且时间准确'。录像被明确标注完整且时间准确，却排除了真相中她 23:12-23:15 离开茶室取片的事实。若录像确实覆盖茶室全时段，则真相 timeline 第 2、3 条与录像直接矛盾；若录像未覆盖茶室内部，则'完整'一词不准确。作者需决定录像究竟拍的是什么（走廊？茶室外部？）、为何声称完整、以及陈默为何出示与自己 23:15 目击矛盾的录像。",
+            "suggestion": "明确录像的拍摄对象与范围（例如只拍走廊而非茶室），或在 truth 中说明录像为何不可靠（如陈默误判、录像角度盲区），使录像声称与真相不直接矛盾。",
+            "citations": [
+              {
+                "path": "/characters/1/topics/1/answer",
+                "quote": "陈默出示连续录像：23:00 至 23:30，林知夏一直在茶室，没有离开过。录像完整且时间准确。"
+              },
+              {
+                "path": "/truth/timeline/2/event",
+                "quote": "林知夏从放映室带走胶片。"
+              },
+              {
+                "path": "/truth/timeline/3/event",
+                "quote": "陈默在走廊遇见抱着铁盒的林知夏。"
+              }
+            ]
+          },
+          {
+            "kind": "contradiction",
+            "severity": "concern",
+            "explanation": "林知夏在 tape 话题中承认'我确实出去过'，但紧接着说'但我没有想过损坏胶片。我只想先和放映的人谈谈'，这与 truth/motive（'临时藏起胶片阻止放映'）和 truth/method（'藏进茶室通风柜'）不一致。她并未藏起胶片，而是'先和放映的人谈谈'——意味着胶片仍在她手中或已交给他人，而非藏入通风柜。同时 solved 结局写'林知夏承认取走胶片，并从茶室通风柜里取回它'，但她从未承认'藏起'这一动作。需确认她的自白程度是否足以支撑 solved 结局，或修改对话使其一致。",
+            "suggestion": "将林知夏的 tape 回答改为承认藏起胶片（例如'我把胶片先藏起来了，想先和放映的人谈谈'），或修改 solved 结局措辞使其与她的实际自白匹配。",
+            "citations": [
+              {
+                "path": "/characters/0/topics/1/answer",
+                "quote": "……那是下午录的练习。我确实出去过，但我没有想过损坏胶片。我只想先和放映的人谈谈。"
+              },
+              {
+                "path": "/truth/motive",
+                "quote": "林知夏想找回胶片中母亲的一段未获同意的私人影像，临时藏起胶片阻止放映。"
+              },
+              {
+                "path": "/endings/0/text",
+                "quote": "林知夏承认取走胶片，并从茶室通风柜里取回它。"
+              }
+            ]
+          },
+          {
+            "kind": "missing_support",
+            "severity": "question",
+            "explanation": "truth/requiredEvidenceIds 包含 witness（陈默的走廊证词），但 witness 的内容是'林知夏一直在茶室，没有离开过'——这是帮助林知夏的清白证据，而非证明她有罪的证据。solved 结局写'你把电源记录、重复的琴声和走廊证词连在一起'，但推理链不清晰：录像说她在茶室，真相说她不在茶室——玩家凭什么相信真相而非'完整且时间准确'的录像？需要补充推理桥梁，例如说明录像视角只能看到茶室门口而非室内、或陈默的证词本身有破绽。",
+            "suggestion": "补充 witness 线索的推理价值说明，或在 solved 结局中展示玩家如何识破录像的局限（如录像只拍走廊/门口，无法证明室内无人进出），使 requiredEvidenceIds 中的 witness 真正发挥定罪作用。",
+            "citations": [
+              {
+                "path": "/truth/requiredEvidenceIds/2",
+                "quote": "witness"
+              },
+              {
+                "path": "/endings/0/text",
+                "quote": "你把电源记录、重复的琴声和走廊证词连在一起。林知夏承认取走胶片，并从茶室通风柜里取回它。"
+              },
+              {
+                "path": "/clues/5/name",
+                "quote": "陈默的走廊证词"
+              }
+            ]
+          },
+          {
+            "kind": "contradiction",
+            "severity": "question",
+            "explanation": "truth/method 称林知夏'用提前录好的钢琴声制造自己一直在茶室弹琴的假象'，但 piano_tape 线索描述为'磁带中同一处错音每隔两分钟重复一次'——即磁带是同一小段录音循环播放，而非一段完整的'提前录好的演奏'。真相描述暗示她录下了一段完整的琴声来覆盖整个时间窗口，而实际磁带只是短片段循环。两者对录音机工作原理的描述需要统一，否则玩家推理时会困惑：她录了多长？为何循环？",
+            "suggestion": "将 truth/method 改为'她让录音机循环播放一段提前录下的琴声片段，制造自己一直在弹琴的假象'，与 piano_tape 的循环描述一致。",
+            "citations": [
+              {
+                "path": "/truth/method",
+                "quote": "她用提前录好的钢琴声制造自己一直在茶室弹琴的假象。"
+              },
+              {
+                "path": "/clues/3/description",
+                "quote": "磁带中同一处错音每隔两分钟重复一次，证明琴声不能作为在场证明。"
+              }
+            ]
+          },
+          {
+            "kind": "disclosure",
+            "severity": "question",
+            "explanation": "cold_tea 线索（茶室）包含'杯旁有一张未寄出的信，内容请求在公开放映前删除私人访谈'，guest_book（大堂）包含'林知夏的备注写着：母亲曾在这里工作'。两条线索均无 requires 前置条件，玩家在收集 power_log、piano_tape 之前即可得知林知夏与胶片中私人访谈的关联及动机。在调查早期，玩家几乎可以锁定林知夏是唯一有动机阻止放映的人。需确认是否希望更早披露动机，或为 guest_book 中的备注添加获取门槛。",
+            "suggestion": "若希望玩家更晚发现动机线索，可将 guest_book 的备注内容改为模糊（如仅写'林知夏登记'），或将 cold_tea 信件设为需要特定前置条件才能阅读。",
+            "citations": [
+              {
+                "path": "/clues/4/description",
+                "quote": "杯旁有一张未寄出的信，内容请求在公开放映前删除私人访谈。"
+              },
+              {
+                "path": "/clues/1/description",
+                "quote": "林知夏的备注写着：母亲曾在这里工作。"
+              }
+            ]
+          }
+        ],
+        "caseHash": "c7ca51730d884f6c25d34dac1515a4b7f9a84d865dc972adce056749df9204f1",
+        "revision": 1,
+        "checkedAt": "2026-09-27T16:04:22.400Z",
+        "model": "qwen3.8-27b",
+        "provider": "mujian-local"
+      }
+    },
+    {
+      "at": "2026-09-27T16:04:40.598Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 18319,
+        "output": 480,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 18799,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    }
+  ],
+  "createdAt": "2026-09-27T16:01:26.322Z",
+  "startedAt": "2026-09-27T16:01:26.323Z",
+  "result": {
+    "projectId": "24137d8d-2e65-41de-8370-1f99cd406c8a",
+    "review": {
+      "summary": "本案件为标注的\"对抗样例：录像与真相冲突（故意注入）\"。初审发现 4 项主要矛盾/疑点：①录像声称完整覆盖茶室却与真相时间线直接矛盾；②林知夏自白与真相动机/方法不一致；③requiredEvidenceIds 中的 witness 实际是清白证据，推理链断裂；④钢琴声\"提前录好\"与\"循环错音\"的描述细节不统一。另附 1 项信息披露节奏问题。以下逐项引用原文并给出建议。",
+      "issues": [
+        {
+          "kind": "contradiction",
+          "severity": "concern",
+          "explanation": "核心矛盾：truth 设定林知夏在 23:12 从放映室带走胶片、23:15 在走廊被陈默遇见；但陈默 corridor 对话声称'23:00 至 23:30，林知夏一直在茶室，没有离开过。录像完整且时间准确'。录像被明确标注完整且时间准确，却排除了真相中她 23:12-23:15 离开茶室取片的事实。若录像确实覆盖茶室全时段，则真相 timeline 第 2、3 条与录像直接矛盾；若录像未覆盖茶室内部，则'完整'一词不准确。作者需决定录像究竟拍的是什么（走廊？茶室外部？）、为何声称完整、以及陈默为何出示与自己 23:15 目击矛盾的录像。",
+          "suggestion": "明确录像的拍摄对象与范围（例如只拍走廊而非茶室），或在 truth 中说明录像为何不可靠（如陈默误判、录像角度盲区），使录像声称与真相不直接矛盾。",
+          "citations": [
+            {
+              "path": "/characters/1/topics/1/answer",
+              "quote": "陈默出示连续录像：23:00 至 23:30，林知夏一直在茶室，没有离开过。录像完整且时间准确。"
+            },
+            {
+              "path": "/truth/timeline/2/event",
+              "quote": "林知夏从放映室带走胶片。"
+            },
+            {
+              "path": "/truth/timeline/3/event",
+              "quote": "陈默在走廊遇见抱着铁盒的林知夏。"
+            }
+          ]
+        },
+        {
+          "kind": "contradiction",
+          "severity": "concern",
+          "explanation": "林知夏在 tape 话题中承认'我确实出去过'，但紧接着说'但我没有想过损坏胶片。我只想先和放映的人谈谈'，这与 truth/motive（'临时藏起胶片阻止放映'）和 truth/method（'藏进茶室通风柜'）不一致。她并未藏起胶片，而是'先和放映的人谈谈'——意味着胶片仍在她手中或已交给他人，而非藏入通风柜。同时 solved 结局写'林知夏承认取走胶片，并从茶室通风柜里取回它'，但她从未承认'藏起'这一动作。需确认她的自白程度是否足以支撑 solved 结局，或修改对话使其一致。",
+          "suggestion": "将林知夏的 tape 回答改为承认藏起胶片（例如'我把胶片先藏起来了，想先和放映的人谈谈'），或修改 solved 结局措辞使其与她的实际自白匹配。",
+          "citations": [
+            {
+              "path": "/characters/0/topics/1/answer",
+              "quote": "……那是下午录的练习。我确实出去过，但我没有想过损坏胶片。我只想先和放映的人谈谈。"
+            },
+            {
+              "path": "/truth/motive",
+              "quote": "林知夏想找回胶片中母亲的一段未获同意的私人影像，临时藏起胶片阻止放映。"
+            },
+            {
+              "path": "/endings/0/text",
+              "quote": "林知夏承认取走胶片，并从茶室通风柜里取回它。"
+            }
+          ]
+        },
+        {
+          "kind": "missing_support",
+          "severity": "question",
+          "explanation": "truth/requiredEvidenceIds 包含 witness（陈默的走廊证词），但 witness 的内容是'林知夏一直在茶室，没有离开过'——这是帮助林知夏的清白证据，而非证明她有罪的证据。solved 结局写'你把电源记录、重复的琴声和走廊证词连在一起'，但推理链不清晰：录像说她在茶室，真相说她不在茶室——玩家凭什么相信真相而非'完整且时间准确'的录像？需要补充推理桥梁，例如说明录像视角只能看到茶室门口而非室内、或陈默的证词本身有破绽。",
+          "suggestion": "补充 witness 线索的推理价值说明，或在 solved 结局中展示玩家如何识破录像的局限（如录像只拍走廊/门口，无法证明室内无人进出），使 requiredEvidenceIds 中的 witness 真正发挥定罪作用。",
+          "citations": [
+            {
+              "path": "/truth/requiredEvidenceIds/2",
+              "quote": "witness"
+            },
+            {
+              "path": "/endings/0/text",
+              "quote": "你把电源记录、重复的琴声和走廊证词连在一起。林知夏承认取走胶片，并从茶室通风柜里取回它。"
+            },
+            {
+              "path": "/clues/5/name",
+              "quote": "陈默的走廊证词"
+            }
+          ]
+        },
+        {
+          "kind": "contradiction",
+          "severity": "question",
+          "explanation": "truth/method 称林知夏'用提前录好的钢琴声制造自己一直在茶室弹琴的假象'，但 piano_tape 线索描述为'磁带中同一处错音每隔两分钟重复一次'——即磁带是同一小段录音循环播放，而非一段完整的'提前录好的演奏'。真相描述暗示她录下了一段完整的琴声来覆盖整个时间窗口，而实际磁带只是短片段循环。两者对录音机工作原理的描述需要统一，否则玩家推理时会困惑：她录了多长？为何循环？",
+          "suggestion": "将 truth/method 改为'她让录音机循环播放一段提前录下的琴声片段，制造自己一直在弹琴的假象'，与 piano_tape 的循环描述一致。",
+          "citations": [
+            {
+              "path": "/truth/method",
+              "quote": "她用提前录好的钢琴声制造自己一直在茶室弹琴的假象。"
+            },
+            {
+              "path": "/clues/3/description",
+              "quote": "磁带中同一处错音每隔两分钟重复一次，证明琴声不能作为在场证明。"
+            }
+          ]
+        },
+        {
+          "kind": "disclosure",
+          "severity": "question",
+          "explanation": "cold_tea 线索（茶室）包含'杯旁有一张未寄出的信，内容请求在公开放映前删除私人访谈'，guest_book（大堂）包含'林知夏的备注写着：母亲曾在这里工作'。两条线索均无 requires 前置条件，玩家在收集 power_log、piano_tape 之前即可得知林知夏与胶片中私人访谈的关联及动机。在调查早期，玩家几乎可以锁定林知夏是唯一有动机阻止放映的人。需确认是否希望更早披露动机，或为 guest_book 中的备注添加获取门槛。",
+          "suggestion": "若希望玩家更晚发现动机线索，可将 guest_book 的备注内容改为模糊（如仅写'林知夏登记'），或将 cold_tea 信件设为需要特定前置条件才能阅读。",
+          "citations": [
+            {
+              "path": "/clues/4/description",
+              "quote": "杯旁有一张未寄出的信，内容请求在公开放映前删除私人访谈。"
+            },
+            {
+              "path": "/clues/1/description",
+              "quote": "林知夏的备注写着：母亲曾在这里工作。"
+            }
+          ]
+        }
+      ],
+      "caseHash": "c7ca51730d884f6c25d34dac1515a4b7f9a84d865dc972adce056749df9204f1",
+      "revision": 1,
+      "checkedAt": "2026-09-27T16:04:22.400Z",
+      "model": "qwen3.8-27b",
+      "provider": "mujian-local"
+    }
+  },
+  "finishedAt": "2026-09-27T16:04:40.599Z"
+}

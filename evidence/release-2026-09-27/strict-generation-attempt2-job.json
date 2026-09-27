@@ -1,0 +1,862 @@
+{
+  "id": "f6658712-f956-4a3a-a9ef-50a053580131",
+  "projectId": "ed96a6fa-2bde-4320-8f34-623fea17a01e",
+  "kind": "generate",
+  "state": "failed",
+  "request": {
+    "prompt": "创作原创短篇《旧书店最后一张借书卡》。打烊前，一张夹着道歉留言的借书卡被人调换。严格三个成年人物、三个场景、六条证据、两个结局；至少一条证词在出示物证后才能获得。真相围绕一次不愿当面承认的误会，不用旅馆、胶片、渡轮或示例人物。时间线与借阅记录清楚，所有必需证据足以支持结案，不靠角色自白作为唯一证据。"
+  },
+  "events": [
+    {
+      "at": "2026-09-27T17:10:57.176Z",
+      "type": "memory",
+      "message": "已释放素材模型内存。",
+      "detail": {
+        "released": true,
+        "reservedBytes": 23068672
+      }
+    },
+    {
+      "at": "2026-09-27T17:10:57.194Z",
+      "type": "model",
+      "message": "使用 本地 模型 qwen3.8-27b"
+    },
+    {
+      "at": "2026-09-27T17:10:58.941Z",
+      "type": "tool-call",
+      "message": "请求工具：read_skill"
+    },
+    {
+      "at": "2026-09-27T17:10:58.942Z",
+      "type": "tool-call",
+      "message": "请求工具：read_case_schema"
+    },
+    {
+      "at": "2026-09-27T17:10:58.952Z",
+      "type": "tool-call",
+      "message": "请求工具：read_case"
+    },
+    {
+      "at": "2026-09-27T17:10:58.952Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 1497,
+        "output": 55,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 1552,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:10:58.955Z",
+      "type": "skill",
+      "message": "读取技能：case-design",
+      "detail": {
+        "hash": "ed42ac688d07fc463f0208f9d385b03cb1d1c5f9812685dcfbf2f51faf00647f"
+      }
+    },
+    {
+      "at": "2026-09-27T17:10:58.955Z",
+      "type": "tool",
+      "message": "读取案件数据契约"
+    },
+    {
+      "at": "2026-09-27T17:10:58.958Z",
+      "type": "tool",
+      "message": "读取工作版本"
+    },
+    {
+      "at": "2026-09-27T17:13:26.132Z",
+      "type": "tool-call",
+      "message": "请求工具：propose_case"
+    },
+    {
+      "at": "2026-09-27T17:13:26.132Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 3311,
+        "output": 3119,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 6430,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:13:26.148Z",
+      "type": "check",
+      "message": "草稿与新建短篇的规模约定不符",
+      "detail": [
+        {
+          "field": "clues",
+          "expected": 6,
+          "actual": 7
+        }
+      ]
+    },
+    {
+      "at": "2026-09-27T17:13:35.750Z",
+      "type": "tool-call",
+      "message": "请求工具：patch_case"
+    },
+    {
+      "at": "2026-09-27T17:13:35.751Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 6510,
+        "output": 221,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 6731,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:14:43.168Z",
+      "type": "tool-call",
+      "message": "请求工具：propose_case"
+    },
+    {
+      "at": "2026-09-27T17:14:43.168Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 6758,
+        "output": 3078,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 9836,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:14:43.181Z",
+      "type": "check",
+      "message": "草稿存在需要修复的规则问题",
+      "detail": {
+        "note": "重新提交完整案件，证据合并为6条（证词合一）。",
+        "issues": [
+          {
+            "code": "TOPIC_GUARD_MISMATCH",
+            "path": "characters.wei.topics.wei_note.requires",
+            "message": "问话条件缺少证词 testimony 的前置物证：bookmark_token。不要把证词 testimony 本身加进条件。",
+            "relatedIds": [
+              "testimony",
+              "note_paper",
+              "bookmark_token"
+            ],
+            "severity": "error"
+          },
+          {
+            "code": "MISSING_GATED_TESTIMONY",
+            "path": "characters.topics",
+            "message": "至少一条结案必需证据必须是盘问证词：sceneId 为 null，由 topics.reveals 给出，且话题 requires 至少包含一条现场物证。",
+            "relatedIds": [],
+            "severity": "error"
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-09-27T17:14:51.366Z",
+      "type": "tool-call",
+      "message": "请求工具：patch_case"
+    },
+    {
+      "at": "2026-09-27T17:14:51.367Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 10340,
+        "output": 267,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 10607,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:14:51.380Z",
+      "type": "patch",
+      "message": "wei_note 揭示 testimony，需包含 testimony 的全部前置物证 note_paper 与 bookmark_token。",
+      "detail": {
+        "collection": "characters",
+        "id": "wei",
+        "fields": [
+          "topics"
+        ],
+        "issues": [
+          {
+            "code": "MISSING_GATED_TESTIMONY",
+            "path": "characters.topics",
+            "message": "至少一条结案必需证据必须是盘问证词：sceneId 为 null，由 topics.reveals 给出，且话题 requires 至少包含一条现场物证。",
+            "relatedIds": [],
+            "severity": "error"
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-09-27T17:14:56.676Z",
+      "type": "tool-call",
+      "message": "请求工具：patch_case"
+    },
+    {
+      "at": "2026-09-27T17:14:56.688Z",
+      "type": "tool-call",
+      "message": "请求工具：read_skill"
+    },
+    {
+      "at": "2026-09-27T17:14:56.688Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 11038,
+        "output": 129,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 11167,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:14:56.692Z",
+      "type": "patch",
+      "message": "临时确认 patch 可用；实际修复在 truth。",
+      "detail": {
+        "collection": "scenes",
+        "id": "loan_desk",
+        "fields": [
+          "requires"
+        ],
+        "issues": [
+          {
+            "code": "MISSING_GATED_TESTIMONY",
+            "path": "characters.topics",
+            "message": "至少一条结案必需证据必须是盘问证词：sceneId 为 null，由 topics.reveals 给出，且话题 requires 至少包含一条现场物证。",
+            "relatedIds": [],
+            "severity": "error"
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-09-27T17:14:56.693Z",
+      "type": "skill",
+      "message": "读取技能：case-audit",
+      "detail": {
+        "hash": "1ea6b660bbcb3a01d84eb9a93ac4eecb64aad029990d05d9139a04a22af4c87e"
+      }
+    },
+    {
+      "at": "2026-09-27T17:15:01.527Z",
+      "type": "tool-call",
+      "message": "请求工具：patch_case"
+    },
+    {
+      "at": "2026-09-27T17:15:01.527Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 11821,
+        "output": 98,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 11919,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:15:01.540Z",
+      "type": "patch",
+      "message": "恢复 loan_desk 的前置 loan_record。",
+      "detail": {
+        "collection": "scenes",
+        "id": "loan_desk",
+        "fields": [
+          "requires"
+        ],
+        "issues": [
+          {
+            "code": "MISSING_GATED_TESTIMONY",
+            "path": "characters.topics",
+            "message": "至少一条结案必需证据必须是盘问证词：sceneId 为 null，由 topics.reveals 给出，且话题 requires 至少包含一条现场物证。",
+            "relatedIds": [],
+            "severity": "error"
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-09-27T17:15:04.846Z",
+      "type": "tool-call",
+      "message": "请求工具：patch_case"
+    },
+    {
+      "at": "2026-09-27T17:15:04.847Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 12350,
+        "output": 74,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 12424,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:15:04.860Z",
+      "type": "patch",
+      "message": "确认 patch 可用。",
+      "detail": {
+        "collection": "clues",
+        "id": "loan_stamp",
+        "fields": [
+          "requires"
+        ],
+        "issues": [
+          {
+            "code": "MISSING_GATED_TESTIMONY",
+            "path": "characters.topics",
+            "message": "至少一条结案必需证据必须是盘问证词：sceneId 为 null，由 topics.reveals 给出，且话题 requires 至少包含一条现场物证。",
+            "relatedIds": [],
+            "severity": "error"
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-09-27T17:15:09.338Z",
+      "type": "tool-call",
+      "message": "请求工具：patch_case"
+    },
+    {
+      "at": "2026-09-27T17:15:09.339Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 12855,
+        "output": 102,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 12957,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:15:09.351Z",
+      "type": "patch",
+      "message": "确认 patch 可用。",
+      "detail": {
+        "collection": "clues",
+        "id": "testimony",
+        "fields": [
+          "requires"
+        ],
+        "issues": [
+          {
+            "code": "MISSING_GATED_TESTIMONY",
+            "path": "characters.topics",
+            "message": "至少一条结案必需证据必须是盘问证词：sceneId 为 null，由 topics.reveals 给出，且话题 requires 至少包含一条现场物证。",
+            "relatedIds": [],
+            "severity": "error"
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-09-27T17:15:13.726Z",
+      "type": "tool-call",
+      "message": "请求工具：patch_case"
+    },
+    {
+      "at": "2026-09-27T17:15:13.726Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 13388,
+        "output": 93,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 13481,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:15:13.738Z",
+      "type": "patch",
+      "message": "确认 patch 可用。",
+      "detail": {
+        "collection": "clues",
+        "id": "note_paper",
+        "fields": [
+          "requires"
+        ],
+        "issues": [
+          {
+            "code": "MISSING_GATED_TESTIMONY",
+            "path": "characters.topics",
+            "message": "至少一条结案必需证据必须是盘问证词：sceneId 为 null，由 topics.reveals 给出，且话题 requires 至少包含一条现场物证。",
+            "relatedIds": [],
+            "severity": "error"
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-09-27T17:16:22.987Z",
+      "type": "tool-call",
+      "message": "请求工具：propose_case"
+    },
+    {
+      "at": "2026-09-27T17:16:22.988Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 13912,
+        "output": 3124,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 17036,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:16:23.000Z",
+      "type": "check",
+      "message": "草稿存在需要修复的规则问题",
+      "detail": {
+        "note": "将 testimony 加入结案必需证据，满足“必需证据须为出示物证后获得的证词”。",
+        "issues": [
+          {
+            "code": "UNREACHABLE_CLUE",
+            "path": "clues.bookmark_token",
+            "message": "证据「铜质书签坠」不可达，检查场景开放和证据之间的循环依赖。",
+            "relatedIds": [
+              "bookmark_token",
+              "corner_table"
+            ],
+            "severity": "error"
+          },
+          {
+            "code": "UNREACHABLE_CLUE",
+            "path": "clues.loan_record",
+            "message": "证据「旧借阅登记册」不可达，检查场景开放和证据之间的循环依赖。",
+            "relatedIds": [
+              "loan_record",
+              "loan_desk"
+            ],
+            "severity": "error"
+          },
+          {
+            "code": "UNREACHABLE_CLUE",
+            "path": "clues.loan_stamp",
+            "message": "证据「还书日章」不可达，检查场景开放和证据之间的循环依赖。",
+            "relatedIds": [
+              "loan_stamp",
+              "loan_desk",
+              "loan_record"
+            ],
+            "severity": "error"
+          },
+          {
+            "code": "UNREACHABLE_CLUE",
+            "path": "clues.shen_note",
+            "message": "证据「沈砚清的旧账备注」不可达，检查场景开放和证据之间的循环依赖。",
+            "relatedIds": [
+              "shen_note",
+              "loan_desk",
+              "loan_record"
+            ],
+            "severity": "error"
+          },
+          {
+            "code": "UNREACHABLE_CLUE",
+            "path": "clues.testimony",
+            "message": "证据「两位常客的证词」不可达，检查场景开放和证据之间的循环依赖。",
+            "relatedIds": [
+              "testimony",
+              "note_paper",
+              "bookmark_token"
+            ],
+            "severity": "error"
+          },
+          {
+            "code": "UNREACHABLE_SCENE",
+            "path": "scenes.loan_desk",
+            "message": "场景「借阅登记桌」不可达。",
+            "relatedIds": [
+              "loan_desk",
+              "loan_record"
+            ],
+            "severity": "error"
+          },
+          {
+            "code": "UNREACHABLE_SCENE",
+            "path": "scenes.corner_table",
+            "message": "场景「窗边小桌」不可达。",
+            "relatedIds": [
+              "corner_table",
+              "bookmark_token"
+            ],
+            "severity": "error"
+          },
+          {
+            "code": "NO_WINNING_PATH",
+            "path": "truth.requiredEvidenceIds",
+            "message": "玩家无法获得结案所需的完整证据链。",
+            "relatedIds": [
+              "bookmark_token",
+              "loan_record",
+              "testimony"
+            ],
+            "severity": "error"
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-09-27T17:17:39.059Z",
+      "type": "tool-call",
+      "message": "请求工具：propose_case"
+    },
+    {
+      "at": "2026-09-27T17:17:39.060Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 17812,
+        "output": 3186,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 20998,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:18:56.543Z",
+      "type": "tool-call",
+      "message": "请求工具：propose_case"
+    },
+    {
+      "at": "2026-09-27T17:18:56.544Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 24195,
+        "output": 3196,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 27391,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:19:00.582Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 30600,
+        "output": 1,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 30601,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:19:00.584Z",
+      "type": "retry",
+      "message": "Agent 尚未提交作品，依据真实检查结果继续修复",
+      "detail": {
+        "attempt": 1,
+        "callsUsed": 14
+      }
+    },
+    {
+      "at": "2026-09-27T17:19:03.169Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 31419,
+        "output": 1,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 31420,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:19:03.170Z",
+      "type": "retry",
+      "message": "Agent 尚未提交作品，依据真实检查结果继续修复",
+      "detail": {
+        "attempt": 2,
+        "callsUsed": 14
+      }
+    },
+    {
+      "at": "2026-09-27T17:19:05.201Z",
+      "type": "usage",
+      "message": "记录本次模型用量",
+      "detail": {
+        "input": 32238,
+        "output": 1,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 32239,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        },
+        "model": "qwen3.8-27b"
+      }
+    },
+    {
+      "at": "2026-09-27T17:19:05.202Z",
+      "type": "draft",
+      "message": "未完成的案件草稿已保存，可在检查页继续修复；尚未通过检查的作品不能导出。",
+      "detail": {
+        "projectId": "ed96a6fa-2bde-4320-8f34-623fea17a01e",
+        "report": {
+          "rulesVersion": 2,
+          "passed": false,
+          "issues": [
+            {
+              "code": "UNREACHABLE_CLUE",
+              "path": "clues.bookmark_token",
+              "message": "证据「铜质书签坠」不可达，检查场景开放和证据之间的循环依赖。",
+              "relatedIds": [
+                "bookmark_token",
+                "corner_table"
+              ],
+              "severity": "error"
+            },
+            {
+              "code": "UNREACHABLE_CLUE",
+              "path": "clues.loan_record",
+              "message": "证据「旧借阅登记册」不可达，检查场景开放和证据之间的循环依赖。",
+              "relatedIds": [
+                "loan_record",
+                "loan_desk"
+              ],
+              "severity": "error"
+            },
+            {
+              "code": "UNREACHABLE_CLUE",
+              "path": "clues.loan_stamp",
+              "message": "证据「还书日章」不可达，检查场景开放和证据之间的循环依赖。",
+              "relatedIds": [
+                "loan_stamp",
+                "loan_desk",
+                "loan_record"
+              ],
+              "severity": "error"
+            },
+            {
+              "code": "UNREACHABLE_CLUE",
+              "path": "clues.shen_note",
+              "message": "证据「沈砚清的旧账备注」不可达，检查场景开放和证据之间的循环依赖。",
+              "relatedIds": [
+                "shen_note",
+                "loan_desk",
+                "loan_record"
+              ],
+              "severity": "error"
+            },
+            {
+              "code": "UNREACHABLE_CLUE",
+              "path": "clues.testimony",
+              "message": "证据「两位常客的证词」不可达，检查场景开放和证据之间的循环依赖。",
+              "relatedIds": [
+                "testimony",
+                "note_paper",
+                "bookmark_token"
+              ],
+              "severity": "error"
+            },
+            {
+              "code": "UNREACHABLE_SCENE",
+              "path": "scenes.loan_desk",
+              "message": "场景「借阅登记桌」不可达。",
+              "relatedIds": [
+                "loan_desk",
+                "loan_record"
+              ],
+              "severity": "error"
+            },
+            {
+              "code": "UNREACHABLE_SCENE",
+              "path": "scenes.corner_table",
+              "message": "场景「窗边小桌」不可达。",
+              "relatedIds": [
+                "corner_table",
+                "bookmark_token"
+              ],
+              "severity": "error"
+            },
+            {
+              "code": "NO_WINNING_PATH",
+              "path": "truth.requiredEvidenceIds",
+              "message": "玩家无法获得结案所需的完整证据链。",
+              "relatedIds": [
+                "bookmark_token",
+                "loan_record",
+                "testimony"
+              ],
+              "severity": "error"
+            }
+          ],
+          "reachableClues": [
+            "note_paper"
+          ],
+          "reachableScenes": [
+            "shop_floor"
+          ],
+          "winningPath": [],
+          "actionCount": 1,
+          "checkedAt": "2026-09-27T17:19:05.202Z",
+          "caseHash": "0097e698fe866d06cc0355e46b359dafe9f72cb437212e38fed8e7661e36ee15"
+        }
+      }
+    },
+    {
+      "at": "2026-09-27T17:19:05.211Z",
+      "type": "error",
+      "message": "Agent 尚未提交通过检查的版本。请查看记录后调整要求重试，原项目已保留。 本次草稿已保存，可继续编辑或修复。"
+    }
+  ],
+  "createdAt": "2026-09-27T17:10:57.105Z",
+  "startedAt": "2026-09-27T17:10:57.106Z",
+  "error": "Agent 尚未提交通过检查的版本。请查看记录后调整要求重试，原项目已保留。 本次草稿已保存，可继续编辑或修复。",
+  "finishedAt": "2026-09-27T17:19:05.211Z"
+}
