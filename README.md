@@ -93,10 +93,10 @@ npm run check
 
 ## 提交材料
 
-[参赛说明与清单](docs/SUBMISSION.md) · [逐镜录屏与口播](docs/VIDEO-SCRIPT.md) · [开发文章草稿](docs/ARTICLE.md) · [当前验收状态](docs/RELEASE-AUDIT.md)
+[参赛说明与清单](docs/SUBMISSION.md) · [逐镜录屏与口播](docs/VIDEO-SCRIPT.md) · [十日谈开发文章](docs/ARTICLE.md) · [当前验收状态](docs/RELEASE-AUDIT.md)
 
 ## 参赛与许可证
 
-用户要求开发阶段使用私有仓库。本届规则要求最终开源提交；准备正式提交时需要由仓库所有者公开源码，并补齐演示视频、500 字以上说明、部署与技术说明、团队资料以及计分的开发征文。目前没有自动向组委会、B 站或社交平台提交。
+本届规则要求开源提交。9 月 29 日已补齐约 3 分 56 秒的 1080p 演示视频、封面与十日谈发布稿，并重新通过 35 项测试与构建。发布状态和提交记录见 [提交状态](docs/PUBLISHING.md)；准备好的本地文件不等同于已公开发布或已向组委会提交。
 
 应用代码采用 MIT。Pi、llama.cpp、React 等依赖遵守各自许可证。模型权重不随仓库发布，SDXL、Wan、Qwen、Nemotron 与可选 StepFun 的使用条款分别适用。素材应使用有权使用的原始内容。参考项目仅用于调研，本仓库没有复制 Super-Idol-Master 或 IntelliVNG 的代码。

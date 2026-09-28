@@ -1,0 +1,45 @@
+{
+  "date": "2026-09-29",
+  "sourceCommit": "ee260d0ad0c6b9d2007d59a4d97d3d6b56f61a06",
+  "automatedChecks": {
+    "command": "npm run check",
+    "tests": 35,
+    "passed": 35,
+    "failed": 0,
+    "buildPassed": true,
+    "note": "Summary of the fresh local execution, not a copied raw log."
+  },
+  "spark": {
+    "healthOk": true,
+    "browserModelConnected": true,
+    "newModelJobsStarted": false
+  },
+  "browserReplay": {
+    "projectId": "d6dea0b2-7673-4747-9aac-ab78e2beb989",
+    "revision": 4,
+    "collectedEvidence": 5,
+    "keyQuestionInitiallyUnavailable": true,
+    "keyQuestionUnlockedWithEvidence": true,
+    "correctEndingReached": true,
+    "recording": "Real Chrome UI capture on 2026-09-29; waiting intervals edited out."
+  },
+  "video": {
+    "file": "幕间_DGX_Spark_参赛演示.mp4",
+    "seconds": 236.499023,
+    "width": 1920,
+    "height": 1080,
+    "fps": 24,
+    "sha256": "dff23996ca011cc4a17b4eb0b93108f58855113da1c7aeac25f0726c292e667c",
+    "fullDecodePassed": true,
+    "meanVolumeDb": -18.3,
+    "peakVolumeDb": -2.5,
+    "chapterFramesVisuallyChecked": true,
+    "narration": "Synthetic Chinese voice, explicitly disclosed"
+  },
+  "publication": {
+    "repositoryPublic": false,
+    "videoPublished": false,
+    "articlePublished": false,
+    "formSubmitted": false
+  }
+}

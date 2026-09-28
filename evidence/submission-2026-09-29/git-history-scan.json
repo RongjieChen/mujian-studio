@@ -1,0 +1,5 @@
+{
+  "checkedTextBlobs": 224,
+  "findings": [],
+  "note": "Pattern scan of reachable Git history; secret values are never printed. Not a comprehensive security audit."
+}
