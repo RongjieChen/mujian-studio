@@ -95,7 +95,7 @@ npm run check
 
 [参赛说明与清单](docs/SUBMISSION.md) · [逐镜录屏与口播](docs/VIDEO-SCRIPT.md) · [十日谈开发文章](docs/ARTICLE.md) · [当前验收状态](docs/RELEASE-AUDIT.md)
 
-已发布征文：[DGX Spark 黑客松十日谈：幕间，把一个悬念做成可玩的故事](https://zhuanlan.zhihu.com/p/2088310219101179986)。仓库现已公开；视频发布与表单提交的实际进度见 [提交状态](docs/PUBLISHING.md)。
+[下载演示视频、离线试玩 HTML 和完整材料包](https://github.com/RongjieChen/mujian-studio/releases/tag/hackathon-2026-09-29) · [已发布十日谈征文](https://zhuanlan.zhihu.com/p/2088310219101179986)。仓库现已公开；B 站发布与表单提交的实际进度见 [提交状态](docs/PUBLISHING.md)。
 
 ## 参赛与许可证
 

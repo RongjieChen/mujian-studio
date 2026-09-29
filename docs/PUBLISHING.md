@@ -13,6 +13,7 @@
 
 - [GitHub 仓库](https://github.com/RongjieChen/mujian-studio)已设为 PUBLIC，匿名访问返回 HTTP 200。
 - [十日谈文章](https://zhuanlan.zhihu.com/p/2088310219101179986)已在知乎发布，页面显示“发布成功”。含作品封面、人工智能话题与“包含 AI 辅助创作”声明。
+- [GitHub Release 材料包](https://github.com/RongjieChen/mujian-studio/releases/tag/hackathon-2026-09-29)已公开发布，包含完整演示 MP4、离线试玩 HTML 和源码与文档归档。三个附件均为 uploaded，视频与材料包的服务端 SHA-256 与本地一致。该版本对应源码与文档提交 140e9d5；后续仅发布状态更新见本文件。
 
 ## 尚未完成的外部步骤
 
