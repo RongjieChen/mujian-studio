@@ -1,6 +1,6 @@
-# 幕间本轮实机记录
+# DGX Spark 案件与媒体样本
 
-本轮从 UTC 2026-09-27 开始，正式视频在北京时间 9 月 28 日完成。真实模型运行、模拟响应自动测试、浏览器验证和作者修订分别保存，不能合并计算成生成成功率。最新交付状态见 [RELEASE-AUDIT](../../docs/RELEASE-AUDIT.md)。
+测量日期为 2026-09-27/28。真实模型运行、模拟响应自动测试、浏览器验证和作者修订分别保存，不能合并计算成生成成功率。环境与结果汇总见 [工作负载实测](../../docs/RELEASE-AUDIT.md)。
 
 ## 单台 DGX Spark 媒体实测
 
@@ -20,7 +20,7 @@ PyTorch 在模型加载后重置峰值计数，报告草稿约 30.038 GiB、正�
 
 ## 模型与配置来源
 
-环境见 `environment.json`。文本使用机器已有目录标称 Qwen3.8-27B-NVFP4 的预量化权重；实际 config 架构为 Qwen3_5ForConditionalGeneration，来源没有独立核实，服务别名不等于官方模型身份。没有从零训练或自行完成权重量化的证据。当前 vLLM 使用 32K 上下文、低并发、FP8 KV、MTP 与 sleep mode；不把配置开关等同于经过消融验证的性能提升。没有 StepFun 本轮调用证据。
+环境见 `environment.json`。文本使用机器已有目录标称 Qwen3.8-27B-NVFP4 的预量化权重；实际 config 架构为 Qwen3_5ForConditionalGeneration，来源没有独立核实，服务别名不等于官方模型身份。没有从零训练或自行完成权重量化的证据。当前 vLLM 使用 32K 上下文、低并发、FP8 KV、MTP 与 sleep mode；不把配置开关等同于经过消融验证的性能提升。本组数据不含 StepFun 调用。
 
 ## 证据阅读顺序
 
@@ -31,8 +31,8 @@ PyTorch 在模型加载后重置峰值计数，报告草稿约 30.038 GiB、正�
 5. `review-v2-*`：只读叙事初审引用，包含弱疑点；引用存在不等于解释正确。
 6. `ui-browser.json`：Chrome 未保存编辑保护、保存/恢复和示例离线结案。
 7. `raw-draft-browser/`：首版案件带草稿视频的离线结案，有 0 外部 HTTP 请求及 0 页面错误。
-8. 最终作品与完整验收以 `final-ready-project.json`、`fresh-browser.json`、`complete-verification.json` 为准，这些文件已取得终态并通过完整复核。
+8. `final-ready-project.json`、`fresh-browser.json`、`complete-verification.json`：示范作品数据、离线玩家操作记录及断言结果。
 
 实测样本少，调试中的重试不是独立未见样本。所有结论限于给定版本、机器与输入。
 
-补充：strict-generation-attempt1/2 保留失败，第三轮规则通过但文学与证据问题见 raw-generation-author-review.md。patch-opening 真实局部编辑通过；hostile-repair 真实素材伪指令测试通过。应用自动测试最终为 35 项，模型响应模拟与真实作业记录分别统计。
+补充：strict-generation-attempt1/2 保留失败，第三轮规则通过但文学与证据问题见 raw-generation-author-review.md。patch-opening 真实局部编辑通过；hostile-repair 真实素材伪指令测试通过。应用自动测试包含 35 项，模型响应模拟与真实作业记录分别统计。
