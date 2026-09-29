@@ -95,6 +95,8 @@ npm run check
 
 [参赛说明与清单](docs/SUBMISSION.md) · [逐镜录屏与口播](docs/VIDEO-SCRIPT.md) · [十日谈开发文章](docs/ARTICLE.md) · [当前验收状态](docs/RELEASE-AUDIT.md)
 
+已发布征文：[DGX Spark 黑客松十日谈：幕间，把一个悬念做成可玩的故事](https://zhuanlan.zhihu.com/p/2088310219101179986)。仓库现已公开；视频发布与表单提交的实际进度见 [提交状态](docs/PUBLISHING.md)。
+
 ## 参赛与许可证
 
 本届规则要求开源提交。9 月 29 日已补齐约 3 分 56 秒的 1080p 演示视频、封面与十日谈发布稿，并重新通过 35 项测试与构建。发布状态和提交记录见 [提交状态](docs/PUBLISHING.md)；准备好的本地文件不等同于已公开发布或已向组委会提交。
